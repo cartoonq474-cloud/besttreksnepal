@@ -1,0 +1,547 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Frequently Asked Questions (FAQ) &amp; Himalayan Travel Guide | Best Treks Nepal</title>
+  <meta name="description" content="Find answers to essential Nepal trekking questions: permits, high-altitude acclimatization, best seasons, Lukla flights, tea house accommodation, guides, and payment policies.">
+  <link rel="canonical" href="https://besttreksnepal.com/faq.html">
+  <meta property="og:title" content="Frequently Asked Questions (FAQ) | Best Treks Nepal">
+  <meta property="og:description" content="Complete answers to your Nepal trekking, permits, gear, safety, and booking questions.">
+  <meta property="og:url" content="https://besttreksnepal.com/faq.html">
+  <meta property="og:type" content="website">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,600;0,700;1,400&family=Poppins:wght@600;700;800&display=swap" rel="stylesheet">
+
+  <!-- 9 Standard CSS Partials in Exact Order -->
+  <link rel="stylesheet" href="/assets/css/reset.css">
+  <link rel="stylesheet" href="/assets/css/variables.css">
+  <link rel="stylesheet" href="/assets/css/typography.css">
+  <link rel="stylesheet" href="/assets/css/layout.css">
+  <link rel="stylesheet" href="/assets/css/components.css">
+  <link rel="stylesheet" href="/assets/css/animations.css">
+  <link rel="stylesheet" href="/assets/css/utilities.css">
+  <link rel="stylesheet" href="/assets/css/responsive.css">
+  <link rel="stylesheet" href="/assets/css/style.css">
+
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+
+  <style>
+    .faq-hero {
+      background: linear-gradient(135deg, #092e31 0%, #0f5257 60%, #134e4a 100%);
+      color: #ffffff;
+      padding: 5rem 1.5rem 4rem;
+      text-align: center;
+      position: relative;
+    }
+    .faq-hero__badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: rgba(200, 169, 107, 0.2);
+      border: 1px solid rgba(200, 169, 107, 0.4);
+      color: #fef08a;
+      font-size: 0.85rem;
+      font-weight: 700;
+      padding: 0.4rem 1rem;
+      border-radius: 999px;
+      margin-bottom: 1.25rem;
+    }
+    .faq-search-box {
+      max-width: 600px;
+      margin: 2rem auto 0;
+      position: relative;
+    }
+    .faq-search-input {
+      width: 100%;
+      padding: 1.1rem 1.4rem 1.1rem 3.2rem;
+      border-radius: 999px;
+      border: 1px solid rgba(255, 255, 255, 0.3);
+      background: rgba(255, 255, 255, 0.95);
+      color: #0f172a;
+      font-size: 1rem;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+      outline: none;
+    }
+    .faq-search-input:focus {
+      background: #ffffff;
+      border-color: #0d9488;
+      box-shadow: 0 0 0 4px rgba(13, 148, 136, 0.25);
+    }
+    .faq-search-icon {
+      position: absolute;
+      left: 1.2rem;
+      top: 50%;
+      transform: translateY(-50%);
+      color: #64748b;
+      width: 20px;
+      height: 20px;
+    }
+    .faq-layout {
+      display: grid;
+      grid-template-columns: 280px 1fr;
+      gap: 2.5rem;
+      padding: 4rem 1.5rem;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    .faq-nav-sticky {
+      position: sticky;
+      top: 100px;
+      background: #ffffff;
+      border: 1px solid #e2e8f0;
+      border-radius: 16px;
+      padding: 1.5rem;
+      height: fit-content;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.03);
+    }
+    .faq-nav-title {
+      font-size: 0.95rem;
+      font-weight: 800;
+      color: #0f172a;
+      margin: 0 0 1rem;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+    .faq-nav-link {
+      display: block;
+      padding: 0.6rem 0.85rem;
+      border-radius: 8px;
+      color: #475569;
+      font-size: 0.9rem;
+      font-weight: 600;
+      text-decoration: none;
+      transition: all 0.2s ease;
+      margin-bottom: 0.25rem;
+    }
+    .faq-nav-link:hover, .faq-nav-link.active {
+      background: #f0fdfa;
+      color: #0f5257;
+      font-weight: 700;
+      transform: translateX(4px);
+    }
+    .faq-category {
+      margin-bottom: 3.5rem;
+      scroll-margin-top: 110px;
+    }
+    .faq-category-title {
+      font-family: var(--font-heading);
+      font-size: 1.5rem;
+      font-weight: 800;
+      color: #0f172a;
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      margin: 0 0 1.25rem;
+      padding-bottom: 0.75rem;
+      border-bottom: 2px solid #f1f5f9;
+    }
+    .faq-accordion-item {
+      background: #ffffff;
+      border: 1px solid #e2e8f0;
+      border-radius: 14px;
+      margin-bottom: 1rem;
+      overflow: hidden;
+      transition: border-color 0.2s ease, box-shadow 0.2s ease;
+    }
+    .faq-accordion-item[open] {
+      border-color: #0f5257;
+      box-shadow: 0 8px 25px rgba(15, 82, 87, 0.08);
+    }
+    .faq-accordion-summary {
+      padding: 1.25rem 1.5rem;
+      font-weight: 700;
+      font-size: 1.02rem;
+      color: #0f172a;
+      cursor: pointer;
+      list-style: none;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+    }
+    .faq-accordion-summary::-webkit-details-marker { display: none; }
+    .faq-accordion-body {
+      padding: 0 1.5rem 1.35rem;
+      color: #475569;
+      font-size: 0.95rem;
+      line-height: 1.7;
+    }
+    @media (max-width: 900px) {
+      .faq-layout {
+        grid-template-columns: 1fr;
+      }
+      .faq-nav-sticky {
+        display: none;
+      }
+    }
+  </style>
+
+  <!-- JSON-LD FAQPage Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Do I need a licensed guide to trek in Nepal?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, under official Nepal Tourism Board (NTB) regulations effective April 2023, solo/FIT trekking is prohibited across all national parks and conservation areas. Trekkers must be accompanied by a government-licensed guide arranged via a registered agency."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What permits are required for Everest and Annapurna?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "For Everest: Sagarmatha National Park Permit and Khumbu Pasang Lhamu Rural Municipality Permit. For Annapurna: Annapurna Conservation Area Project (ACAP) Permit and TIMS Card. Best Treks Nepal arranges 100% of required clearances."
+        }
+      }
+    ]
+  }
+  </script>
+  <!-- No-JS: reveal all content hidden by JS animation system -->
+  <noscript><style>
+    /* Hide the page loader overlay */
+    .page-loader { display: none !important; }
+    body { visibility: visible !important; opacity: 1 !important; }
+
+    /* Reveal all scroll-animated elements immediately */
+    .reveal,
+    .reveal.reveal--left,
+    .reveal.reveal--right,
+    .reveal.reveal--scale {
+      opacity: 1 !important;
+      transform: none !important;
+      transition: none !important;
+    }
+
+    /* Show counters and stats at their final values */
+    [data-counter] { opacity: 1 !important; }
+
+    /* Show all lazy-hidden sections */
+    [data-animate],
+    [data-scroll-reveal] {
+      opacity: 1 !important;
+      transform: none !important;
+    }
+
+    /* Hide JS-only widgets that serve no purpose without JS */
+    .floating-whatsapp { display: none !important; }
+    .cookie-banner     { display: none !important; }
+    .back-to-top       { display: none !important; }
+
+    /* Ensure navbar links are always visible */
+    .navbar__nav { display: flex !important; }
+  </style></noscript>
+</head>
+<body>
+
+  <!-- Top Bar -->
+  <div class="top-bar">
+    <div class="container top-bar__inner">
+      <div class="top-bar__left">
+        <a href="tel:+97714700000" class="top-bar__link">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.19 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.12 1.18l3-.017a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L7.09 8.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+          +977 1 470 0000
+        </a>
+        <a href="mailto:info@besttreksnepal.com" class="top-bar__link">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          info@besttreksnepal.com
+        </a>
+      </div>
+      <div class="top-bar__right">
+        <span>🇳🇵 Official Gov. Lic #1482</span>
+        <a href="/booking.html" class="top-bar__book-btn">Book a Trek</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Main Navbar -->
+  <header class="site-header" role="banner">
+    <div class="container">
+      <nav class="navbar" aria-label="Main Navigation">
+        <a href="/" class="navbar__logo" aria-label="Best Treks Nepal">
+          <div class="navbar__logo-text">
+            Best Treks Nepal
+            <span>Adventure Awaits</span>
+          </div>
+        </a>
+
+        <ul class="navbar__nav">
+          <li class="navbar__nav-item"><a href="/" class="navbar__nav-link">Home</a></li>
+          <li class="navbar__nav-item"><a href="/destinations.html" class="navbar__nav-link">Destinations</a></li>
+          <li class="navbar__nav-item"><a href="/treks.html" class="navbar__nav-link">Trek Packages</a></li>
+          <li class="navbar__nav-item"><a href="/blog.html" class="navbar__nav-link">Blog &amp; Guides</a></li>
+          <li class="navbar__nav-item"><a href="/about.html" class="navbar__nav-link">About Us</a></li>
+          <li class="navbar__nav-item"><a href="/contact.html" class="navbar__nav-link">Contact</a></li>
+        </ul>
+
+        <div class="navbar__actions">
+          <button class="navbar__search-btn" data-search-open aria-label="Search site">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+          </button>
+          <a href="/booking.html" class="btn btn--primary navbar__cta">Book Now</a>
+          <button class="navbar__hamburger" aria-label="Toggle navigation menu" aria-expanded="false">
+            <span></span><span></span><span></span>
+          </button>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="faq-hero">
+    <div class="container">
+      <div class="faq-hero__badge">💡 24/7 Expert Advice &amp; Field Guide Knowledge</div>
+      <h1 style="font-size:clamp(2rem, 4vw, 3rem); font-weight:800; margin:0 0 1rem; color:#ffffff;">
+        Frequently Asked Questions
+      </h1>
+      <p style="max-width:680px; margin:0 auto; font-size:1.1rem; color:#cbd5e1; line-height:1.6;">
+        Everything you need to know about trekking permits, high-altitude acclimatization, tea houses, seasonal weather, packing, and booking safety in Nepal.
+      </p>
+
+      <div class="faq-search-box">
+        <svg class="faq-search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+        <input type="text" id="faqLiveSearch" class="faq-search-input" placeholder="Search questions (e.g. permits, altitude, Lukla, deposit)..." oninput="filterFaqs()">
+      </div>
+    </div>
+  </section>
+
+  <!-- Main FAQ Content -->
+  <main class="faq-layout">
+    
+    <!-- Sticky Navigation Sidebar -->
+    <aside>
+      <nav class="faq-nav-sticky" aria-label="FAQ Categories">
+        <div class="faq-nav-title">Categories</div>
+        <a href="#permits-regulations" class="faq-nav-link active">📜 Permits &amp; Rules</a>
+        <a href="#safety-altitude" class="faq-nav-link">🏔️ Safety &amp; Altitude</a>
+        <a href="#logistics-teahouse" class="faq-nav-link">🏡 Tea Houses &amp; Food</a>
+        <a href="#season-weather" class="faq-nav-link">⛅ Best Seasons &amp; Flights</a>
+        <a href="#booking-payments" class="faq-nav-link">💳 Booking &amp; Deposits</a>
+      </nav>
+    </aside>
+
+    <!-- FAQ Questions List -->
+    <section>
+      
+      <!-- Category 1 -->
+      <div class="faq-category" id="permits-regulations">
+        <h2 class="faq-category-title"><span>📜</span> Permits &amp; Mandatory Guide Rules</h2>
+        
+        <details class="faq-accordion-item" open>
+          <summary class="faq-accordion-summary">
+            <span>Do I need a licensed guide to trek in Nepal in 2026/2027?</span>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+          </summary>
+          <div class="faq-accordion-body">
+            Yes. Under official regulations enforced by the Nepal Tourism Board (NTB) and TAAN, solo independent trekking is prohibited across all national parks and conservation areas. Trekkers must trek with a licensed guide provided by a government-registered trekking agency like Best Treks Nepal.
+          </div>
+        </details>
+
+        <details class="faq-accordion-item">
+          <summary class="faq-accordion-summary">
+            <span>What permits are required for Restricted Areas (Mustang, Manaslu, Dolpo)?</span>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+          </summary>
+          <div class="faq-accordion-body">
+            Restricted areas require special Restricted Area Permits (RAP) issued by the Department of Immigration. They require a minimum of 2 trekkers and a certified guide. For Upper Mustang, the fee is $500 USD for the first 10 days; Manaslu is $100 USD/week (Autumn) or $75 USD/week (Spring). All permit processing is fully handled by our team.
+          </div>
+        </details>
+      </div>
+
+      <!-- Category 2 -->
+      <div class="faq-category" id="safety-altitude">
+        <h2 class="faq-category-title"><span>🏔️</span> Health, Altitude Sickness &amp; Insurance</h2>
+        
+        <details class="faq-accordion-item">
+          <summary class="faq-accordion-summary">
+            <span>How do you prevent Acute Mountain Sickness (AMS)?</span>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+          </summary>
+          <div class="faq-accordion-body">
+            We follow strict UIAA and Himalayan Rescue Association (HRA) acclimatization guidelines: gradual elevation gains (under 400-500m net sleeping ascent per day above 3,000m), built-in rest and acclimatization days at Namche Bazaar / Dingboche / Manang, 3-4 liters of hydration daily, and daily pulse oximeter monitoring by our Lead Sherpa.
+          </div>
+        </details>
+
+        <details class="faq-accordion-item">
+          <summary class="faq-accordion-summary">
+            <span>What type of travel insurance is mandatory?</span>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+          </summary>
+          <div class="faq-accordion-body">
+            Your travel insurance policy must explicitly cover high-altitude trekking up to the maximum elevation of your trip (e.g. 5,500m for EBC / Kala Patthar; 5,416m for Thorong La) including emergency helicopter evacuation and inpatient hospitalization.
+          </div>
+        </details>
+      </div>
+
+      <!-- Category 3 -->
+      <div class="faq-category" id="logistics-teahouse">
+        <h2 class="faq-category-title"><span>🏡</span> Tea Houses, Food &amp; Charging</h2>
+        
+        <details class="faq-accordion-item">
+          <summary class="faq-accordion-summary">
+            <span>What are tea house accommodations like?</span>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+          </summary>
+          <div class="faq-accordion-body">
+            Tea houses are family-run mountain lodges. Rooms are twin-share with wooden beds, clean mattresses, pillows, and blankets. Attached bathrooms are available in lower valleys (Lukla, Namche, Pokhara), transitioning to shared facilities higher up. Dining halls are warmed by central stoves in the evenings.
+          </div>
+        </details>
+
+        <details class="faq-accordion-item">
+          <summary class="faq-accordion-summary">
+            <span>What meals are provided on the trek?</span>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+          </summary>
+          <div class="faq-accordion-body">
+            Breakfast, lunch, and dinner are included on all our guided packages. You choose from hearty tea house menus including Dal Bhat (rice, lentil soup, curry - unlimited refills), Sherpa noodle soup (Thukpa), Momos, pasta, oatmeal, eggs, toast, and hot herbal teas.
+          </div>
+        </details>
+      </div>
+
+      <!-- Category 4 -->
+      <div class="faq-category" id="season-weather">
+        <h2 class="faq-category-title"><span>⛅</span> Best Seasons &amp; Flights</h2>
+        
+        <details class="faq-accordion-item">
+          <summary class="faq-accordion-summary">
+            <span>When is the best time of year to trek in Nepal?</span>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+          </summary>
+          <div class="faq-accordion-body">
+            The two prime trekking windows are <strong>Autumn (September to November)</strong> for crystal-clear mountain panoramas and dry conditions, and <strong>Spring (March to May)</strong> for blooming rhododendron forests and warmer temperatures. Upper Mustang and Upper Dolpo are also exceptional in summer (June to August) as rain-shadow zones.
+          </div>
+        </details>
+      </div>
+
+      <!-- Category 5 -->
+      <div class="faq-category" id="booking-payments">
+        <h2 class="faq-category-title"><span>💳</span> Booking, Deposits &amp; Guarantee</h2>
+        
+        <details class="faq-accordion-item">
+          <summary class="faq-accordion-summary">
+            <span>How much deposit is required to secure my trek?</span>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+          </summary>
+          <div class="faq-accordion-body">
+            A 15% deposit confirms your booking, flight reservations, and permit clearances. The remaining 85% balance is conveniently payable upon arrival at our Kathmandu headquarters via credit card or cash (USD/EUR/GBP/NPR).
+          </div>
+        </details>
+      </div>
+
+    </section>
+  </main>
+
+  <!-- Standard Brand Footer -->
+  <footer class="footer" role="contentinfo" aria-label="Site footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__brand">
+          <a class="footer__logo" href="/" aria-label="Best Treks Nepal — Homepage">
+            <div class="footer__logo-text">
+              Best Treks Nepal
+              <span>Adventure Awaits</span>
+            </div>
+          </a>
+          <p class="footer__desc">
+            Nepal's trusted trekking company, crafting unforgettable Himalayan adventures since 2009. Licensed, expert, and passionate about Nepal.
+          </p>
+          <div class="footer__social">
+            <a href="https://www.facebook.com/besttreksnepal" class="footer__social-link" aria-label="Facebook"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>
+            <a href="https://www.instagram.com/besttreksnepal" class="footer__social-link" aria-label="Instagram"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/></svg></a>
+          </div>
+        </div>
+
+        <div>
+          <h3 class="footer__col-title">Quick Links</h3>
+          <nav class="footer__links">
+            <a href="/" class="footer__link">Home</a>
+            <a href="/about.html" class="footer__link">About Us</a>
+            <a href="/gallery.html" class="footer__link">Gallery</a>
+            <a href="/blog.html" class="footer__link">Blog &amp; Guides</a>
+            <a href="/destinations.html" class="footer__link">Destinations</a>
+            <a href="/contact.html" class="footer__link">Contact Us</a>
+            <a href="/booking.html" class="footer__link">Book a Trek</a>
+            <a href="/pages.html" class="footer__link">All Pages</a>
+          </nav>
+        </div>
+
+        <div>
+          <h3 class="footer__col-title">Trekking Regions</h3>
+          <nav class="footer__links">
+            <a href="/destinations.html#everest" class="footer__link">Everest Region</a>
+            <a href="/destinations.html#annapurna" class="footer__link">Annapurna Region</a>
+            <a href="/destinations.html#langtang" class="footer__link">Langtang Region</a>
+            <a href="/destinations.html#manaslu" class="footer__link">Manaslu Region</a>
+            <a href="/destinations.html#mustang" class="footer__link">Upper Mustang</a>
+            <a href="/destinations.html#dolpo" class="footer__link">Upper Dolpo</a>
+            <a href="/destinations.html#kanchenjunga" class="footer__link">Kanchenjunga</a>
+          </nav>
+        </div>
+
+        <div>
+          <h3 class="footer__col-title">Kathmandu Headquarters</h3>
+          <address style="font-style:normal;">
+            <div class="footer__contact-item">Bhagawati Bahal, Thamel, Kathmandu</div>
+            <div class="footer__contact-item"><a href="tel:+97714700000">+977 1 470 0000</a></div>
+            <div class="footer__contact-item"><a href="mailto:info@besttreksnepal.com">info@besttreksnepal.com</a></div>
+          </address>
+        </div>
+      </div>
+
+      <div class="footer__bottom">
+        <div class="footer__bottom-inner">
+          <p class="footer__copyright">
+            © <span data-year>2026</span> Best Treks Nepal. All rights reserved. Registered with Nepal Tourism Board (Govt. Lic. #1482).
+          </p>
+          <nav class="footer__bottom-links" aria-label="Legal links">
+            <a href="/privacy-policy.html" class="footer__bottom-link">Privacy Policy</a>
+            <a href="/terms.html" class="footer__bottom-link">Terms &amp; Conditions</a>
+            <a href="/pages.html" class="footer__bottom-link">All Pages</a>
+            <a href="/sitemap.xml" class="footer__bottom-link">Sitemap</a>
+          </nav>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <button class="back-to-top" aria-label="Scroll back to top">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="18 15 12 9 6 15"/></svg>
+  </button>
+
+  <script type="module" src="/assets/js/main.js"></script>
+  <script>
+    function filterFaqs() {
+      const q = document.getElementById('faqLiveSearch').value.toLowerCase();
+      const items = document.querySelectorAll('.faq-accordion-item');
+      items.forEach(item => {
+        const text = item.textContent.toLowerCase();
+        item.style.display = text.includes(q) ? 'block' : 'none';
+      });
+    }
+  </script>
+
+  <!-- Static fallback for no-JS environments -->
+  <noscript>
+    <style>
+      .noscript-notice{position:fixed;bottom:0;left:0;right:0;z-index:99999;
+        background:#0f5257;color:#fff;text-align:center;padding:12px 20px;
+        font-family:Inter,sans-serif;font-size:14px;font-weight:500;
+        border-top:3px solid #c8a96b;}
+      .noscript-notice a{color:#c8a96b;text-decoration:underline;}
+    </style>
+    <div class="noscript-notice">
+      ⚠️ Some interactive features (filters, search, map) require JavaScript.
+      All trek pages, content &amp; booking links work without it.
+      <a href="/contact.html">Contact us directly</a> if you need help.
+    </div>
+  </noscript>
+</body>
+</html>

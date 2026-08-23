@@ -1,0 +1,2832 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Himalayan Trek Blog — Expert Guides &amp; Travel Tips | Best Treks Nepal</title>
+  <meta name="description"
+    content="Expert trekking articles, guides, and travel tips for Nepal. Read about Everest Base Camp, Annapurna, Manaslu, permits, altitude safety, gear, and best seasons to trek.">
+  <meta name="keywords"
+    content="Nepal trekking blog, Himalayan trek guides, Everest Base Camp guide, Annapurna trekking tips, Nepal altitude sickness, trekking permits Nepal, best time to trek Nepal">
+  <link rel="canonical" href="https://besttreksnepal.com/blog.html">
+  <meta property="og:title" content="Himalayan Trek Blog — Expert Guides &amp; Travel Tips | Best Treks Nepal">
+  <meta property="og:description" content="Expert trekking articles, guides, and travel tips for Nepal. Read about Everest Base Camp, Annapurna, Manaslu, permits, altitude safety, gear, and best seasons to trek.">
+  <meta property="og:url" content="https://besttreksnepal.com/blog.html">
+  <meta property="og:type" content="website">
+  <link rel="icon" type="image/svg+xml" href="/assets/images/icons/favicon.svg">
+  <meta name="theme-color" content="#0F5257">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Inter:wght@400;500;600&family=Playfair+Display:ital,wght@1,700&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="/assets/css/style.css">
+  <style>
+    .blog-hero {
+      position: relative;
+      background-color: #071e20;
+      background-image: radial-gradient(circle at 85% 15%, rgba(200, 169, 107, 0.16) 0%, transparent 45%),
+        radial-gradient(circle at 15% 85%, rgba(15, 82, 87, 0.45) 0%, transparent 50%),
+        linear-gradient(180deg, rgba(7, 30, 32, 0.82) 0%, rgba(7, 30, 32, 0.94) 100%),
+        url('/assets/images/hero/slide-1-everest.jpg');
+      background-size: cover;
+      background-position: center center;
+      background-repeat: no-repeat;
+      padding: 5rem 0 4.5rem;
+      overflow: hidden;
+      color: #fff;
+    }
+
+    .blog-hero__grid {
+      display: grid;
+      grid-template-columns: 1.25fr 0.75fr;
+      gap: 3.5rem;
+      align-items: center;
+      position: relative;
+      z-index: 2;
+    }
+
+    .blog-hero__badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.6rem;
+      background: rgba(200, 169, 107, 0.15);
+      border: 1px solid rgba(200, 169, 107, 0.4);
+      color: #fef08a;
+      font-size: 0.78rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      padding: 0.4rem 1.2rem;
+      border-radius: 999px;
+      margin-bottom: 1.25rem;
+      backdrop-filter: blur(8px);
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+    }
+
+    .blog-hero__badge-pulse {
+      width: 8px;
+      height: 8px;
+      background-color: #eab308;
+      border-radius: 50%;
+      box-shadow: 0 0 0 0 rgba(234, 179, 8, 0.7);
+      animation: pulse-ring 2s infinite;
+    }
+
+    @keyframes pulse-ring {
+      0% {
+        box-shadow: 0 0 0 0 rgba(234, 179, 8, 0.7);
+      }
+
+      70% {
+        box-shadow: 0 0 0 8px rgba(234, 179, 8, 0);
+      }
+
+      100% {
+        box-shadow: 0 0 0 0 rgba(234, 179, 8, 0);
+      }
+    }
+
+    .blog-hero__title {
+      font-size: clamp(2.4rem, 4.5vw, 3.6rem);
+      font-weight: 800;
+      color: #ffffff;
+      line-height: 1.15;
+      margin: 0 0 1.25rem;
+      letter-spacing: -0.02em;
+    }
+
+    .blog-hero__title span {
+      background: linear-gradient(90deg, #c8a96b 0%, #fef08a 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .blog-hero__subtitle {
+      color: #cbd5e1;
+      font-size: 1.05rem;
+      line-height: 1.7;
+      margin: 0 0 2rem;
+      max-width: 620px;
+    }
+
+    /* Enhanced Search & Tags */
+    .blog-hero__search-box {
+      max-width: 600px;
+      margin-bottom: 1.25rem;
+    }
+
+    .blog-search {
+      display: flex;
+      background: rgba(255, 255, 255, 0.98);
+      border: 1px solid rgba(255, 255, 255, 0.3);
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: 0 12px 35px rgba(0, 0, 0, 0.35);
+      transition: all 0.3s ease;
+      padding: 0.3rem;
+    }
+
+    .blog-search:focus-within {
+      box-shadow: 0 12px 40px rgba(200, 169, 107, 0.35);
+      border-color: #c8a96b;
+    }
+
+    .blog-search__input {
+      flex: 1;
+      border: none;
+      padding: 0.85rem 1.2rem;
+      font-size: 0.95rem;
+      color: #0f172a;
+      outline: none;
+      background: transparent;
+      font-family: inherit;
+    }
+
+    .blog-search__btn {
+      background: linear-gradient(135deg, #0f5257 0%, #0b3c40 100%);
+      color: #fff;
+      border: none;
+      padding: 0.85rem 1.6rem;
+      border-radius: 12px;
+      font-weight: 700;
+      font-size: 0.9rem;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      transition: all 0.25s ease;
+    }
+
+    .blog-search__btn:hover {
+      background: linear-gradient(135deg, #136970 0%, #0f5257 100%);
+      transform: translateY(-1px);
+    }
+
+    .blog-hero__tags {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      flex-wrap: wrap;
+    }
+
+    .blog-hero__tags-label {
+      font-size: 0.76rem;
+      font-weight: 700;
+      color: #94a3b8;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    .blog-hero__tag {
+      background: rgba(255, 255, 255, 0.1);
+      border: 1px solid rgba(255, 255, 255, 0.18);
+      color: #e2e8f0;
+      font-size: 0.78rem;
+      font-weight: 600;
+      padding: 0.3rem 0.85rem;
+      border-radius: 999px;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.3rem;
+      backdrop-filter: blur(4px);
+    }
+
+    .blog-hero__tag:hover {
+      background: rgba(200, 169, 107, 0.25);
+      border-color: rgba(200, 169, 107, 0.6);
+      color: #fef08a;
+      transform: translateY(-1px);
+    }
+
+    /* Hero Spotlight Card (Right Column Rotator) */
+    .blog-hero__spotlight {
+      position: relative;
+    }
+
+    .blog-spotlight-rotator {
+      position: relative;
+      min-height: 380px;
+    }
+
+    .blog-spotlight-card {
+      background: rgba(15, 82, 87, 0.35);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border: 1px solid rgba(255, 255, 255, 0.18);
+      border-radius: 24px;
+      overflow: hidden;
+      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.4);
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      opacity: 0;
+      visibility: hidden;
+      transform: translateY(12px) scale(0.98);
+      transition: opacity 0.5s cubic-bezier(0.4, 0, 0.2, 1),
+        transform 0.5s cubic-bezier(0.4, 0, 0.2, 1),
+        visibility 0.5s step-end;
+      pointer-events: none;
+      z-index: 1;
+    }
+
+    .blog-spotlight-card.is-active {
+      position: relative;
+      opacity: 1;
+      visibility: visible;
+      transform: translateY(0) scale(1);
+      transition: opacity 0.5s cubic-bezier(0.4, 0, 0.2, 1),
+        transform 0.5s cubic-bezier(0.4, 0, 0.2, 1),
+        visibility 0s step-start;
+      pointer-events: auto;
+      z-index: 2;
+    }
+
+    .blog-spotlight-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 25px 60px rgba(0, 0, 0, 0.5), 0 0 30px rgba(200, 169, 107, 0.2);
+      border-color: rgba(200, 169, 107, 0.45);
+    }
+
+    .blog-spotlight-nav {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+      margin-top: 1.25rem;
+    }
+
+    .blog-spotlight-dot {
+      width: 22px;
+      height: 4px;
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.22);
+      border: none;
+      cursor: pointer;
+      padding: 0;
+      transition: all 0.3s ease;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .blog-spotlight-dot:hover {
+      background: rgba(255, 255, 255, 0.5);
+    }
+
+    .blog-spotlight-dot.is-active {
+      background: rgba(200, 169, 107, 0.4);
+      width: 38px;
+    }
+
+    .blog-spotlight-dot.is-active::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      background: linear-gradient(90deg, #c8a96b, #fef08a);
+      animation: progress-timer 3s linear forwards;
+    }
+
+    .blog-spotlight-rotator.is-paused .blog-spotlight-dot.is-active::after {
+      animation-play-state: paused;
+    }
+
+    @keyframes progress-timer {
+      0% {
+        transform: translateX(-100%);
+      }
+
+      100% {
+        transform: translateX(0);
+      }
+    }
+
+    .blog-spotlight-card__img-wrap {
+      position: relative;
+      height: 210px;
+      overflow: hidden;
+    }
+
+    .blog-spotlight-card__img-wrap img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.6s ease;
+    }
+
+    .blog-spotlight-card:hover .blog-spotlight-card__img-wrap img {
+      transform: scale(1.05);
+    }
+
+    .blog-spotlight-card__badge {
+      position: absolute;
+      top: 1rem;
+      left: 1rem;
+      background: rgba(7, 30, 32, 0.85);
+      border: 1px solid rgba(200, 169, 107, 0.5);
+      color: #c8a96b;
+      font-size: 0.7rem;
+      font-weight: 800;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      padding: 0.3rem 0.8rem;
+      border-radius: 999px;
+      backdrop-filter: blur(6px);
+    }
+
+    .blog-spotlight-card__body {
+      padding: 1.5rem;
+    }
+
+    .blog-spotlight-card__meta {
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+      font-size: 0.76rem;
+      color: #94a3b8;
+      margin-bottom: 0.6rem;
+    }
+
+    .blog-spotlight-card__title {
+      font-size: 1.15rem;
+      font-weight: 700;
+      color: #ffffff;
+      line-height: 1.4;
+      margin: 0 0 0.8rem;
+    }
+
+    .blog-spotlight-card__title a {
+      color: inherit;
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+
+    .blog-spotlight-card__title a:hover {
+      color: #fef08a;
+    }
+
+    .blog-spotlight-card__footer {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+      padding-top: 0.85rem;
+      margin-top: 0.5rem;
+    }
+
+    .blog-spotlight-card__author {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .blog-spotlight-card__avatar {
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, #c8a96b, #0f5257);
+      color: #fff;
+      font-weight: 800;
+      font-size: 0.7rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+    }
+
+    .blog-spotlight-card__author-info {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .blog-spotlight-card__author-name {
+      font-size: 0.78rem;
+      font-weight: 700;
+      color: #f8fafc;
+    }
+
+    .blog-spotlight-card__author-role {
+      font-size: 0.68rem;
+      color: #94a3b8;
+    }
+
+    .blog-spotlight-card__btn {
+      color: #c8a96b;
+      font-size: 0.82rem;
+      font-weight: 700;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.3rem;
+      transition: color 0.2s;
+    }
+
+    .blog-spotlight-card__btn:hover {
+      color: #fef08a;
+    }
+
+    /* Floating Stats Bar */
+    .blog-stats-bar {
+      display: flex;
+      align-items: center;
+      justify-content: space-around;
+      gap: 1.5rem;
+      margin-top: 3.5rem;
+      background: rgba(7, 30, 32, 0.65);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      border-radius: 20px;
+      padding: 1.2rem 2rem;
+      flex-wrap: wrap;
+      position: relative;
+      z-index: 2;
+    }
+
+    .blog-stat {
+      text-align: center;
+      display: flex;
+      align-items: center;
+      gap: 0.8rem;
+    }
+
+    .blog-stat__icon {
+      font-size: 1.5rem;
+      opacity: 0.9;
+    }
+
+    .blog-stat__num {
+      font-size: 1.4rem;
+      font-weight: 800;
+      color: #ffffff;
+      line-height: 1.1;
+      display: block;
+    }
+
+    .blog-stat__label {
+      font-size: 0.74rem;
+      color: #94a3b8;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      font-weight: 600;
+    }
+
+    .blog-stat-divider {
+      width: 1px;
+      height: 32px;
+      background: rgba(255, 255, 255, 0.12);
+    }
+
+    @media (max-width: 992px) {
+      .blog-hero__grid {
+        grid-template-columns: 1fr;
+        gap: 2.5rem;
+      }
+
+      .blog-spotlight-card {
+        max-width: 540px;
+        margin: 0 auto;
+      }
+    }
+
+    @media (max-width: 640px) {
+      .blog-hero {
+        padding: 3.5rem 0 3rem;
+      }
+
+      .blog-stats-bar {
+        gap: 1rem;
+        padding: 1rem;
+      }
+
+      .blog-stat-divider {
+        display: none;
+      }
+
+      .blog-stat {
+        flex-direction: column;
+        gap: 0.3rem;
+        flex: 1 1 40%;
+      }
+    }
+
+    .blog-filter-tabs {
+      display: flex;
+      flex-wrap: wrap;
+      gap: .65rem;
+      justify-content: center;
+      padding: 2rem 0 0
+    }
+
+    .blog-tab {
+      background: #f1f5f9;
+      color: #475569;
+      border: 1.5px solid transparent;
+      border-radius: 999px;
+      padding: .45rem 1.15rem;
+      font-size: .82rem;
+      font-weight: 700;
+      cursor: pointer;
+      transition: all .2s;
+      white-space: nowrap;
+      font-family: inherit
+    }
+
+    .blog-tab:hover,
+    .blog-tab.is-active {
+      background: #0f5257;
+      color: #fff;
+      border-color: #0f5257
+    }
+
+    .featured-article {
+      background: #fff;
+      border-radius: 24px;
+      overflow: hidden;
+      box-shadow: 0 6px 30px rgba(15, 82, 87, .1);
+      display: grid;
+      grid-template-columns: 1.1fr 1fr;
+      min-height: 420px;
+      margin: 3rem 0
+    }
+
+    .featured-article__image {
+      position: relative;
+      overflow: hidden
+    }
+
+    .featured-article__image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform .5s
+    }
+
+    .featured-article:hover .featured-article__image img {
+      transform: scale(1.03)
+    }
+
+    .featured-article__badge {
+      position: absolute;
+      top: 1.25rem;
+      left: 1.25rem;
+      background: #c8a96b;
+      color: #0f172a;
+      font-size: .72rem;
+      font-weight: 800;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+      padding: .35rem .9rem;
+      border-radius: 999px
+    }
+
+    .featured-article__featured-pill {
+      position: absolute;
+      top: 1.25rem;
+      right: 1.25rem;
+      background: rgba(15, 82, 87, .9);
+      color: #fff;
+      font-size: .7rem;
+      font-weight: 700;
+      padding: .3rem .8rem;
+      border-radius: 999px;
+      backdrop-filter: blur(6px)
+    }
+
+    .featured-article__body {
+      padding: 2.5rem 2.25rem 2rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: center
+    }
+
+    .featured-article__meta {
+      display: flex;
+      align-items: center;
+      gap: .75rem;
+      font-size: .78rem;
+      color: #64748b;
+      margin-bottom: 1rem;
+      flex-wrap: wrap
+    }
+
+    .featured-article__meta-dot {
+      color: #cbd5e1
+    }
+
+    .featured-article__title {
+      font-size: 1.55rem;
+      font-weight: 800;
+      color: #0f172a;
+      line-height: 1.3;
+      margin: 0 0 1rem
+    }
+
+    .featured-article__title a {
+      text-decoration: none;
+      color: inherit;
+      transition: color .2s
+    }
+
+    .featured-article__title a:hover {
+      color: #0f5257
+    }
+
+    .featured-article__excerpt {
+      font-size: .95rem;
+      color: #475569;
+      line-height: 1.65;
+      margin: 0 0 1.5rem
+    }
+
+    .featured-article__author {
+      display: flex;
+      align-items: center;
+      gap: .75rem;
+      border-top: 1px solid #f1f5f9;
+      padding-top: 1.25rem;
+      flex-wrap: wrap
+    }
+
+    .author-avatar {
+      width: 42px;
+      height: 42px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+      font-weight: 800;
+      font-size: .82rem;
+      flex-shrink: 0
+    }
+
+    .author-info__name {
+      font-size: .88rem;
+      font-weight: 700;
+      color: #0f172a
+    }
+
+    .author-info__role {
+      font-size: .76rem;
+      color: #64748b
+    }
+
+    .featured-article__read-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: .4rem;
+      background: #0f5257;
+      color: #fff;
+      font-size: .88rem;
+      font-weight: 700;
+      padding: .7rem 1.4rem;
+      border-radius: 10px;
+      text-decoration: none;
+      transition: background .2s
+    }
+
+    .featured-article__read-btn:hover {
+      background: #0b3c40
+    }
+
+    .blog-articles-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2rem
+    }
+
+    .blog-article-card {
+      background: #fff;
+      border-radius: 20px;
+      overflow: hidden;
+      box-shadow: 0 4px 20px rgba(15, 82, 87, .07);
+      display: flex;
+      flex-direction: column;
+      transition: transform .3s, box-shadow .3s
+    }
+
+    .blog-article-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 12px 35px rgba(15, 82, 87, .14)
+    }
+
+    .blog-article-card__image {
+      aspect-ratio: 16/10;
+      overflow: hidden;
+      position: relative
+    }
+
+    .blog-article-card__image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform .45s
+    }
+
+    .blog-article-card:hover .blog-article-card__image img {
+      transform: scale(1.06)
+    }
+
+    .blog-article-card__category {
+      position: absolute;
+      top: 1rem;
+      left: 1rem;
+      font-size: .68rem;
+      font-weight: 800;
+      letter-spacing: .06em;
+      text-transform: uppercase;
+      padding: .28rem .7rem;
+      border-radius: 999px;
+      color: #fff
+    }
+
+    .blog-article-card__body {
+      padding: 1.4rem 1.5rem 1.5rem;
+      display: flex;
+      flex-direction: column;
+      flex: 1
+    }
+
+    .blog-article-card__meta {
+      font-size: .76rem;
+      color: #94a3b8;
+      margin-bottom: .7rem;
+      display: flex;
+      gap: .5rem;
+      align-items: center
+    }
+
+    .blog-article-card__title {
+      font-size: 1rem;
+      font-weight: 700;
+      color: #0f172a;
+      line-height: 1.45;
+      margin: 0 0 .65rem
+    }
+
+    .blog-article-card__title a {
+      text-decoration: none;
+      color: inherit;
+      transition: color .2s
+    }
+
+    .blog-article-card__title a:hover {
+      color: #0f5257
+    }
+
+    .blog-article-card__excerpt {
+      font-size: .86rem;
+      color: #64748b;
+      line-height: 1.6;
+      flex: 1;
+      margin: 0 0 1.1rem
+    }
+
+    .blog-article-card__footer {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-top: 1px solid #f1f5f9;
+      padding-top: .85rem
+    }
+
+    .blog-article-card__author {
+      display: flex;
+      align-items: center;
+      gap: .5rem
+    }
+
+    .blog-article-card__author-avatar {
+      width: 28px;
+      height: 28px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+      font-weight: 800;
+      font-size: .65rem;
+      flex-shrink: 0
+    }
+
+    .blog-article-card__author-name {
+      font-size: .78rem;
+      color: #475569;
+      font-weight: 600
+    }
+
+    .blog-article-card__read-link {
+      font-size: .78rem;
+      font-weight: 700;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: .2rem;
+      transition: gap .2s
+    }
+
+    .blog-article-card__read-link:hover {
+      gap: .4rem
+    }
+
+    .blog-layout {
+      display: grid;
+      grid-template-columns: 1fr 300px;
+      gap: 3rem;
+      align-items: start
+    }
+
+    .blog-sidebar {
+      position: sticky;
+      top: 100px
+    }
+
+    .sidebar-widget {
+      background: #fff;
+      border-radius: 20px;
+      padding: 1.75rem;
+      box-shadow: 0 4px 20px rgba(15, 82, 87, .07);
+      margin-bottom: 1.75rem
+    }
+
+    .sidebar-widget__title {
+      font-size: .8rem;
+      font-weight: 800;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+      color: #0f5257;
+      margin: 0 0 1.25rem;
+      padding-bottom: .75rem;
+      border-bottom: 2px solid #e2e8f0
+    }
+
+    .sidebar-article-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem
+    }
+
+    .sidebar-article-item {
+      display: flex;
+      gap: .9rem;
+      align-items: flex-start
+    }
+
+    .sidebar-article-num {
+      flex-shrink: 0;
+      width: 26px;
+      height: 26px;
+      border-radius: 8px;
+      background: rgba(15, 82, 87, .1);
+      color: #0f5257;
+      font-size: .75rem;
+      font-weight: 800;
+      display: flex;
+      align-items: center;
+      justify-content: center
+    }
+
+    .sidebar-article-title {
+      font-size: .84rem;
+      font-weight: 600;
+      color: #0f172a;
+      line-height: 1.4;
+      text-decoration: none;
+      transition: color .2s
+    }
+
+    .sidebar-article-title:hover {
+      color: #0f5257
+    }
+
+    .sidebar-article-meta {
+      font-size: .72rem;
+      color: #94a3b8;
+      margin-top: .2rem
+    }
+
+    .tag-cloud {
+      display: flex;
+      flex-wrap: wrap;
+      gap: .5rem
+    }
+
+    .tag-pill {
+      background: #f1f5f9;
+      color: #475569;
+      font-size: .76rem;
+      font-weight: 600;
+      padding: .32rem .8rem;
+      border-radius: 999px;
+      text-decoration: none;
+      transition: all .2s
+    }
+
+    .tag-pill:hover {
+      background: #0f5257;
+      color: #fff
+    }
+
+    .newsletter-widget {
+      background: linear-gradient(135deg, #0f5257, #0b3c40);
+      color: #fff;
+      border-radius: 20px;
+      padding: 2rem;
+      margin-bottom: 1.75rem
+    }
+
+    .newsletter-widget__title {
+      font-size: 1.1rem;
+      font-weight: 800;
+      margin: 0 0 .5rem
+    }
+
+    .newsletter-widget__desc {
+      font-size: .84rem;
+      color: #94a3b8;
+      margin: 0 0 1.25rem;
+      line-height: 1.55
+    }
+
+    .newsletter-form {
+      display: flex;
+      flex-direction: column;
+      gap: .65rem
+    }
+
+    .newsletter-input {
+      border: none;
+      border-radius: 10px;
+      padding: .75rem 1rem;
+      font-family: inherit;
+      font-size: .88rem;
+      color: #0f172a;
+      outline: none
+    }
+
+    .newsletter-btn {
+      background: #eab308;
+      color: #0f172a;
+      border: none;
+      border-radius: 10px;
+      padding: .75rem;
+      font-weight: 800;
+      font-size: .9rem;
+      cursor: pointer;
+      transition: background .2s;
+      font-family: inherit
+    }
+
+    .newsletter-btn:hover {
+      background: #ca8a04
+    }
+
+    .load-more-wrap {
+      text-align: center;
+      margin-top: 3rem
+    }
+
+    .load-more-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: .6rem;
+      background: #fff;
+      color: #0f5257;
+      font-weight: 700;
+      font-size: .95rem;
+      padding: .9rem 2rem;
+      border-radius: 12px;
+      border: 2px solid #0f5257;
+      text-decoration: none;
+      transition: all .25s
+    }
+
+    .load-more-btn:hover {
+      background: #0f5257;
+      color: #fff
+    }
+
+    .blog-section-label {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      margin-bottom: 2rem
+    }
+
+    .blog-section-label__text {
+      font-size: .78rem;
+      font-weight: 800;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+      color: #0f5257;
+      white-space: nowrap
+    }
+
+    .blog-section-label__line {
+      flex: 1;
+      height: 1px;
+      background: #e2e8f0
+    }
+
+    @media(max-width:1100px) {
+      .blog-layout {
+        grid-template-columns: 1fr
+      }
+
+      .blog-sidebar {
+        position: static
+      }
+
+      .blog-articles-grid {
+        grid-template-columns: 1fr 1fr
+      }
+
+      .featured-article {
+        grid-template-columns: 1fr
+      }
+
+      .featured-article__image {
+        min-height: 280px
+      }
+    }
+
+    @media(max-width:680px) {
+      .blog-articles-grid {
+        grid-template-columns: 1fr
+      }
+
+      .blog-stats-bar {
+        gap: 1.5rem
+      }
+    }
+  </style>
+  <!-- No-JS: reveal all content hidden by JS animation system -->
+  <noscript><style>
+    /* Hide the page loader overlay */
+    .page-loader { display: none !important; }
+    body { visibility: visible !important; opacity: 1 !important; }
+
+    /* Reveal all scroll-animated elements immediately */
+    .reveal,
+    .reveal.reveal--left,
+    .reveal.reveal--right,
+    .reveal.reveal--scale {
+      opacity: 1 !important;
+      transform: none !important;
+      transition: none !important;
+    }
+
+    /* Show counters and stats at their final values */
+    [data-counter] { opacity: 1 !important; }
+
+    /* Show all lazy-hidden sections */
+    [data-animate],
+    [data-scroll-reveal] {
+      opacity: 1 !important;
+      transform: none !important;
+    }
+
+    /* Hide JS-only widgets that serve no purpose without JS */
+    .floating-whatsapp { display: none !important; }
+    .cookie-banner     { display: none !important; }
+    .back-to-top       { display: none !important; }
+
+    /* Ensure navbar links are always visible */
+    .navbar__nav { display: flex !important; }
+  </style></noscript>
+</head>
+
+<body class="page-blog">
+  <!-- Skip Navigation (Accessibility) -->
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  <!-- Page Loader -->
+  <div class="page-loader" aria-hidden="true">
+    <div class="page-loader__logo">
+      <svg viewBox="0 0 120 40" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <text x="0" y="30" font-family="Poppins, sans-serif" font-weight="700" font-size="18" fill="#FCEEDF">Best
+          Treks</text>
+        <text x="0" y="42" font-family="Poppins, sans-serif" font-weight="400" font-size="10" fill="#7FB3B0"
+          letter-spacing="3">NEPAL</text>
+      </svg>
+    </div>
+  </div>
+
+  <!-- Scroll Progress Bar -->
+  <div class="navbar-progress" id="navbar-progress" aria-hidden="true"></div>
+
+  <!-- =====================================================================
+       SITE HEADER (sticky wrapper: top-bar + navbar)
+       ===================================================================== -->
+  <div class="site-header">
+
+    <!-- =====================================================================
+       TOP INFORMATION BAR
+       ===================================================================== -->
+    <div class="top-bar" role="banner" aria-label="Contact information">
+      <div class="container">
+        <div class="top-bar__inner">
+          <div class="top-bar__contacts">
+            <a href="tel:+97714700000" aria-label="Call us at +977 1 470 0000">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path
+                  d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.79 19.79 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z" />
+              </svg>
+              +977 1 470 0000
+            </a>
+            <a href="mailto:info@besttreksnepal.com" aria-label="Email us at info@besttreksnepal.com">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+                <polyline points="22,6 12,13 2,6" />
+              </svg>
+              info@besttreksnepal.com
+            </a>
+          </div>
+          <div class="top-bar__social" aria-label="Follow us on social media">
+            <a href="https://www.facebook.com/besttreksnepal" aria-label="Facebook">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" />
+              </svg>
+            </a>
+            <a href="https://www.instagram.com/besttreksnepal" aria-label="Instagram">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
+                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" />
+              </svg>
+            </a>
+            <a href="https://wa.me/9771234567890" aria-label="WhatsApp">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                <path
+                  d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z" />
+                <path
+                  d="M12 2C6.477 2 2 6.477 2 12c0 1.89.525 3.66 1.438 5.168L2 22l4.832-1.438A9.946 9.946 0 0 0 12 22c5.523 0 10-4.477 10-10S17.523 2 12 2z" />
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- =====================================================================
+       NAVBAR
+       ===================================================================== -->
+    <header>
+      <nav class="navbar" aria-label="Main navigation" id="navbar">
+        <div class="container">
+          <div class="navbar__inner">
+
+            <!-- Logo -->
+            <a class="navbar__logo" href="/" aria-label="Best Treks Nepal — Homepage">
+              <div class="navbar__logo-text">
+                Best Treks Nepal
+                <span>Adventure Awaits</span>
+              </div>
+            </a>
+
+            <!-- Desktop Navigation -->
+            <ul class="navbar__nav" role="list">
+
+              <li class="navbar__nav-item">
+                <a href="/" class="navbar__nav-link" aria-current="page">Home</a>
+              </li>
+
+              <!-- Destinations — Mega Menu -->
+              <li class="navbar__nav-item">
+                <a href="destinations.html" class="navbar__nav-link" aria-haspopup="true" aria-expanded="false">
+                  Destinations
+                  <svg class="navbar__caret" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2.5" aria-hidden="true">
+                    <polyline points="6 9 12 15 18 9" />
+                  </svg>
+                </a>
+                <div class="mega-menu" role="region" aria-label="Destinations menu">
+                  <div class="mega-menu__header">
+                    <div class="mega-menu__header-title-wrap">
+                      <span class="mega-menu__header-icon">🏔️</span>
+                      <span class="mega-menu__header-label">Himalayan Regions &amp; Travel Guides</span>
+                    </div>
+                    <a href="/destinations.html" class="mega-menu__header-link">
+                      Explore All Destinations
+                      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="none" stroke="currentColor"
+                        stroke-width="2" width="12" height="12" aria-hidden="true">
+                        <path d="M3 8h10M9 4l4 4-4 4" />
+                      </svg>
+                    </a>
+                  </div>
+                  <div class="mega-menu__body">
+                    <div class="mega-menu__layout">
+
+                      <!-- Left Column: 6 Destination Regions Grid -->
+                      <div class="mega-menu__regions-section">
+                        <div class="mega-menu__section-title">Featured Trekking Regions</div>
+                        <div class="mega-menu__grid">
+
+                          <a href="/destinations.html#everest" class="mega-menu__item">
+                            <div class="mega-menu__item-thumb">
+                              <img src="/assets/images/destinations/everest.jpg" alt="Everest Region" loading="lazy">
+                              <span class="mega-menu__item-alt-tag">5,545m</span>
+                            </div>
+                            <div class="mega-menu__item-info">
+                              <div class="mega-menu__item-title">Everest Region</div>
+                              <div class="mega-menu__item-desc">World's highest peaks &amp; Sherpa culture</div>
+                            </div>
+                          </a>
+
+                          <a href="/destinations.html#annapurna" class="mega-menu__item">
+                            <div class="mega-menu__item-thumb">
+                              <img src="/assets/images/destinations/annapurna.jpg" alt="Annapurna Region"
+                                loading="lazy">
+                              <span class="mega-menu__item-alt-tag">5,416m</span>
+                            </div>
+                            <div class="mega-menu__item-info">
+                              <div class="mega-menu__item-title">Annapurna Region</div>
+                              <div class="mega-menu__item-desc">Diverse alpine trails &amp; sanctuaries</div>
+                            </div>
+                          </a>
+
+                          <a href="/destinations.html#langtang" class="mega-menu__item">
+                            <div class="mega-menu__item-thumb">
+                              <img src="/assets/images/destinations/langtang.jpg" alt="Langtang Region" loading="lazy">
+                              <span class="mega-menu__item-alt-tag">4,773m</span>
+                            </div>
+                            <div class="mega-menu__item-info">
+                              <div class="mega-menu__item-title">Langtang Valley</div>
+                              <div class="mega-menu__item-desc">Glaciers &amp; Tamang heritage</div>
+                            </div>
+                          </a>
+
+                          <a href="/destinations.html#manaslu" class="mega-menu__item">
+                            <div class="mega-menu__item-thumb">
+                              <img src="/assets/images/destinations/manaslu.jpg" alt="Manaslu Region" loading="lazy">
+                              <span class="mega-menu__item-alt-tag">5,106m</span>
+                            </div>
+                            <div class="mega-menu__item-info">
+                              <div class="mega-menu__item-title">Manaslu Circuit</div>
+                              <div class="mega-menu__item-desc">Uncrowded high-altitude circuit</div>
+                            </div>
+                          </a>
+
+                          <a href="/destinations.html#mustang" class="mega-menu__item">
+                            <div class="mega-menu__item-thumb">
+                              <img src="/assets/images/destinations/mustang.jpg" alt="Upper Mustang" loading="lazy">
+                              <span class="mega-menu__item-alt-tag">3,840m</span>
+                            </div>
+                            <div class="mega-menu__item-info">
+                              <div class="mega-menu__item-title">Upper Mustang</div>
+                              <div class="mega-menu__item-desc">Forbidden walled Buddhist kingdom</div>
+                            </div>
+                          </a>
+
+                          <a href="/destinations.html#dolpo" class="mega-menu__item">
+                            <div class="mega-menu__item-thumb">
+                              <img src="/assets/images/destinations/dolpo.jpg" alt="Dolpo Region" loading="lazy">
+                              <span class="mega-menu__item-alt-tag">5,350m</span>
+                            </div>
+                            <div class="mega-menu__item-info">
+                              <div class="mega-menu__item-title">Dolpo &amp; Far-West</div>
+                              <div class="mega-menu__item-desc">Remote turquoise lake wilderness</div>
+                            </div>
+                          </a>
+
+                        </div>
+                      </div>
+
+                      <!-- Right Column: Regional Articles & Guides -->
+                      <div class="mega-menu__articles-section">
+                        <div class="mega-menu__section-title">
+                          <span>📰 Regional Guides &amp; Articles</span>
+                        </div>
+                        <div class="mega-menu__articles-list">
+
+                          <a href="/blog/everest-base-camp-packing-list.html" class="mega-menu__article-card">
+                            <div class="mega-menu__article-tag mega-menu__article-tag--everest">Everest Guide</div>
+                            <h4 class="mega-menu__article-title">Everest Base Camp Altitude &amp; Packing List</h4>
+                            <span class="mega-menu__article-meta">⏱️ 8 min read · Gear &amp; Altitude</span>
+                          </a>
+
+                          <a href="/blog/best-time-trek-nepal.html" class="mega-menu__article-card">
+                            <div class="mega-menu__article-tag mega-menu__article-tag--annapurna">Annapurna Guide</div>
+                            <h4 class="mega-menu__article-title">Best Time to Trek: Weather &amp; Seasons</h4>
+                            <span class="mega-menu__article-meta">⏱️ 6 min read · Spring vs. Autumn</span>
+                          </a>
+
+                          <a href="/blog/nepal-trekking-permits.html" class="mega-menu__article-card">
+                            <div class="mega-menu__article-tag mega-menu__article-tag--permits">Permits Guide</div>
+                            <h4 class="mega-menu__article-title">Nepal Trekking Permits &amp; Clearances 2026</h4>
+                            <span class="mega-menu__article-meta">⏱️ 7 min read · TIMS &amp; Restricted Areas</span>
+                          </a>
+
+                        </div>
+
+                        <!-- Featured Trip Help Banner -->
+                        <div class="mega-menu__promo-banner">
+                          <div class="mega-menu__promo-text">Unsure which region fits your goals?</div>
+                          <a href="/contact.html" class="mega-menu__promo-btn">Ask a Sherpa Guide →</a>
+                        </div>
+                      </div>
+
+                    </div>
+                  </div>
+                </div>
+              </li>
+
+              <!-- Trek Packages dropdown -->
+              <li class="navbar__nav-item">
+                <a href="/treks.html" class="navbar__nav-link">Trek Packages</a>
+              </li>
+
+              <li class="navbar__nav-item">
+                <a href="/blog.html" class="navbar__nav-link">Blog</a>
+              </li>
+
+              <li class="navbar__nav-item">
+                <a href="/about.html" class="navbar__nav-link">About</a>
+              </li>
+
+              <li class="navbar__nav-item">
+                <a href="/contact.html" class="navbar__nav-link">Contact</a>
+              </li>
+            </ul>
+
+            <!-- Navbar Actions -->
+            <div class="navbar__actions">
+              <button class="navbar__search-btn" aria-label="Open search" data-search-open type="button">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                  stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <circle cx="11" cy="11" r="8" />
+                  <line x1="21" y1="21" x2="16.65" y2="16.65" />
+                </svg>
+              </button>
+              <a href="/booking.html" class="btn btn--primary btn--sm" aria-label="Book a trek">
+                Book a Trek
+              </a>
+            </div>
+
+            <!-- Mobile Hamburger -->
+            <button class="navbar__hamburger" aria-label="Open navigation menu" aria-expanded="false"
+              aria-controls="mobile-menu" type="button">
+              <span></span>
+              <span></span>
+              <span></span>
+            </button>
+
+          </div>
+        </div>
+      </nav>
+    </header>
+
+  </div><!-- /.site-header -->
+
+  <!-- Mobile Menu Overlay -->
+  <div class="mobile-menu-overlay" aria-hidden="true"></div>
+
+  <!-- Mobile Menu Panel -->
+  <div class="mobile-menu" id="mobile-menu" role="dialog" aria-modal="true" aria-label="Navigation menu"
+    aria-hidden="true">
+    <div class="mobile-menu__header">
+      <span class="navbar__logo-text" aria-hidden="true">Best Treks Nepal</span>
+      <button class="mobile-menu__close" aria-label="Close navigation menu" type="button">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+          stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <line x1="18" y1="6" x2="6" y2="18" />
+          <line x1="6" y1="6" x2="18" y2="18" />
+        </svg>
+      </button>
+    </div>
+    <nav class="mobile-menu__nav" aria-label="Mobile navigation">
+      <a href="/" class="mobile-menu__link">Home</a>
+      <a href="/about.html" class="mobile-menu__link">About</a>
+      <a href="/blog.html" class="mobile-menu__link">Blog</a>
+      <a href="/gallery.html" class="mobile-menu__link">Gallery</a>
+      <a href="/contact.html" class="mobile-menu__link">Contact</a>
+      <div class="mobile-menu__group-title">Destinations</div>
+      <a href="/destinations/everest.html" class="mobile-menu__sub-link">Everest Region</a>
+      <a href="/destinations/annapurna.html" class="mobile-menu__sub-link">Annapurna Region</a>
+      <a href="/destinations/langtang.html" class="mobile-menu__sub-link">Langtang Region</a>
+      <a href="/destinations/manaslu.html" class="mobile-menu__sub-link">Manaslu Region</a>
+      <a href="/destinations/mustang.html" class="mobile-menu__sub-link">Mustang</a>
+      <a href="/destinations/dolpo.html" class="mobile-menu__sub-link">Dolpo</a>
+      <a href="/destinations/kanchenjunga.html" class="mobile-menu__sub-link">Kanchenjunga</a>
+      <div class="mobile-menu__group-title">Popular Treks</div>
+      <a href="/treks/everest-base-camp.html" class="mobile-menu__sub-link">Everest Base Camp</a>
+      <a href="/treks/annapurna-circuit.html" class="mobile-menu__sub-link">Annapurna Circuit</a>
+      <a href="/treks/manaslu-circuit.html" class="mobile-menu__sub-link">Manaslu Circuit</a>
+      <a href="/treks/gokyo-lakes.html" class="mobile-menu__sub-link">Gokyo Lakes</a>
+      <a href="/treks/upper-mustang.html" class="mobile-menu__sub-link">Upper Mustang</a>
+    </nav>
+    <div class="mobile-menu__footer">
+      <a href="/booking.html" class="btn btn--primary btn--full">Book a Trek</a>
+      <a href="tel:+97714700000" class="btn btn--secondary btn--full">Call Us Now</a>
+    </div>
+  </div>
+
+  <!-- Search Modal -->
+  <div class="search-modal" role="dialog" aria-modal="true" aria-label="Search treks and destinations"
+    aria-hidden="true">
+    <div class="search-modal__inner">
+      <div class="search-modal__bar">
+        <div class="search-modal__icon" aria-hidden="true">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="11" cy="11" r="8" />
+            <line x1="21" y1="21" x2="16.65" y2="16.65" />
+          </svg>
+        </div>
+        <input class="search-modal__input" type="search" placeholder="Search treks, destinations…"
+          aria-label="Search treks and destinations" autocomplete="off" data-search-input aria-controls="search-results"
+          aria-expanded="false">
+        <button class="btn btn--sm btn--secondary" data-search-close aria-label="Close search"
+          type="button">ESC</button>
+      </div>
+      <div class="search-modal__results" id="search-results" role="listbox" aria-label="Search results" hidden></div>
+    </div>
+  </div>
+  <main id="main-content">
+
+    <!-- HERO -->
+    <section class="blog-hero" aria-label="Blog Hero">
+      <div class="container">
+        <div class="blog-hero__grid">
+          <!-- Left Content Column -->
+          <div class="blog-hero__content">
+            <div class="blog-hero__badge">
+              <span class="blog-hero__badge-pulse"></span>
+              <span>🔥 2026/2027 Field Reports &amp; Expedition Guides</span>
+            </div>
+            <h1 class="blog-hero__title">
+              Insider Wisdom &amp; <span>Sherpa Guides</span> from the Himalayas
+            </h1>
+            <p class="blog-hero__subtitle">
+              In-depth route breakdowns, elevation safety protocols, permit advisories, and gear checklists curated by
+              certified Everest &amp; Annapurna expedition leads.
+            </p>
+
+            <!-- Search Input Box -->
+            <div class="blog-hero__search-box">
+              <div class="blog-search" role="search">
+                <input class="blog-search__input" type="search" id="hero-blog-search"
+                  placeholder="Search guides, routes, permits (e.g. EBC, altitude)..."
+                  aria-label="Search blog articles">
+                <button class="blog-search__btn" type="button" id="hero-search-btn" aria-label="Search">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="11" cy="11" r="8" />
+                    <line x1="21" y1="21" x2="16.65" y2="16.65" />
+                  </svg>
+                  Search
+                </button>
+              </div>
+            </div>
+
+            <!-- Trending Topics Tag List -->
+            <div class="blog-hero__tags">
+              <span class="blog-hero__tags-label">Trending Topics:</span>
+              <button class="blog-hero__tag" type="button" data-tag="Everest Base Camp">🔥 Everest</button>
+              <button class="blog-hero__tag" type="button" data-tag="Permits">📜 Permits 2026</button>
+              <button class="blog-hero__tag" type="button" data-tag="Packing List">🥾 Gear Checklists</button>
+              <button class="blog-hero__tag" type="button" data-tag="Altitude">🏔️ Altitude Safety</button>
+              <button class="blog-hero__tag" type="button" data-tag="Seasons">🌤️ Best Seasons</button>
+            </div>
+          </div>
+
+          <!-- Right Column Spotlight Glass Card Rotator (Auto-changes every 3s) -->
+          <div class="blog-hero__spotlight">
+            <div class="blog-spotlight-rotator" id="spotlight-rotator">
+
+              <!-- Card 1: Everest Base Camp -->
+              <div class="blog-spotlight-card is-active" data-index="0">
+                <div class="blog-spotlight-card__img-wrap">
+                  <img src="/assets/images/destinations/everest.jpg" alt="Everest Base Camp Trek 2026 Guide"
+                    loading="eager">
+                  <span class="blog-spotlight-card__badge">⭐ Sherpa Choice</span>
+                </div>
+                <div class="blog-spotlight-card__body">
+                  <div class="blog-spotlight-card__meta">
+                    <span>⏱️ 12 Min Read</span>
+                    <span>•</span>
+                    <span>August 2026 Edition</span>
+                  </div>
+                  <h3 class="blog-spotlight-card__title">
+                    <a href="/blog/everest-base-camp-complete-guide.html">Everest Base Camp 2026: Complete Survival
+                      &amp; Route Guide</a>
+                  </h3>
+                  <div class="blog-spotlight-card__footer">
+                    <div class="blog-spotlight-card__author">
+                      <div class="blog-spotlight-card__avatar">PS</div>
+                      <div class="blog-spotlight-card__author-info">
+                        <span class="blog-spotlight-card__author-name">Pasang Sherpa</span>
+                        <span class="blog-spotlight-card__author-role">Lead Expedition Guide</span>
+                      </div>
+                    </div>
+                    <a href="/blog/everest-base-camp-complete-guide.html" class="blog-spotlight-card__btn">Read Guide
+                      →</a>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Card 2: Annapurna Circuit -->
+              <div class="blog-spotlight-card" data-index="1">
+                <div class="blog-spotlight-card__img-wrap">
+                  <img src="/assets/images/destinations/annapurna.jpg" alt="Annapurna Circuit 2026 Guide"
+                    loading="lazy">
+                  <span class="blog-spotlight-card__badge" style="border-color:#a855f7;color:#c084fc;">⛰️ Classic
+                    Circuit</span>
+                </div>
+                <div class="blog-spotlight-card__body">
+                  <div class="blog-spotlight-card__meta">
+                    <span>⏱️ 9 Min Read</span>
+                    <span>•</span>
+                    <span>Thorong La 5,416m</span>
+                  </div>
+                  <h3 class="blog-spotlight-card__title">
+                    <a href="/blog/annapurna-circuit-complete-guide.html">Annapurna Circuit Trek 2026: 14-Day Route
+                      &amp; Teahouses</a>
+                  </h3>
+                  <div class="blog-spotlight-card__footer">
+                    <div class="blog-spotlight-card__author">
+                      <div class="blog-spotlight-card__avatar"
+                        style="background:linear-gradient(135deg,#7c3aed,#a855f7);">RL</div>
+                      <div class="blog-spotlight-card__author-info">
+                        <span class="blog-spotlight-card__author-name">Raj Lama</span>
+                        <span class="blog-spotlight-card__author-role">Annapurna Trek Specialist</span>
+                      </div>
+                    </div>
+                    <a href="/blog/annapurna-circuit-complete-guide.html" class="blog-spotlight-card__btn">Read Guide
+                      →</a>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Card 3: Manaslu Circuit -->
+              <div class="blog-spotlight-card" data-index="2">
+                <div class="blog-spotlight-card__img-wrap">
+                  <img src="/assets/images/destinations/manaslu.jpg" alt="Manaslu Circuit Trek Guide" loading="lazy">
+                  <span class="blog-spotlight-card__badge" style="border-color:#f59e0b;color:#fbbf24;">🧭 Restricted
+                    Area</span>
+                </div>
+                <div class="blog-spotlight-card__body">
+                  <div class="blog-spotlight-card__meta">
+                    <span>⏱️ 8 Min Read</span>
+                    <span>•</span>
+                    <span>Larke Pass 5,106m</span>
+                  </div>
+                  <h3 class="blog-spotlight-card__title">
+                    <a href="/blog/manaslu-circuit-trek-guide.html">Manaslu Circuit Guide 2026: High-Pass Wild Trail
+                      Breakdown</a>
+                  </h3>
+                  <div class="blog-spotlight-card__footer">
+                    <div class="blog-spotlight-card__author">
+                      <div class="blog-spotlight-card__avatar"
+                        style="background:linear-gradient(135deg,#d97706,#f59e0b);">KG</div>
+                      <div class="blog-spotlight-card__author-info">
+                        <span class="blog-spotlight-card__author-name">Karma Gurung</span>
+                        <span class="blog-spotlight-card__author-role">Manaslu Circuit Guide</span>
+                      </div>
+                    </div>
+                    <a href="/blog/manaslu-circuit-trek-guide.html" class="blog-spotlight-card__btn">Read Guide →</a>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Card 4: Langtang Valley -->
+              <div class="blog-spotlight-card" data-index="3">
+                <div class="blog-spotlight-card__img-wrap">
+                  <img src="/assets/images/destinations/langtang.jpg" alt="Langtang Valley Trek Guide" loading="lazy">
+                  <span class="blog-spotlight-card__badge" style="border-color:#10b981;color:#34d399;">🌿 Glacier
+                    Valley</span>
+                </div>
+                <div class="blog-spotlight-card__body">
+                  <div class="blog-spotlight-card__meta">
+                    <span>⏱️ 8 Min Read</span>
+                    <span>•</span>
+                    <span>Kyanjin Ri 4,773m</span>
+                  </div>
+                  <h3 class="blog-spotlight-card__title">
+                    <a href="/blog/langtang-valley-trek-guide.html">Langtang Valley 2026: Tamang Heritage &amp;
+                      Glacier Viewpoint</a>
+                  </h3>
+                  <div class="blog-spotlight-card__footer">
+                    <div class="blog-spotlight-card__author">
+                      <div class="blog-spotlight-card__avatar"
+                        style="background:linear-gradient(135deg,#059669,#10b981);">MT</div>
+                      <div class="blog-spotlight-card__author-info">
+                        <span class="blog-spotlight-card__author-name">Mingma Tamang</span>
+                        <span class="blog-spotlight-card__author-role">Langtang Regional Expert</span>
+                      </div>
+                    </div>
+                    <a href="/blog/langtang-valley-trek-guide.html" class="blog-spotlight-card__btn">Read Guide
+                      →</a>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Card 5: Upper Mustang -->
+              <div class="blog-spotlight-card" data-index="4">
+                <div class="blog-spotlight-card__img-wrap">
+                  <img src="/assets/images/destinations/mustang.jpg" alt="Upper Mustang Trek Guide" loading="lazy">
+                  <span class="blog-spotlight-card__badge" style="border-color:#b45309;color:#fef08a;">🏛️ Walled
+                    Kingdom</span>
+                </div>
+                <div class="blog-spotlight-card__body">
+                  <div class="blog-spotlight-card__meta">
+                    <span>⏱️ 12 Min Read</span>
+                    <span>•</span>
+                    <span>$500 RAP &amp; Caves</span>
+                  </div>
+                  <h3 class="blog-spotlight-card__title">
+                    <a href="/blog/upper-mustang-trek-guide.html">Upper Mustang 2026: Lo Manthang &amp;
+                      2,000-Yr Sky Caves</a>
+                  </h3>
+                  <div class="blog-spotlight-card__footer">
+                    <div class="blog-spotlight-card__author">
+                      <div class="blog-spotlight-card__avatar"
+                        style="background:linear-gradient(135deg,#b45309,#d97706);">TG</div>
+                      <div class="blog-spotlight-card__author-info">
+                        <span class="blog-spotlight-card__author-name">Tenzing Gurung</span>
+                        <span class="blog-spotlight-card__author-role">Mustang Lead Guide</span>
+                      </div>
+                    </div>
+                    <a href="/blog/upper-mustang-trek-guide.html" class="blog-spotlight-card__btn">Read Guide
+                      →</a>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Card 6: Nepal Trekking Permits -->
+              <div class="blog-spotlight-card" data-index="5">
+                <div class="blog-spotlight-card__img-wrap">
+                  <img src="/assets/images/destinations/everest.jpg" alt="Nepal Trekking Permits 2026" loading="lazy">
+                  <span class="blog-spotlight-card__badge" style="border-color:#0284c7;color:#7dd3fc;">📜 Official
+                    Rules</span>
+                </div>
+                <div class="blog-spotlight-card__body">
+                  <div class="blog-spotlight-card__meta">
+                    <span>⏱️ 15 Min Read</span>
+                    <span>•</span>
+                    <span>All 33 Routes &amp; Calculator</span>
+                  </div>
+                  <h3 class="blog-spotlight-card__title">
+                    <a href="/blog/nepal-trekking-permits.html">Nepal Trekking Permits 2026: TIMS, ACAP &amp;
+                      $500 RAP Guide</a>
+                  </h3>
+                  <div class="blog-spotlight-card__footer">
+                    <div class="blog-spotlight-card__author">
+                      <div class="blog-spotlight-card__avatar"
+                        style="background:linear-gradient(135deg,#0f5257,#059669);">PS</div>
+                      <div class="blog-spotlight-card__author-info">
+                        <span class="blog-spotlight-card__author-name">Pasang Sherpa</span>
+                        <span class="blog-spotlight-card__author-role">Head of Clearances</span>
+                      </div>
+                    </div>
+                    <a href="/blog/nepal-trekking-permits.html" class="blog-spotlight-card__btn">Read Guide
+                      →</a>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+
+            <!-- Spotlight Nav Dots with 3-Second Progress Bar -->
+            <div class="blog-spotlight-nav" id="spotlight-nav" aria-label="Spotlight article slides">
+              <button class="blog-spotlight-dot is-active" type="button" data-slide="0"
+                aria-label="Everest Base Camp Guide"></button>
+              <button class="blog-spotlight-dot" type="button" data-slide="1"
+                aria-label="Annapurna Circuit Guide"></button>
+              <button class="blog-spotlight-dot" type="button" data-slide="2"
+                aria-label="Manaslu Circuit Guide"></button>
+              <button class="blog-spotlight-dot" type="button" data-slide="3"
+                aria-label="Langtang Valley Guide"></button>
+              <button class="blog-spotlight-dot" type="button" data-slide="4" aria-label="Upper Mustang Guide"></button>
+              <button class="blog-spotlight-dot" type="button" data-slide="5"
+                aria-label="Nepal Trekking Permits Guide"></button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Bottom Credibility & Stats Bar -->
+        <div class="blog-stats-bar">
+          <div class="blog-stat">
+            <span class="blog-stat__icon">📚</span>
+            <div>
+              <span class="blog-stat__num">50+</span>
+              <span class="blog-stat__label">Expert Guides</span>
+            </div>
+          </div>
+          <div class="blog-stat-divider"></div>
+          <div class="blog-stat">
+            <span class="blog-stat__icon">🏔️</span>
+            <div>
+              <span class="blog-stat__num">8</span>
+              <span class="blog-stat__label">Sherpa Authors</span>
+            </div>
+          </div>
+          <div class="blog-stat-divider"></div>
+          <div class="blog-stat">
+            <span class="blog-stat__icon">📍</span>
+            <div>
+              <span class="blog-stat__num">7</span>
+              <span class="blog-stat__label">Himalayan Regions</span>
+            </div>
+          </div>
+          <div class="blog-stat-divider"></div>
+          <div class="blog-stat">
+            <span class="blog-stat__icon">⚡</span>
+            <div>
+              <span class="blog-stat__num">2026</span>
+              <span class="blog-stat__label">Verified Season Data</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CATEGORY TABS -->
+    <section class="section section--white" style="padding-top:2rem;padding-bottom:0;">
+      <div class="container">
+        <div class="blog-filter-tabs" role="tablist" aria-label="Blog categories">
+          <button class="blog-tab is-active" data-blog-cat="all" type="button">All Articles</button>
+          <button class="blog-tab" data-blog-cat="trek-guides" type="button">Trek Guides</button>
+          <button class="blog-tab" data-blog-cat="packages" type="button">Trek Packages</button>
+          <button class="blog-tab" data-blog-cat="permits" type="button">Permits &amp; Rules</button>
+          <button class="blog-tab" data-blog-cat="safety" type="button">Safety &amp; Health</button>
+          <button class="blog-tab" data-blog-cat="gear" type="button">Gear &amp; Packing</button>
+          <button class="blog-tab" data-blog-cat="seasons" type="button">Best Seasons</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ARTICLES + SIDEBAR -->
+    <section class="section section--white" aria-labelledby="blog-articles-heading">
+      <div class="container">
+        <h2 class="sr-only" id="blog-articles-heading">Blog Articles</h2>
+
+        <!-- Featured Article -->
+        <div class="blog-section-label">
+          <span class="blog-section-label__text">⭐ Featured Article</span>
+          <span class="blog-section-label__line"></span>
+        </div>
+        <article class="featured-article reveal" data-cat="trek-guides">
+          <div class="featured-article__image">
+            <img src="/assets/images/destinations/everest.jpg" alt="Everest Base Camp Complete Guide 2026"
+              loading="eager">
+            <span class="featured-article__badge">EVEREST REGION</span>
+            <span class="featured-article__featured-pill">⭐ Editor's Pick</span>
+          </div>
+          <div class="featured-article__body">
+            <div class="featured-article__meta">
+              <span>⏱ 12 min read</span><span class="featured-article__meta-dot">·</span><span>Trek Guide</span><span
+                class="featured-article__meta-dot">·</span><span>August 2026</span>
+            </div>
+            <h2 class="featured-article__title"><a href="/blog/everest-base-camp-complete-guide.html">Everest Base Camp
+                Trek 2026: The Definitive Guide — Itinerary, Cost, Difficulty &amp; What No One Tells You</a></h2>
+            <p class="featured-article__excerpt">From the chaotic streets of Namche Bazaar to the silent grandeur of
+              Khumbu Glacier — our lead Sherpa guide reveals the day-by-day EBC breakdown, exact teahouse costs at
+              5,000m, altitude acclimatization science, and the common mistakes that ruin first-time treks.</p>
+            <div class="featured-article__author">
+              <div class="author-avatar" style="background:linear-gradient(135deg,#0f5257,#1a7a82);">PS</div>
+              <div class="author-info">
+                <div class="author-info__name">Pasang Sherpa</div>
+                <div class="author-info__role">Lead Sherpa Guide · 20+ EBC Summits</div>
+              </div>
+              <a href="/blog/everest-base-camp-complete-guide.html" class="featured-article__read-btn"
+                style="margin-left:auto;">Read Full Guide <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14"
+                  viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"
+                  stroke-linejoin="round">
+                  <line x1="5" y1="12" x2="19" y2="12" />
+                  <polyline points="12 5 19 12 12 19" />
+                </svg></a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Grid + Sidebar -->
+        <div class="blog-layout">
+          <div>
+            <!-- TREK GUIDES -->
+            <div class="blog-section-label" style="margin-top:3rem;"><span class="blog-section-label__text">🥾 Trek
+                Guides</span><span class="blog-section-label__line"></span></div>
+            <div class="blog-articles-grid reveal-group">
+              <article class="blog-article-card reveal" data-cat="trek-guides">
+                <div class="blog-article-card__image"><img src="/assets/images/destinations/everest.jpg"
+                    alt="Everest Base Camp Trek Guide" loading="lazy"><span class="blog-article-card__category"
+                    style="background:#0f5257;">EVEREST</span></div>
+                <div class="blog-article-card__body">
+                  <div class="blog-article-card__meta">⏱ 12 min read <span>·</span> Trek Guide</div>
+                  <h3 class="blog-article-card__title"><a href="/blog/everest-base-camp-complete-guide.html">Everest Base
+                      Camp Trek 2026: The Definitive 14-Day Guide &amp; Cost Breakdown</a></h3>
+                  <p class="blog-article-card__excerpt">From Namche Bazaar acclimatization to Kala Patthar (5,545m) sunrise —
+                    complete daily stages, teahouse expenses, and altitude safety protocols.</p>
+                  <div class="blog-article-card__footer">
+                    <div class="blog-article-card__author">
+                      <div class="blog-article-card__author-avatar"
+                        style="background:linear-gradient(135deg,#0f5257,#1a7a82);">PS</div><span
+                        class="blog-article-card__author-name">Pasang Sherpa</span>
+                    </div>
+                    <a href="/blog/everest-base-camp-complete-guide.html" class="blog-article-card__read-link"
+                      style="color:#0f5257;">Read More →</a>
+                  </div>
+                </div>
+              </article>
+              <article class="blog-article-card reveal" data-cat="trek-guides">
+                <div class="blog-article-card__image"><img src="/assets/images/destinations/annapurna.jpg"
+                    alt="Annapurna Circuit Trek Guide" loading="lazy"><span class="blog-article-card__category"
+                    style="background:#7c3aed;">ANNAPURNA</span></div>
+                <div class="blog-article-card__body">
+                  <div class="blog-article-card__meta">⏱ 9 min read <span>·</span> Trek Guide</div>
+                  <h3 class="blog-article-card__title"><a href="/blog/annapurna-circuit-complete-guide.html">Annapurna
+                      Circuit Trek 2026: 14-Day Itinerary, Best Teahouses &amp; Thorong La Pass Tips</a></h3>
+                  <p class="blog-article-card__excerpt">Nepal's greatest loop trek — crossing Thorong La Pass at 5,416m.
+                    Daily stages, lodge upgrades, and weather windows for spring and autumn.</p>
+                  <div class="blog-article-card__footer">
+                    <div class="blog-article-card__author">
+                      <div class="blog-article-card__author-avatar"
+                        style="background:linear-gradient(135deg,#7c3aed,#a855f7);">RL</div><span
+                        class="blog-article-card__author-name">Raj Lama</span>
+                    </div>
+                    <a href="/blog/annapurna-circuit-complete-guide.html" class="blog-article-card__read-link"
+                      style="color:#7c3aed;">Read More →</a>
+                  </div>
+                </div>
+              </article>
+              <article class="blog-article-card reveal" data-cat="trek-guides">
+                <div class="blog-article-card__image"><img src="/assets/images/destinations/manaslu.jpg"
+                    alt="Manaslu Circuit Trek Guide" loading="lazy"><span class="blog-article-card__category"
+                    style="background:#d97706;">MANASLU</span></div>
+                <div class="blog-article-card__body">
+                  <div class="blog-article-card__meta">⏱ 8 min read <span>·</span> Trek Guide</div>
+                  <h3 class="blog-article-card__title"><a href="/blog/manaslu-circuit-trek-guide.html">Manaslu Circuit
+                      Trek Guide 2026: Nepal's Most Dramatic High-Pass Circuit</a></h3>
+                  <p class="blog-article-card__excerpt">Nepal's most remote restricted-area trek — 15-day route from
+                    Soti Khola to Larke Pass 5,106m and back.</p>
+                  <div class="blog-article-card__footer">
+                    <div class="blog-article-card__author">
+                      <div class="blog-article-card__author-avatar"
+                        style="background:linear-gradient(135deg,#d97706,#f59e0b);">KG</div><span
+                        class="blog-article-card__author-name">Karma Gurung</span>
+                    </div>
+                    <a href="/blog/manaslu-circuit-trek-guide.html" class="blog-article-card__read-link"
+                      style="color:#d97706;">Read More →</a>
+                  </div>
+                </div>
+              </article>
+              <article class="blog-article-card reveal" data-cat="trek-guides">
+                <div class="blog-article-card__image"><img src="/assets/images/destinations/langtang.jpg"
+                    alt="Langtang Valley Trek Guide" loading="lazy"><span class="blog-article-card__category"
+                    style="background:#059669;">LANGTANG</span></div>
+                <div class="blog-article-card__body">
+                  <div class="blog-article-card__meta">⏱ 8 min read <span>·</span> Trek Guide</div>
+                  <h3 class="blog-article-card__title"><a href="/blog/langtang-valley-trek-guide.html">Langtang Valley
+                      Trek 2026: The Definitive Guide — Kyanjin Ri (4,773m) &amp; Glaciers</a></h3>
+                  <p class="blog-article-card__excerpt">8-day complete route breakdown, 4,773m Kyanjin Ri viewpoints,
+                    Swiss yak cheese factory, teahouse costs, and zero-flight-delay roadmap.</p>
+                  <div class="blog-article-card__footer">
+                    <div class="blog-article-card__author">
+                      <div class="blog-article-card__author-avatar"
+                        style="background:linear-gradient(135deg,#059669,#10b981);">MT</div><span
+                        class="blog-article-card__author-name">Mingma Tamang</span>
+                    </div>
+                    <a href="/blog/langtang-valley-trek-guide.html" class="blog-article-card__read-link"
+                      style="color:#059669;">Read More →</a>
+                  </div>
+                </div>
+              </article>
+              <article class="blog-article-card reveal" data-cat="trek-guides">
+                <div class="blog-article-card__image"><img src="/assets/images/destinations/mustang.jpg"
+                    alt="Upper Mustang Trek Guide" loading="lazy"><span class="blog-article-card__category"
+                    style="background:#b45309;">MUSTANG</span></div>
+                <div class="blog-article-card__body">
+                  <div class="blog-article-card__meta">⏱ 12 min read <span>·</span> Restricted Area</div>
+                  <h3 class="blog-article-card__title"><a href="/blog/upper-mustang-trek-guide.html">Upper Mustang
+                      Trek 2026: The Definitive Guide — Lo Manthang &amp; $500 RAP</a></h3>
+                  <p class="blog-article-card__excerpt">Explore the 15th-century walled kingdom of Lo Manthang (3,840m),
+                    2,000-year-old Chhoser sky caves, and summer monsoon rain-shadow trekking.</p>
+                  <div class="blog-article-card__footer">
+                    <div class="blog-article-card__author">
+                      <div class="blog-article-card__author-avatar"
+                        style="background:linear-gradient(135deg,#b45309,#d97706);">TG</div><span
+                        class="blog-article-card__author-name">Tenzing Gurung</span>
+                    </div>
+                    <a href="/blog/upper-mustang-trek-guide.html" class="blog-article-card__read-link"
+                      style="color:#b45309;">Read More →</a>
+                  </div>
+                </div>
+              </article>
+            </div>
+
+            <!-- PACKAGES -->
+            <div class="blog-section-label" style="margin-top:3rem;"><span class="blog-section-label__text">📦 Packages
+                &amp; Planning</span><span class="blog-section-label__line"></span></div>
+            <div class="blog-articles-grid reveal-group">
+              <article class="blog-article-card reveal" data-cat="packages">
+                <div class="blog-article-card__image"><img src="/assets/images/destinations/mustang.jpg"
+                    alt="Upper Mustang Trek Package" loading="lazy"><span class="blog-article-card__category"
+                    style="background:#b45309;">MUSTANG</span></div>
+                <div class="blog-article-card__body">
+                  <div class="blog-article-card__meta">⏱ 9 min read <span>·</span> Package Guide</div>
+                  <h3 class="blog-article-card__title"><a href="/blog/upper-mustang-trek-packages-guide.html">Upper
+                      Mustang Trek Packages 2026: 4 Flagship Itineraries, Costs &amp; Overland 4WD Comparison</a></h3>
+                  <p class="blog-article-card__excerpt">Compare 14-Day Classic, 10-Day 4WD Jeep Safari, and 17-Day Tiji Festival with all-inclusive $500 RAP permits and native Loba guides.</p>
+                  <div class="blog-article-card__footer">
+                    <div class="blog-article-card__author">
+                      <div class="blog-article-card__author-avatar"
+                        style="background:linear-gradient(135deg,#b45309,#d97706);">MB</div><span
+                        class="blog-article-card__author-name">Maya Bista</span>
+                    </div>
+                    <a href="/blog/upper-mustang-trek-packages-guide.html" class="blog-article-card__read-link"
+                      style="color:#b45309;">Read More →</a>
+                  </div>
+                </div>
+              </article>
+              <article class="blog-article-card reveal" data-cat="packages">
+                <div class="blog-article-card__image"><img src="/assets/images/destinations/annapurna.jpg"
+                    alt="Annapurna Circuit vs Base Camp" loading="lazy"><span class="blog-article-card__category"
+                    style="background:#7c3aed;">COMPARISON</span></div>
+                <div class="blog-article-card__body">
+                  <div class="blog-article-card__meta">⏱ 6 min read <span>·</span> Comparison Guide</div>
+                  <h3 class="blog-article-card__title"><a href="/blog/annapurna-circuit-vs-sanctuary.html">Annapurna
+                      Circuit vs. ABC: Which Package Should You Choose in 2026?</a></h3>
+                  <p class="blog-article-card__excerpt">Head-to-head comparison — difficulty, cost, highlights, best
+                    season, and which type of trekker each suits best.</p>
+                  <div class="blog-article-card__footer">
+                    <div class="blog-article-card__author">
+                      <div class="blog-article-card__author-avatar"
+                        style="background:linear-gradient(135deg,#7c3aed,#a855f7);">RL</div><span
+                        class="blog-article-card__author-name">Raj Lama</span>
+                    </div>
+                    <a href="/blog/annapurna-circuit-vs-sanctuary.html" class="blog-article-card__read-link"
+                      style="color:#7c3aed;">Read More →</a>
+                  </div>
+                </div>
+              </article>
+              <article class="blog-article-card reveal" data-cat="packages">
+                <div class="blog-article-card__image"><img src="/assets/images/destinations/langtang.jpg"
+                    alt="What is included in Nepal trek package" loading="lazy"><span
+                    class="blog-article-card__category" style="background:#0f5257;">PACKAGE GUIDE</span></div>
+                <div class="blog-article-card__body">
+                  <div class="blog-article-card__meta">⏱ 7 min read <span>·</span> Beginner's Guide</div>
+                  <h3 class="blog-article-card__title"><a href="/blog/what-is-included-trek-package.html">What's
+                      Actually Included in a Nepal All-Inclusive Trek Package? Full Breakdown</a></h3>
+                  <p class="blog-article-card__excerpt">Honest breakdown — flights, meals, guides, permits,
+                    accommodation, and the extras most agencies hide in the fine print.</p>
+                  <div class="blog-article-card__footer">
+                    <div class="blog-article-card__author">
+                      <div class="blog-article-card__author-avatar"
+                        style="background:linear-gradient(135deg,#0f5257,#1a7a82);">AT</div><span
+                        class="blog-article-card__author-name">Ang Tenzin</span>
+                    </div>
+                    <a href="/blog/what-is-included-trek-package.html" class="blog-article-card__read-link"
+                      style="color:#0f5257;">Read More →</a>
+                  </div>
+                </div>
+              </article>
+            </div>
+
+            <!-- SAFETY, PERMITS & SEASONS -->
+            <div class="blog-section-label" style="margin-top:3rem;"><span class="blog-section-label__text">🛡️ Safety,
+                Permits &amp; Seasons</span><span class="blog-section-label__line"></span></div>
+            <div class="blog-articles-grid reveal-group">
+              <article class="blog-article-card reveal" data-cat="safety">
+                <div class="blog-article-card__image"><img src="/assets/images/destinations/kanchenjunga.jpg"
+                    alt="Altitude Sickness Prevention Guide" loading="lazy"><span class="blog-article-card__category"
+                    style="background:#dc2626;">SAFETY</span></div>
+                <div class="blog-article-card__body">
+                  <div class="blog-article-card__meta">⏱ 10 min read <span>·</span> Safety Guide</div>
+                  <h3 class="blog-article-card__title"><a
+                      href="/blog/altitude-sickness-prevention-himalayan-treks.html">AMS, HACE &amp; HAPE: Altitude
+                      Sickness Guide for Himalayan Trekkers 2026</a></h3>
+                  <p class="blog-article-card__excerpt">Identifying early AMS, emergency descents, pulse oximeter
+                    readings, and our 24/7 helicopter evacuation protocol.</p>
+                  <div class="blog-article-card__footer">
+                    <div class="blog-article-card__author">
+                      <div class="blog-article-card__author-avatar"
+                        style="background:linear-gradient(135deg,#dc2626,#ef4444);">DS</div><span
+                        class="blog-article-card__author-name">Dr. Dawa Sherpa</span>
+                    </div>
+                    <a href="/blog/altitude-sickness-prevention-himalayan-treks.html"
+                      class="blog-article-card__read-link" style="color:#dc2626;">Read More →</a>
+                  </div>
+                </div>
+              </article>
+              <article class="blog-article-card reveal" data-cat="permits">
+                <div class="blog-article-card__image"><img src="/assets/images/destinations/mustang.jpg"
+                    alt="Nepal Trekking Permits 2026 Complete Guide" loading="lazy"><span
+                    class="blog-article-card__category" style="background:#0f5257;">OFFICIAL PERMITS</span></div>
+                <div class="blog-article-card__body">
+                  <div class="blog-article-card__meta">⏱ 15 min read <span>·</span> Permits Guide</div>
+                  <h3 class="blog-article-card__title"><a href="/blog/nepal-trekking-permits.html">Nepal Trekking
+                      Permits 2026: The Definitive Authority Guide — TIMS, ACAP &amp; $500 RAP Matrix</a></h3>
+                  <p class="blog-article-card__excerpt">Comprehensive 2026 fee matrix across 33 routes, Department of
+                    Immigration rules, checkpoint SOPs, and interactive permit cost calculator.</p>
+                  <div class="blog-article-card__footer">
+                    <div class="blog-article-card__author">
+                      <div class="blog-article-card__author-avatar"
+                        style="background:linear-gradient(135deg,#0f5257,#059669);">PS</div><span
+                        class="blog-article-card__author-name">Pasang Sherpa</span>
+                    </div>
+                    <a href="/blog/nepal-trekking-permits.html" class="blog-article-card__read-link"
+                      style="color:#0f5257;">Read More →</a>
+                  </div>
+                </div>
+              </article>
+              <article class="blog-article-card reveal" data-cat="gear">
+                <div class="blog-article-card__image"><img src="/assets/images/destinations/everest.jpg"
+                    alt="Nepal Trekking Gear Packing List" loading="lazy"><span class="blog-article-card__category"
+                    style="background:#0f5257;">GEAR LIST</span></div>
+                <div class="blog-article-card__body">
+                  <div class="blog-article-card__meta">⏱ 11 min read <span>·</span> Gear List</div>
+                  <h3 class="blog-article-card__title"><a href="/blog/nepal-trekking-gear-packing-list.html">The
+                      Ultimate Nepal Trekking Gear &amp; Packing List 2026 (What to Bring &amp; Skip)</a></h3>
+                  <p class="blog-article-card__excerpt">Our Sherpa team's no-nonsense gear list — the 10 must-haves,
+                    what to rent in Thamel, and items you should leave at home.</p>
+                  <div class="blog-article-card__footer">
+                    <div class="blog-article-card__author">
+                      <div class="blog-article-card__author-avatar"
+                        style="background:linear-gradient(135deg,#0f5257,#1a7a82);">PS</div><span
+                        class="blog-article-card__author-name">Pasang Sherpa</span>
+                    </div>
+                    <a href="/blog/nepal-trekking-gear-packing-list.html" class="blog-article-card__read-link"
+                      style="color:#0f5257;">Read More →</a>
+                  </div>
+                </div>
+              </article>
+              <article class="blog-article-card reveal" data-cat="gear">
+                <div class="blog-article-card__image"><img
+                    src="https://images.unsplash.com/photo-1551632811-561732d1e306?w=800&auto=format&fit=crop&q=80"
+                    alt="Everest Base Camp Packing List" loading="lazy"><span class="blog-article-card__category"
+                    style="background:#0f5257;">GEAR LIST</span></div>
+                <div class="blog-article-card__body">
+                  <div class="blog-article-card__meta">⏱ 10 min read <span>·</span> Gear List</div>
+                  <h3 class="blog-article-card__title"><a href="/blog/everest-base-camp-packing-list.html">Everest Base
+                      Camp Packing List: Essential Expedition Checklist 2026</a></h3>
+                  <p class="blog-article-card__excerpt">From thermal layering strategy to high-altitude sleeping bags
+                    and water filtration — pack smart and stay light at 5,364m.</p>
+                  <div class="blog-article-card__footer">
+                    <div class="blog-article-card__author">
+                      <div class="blog-article-card__author-avatar"
+                        style="background:linear-gradient(135deg,#0f5257,#1a7a82);">SJ</div><span
+                        class="blog-article-card__author-name">Dr. Sarah J.</span>
+                    </div>
+                    <a href="/blog/everest-base-camp-packing-list.html" class="blog-article-card__read-link"
+                      style="color:#0f5257;">Read More →</a>
+                  </div>
+                </div>
+              </article>
+              <article class="blog-article-card reveal" data-cat="seasons">
+                <div class="blog-article-card__image"><img
+                    src="https://images.unsplash.com/photo-1544735716-392fe2489ffa?w=800&auto=format&fit=crop&q=80"
+                    alt="Best Time to Trek in Nepal" loading="lazy"><span class="blog-article-card__category"
+                    style="background:#eab308;color:#0f172a;">BEST SEASONS</span></div>
+                <div class="blog-article-card__body">
+                  <div class="blog-article-card__meta">⏱ 8 min read <span>·</span> Season Guide</div>
+                  <h3 class="blog-article-card__title"><a href="/blog/best-time-trek-nepal.html">Best Time to Trek in
+                      Nepal: Complete 2026 Season &amp; Weather Guide</a></h3>
+                  <p class="blog-article-card__excerpt">Discover optimal weather windows, spring rhododendron blooms,
+                    clear autumn skies, and month-by-month breakdowns.</p>
+                  <div class="blog-article-card__footer">
+                    <div class="blog-article-card__author">
+                      <div class="blog-article-card__author-avatar"
+                        style="background:linear-gradient(135deg,#eab308,#ca8a04);color:#0f172a;">PS</div><span
+                        class="blog-article-card__author-name">Pasang Sherpa</span>
+                    </div>
+                    <a href="/blog/best-time-trek-nepal.html" class="blog-article-card__read-link"
+                      style="color:#ca8a04;">Read More →</a>
+                  </div>
+                </div>
+              </article>
+              <article class="blog-article-card reveal" data-cat="seasons">
+                <div class="blog-article-card__image"><img src="/assets/images/destinations/mustang.jpg"
+                    alt="Upper Mustang Monsoon Trekking" loading="lazy"><span class="blog-article-card__category"
+                    style="background:#eab308;color:#0f172a;">BEST SEASONS</span></div>
+                <div class="blog-article-card__body">
+                  <div class="blog-article-card__meta">⏱ 13 min read <span>·</span> Rain-Shadow Guide</div>
+                  <h3 class="blog-article-card__title"><a href="/blog/upper-mustang-dolpo-monsoon-trekking.html">Upper Mustang &amp;
+                      Dolpo: Summer Monsoon Rain-Shadow Guide</a></h3>
+                  <p class="blog-article-card__excerpt">Why trans-Himalayan desert plateaus behind main peaks offer dry,
+                    sunny, and crowd-free trekking from June through August.</p>
+                  <div class="blog-article-card__footer">
+                    <div class="blog-article-card__author">
+                      <div class="blog-article-card__author-avatar"
+                        style="background:linear-gradient(135deg,#b45309,#d97706);">MB</div><span
+                        class="blog-article-card__author-name">Maya Bista</span>
+                    </div>
+                    <a href="/blog/upper-mustang-dolpo-monsoon-trekking.html" class="blog-article-card__read-link"
+                      style="color:#b45309;">Read More →</a>
+                  </div>
+                </div>
+              </article>
+              <!-- New Article 1: Sustainable Trekking 2026 Industry Scenario -->
+              <article class="blog-article-card reveal" data-cat="safety">
+                <div class="blog-article-card__image"><img
+                    src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=800&auto=format&fit=crop&q=80"
+                    alt="Sustainable Himalayan Trekking 2026" loading="lazy"><span class="blog-article-card__category"
+                    style="background:#10b981;">SUSTAINABILITY</span></div>
+                <div class="blog-article-card__body">
+                  <div class="blog-article-card__meta">⏱ 14 min read <span>·</span> Industry Scenario 2026</div>
+                  <h3 class="blog-article-card__title"><a
+                      href="/blog/sustainable-himalayan-trekking-2026.html">Sustainable Himalayan Trekking 2026:
+                      Single-Use Plastic Bans, Eco-Teahouses &amp; Solar Micro-Grids</a></h3>
+                  <p class="blog-article-card__excerpt">Exploring Nepal's 2026 environmental mandates — Khumbu plastic
+                    bottled water bans, UV water purification protocols, and solar-powered teahouse networks.</p>
+                  <div class="blog-article-card__footer">
+                    <div class="blog-article-card__author">
+                      <div class="blog-article-card__author-avatar"
+                        style="background:linear-gradient(135deg,#059669,#10b981);">AT</div><span
+                        class="blog-article-card__author-name">Ang Tenzin</span>
+                    </div>
+                    <a href="/blog/sustainable-himalayan-trekking-2026.html" class="blog-article-card__read-link"
+                      style="color:#10b981;">Read More →</a>
+                  </div>
+                </div>
+              </article>
+              <!-- New Article 2: High-Altitude Tech & Connectivity 2026 -->
+              <article class="blog-article-card reveal" data-cat="gear">
+                <div class="blog-article-card__image"><img
+                    src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?w=800&auto=format&fit=crop&q=80"
+                    alt="High-Altitude Tech &amp; Connectivity 2026" loading="lazy"><span
+                    class="blog-article-card__category" style="background:#6366f1;">TECH &amp; SAFETY</span></div>
+                <div class="blog-article-card__body">
+                  <div class="blog-article-card__meta">⏱ 14 min read <span>·</span> Tech &amp; Safety Guide</div>
+                  <h3 class="blog-article-card__title"><a
+                      href="/blog/high-altitude-tech-connectivity-2026.html">High-Altitude Tech 2026: Starlink
+                      Teahouses, Satellite SOS Trackers &amp; Digital TIMS Checkpoints</a></h3>
+                  <p class="blog-article-card__excerpt">From high-speed satellite Wi-Fi at 5,100m Gorakshep to real-time
+                    Garmin inReach satellite tracking — how technology is reshaping Himalayan safety.</p>
+                  <div class="blog-article-card__footer">
+                    <div class="blog-article-card__author">
+                      <div class="blog-article-card__author-avatar"
+                        style="background:linear-gradient(135deg,#4f46e5,#6366f1);">DS</div><span
+                        class="blog-article-card__author-name">Dr. Dawa Sherpa</span>
+                    </div>
+                    <a href="/blog/high-altitude-tech-connectivity-2026.html" class="blog-article-card__read-link"
+                      style="color:#6366f1;">Read More →</a>
+                  </div>
+                </div>
+              </article>
+            </div>
+
+            <div class="load-more-wrap reveal">
+              <a href="#" class="load-more-btn">Load More Articles <svg xmlns="http://www.w3.org/2000/svg" width="16"
+                  height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+                  stroke-linecap="round" stroke-linejoin="round">
+                  <line x1="12" y1="5" x2="12" y2="19" />
+                  <polyline points="19 12 12 19 5 12" />
+                </svg></a>
+            </div>
+          </div>
+
+          <!-- SIDEBAR -->
+          <aside class="blog-sidebar">
+            <div class="sidebar-widget">
+              <div class="sidebar-widget__title">🔥 Most Popular</div>
+              <ol class="sidebar-article-list">
+                <li class="sidebar-article-item"><span class="sidebar-article-num">1</span>
+                  <div><a href="/blog/everest-base-camp-complete-guide.html" class="sidebar-article-title">Everest Base
+                      Camp: The Definitive 14-Day Guide 2026</a>
+                    <div class="sidebar-article-meta">12 min read · 48k views</div>
+                  </div>
+                </li>
+                <li class="sidebar-article-item"><span class="sidebar-article-num">2</span>
+                  <div><a href="/blog/nepal-trekking-permits.html" class="sidebar-article-title">Nepal Trekking Permits
+                      2026: Official TIMS &amp; RAP Guide</a>
+                    <div class="sidebar-article-meta">15 min read · 39k views</div>
+                  </div>
+                </li>
+                <li class="sidebar-article-item"><span class="sidebar-article-num">3</span>
+                  <div><a href="/blog/annapurna-circuit-complete-guide.html" class="sidebar-article-title">Annapurna
+                      Circuit 2026: Thorong La Pass &amp; Teahouses</a>
+                    <div class="sidebar-article-meta">9 min read · 27k views</div>
+                  </div>
+                </li>
+                <li class="sidebar-article-item"><span class="sidebar-article-num">4</span>
+                  <div><a href="/blog/langtang-valley-trek-guide.html" class="sidebar-article-title">Langtang Valley
+                      Trek 2026: Kyanjin Ri &amp; Glaciers</a>
+                    <div class="sidebar-article-meta">8 min read · 24k views</div>
+                  </div>
+                </li>
+                <li class="sidebar-article-item"><span class="sidebar-article-num">5</span>
+                  <div><a href="/blog/upper-mustang-trek-guide.html" class="sidebar-article-title">Upper
+                      Mustang: Nepal's Forbidden Kingdom Trek</a>
+                    <div class="sidebar-article-meta">12 min read · 19k views</div>
+                  </div>
+                </li>
+              </ol>
+            </div>
+            <div class="sidebar-widget">
+              <div class="sidebar-widget__title">🏷️ Popular Topics</div>
+              <div class="tag-cloud">
+                <a href="#" class="tag-pill">Everest Base Camp</a><a href="#" class="tag-pill">Annapurna Circuit</a><a
+                  href="#" class="tag-pill">Altitude Sickness</a><a href="#" class="tag-pill">Trekking Permits</a><a
+                  href="#" class="tag-pill">Manaslu</a><a href="#" class="tag-pill">Upper Mustang</a><a href="#"
+                  class="tag-pill">Langtang</a><a href="#" class="tag-pill">Gear List</a><a href="#"
+                  class="tag-pill">Solo Trekking</a><a href="#" class="tag-pill">Best Season</a><a href="#"
+                  class="tag-pill">Monsoon Treks</a><a href="#" class="tag-pill">Gokyo Lakes</a><a href="#"
+                  class="tag-pill">Sherpa Guides</a><a href="#" class="tag-pill">Three Passes</a><a href="#"
+                  class="tag-pill">Kanchenjunga</a>
+              </div>
+            </div>
+            <div class="newsletter-widget">
+              <div class="newsletter-widget__title">📬 Get Trek Tips</div>
+              <p class="newsletter-widget__desc">Latest trek guides, permit updates, and seasonal alerts delivered to
+                your inbox.</p>
+              <form class="newsletter-form" onsubmit="return false;">
+                <input class="newsletter-input" type="email" placeholder="Your email address"
+                  aria-label="Email address">
+                <button class="newsletter-btn" type="submit">Subscribe — It's Free</button>
+              </form>
+            </div>
+            <div class="sidebar-widget"
+              style="background:linear-gradient(135deg,#0f5257,#0b3c40);color:#fff;text-align:center;padding:2rem;">
+              <div style="font-size:2rem;margin-bottom:.75rem;">🏔️</div>
+              <h3 style="font-size:1.05rem;font-weight:800;color:#fff;margin:0 0 .5rem;">Ready to Trek Nepal?</h3>
+              <p style="font-size:.84rem;color:#94a3b8;margin:0 0 1.25rem;line-height:1.55;">Browse 12+ all-inclusive
+                packages with certified Sherpa guides.</p>
+              <a href="/treks.html"
+                style="display:block;background:#eab308;color:#0f172a;font-weight:800;padding:.75rem;border-radius:10px;text-decoration:none;font-size:.9rem;">View
+                All Packages →</a>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <section class="section cert-partners-section" aria-labelledby="cert-partners-heading">
+    <div class="container">
+
+      <!-- Section Header -->
+      <div class="section-heading section-heading--center reveal">
+        <span class="cert-partners-eyebrow">CERTIFIED &amp; TRUSTED</span>
+        <h2 class="cert-partners-title" id="cert-partners-heading">
+          Our Certifications &amp; Trusted Partnerships
+        </h2>
+        <p class="cert-partners-subtitle">
+          We are proud to be recognized by leading organizations and associations that promote responsible, safe, and
+          sustainable travel.
+        </p>
+      </div>
+
+      <!-- 12-Card Grid -->
+      <div class="cert-partners-grid reveal-group">
+
+        <!-- Card 1: Travelife Certified -->
+        <div class="cert-partner-card reveal">
+          <div class="cert-partner-logo">
+            <svg width="120" height="42" viewBox="0 0 120 42" fill="none">
+              <text x="5" y="26" font-family="'Plus Jakarta Sans', sans-serif" font-weight="700" font-size="18"
+                fill="#1e293b">Travelife</text>
+              <path d="M90 12C90 12 98 10 102 18C106 26 96 30 96 30C96 30 106 24 100 16C94 8 90 12 90 12Z"
+                fill="#10b981" />
+              <path d="M96 30C96 30 108 28 112 20" stroke="#f59e0b" stroke-width="2" stroke-linecap="round" />
+            </svg>
+          </div>
+          <h3 class="cert-partner-name">Travelife Certified</h3>
+          <span class="cert-line-indicator cert-line--green"></span>
+          <p class="cert-partner-desc">Excellence in sustainability and responsible tourism.</p>
+        </div>
+
+        <!-- Card 2: TAAN Member -->
+        <div class="cert-partner-card reveal">
+          <div class="cert-partner-logo">
+            <svg width="48" height="48" viewBox="0 0 48 48" fill="none">
+              <circle cx="24" cy="24" r="22" stroke="#059669" stroke-width="2.5" fill="#f0fdf4" />
+              <path d="M24 10L14 34H34L24 10Z" fill="#059669" />
+              <path d="M24 18L18 32H30L24 18Z" fill="#ffffff" />
+              <text x="14" y="42" font-family="sans-serif" font-weight="800" font-size="8" fill="#059669"
+                letter-spacing="1">TAAN</text>
+            </svg>
+          </div>
+          <h3 class="cert-partner-name">TAAN Member</h3>
+          <span class="cert-line-indicator cert-line--green"></span>
+          <p class="cert-partner-desc">Official member of Trekking Agencies' Association of Nepal.</p>
+        </div>
+
+        <!-- Card 3: NMA Registered -->
+        <div class="cert-partner-card reveal">
+          <div class="cert-partner-logo">
+            <svg width="48" height="48" viewBox="0 0 48 48" fill="none">
+              <path d="M24 8L38 34H10L24 8Z" fill="#1e3a8a" />
+              <circle cx="24" cy="20" r="4" fill="#dc2626" />
+              <text x="12" y="44" font-family="sans-serif" font-weight="900" font-size="10" fill="#1e3a8a"
+                letter-spacing="2">NMA</text>
+            </svg>
+          </div>
+          <h3 class="cert-partner-name">NMA Registered</h3>
+          <span class="cert-line-indicator cert-line--blue"></span>
+          <p class="cert-partner-desc">Registered with Nepal Mountaineering Association.</p>
+        </div>
+
+        <!-- Card 4: ATTA Member -->
+        <div class="cert-partner-card reveal">
+          <div class="cert-partner-logo">
+            <svg width="120" height="40" viewBox="0 0 120 40" fill="none">
+              <rect x="4" y="10" width="20" height="20" rx="4" fill="#ea580c" />
+              <circle cx="14" cy="20" r="4" stroke="#ffffff" stroke-width="2" />
+              <text x="30" y="20" font-family="sans-serif" font-weight="800" font-size="9" fill="#ea580c">MEMBER</text>
+              <text x="30" y="28" font-family="sans-serif" font-weight="700" font-size="7" fill="#1e293b">ADVENTURE
+                TRAVEL</text>
+              <text x="30" y="34" font-family="sans-serif" font-weight="600" font-size="6" fill="#64748b">TRADE
+                ASSOCIATION</text>
+            </svg>
+          </div>
+          <h3 class="cert-partner-name">ATTA Member</h3>
+          <span class="cert-line-indicator cert-line--orange"></span>
+          <p class="cert-partner-desc">Member of Adventure Travel Trade Association.</p>
+        </div>
+
+        <!-- Card 5: KEEP Member -->
+        <div class="cert-partner-card reveal">
+          <div class="cert-partner-logo">
+            <svg width="48" height="48" viewBox="0 0 48 48" fill="none">
+              <rect x="8" y="8" width="32" height="32" rx="4" fill="#1e3a8a" />
+              <path d="M24 14L32 26H16L24 14Z" fill="#10b981" />
+              <circle cx="24" cy="18" r="2.5" fill="#ffffff" />
+              <text x="11" y="45" font-family="sans-serif" font-weight="800" font-size="9" fill="#1e3a8a"
+                letter-spacing="1">KEEP</text>
+            </svg>
+          </div>
+          <h3 class="cert-partner-name">KEEP Member</h3>
+          <span class="cert-line-indicator cert-line--green"></span>
+          <p class="cert-partner-desc">Committed to responsible environmental practices.</p>
+        </div>
+
+        <!-- Card 6: Conservation Partner -->
+        <div class="cert-partner-card reveal">
+          <div class="cert-partner-logo">
+            <svg width="48" height="48" viewBox="0 0 48 48" fill="none">
+              <path d="M14 32L24 14L34 32H14Z" fill="#ea580c" />
+              <path d="M26 32L34 18L42 32H26Z" fill="#c2410c" />
+            </svg>
+          </div>
+          <h3 class="cert-partner-name">Conservation Partner</h3>
+          <span class="cert-line-indicator cert-line--orange"></span>
+          <p class="cert-partner-desc">Supporting conservation through the ATCF.</p>
+        </div>
+
+        <!-- Card 7: Nepal Tourism Board -->
+        <div class="cert-partner-card reveal">
+          <div class="cert-partner-logo">
+            <svg width="48" height="48" viewBox="0 0 48 48" fill="none">
+              <path d="M24 10L32 24H16L24 10Z" fill="#dc2626" />
+              <path d="M24 18L38 34H10L24 18Z" fill="#1e3a8a" />
+              <path d="M24 6L26 12H22L24 6Z" fill="#f59e0b" />
+              <text x="15" y="44" font-family="sans-serif" font-weight="900" font-size="9" fill="#dc2626"
+                letter-spacing="1">NTB</text>
+            </svg>
+          </div>
+          <h3 class="cert-partner-name">Nepal Tourism Board</h3>
+          <span class="cert-line-indicator cert-line--blue"></span>
+          <p class="cert-partner-desc">Officially recognized by Nepal Tourism Board.</p>
+        </div>
+
+        <!-- Card 8: Nepal Airlines -->
+        <div class="cert-partner-card reveal">
+          <div class="cert-partner-logo">
+            <svg width="48" height="48" viewBox="0 0 48 48" fill="none">
+              <path d="M8 24C14 16 20 16 24 24C28 16 34 16 40 24C34 30 28 30 24 24C20 30 14 30 8 24Z" fill="#dc2626" />
+              <path d="M22 18L24 14L26 18L24 22L22 18Z" fill="#1e3a8a" />
+            </svg>
+          </div>
+          <h3 class="cert-partner-name">Nepal Airlines</h3>
+          <span class="cert-line-indicator cert-line--red"></span>
+          <p class="cert-partner-desc">Authorized partner of Nepal Airlines.</p>
+        </div>
+
+        <!-- Card 9: NATTA Member -->
+        <div class="cert-partner-card reveal">
+          <div class="cert-partner-logo">
+            <svg width="48" height="48" viewBox="0 0 48 48" fill="none">
+              <path d="M24 8L34 26H14L24 8Z" fill="#1d4ed8" />
+              <path d="M12 30H36L24 38L12 30Z" fill="#1e40af" />
+              <text x="8" y="46" font-family="sans-serif" font-weight="900" font-size="8" fill="#1d4ed8"
+                letter-spacing="1">NATTA</text>
+            </svg>
+          </div>
+          <h3 class="cert-partner-name">NATTA Member</h3>
+          <span class="cert-line-indicator cert-line--blue"></span>
+          <p class="cert-partner-desc">Member of Nepal Association of Tour &amp; Travel Agents.</p>
+        </div>
+
+        <!-- Card 10: HAN Member -->
+        <div class="cert-partner-card reveal">
+          <div class="cert-partner-logo">
+            <svg width="100" height="40" viewBox="0 0 100 40" fill="none">
+              <text x="10" y="24" font-family="'Plus Jakarta Sans', sans-serif" font-weight="900" font-size="20"
+                fill="#1e3a8a" letter-spacing="2">HAN</text>
+              <text x="10" y="34" font-family="sans-serif" font-weight="600" font-size="6" fill="#64748b"
+                letter-spacing="0.5">HOTEL ASSOCIATION NEPAL</text>
+            </svg>
+          </div>
+          <h3 class="cert-partner-name">HAN Member</h3>
+          <span class="cert-line-indicator cert-line--blue"></span>
+          <p class="cert-partner-desc">Member of Hotel Association Nepal.</p>
+        </div>
+
+        <!-- Card 11: TURGAN Member -->
+        <div class="cert-partner-card reveal">
+          <div class="cert-partner-logo">
+            <svg width="48" height="48" viewBox="0 0 48 48" fill="none">
+              <circle cx="24" cy="22" r="16" fill="#fef08a" stroke="#15803d" stroke-width="2" />
+              <path d="M24 10L28 20H20L24 10Z" fill="#15803d" />
+              <text x="7" y="44" font-family="sans-serif" font-weight="900" font-size="8" fill="#15803d"
+                letter-spacing="1">TURGAN</text>
+            </svg>
+          </div>
+          <h3 class="cert-partner-name">TURGAN Member</h3>
+          <span class="cert-line-indicator cert-line--green"></span>
+          <p class="cert-partner-desc">Member of Tourist Guide Association of Nepal.</p>
+        </div>
+
+        <!-- Card 12: Sustainable Travel -->
+        <div class="cert-partner-card reveal">
+          <div class="cert-partner-logo">
+            <svg width="110" height="40" viewBox="0 0 110 40" fill="none">
+              <circle cx="16" cy="20" r="10" stroke="#0284c7" stroke-width="2.5" />
+              <circle cx="16" cy="20" r="4" fill="#0284c7" />
+              <text x="32" y="18" font-family="sans-serif" font-weight="800" font-size="7" fill="#0284c7"
+                letter-spacing="0.5">SUSTAINABLE</text>
+              <text x="32" y="26" font-family="sans-serif" font-weight="700" font-size="6" fill="#0369a1"
+                letter-spacing="0.5">TRAVEL INTERNATIONAL</text>
+            </svg>
+          </div>
+          <h3 class="cert-partner-name">Sustainable Travel</h3>
+          <span class="cert-line-indicator cert-line--green"></span>
+          <p class="cert-partner-desc">Partnering for a sustainable future of travel.</p>
+        </div>
+
+      </div><!-- /cert-partners-grid -->
+
+      <!-- Bottom 4-Pillar Trust Strip -->
+      <div class="cert-trust-strip reveal">
+        <div class="cert-trust-item">
+          <div class="cert-trust-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#2563eb" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+            </svg>
+          </div>
+          <div class="cert-trust-text">
+            <div class="cert-trust-title">Trusted &amp; Verified</div>
+            <div class="cert-trust-sub">Verified by leading organizations</div>
+          </div>
+        </div>
+
+        <div class="cert-trust-item">
+          <div class="cert-trust-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#2563eb" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round">
+              <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
+              <circle cx="9" cy="7" r="4" />
+              <path d="M23 21v-2a4 4 0 0 0-3-3.87" />
+              <path d="M16 3.13a4 4 0 0 1 0 7.75" />
+            </svg>
+          </div>
+          <div class="cert-trust-text">
+            <div class="cert-trust-title">Safety First</div>
+            <div class="cert-trust-sub">Your safety is our top priority</div>
+          </div>
+        </div>
+
+        <div class="cert-trust-item">
+          <div class="cert-trust-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#2563eb" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round">
+              <path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.4 19 2c1 2 2 4.1 2 7 0 6-4.5 11-10 11Z" />
+            </svg>
+          </div>
+          <div class="cert-trust-text">
+            <div class="cert-trust-title">Responsible Travel</div>
+            <div class="cert-trust-sub">We protect the places we visit</div>
+          </div>
+        </div>
+
+        <div class="cert-trust-item">
+          <div class="cert-trust-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#2563eb" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round">
+              <path
+                d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z" />
+            </svg>
+          </div>
+          <div class="cert-trust-text">
+            <div class="cert-trust-title">Community Focused</div>
+            <div class="cert-trust-sub">Supporting local communities</div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <footer class="footer" role="contentinfo" aria-label="Site footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__brand">
+          <a class="footer__logo" href="/" aria-label="Best Treks Nepal">
+            <div class="footer__logo-text">Best Treks Nepal<span>Adventure Awaits</span></div>
+          </a>
+          <p class="footer__desc">Nepal's trusted trekking company, crafting unforgettable Himalayan adventures since
+            2009. Licensed, expert, and passionate about Nepal.</p>
+          <div class="footer__social" aria-label="Social media links">
+            <a href="https://www.facebook.com/besttreksnepal" class="footer__social-link" aria-label="Facebook"><svg
+                xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" />
+              </svg></a>
+            <a href="https://www.instagram.com/besttreksnepal" class="footer__social-link" aria-label="Instagram"><svg
+                xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
+                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" />
+              </svg></a>
+            <a href="https://youtube.com/besttreksnepal" class="footer__social-link" aria-label="YouTube"><svg
+                xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                <path
+                  d="M22.54 6.42a2.78 2.78 0 0 0-1.95-1.96C18.88 4 12 4 12 4s-6.88 0-8.59.46A2.78 2.78 0 0 0 1.46 6.42 29 29 0 0 0 1 12a29 29 0 0 0 .46 5.58 2.78 2.78 0 0 0 1.95 1.96C5.12 20 12 20 12 20s6.88 0 8.59-.46a2.78 2.78 0 0 0 1.96-1.96A29 29 0 0 0 23 12a29 29 0 0 0-.46-5.58z" />
+                <polygon fill="#0F5257" points="9.75 15.02 15.5 12 9.75 8.98 9.75 15.02" />
+              </svg></a>
+          </div>
+        </div>
+        <div>
+          <h3 class="footer__col-title">Blog Categories</h3>
+          <nav class="footer__links" aria-label="Blog categories"><a href="#" class="footer__link">Trek Guides</a><a
+              href="#" class="footer__link">Package Planning</a><a href="#" class="footer__link">Permits &amp;
+              Rules</a><a href="#" class="footer__link">Safety &amp; Health</a><a href="#" class="footer__link">Gear
+              &amp; Packing</a><a href="#" class="footer__link">Best Seasons</a></nav>
+        </div>
+        <div>
+          <h3 class="footer__col-title">Popular Articles</h3>
+          <nav class="footer__links" aria-label="Popular articles"><a href="/blog/everest-base-camp-complete-guide.html"
+              class="footer__link">Everest Base Camp Guide 2026</a><a href="/blog/annapurna-circuit-vs-sanctuary.html"
+              class="footer__link">Annapurna Circuit vs ABC</a><a
+              href="/blog/altitude-sickness-prevention-himalayan-treks.html" class="footer__link">Altitude Sickness
+              Guide</a><a href="/blog/nepal-trekking-gear-packing-list.html" class="footer__link">Nepal Gear Packing
+              List</a><a href="/blog/manaslu-circuit-trek-guide.html" class="footer__link">Manaslu RAP Permits
+              2026</a></nav>
+        </div>
+        <div>
+          <h3 class="footer__col-title">Contact Us</h3>
+          <address style="font-style:normal;">
+            <div class="footer__contact-item"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                aria-hidden="true">
+                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
+                <circle cx="12" cy="10" r="3" />
+              </svg>Thamel, Kathmandu, Nepal</div>
+            <div class="footer__contact-item"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                aria-hidden="true">
+                <path
+                  d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.19 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.12 1.18l3-.017a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L7.09 8.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" />
+              </svg><a href="tel:+97714700000">+977 1 470 0000</a></div>
+            <div class="footer__contact-item"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                aria-hidden="true">
+                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+                <polyline points="22,6 12,13 2,6" />
+              </svg><a href="mailto:info@besttreksnepal.com">info@besttreksnepal.com</a></div>
+          </address>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <div class="footer__bottom-inner">
+          <p class="footer__copyright">© <span data-year>2026</span> Best Treks Nepal. All rights reserved. Registered with
+            Nepal Tourism Board.</p>
+          <nav class="footer__bottom-links" aria-label="Legal links"><a href="/privacy-policy.html"
+              class="footer__bottom-link">Privacy Policy</a><a href="/terms.html" class="footer__bottom-link">Terms
+              &amp; Conditions</a><a href="/pages.html" class="footer__bottom-link">All Pages</a>
+            <a href="/sitemap.xml" class="footer__bottom-link">Sitemap</a></nav>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <button class="back-to-top" aria-label="Back to top"><svg width="20" height="20" viewBox="0 0 24 24" fill="none"
+      stroke="currentColor" stroke-width="2">
+      <path d="M18 15l-6-6-6 6" />
+    </svg></button>
+
+  <script type="module" src="/assets/js/main.js"></script>
+  <script>
+    // Category Tab Switching & Search Filter Integration
+    const searchInput = document.getElementById('hero-blog-search');
+    const categoryTabs = document.querySelectorAll('.blog-tab');
+    const allArticles = document.querySelectorAll('.featured-article, .blog-article-card');
+
+    function filterBlogArticles() {
+      const activeTab = document.querySelector('.blog-tab.is-active');
+      const selectedCat = activeTab ? activeTab.dataset.blogCat : 'all';
+      const searchVal = (searchInput ? searchInput.value : '').toLowerCase().trim();
+
+      allArticles.forEach(card => {
+        const cardCat = card.dataset.cat || 'all';
+        const cardText = card.textContent.toLowerCase();
+
+        const catMatch = (selectedCat === 'all' || cardCat === selectedCat);
+        const searchMatch = (searchVal === '' || cardText.includes(searchVal));
+
+        if (catMatch && searchMatch) {
+          card.style.display = card.classList.contains('featured-article') ? 'grid' : 'flex';
+        } else {
+          card.style.display = 'none';
+        }
+      });
+
+      // Update Section Labels Visibility based on visible cards under each section
+      document.querySelectorAll('.blog-section-label').forEach(label => {
+        const nextElem = label.nextElementSibling;
+        if (!nextElem) return;
+
+        if (nextElem.classList.contains('featured-article')) {
+          label.style.display = nextElem.style.display !== 'none' ? 'flex' : 'none';
+        } else if (nextElem.classList.contains('blog-articles-grid') || nextElem.classList.contains('reveal-group')) {
+          const visibleCards = nextElem.querySelectorAll('.featured-article:not([style*="display: none"]), .blog-article-card:not([style*="display: none"])');
+          label.style.display = visibleCards.length > 0 ? 'flex' : 'none';
+        }
+      });
+    }
+
+    categoryTabs.forEach(btn => {
+      btn.addEventListener('click', () => {
+        categoryTabs.forEach(b => b.classList.remove('is-active'));
+        btn.classList.add('is-active');
+        filterBlogArticles();
+      });
+    });
+
+    if (searchInput) {
+      searchInput.addEventListener('input', filterBlogArticles);
+    }
+
+    document.querySelectorAll('.blog-hero__tag').forEach(tagBtn => {
+      tagBtn.addEventListener('click', () => {
+        const tagValue = tagBtn.dataset.tag || tagBtn.textContent;
+        if (searchInput) {
+          searchInput.value = tagValue;
+          filterBlogArticles();
+        }
+      });
+    });
+
+    // Spotlight Card Dynamic Auto-Rotator (Includes ALL articles on page & future added articles)
+    (function initSpotlightRotator() {
+      const rotator = document.getElementById('spotlight-rotator');
+      const nav = document.getElementById('spotlight-nav');
+      if (!rotator || !nav) return;
+
+      // Find ALL articles on the page (featured + grid cards)
+      const pageArticles = Array.from(document.querySelectorAll('.featured-article, .blog-article-card'));
+      if (!pageArticles.length) return;
+
+      // Clear existing static fallback cards and dots
+      rotator.innerHTML = '';
+      nav.innerHTML = '';
+
+      // Build dynamic spotlight cards from all page articles
+      pageArticles.forEach((art, index) => {
+        // Extract Image
+        const imgEl = art.querySelector('img');
+        const imgSrc = imgEl ? imgEl.getAttribute('src') : '/assets/images/destinations/everest.jpg';
+        const imgAlt = imgEl ? imgEl.getAttribute('alt') : 'Himalayan Trek Guide';
+
+        // Extract Category / Badge
+        const badgeEl = art.querySelector('.featured-article__badge, .blog-article-card__category');
+        const badgeText = badgeEl ? badgeEl.textContent.trim() : 'TREK GUIDE';
+        const badgeStyle = badgeEl ? (badgeEl.getAttribute('style') || '') : '';
+
+        // Extract Title & Link
+        const titleEl = art.querySelector('.featured-article__title a, .blog-article-card__title a');
+        const titleText = titleEl ? titleEl.textContent.trim() : 'Himalayan Trekking Article';
+        const titleLink = titleEl ? titleEl.getAttribute('href') : '#';
+
+        // Extract Meta info
+        const metaEl = art.querySelector('.featured-article__meta, .blog-article-card__meta');
+        let metaText = metaEl ? metaEl.textContent.replace(/\s+/g, ' ').trim() : '⏱️ 8 Min Read';
+        if (metaText.length > 35) {
+          metaText = metaText.split('·')[0].trim();
+        }
+
+        // Extract Author Info
+        const avatarEl = art.querySelector('.author-avatar, .blog-article-card__author-avatar');
+        const avatarText = avatarEl ? avatarEl.textContent.trim() : 'PS';
+        const avatarStyle = avatarEl ? (avatarEl.getAttribute('style') || '') : '';
+        const nameEl = art.querySelector('.author-info__name, .blog-article-card__author-name');
+        const authorName = nameEl ? nameEl.textContent.trim() : 'Sherpa Guide';
+
+        // Create Card HTML
+        const card = document.createElement('div');
+        card.className = `blog-spotlight-card ${index === 0 ? 'is-active' : ''}`;
+        card.setAttribute('data-index', index);
+        card.innerHTML = `
+          <div class="blog-spotlight-card__img-wrap">
+            <img src="${imgSrc}" alt="${imgAlt}" loading="${index === 0 ? 'eager' : 'lazy'}">
+            <span class="blog-spotlight-card__badge" style="${badgeStyle}">${badgeText}</span>
+          </div>
+          <div class="blog-spotlight-card__body">
+            <div class="blog-spotlight-card__meta">
+              <span>${metaText}</span>
+            </div>
+            <h3 class="blog-spotlight-card__title">
+              <a href="${titleLink}">${titleText}</a>
+            </h3>
+            <div class="blog-spotlight-card__footer">
+              <div class="blog-spotlight-card__author">
+                <div class="blog-spotlight-card__avatar" style="${avatarStyle}">${avatarText}</div>
+                <div class="blog-spotlight-card__author-info">
+                  <span class="blog-spotlight-card__author-name">${authorName}</span>
+                  <span class="blog-spotlight-card__author-role">Expedition Guide</span>
+                </div>
+              </div>
+              <a href="${titleLink}" class="blog-spotlight-card__btn">Read Guide →</a>
+            </div>
+          </div>
+        `;
+        rotator.appendChild(card);
+
+        // Create Nav Dot
+        const dot = document.createElement('button');
+        dot.type = 'button';
+        dot.className = `blog-spotlight-dot ${index === 0 ? 'is-active' : ''}`;
+        dot.setAttribute('data-slide', index);
+        dot.setAttribute('aria-label', `Article ${index + 1}: ${titleText}`);
+        nav.appendChild(dot);
+      });
+
+      // Rotator logic
+      const cards = rotator.querySelectorAll('.blog-spotlight-card');
+      const dots = nav.querySelectorAll('.blog-spotlight-dot');
+      let currentIndex = 0;
+      let timer = null;
+      const intervalDuration = 3000; // 3 seconds
+
+      function showSlide(index) {
+        cards.forEach((card, i) => card.classList.toggle('is-active', i === index));
+        dots.forEach((dot, i) => dot.classList.toggle('is-active', i === index));
+        currentIndex = index;
+      }
+
+      function nextSlide() {
+        const nextIndex = (currentIndex + 1) % cards.length;
+        showSlide(nextIndex);
+      }
+
+      function startTimer() {
+        stopTimer();
+        timer = setInterval(nextSlide, intervalDuration);
+        rotator.classList.remove('is-paused');
+      }
+
+      function stopTimer() {
+        if (timer) clearInterval(timer);
+        rotator.classList.add('is-paused');
+      }
+
+      dots.forEach((dot, index) => {
+        dot.addEventListener('click', () => {
+          showSlide(index);
+          startTimer();
+        });
+      });
+
+      if (rotator.parentElement) {
+        rotator.parentElement.addEventListener('mouseenter', stopTimer);
+        rotator.parentElement.addEventListener('mouseleave', startTimer);
+      }
+
+      startTimer();
+    })();
+  </script>
+
+  <!-- Static fallback for no-JS environments -->
+  <noscript>
+    <style>
+      .noscript-notice{position:fixed;bottom:0;left:0;right:0;z-index:99999;
+        background:#0f5257;color:#fff;text-align:center;padding:12px 20px;
+        font-family:Inter,sans-serif;font-size:14px;font-weight:500;
+        border-top:3px solid #c8a96b;}
+      .noscript-notice a{color:#c8a96b;text-decoration:underline;}
+    </style>
+    <div class="noscript-notice">
+      ⚠️ Some interactive features (filters, search, map) require JavaScript.
+      All trek pages, content &amp; booking links work without it.
+      <a href="/contact.html">Contact us directly</a> if you need help.
+    </div>
+  </noscript>
+</body>
+
+</html>

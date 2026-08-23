@@ -1,0 +1,323 @@
+/* ==========================================================================
+   layout.css — Best Treks Nepal Layout System
+   Version: 1.0 | August 2026
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   Page Body
+   -------------------------------------------------------------------------- */
+body {
+  background-color: var(--color-white);
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+main {
+  flex: 1;
+}
+
+/* --------------------------------------------------------------------------
+   Container
+   Max-width 1200px | Wide variant 1400px
+   Padding: 16px mobile → 24px tablet → 32px desktop
+   -------------------------------------------------------------------------- */
+.container {
+  width: 100%;
+  max-width: var(--container-max);
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: var(--space-2);
+  /* 16px mobile */
+  padding-right: var(--space-2);
+
+}
+
+.container--wide {
+  max-width: var(--container-wide);
+}
+
+.container--narrow {
+  max-width: 50rem;
+  /* 800px */
+}
+
+@media (min-width: 576px) {
+  .container {
+    padding-left: var(--space-3);
+    /* 24px */
+    padding-right: var(--space-3);
+  }
+}
+
+@media (min-width: 992px) {
+  .container {
+    padding-left: var(--space-4);
+    /* 32px */
+    padding-right: var(--space-4);
+  }
+}
+
+/* --------------------------------------------------------------------------
+   Section
+   -------------------------------------------------------------------------- */
+.section {
+  padding-top: var(--section-padding-y);
+  padding-bottom: var(--section-padding-y);
+}
+
+.section--sm {
+  padding-top: var(--section-padding-y-sm);
+  padding-bottom: var(--section-padding-y-sm);
+}
+
+.section--no-top {
+  padding-top: 0;
+}
+
+.section--no-bottom {
+  padding-bottom: 0;
+}
+
+/* Section backgrounds */
+.section--white {
+  background-color: var(--color-white);
+}
+
+.section--light {
+  background-color: var(--color-background);
+}
+
+.section--primary {
+  background-color: var(--color-primary);
+}
+
+.section--dark {
+  background-color: var(--color-primary-dark);
+}
+
+/* --------------------------------------------------------------------------
+   Grid System
+   -------------------------------------------------------------------------- */
+
+/* Auto-fit responsive grid */
+.grid {
+  display: grid;
+  gap: var(--space-4);
+}
+
+.grid--cols-2 {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.grid--cols-3 {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.grid--cols-4 {
+  grid-template-columns: repeat(4, 1fr);
+}
+
+/* Auto-responsive grids (no JS, pure CSS) */
+.grid--auto-fit-sm {
+  grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
+}
+
+.grid--auto-fit-md {
+  grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+}
+
+.grid--auto-fit-lg {
+  grid-template-columns: repeat(auto-fit, minmax(24rem, 1fr));
+}
+
+/* Gap variants */
+.grid--gap-sm {
+  gap: var(--space-2);
+}
+
+.grid--gap-md {
+  gap: var(--space-3);
+}
+
+.grid--gap-lg {
+  gap: var(--space-6);
+}
+
+/* --------------------------------------------------------------------------
+   Flexbox Utilities
+   -------------------------------------------------------------------------- */
+.flex {
+  display: flex;
+}
+
+.flex-col {
+  flex-direction: column;
+}
+
+.flex-wrap {
+  flex-wrap: wrap;
+}
+
+.flex-nowrap {
+  flex-wrap: nowrap;
+}
+
+.items-start {
+  align-items: flex-start;
+}
+
+.items-center {
+  align-items: center;
+}
+
+.items-end {
+  align-items: flex-end;
+}
+
+.items-stretch {
+  align-items: stretch;
+}
+
+.justify-start {
+  justify-content: flex-start;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.justify-end {
+  justify-content: flex-end;
+}
+
+.justify-between {
+  justify-content: space-between;
+}
+
+.justify-around {
+  justify-content: space-around;
+}
+
+.gap-1 {
+  gap: var(--space-1);
+}
+
+.gap-2 {
+  gap: var(--space-2);
+}
+
+.gap-3 {
+  gap: var(--space-3);
+}
+
+.gap-4 {
+  gap: var(--space-4);
+}
+
+.gap-6 {
+  gap: var(--space-6);
+}
+
+.gap-8 {
+  gap: var(--space-8);
+}
+
+.flex-1 {
+  flex: 1;
+}
+
+.flex-none {
+  flex: none;
+}
+
+/* --------------------------------------------------------------------------
+   Two-Column Content Layout (text + image)
+   -------------------------------------------------------------------------- */
+.content-split {
+  display: grid;
+  gap: var(--space-8);
+  align-items: center;
+}
+
+@media (min-width: 768px) {
+  .content-split {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .content-split--60-40 {
+    grid-template-columns: 60fr 40fr;
+  }
+
+  .content-split--40-60 {
+    grid-template-columns: 40fr 60fr;
+  }
+
+  /* Reverse column order on desktop */
+  .content-split--reverse .content-split__media {
+    order: -1;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   Sticky Layout (sidebar + main)
+   -------------------------------------------------------------------------- */
+.layout-sticky {
+  display: grid;
+  gap: var(--space-6);
+}
+
+@media (min-width: 992px) {
+  .layout-sticky {
+    grid-template-columns: 1fr 22rem;
+    align-items: flex-start;
+  }
+
+  .layout-sticky__sidebar {
+    position: sticky;
+    top: calc(var(--navbar-height) + var(--space-4));
+  }
+}
+
+/* --------------------------------------------------------------------------
+   Overlay helper
+   -------------------------------------------------------------------------- */
+.overlay {
+  position: absolute;
+  inset: 0;
+}
+
+.overlay--dark {
+  background: linear-gradient(to bottom,
+      rgba(0, 0, 0, 0.15) 0%,
+      rgba(0, 0, 0, 0.55) 100%);
+}
+
+.overlay--primary {
+  background: linear-gradient(135deg,
+      rgba(15, 82, 87, 0.85) 0%,
+      rgba(10, 59, 63, 0.70) 100%);
+}
+
+/* --------------------------------------------------------------------------
+   Responsive Grid Overrides
+   -------------------------------------------------------------------------- */
+@media (max-width: 991px) {
+  .grid--cols-4 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 767px) {
+
+  .grid--cols-3,
+  .grid--cols-4 {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 575px) {
+  .grid--cols-2 {
+    grid-template-columns: 1fr;
+  }
+}

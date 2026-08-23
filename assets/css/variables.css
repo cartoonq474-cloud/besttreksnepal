@@ -1,0 +1,156 @@
+/* ==========================================================================
+   variables.css — Best Treks Nepal Design System Tokens
+   Version: 1.0 | August 2026
+   
+   This file is the single source of truth for all design tokens.
+   Never hard-code colors, spacing, or typography values anywhere else.
+   ========================================================================== */
+
+:root {
+
+  /* --------------------------------------------------------------------------
+     Brand Colors
+     -------------------------------------------------------------------------- */
+  --color-primary:        #0F5257;
+  --color-primary-dark:   #0a3b3f;
+  --color-primary-light:  #1a6e75;
+
+  --color-secondary:      #7FB3B0;
+  --color-secondary-dark: #5c9996;
+  --color-secondary-light:#a3cac8;
+
+  --color-accent:         #F2A65A;
+  --color-accent-dark:    #d98b3d;
+  --color-accent-light:   #f5b97c;
+
+  --color-background:     #FFFFFF;
+  --color-background-alt: #FAFAFA;
+
+  --color-text:           #2E2E2E;
+  --color-text-light:     #5a5a5a;
+  --color-text-muted:     #8a8a8a;
+
+  --color-white:          #FFFFFF;
+  --color-off-white:      #FAFAFA;
+
+  /* --------------------------------------------------------------------------
+     Status Colors (WCAG-accessible shades)
+     -------------------------------------------------------------------------- */
+  --color-success:        #1d6e4a;
+  --color-success-bg:     #e8f5ee;
+  --color-warning:        #92610a;
+  --color-warning-bg:     #fff4e0;
+  --color-error:          #b91c1c;
+  --color-error-bg:       #fef2f2;
+  --color-info:           #1d4ed8;
+  --color-info-bg:        #eff6ff;
+
+  /* --------------------------------------------------------------------------
+     Typography
+     -------------------------------------------------------------------------- */
+  --font-heading: 'Poppins', sans-serif;
+  --font-body:    'Inter', sans-serif;
+
+  /* Font sizes — heading scale (DESIGN_SYSTEM §5) */
+  --text-h1:  clamp(2rem, 5vw, 3rem);       /* 32–48px */
+  --text-h2:  clamp(1.75rem, 4vw, 2.5rem);  /* 28–40px */
+  --text-h3:  clamp(1.375rem, 3vw, 2rem);   /* 22–32px */
+  --text-h4:  clamp(1.125rem, 2vw, 1.5rem); /* 18–24px */
+  --text-h5:  clamp(1rem, 1.5vw, 1.25rem);  /* 16–20px */
+  --text-h6:  clamp(0.9375rem, 1.2vw, 1.125rem); /* 15–18px */
+
+  /* Font sizes — body scale */
+  --text-lg:  1.125rem;  /* 18px */
+  --text-md:  1rem;      /* 16px */
+  --text-sm:  0.875rem;  /* 14px */
+  --text-xs:  0.75rem;   /* 12px */
+
+  /* Font weights */
+  --weight-regular:   400;
+  --weight-medium:    500;
+  --weight-semibold:  600;
+  --weight-bold:      700;
+
+  /* Line heights */
+  --leading-tight:    1.25;
+  --leading-snug:     1.375;
+  --leading-normal:   1.5;
+  --leading-relaxed:  1.65;
+  --leading-loose:    1.8;
+
+  /* Letter spacing */
+  --tracking-tight:   -0.01em;
+  --tracking-normal:   0;
+  --tracking-wide:     0.05em;
+  --tracking-wider:    0.1em;
+  --tracking-widest:   0.15em;
+
+  /* --------------------------------------------------------------------------
+     Spacing Scale (8px base)
+     -------------------------------------------------------------------------- */
+  --space-1:   0.5rem;   /* 8px  */
+  --space-2:   1rem;     /* 16px */
+  --space-3:   1.5rem;   /* 24px */
+  --space-4:   2rem;     /* 32px */
+  --space-6:   3rem;     /* 48px */
+  --space-8:   4rem;     /* 64px */
+  --space-12:  6rem;     /* 96px */
+  --space-16:  8rem;     /* 128px */
+
+  /* Section vertical padding */
+  --section-padding-y: var(--space-12);
+  --section-padding-y-sm: var(--space-6);
+
+  /* --------------------------------------------------------------------------
+     Border Radius
+     -------------------------------------------------------------------------- */
+  --radius-sm:   0.5rem;    /* 8px  */
+  --radius-md:   0.75rem;   /* 12px */
+  --radius-lg:   1rem;      /* 16px */
+  --radius-xl:   1.5rem;    /* 24px */
+  --radius-full: 9999px;    /* pill shape */
+
+  /* --------------------------------------------------------------------------
+     Shadows
+     -------------------------------------------------------------------------- */
+  --shadow-sm:  0 1px 3px rgba(0,0,0,0.08), 0 1px 2px rgba(0,0,0,0.06);
+  --shadow-md:  0 4px 12px rgba(0,0,0,0.10), 0 2px 4px rgba(0,0,0,0.06);
+  --shadow-lg:  0 12px 32px rgba(0,0,0,0.12), 0 4px 8px rgba(0,0,0,0.06);
+  --shadow-xl:  0 24px 48px rgba(0,0,0,0.15), 0 8px 16px rgba(0,0,0,0.06);
+
+  /* Color-tinted card shadow */
+  --shadow-card: 0 4px 20px rgba(15, 82, 87, 0.10);
+  --shadow-card-hover: 0 8px 32px rgba(15, 82, 87, 0.18);
+
+  /* --------------------------------------------------------------------------
+     Transitions & Animations
+     -------------------------------------------------------------------------- */
+  --transition-fast:    150ms ease;
+  --transition-base:    250ms ease;
+  --transition-slow:    350ms ease;
+  --transition-slower:  500ms ease;
+
+  /* --------------------------------------------------------------------------
+     Z-index Scale
+     -------------------------------------------------------------------------- */
+  --z-below:    -1;
+  --z-base:      0;
+  --z-raised:    10;
+  --z-dropdown:  100;
+  --z-sticky:    200;
+  --z-overlay:   300;
+  --z-modal:     400;
+  --z-toast:     500;
+
+  /* --------------------------------------------------------------------------
+     Layout
+     -------------------------------------------------------------------------- */
+  --container-max:       75rem;    /* 1200px */
+  --container-wide:      87.5rem;  /* 1400px */
+  --container-padding-x: var(--space-4);  /* 32px desktop */
+
+  /* Navbar */
+  --navbar-height:        4.5rem;   /* 72px */
+  --navbar-height-mobile: 4rem;     /* 64px */
+  --top-bar-height:       2.5rem;   /* 40px */
+}

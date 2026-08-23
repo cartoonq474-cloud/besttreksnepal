@@ -1,0 +1,34 @@
+/* ==========================================================================
+   style.css — Best Treks Nepal Master CSS Entry Point
+   Version: 1.0 | August 2026
+
+   This file ONLY imports all CSS modules in the correct cascade order.
+   Do NOT add styles directly here.
+
+   Load order follows Architecture.md §6:
+   variables → reset → typography → layout → components → utilities → animations → responsive
+   ========================================================================== */
+
+/* 1. Design Tokens — must come first */
+@import url('./variables.css');
+
+/* 2. Modern CSS Reset */
+@import url('./reset.css');
+
+/* 3. Typography System */
+@import url('./typography.css');
+
+/* 4. Layout Primitives */
+@import url('./layout.css');
+
+/* 5. Reusable Components */
+@import url('./components.css');
+
+/* 6. Utility Classes */
+@import url('./utilities.css');
+
+/* 7. Animations & Transitions */
+@import url('./animations.css');
+
+/* 8. Responsive Overrides — must come last */
+@import url('./responsive.css');

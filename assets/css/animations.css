@@ -1,0 +1,305 @@
+/* ==========================================================================
+   animations.css — Best Treks Nepal Animation System
+   Version: 1.0 | August 2026
+
+   All animations respect prefers-reduced-motion.
+   Duration guidelines: 150–300ms for UI, longer for hero storytelling.
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   @keyframes Definitions
+   -------------------------------------------------------------------------- */
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity:   0;
+    transform: translateY(1.5rem);
+  }
+  to {
+    opacity:   1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInDown {
+  from {
+    opacity:   0;
+    transform: translateY(-1.5rem);
+  }
+  to {
+    opacity:   1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInLeft {
+  from {
+    opacity:   0;
+    transform: translateX(-1.5rem);
+  }
+  to {
+    opacity:   1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeInRight {
+  from {
+    opacity:   0;
+    transform: translateX(1.5rem);
+  }
+  to {
+    opacity:   1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes scaleIn {
+  from {
+    opacity:   0;
+    transform: scale(0.92);
+  }
+  to {
+    opacity:   1;
+    transform: scale(1);
+  }
+}
+
+@keyframes slideInLeft {
+  from { transform: translateX(-100%); }
+  to   { transform: translateX(0); }
+}
+
+@keyframes slideInRight {
+  from { transform: translateX(100%); }
+  to   { transform: translateX(0); }
+}
+
+@keyframes slideInDown {
+  from { transform: translateY(-100%); opacity: 0; }
+  to   { transform: translateY(0);    opacity: 1; }
+}
+
+@keyframes pulse {
+  0%, 100% { transform: scale(1); }
+  50%       { transform: scale(1.04); }
+}
+
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(360deg); }
+}
+
+@keyframes shimmer {
+  from { background-position: -200% 0; }
+  to   { background-position:  200% 0; }
+}
+
+@keyframes countUp {
+  from { opacity: 0; transform: translateY(10px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* --------------------------------------------------------------------------
+   Scroll-Reveal Base Classes
+   Applied by JavaScript (animation.js) using IntersectionObserver
+   -------------------------------------------------------------------------- */
+
+/* Initial state — elements are invisible (only when JS is active via .js class on <html>) */
+.js .reveal {
+  opacity:    0;
+  transform:  translateY(1.5rem);
+  transition: opacity var(--transition-slower) ease,
+              transform var(--transition-slower) ease;
+}
+
+/* No-JS fallback: show all reveal elements immediately when .no-js is on <html> */
+.no-js .reveal {
+  opacity:   1 !important;
+  transform: none !important;
+}
+
+/* Pure CSS no-JS safety net: if neither .js nor .no-js is on <html>,
+   still show content after a brief delay using animation.
+   This catches cases where JS hasn't added the .js class yet. */
+@keyframes reveal-fallback {
+  0%   { opacity: 0; transform: translateY(1.5rem); }
+  100% { opacity: 1; transform: none; }
+}
+
+/* Default state: visible. JS hides & animates via .js .reveal override above. */
+.reveal {
+  opacity:   1;
+  transform: none;
+}
+
+/* When JS IS active, these are controlled by the .js .reveal rule above */
+.js .reveal.reveal--left  { transform: translateX(-1.5rem); }
+.js .reveal.reveal--right { transform: translateX(1.5rem); }
+.js .reveal.reveal--scale { transform: scale(0.94); }
+
+/* For backwards compat: keep these for pages that may not have .js class */
+.reveal.reveal--left,
+.reveal.reveal--right,
+.reveal.reveal--scale {
+  /* No transform by default — only applied when JS is active */
+  transform: none;
+}
+
+/* Visible state — added by JS when element enters viewport */
+.reveal.is-visible {
+  opacity:   1;
+  transform: none;
+}
+
+/* Staggered children delays */
+.reveal-group .reveal:nth-child(1) { transition-delay: 0ms; }
+.reveal-group .reveal:nth-child(2) { transition-delay: 80ms; }
+.reveal-group .reveal:nth-child(3) { transition-delay: 160ms; }
+.reveal-group .reveal:nth-child(4) { transition-delay: 240ms; }
+.reveal-group .reveal:nth-child(5) { transition-delay: 320ms; }
+.reveal-group .reveal:nth-child(6) { transition-delay: 400ms; }
+
+/* --------------------------------------------------------------------------
+   Hover Transitions (used on cards and buttons)
+   -------------------------------------------------------------------------- */
+.hover-lift {
+  transition: transform var(--transition-base), box-shadow var(--transition-base);
+}
+
+.hover-lift:hover {
+  transform:  translateY(-4px);
+  box-shadow: var(--shadow-card-hover);
+}
+
+.hover-scale {
+  transition: transform var(--transition-base);
+}
+
+.hover-scale:hover {
+  transform: scale(1.03);
+}
+
+/* --------------------------------------------------------------------------
+   Loading Spinner
+   -------------------------------------------------------------------------- */
+.spinner {
+  display:       inline-block;
+  width:         1.5rem;
+  height:        1.5rem;
+  border:        2px solid rgba(255,255,255,0.3);
+  border-top-color: var(--color-white);
+  border-radius: 50%;
+  animation:     spin 0.65s linear infinite;
+}
+
+.spinner--primary {
+  border-color:     rgba(15, 82, 87, 0.2);
+  border-top-color: var(--color-primary);
+}
+
+/* --------------------------------------------------------------------------
+   Skeleton Loader
+   -------------------------------------------------------------------------- */
+.skeleton {
+  background: linear-gradient(
+    90deg,
+    var(--color-background) 25%,
+    var(--color-background-alt) 50%,
+    var(--color-background) 75%
+  );
+  background-size: 200% 100%;
+  animation:       shimmer 1.5s infinite;
+  border-radius:   var(--radius-sm);
+}
+
+/* --------------------------------------------------------------------------
+   Page Transition Loader
+   -------------------------------------------------------------------------- */
+
+/* Hide loader entirely when JavaScript is disabled (no-js class on <html>) */
+.no-js .page-loader {
+  display: none !important;
+}
+
+/* CSS-only fallback: auto-fade the loader after 1.5s even without JS.
+   The JS version dismisses it instantly on load; this is the safety net. */
+@keyframes loader-auto-hide {
+  0%,  80% { opacity: 1;  visibility: visible; pointer-events: auto;  }
+  100%      { opacity: 0;  visibility: hidden;  pointer-events: none;  }
+}
+
+.page-loader {
+  position:   fixed;
+  inset:      0;
+  z-index:    var(--z-modal);
+  background: var(--color-primary);
+  display:    flex;
+  align-items: center;
+  justify-content: center;
+  transition: opacity var(--transition-slow), visibility var(--transition-slow);
+  /* Auto-hide after 1.5s via pure CSS — ensures it never blocks content */
+  animation: loader-auto-hide 2s ease-out 1.5s both;
+}
+
+.page-loader.is-hidden {
+  opacity:    0;
+  visibility: hidden;
+}
+
+.page-loader__logo {
+  width:     8rem;
+  animation: pulse 1.2s ease-in-out infinite;
+}
+
+/* --------------------------------------------------------------------------
+   Hero Slider Transitions
+   -------------------------------------------------------------------------- */
+.slide {
+  position:   absolute;
+  inset:      0;
+  opacity:    0;
+  transition: opacity 800ms ease;
+}
+
+.slide.is-active {
+  opacity: 1;
+}
+
+/* --------------------------------------------------------------------------
+   Reduced Motion — disable all animations
+   -------------------------------------------------------------------------- */
+@media (prefers-reduced-motion: reduce) {
+  .reveal {
+    opacity:   1;
+    transform: none;
+    transition: none;
+  }
+
+  .hover-lift:hover,
+  .hover-scale:hover {
+    transform: none;
+  }
+
+  .spinner {
+    animation: none;
+  }
+
+  .skeleton {
+    animation: none;
+    background: var(--color-background-alt);
+  }
+
+  .page-loader__logo {
+    animation: none;
+  }
+
+  .slide {
+    transition: none;
+  }
+}

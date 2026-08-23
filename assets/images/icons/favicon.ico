@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <defs>
+    <linearGradient id="peakGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f5257"/>
+      <stop offset="100%" stop-color="#0d9488"/>
+    </linearGradient>
+    <linearGradient id="goldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f59e0b"/>
+      <stop offset="100%" stop-color="#d97706"/>
+    </linearGradient>
+  </defs>
+  <rect width="64" height="64" rx="14" fill="#0f5257"/>
+  <!-- Mountain Peaks -->
+  <polygon points="32,10 52,48 12,48" fill="url(#peakGrad)"/>
+  <!-- Snow Cap -->
+  <polygon points="32,10 40,26 36,23 32,27 28,23 24,26" fill="#ffffff"/>
+  <!-- Secondary Gold Ridge -->
+  <polygon points="44,24 56,48 32,48" fill="url(#goldGrad)" opacity="0.9"/>
+  <!-- Gold Sun -->
+  <circle cx="48" cy="18" r="5" fill="#f59e0b"/>
+</svg>

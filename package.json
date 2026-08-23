@@ -1,0 +1,16 @@
+{
+  "name": "best-treks-nepal",
+  "version": "1.0.0",
+  "description": "Best Treks Nepal — Static trekking website",
+  "private": true,
+  "scripts": {
+    "dev":   "serve . --listen 3000 --no-clipboard",
+    "start": "serve . --listen 3000 --no-clipboard"
+  },
+  "keywords": ["nepal", "trekking", "himalaya"],
+  "license": "UNLICENSED",
+  "devDependencies": {
+    "serve": "^14.2.1"
+  }
+}
+

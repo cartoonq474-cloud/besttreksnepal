@@ -1,0 +1,249 @@
+# ================================================================
+# Best Treks Nepal — robots.txt
+# https://besttreksnepal.com/robots.txt
+# Last updated: 2026-08-24
+#
+# Strategy: Maximum visibility across search engines AND AI platforms
+# (Google, Bing, ChatGPT, Claude, Grok, Perplexity, Meta AI, etc.)
+# while blocking non-indexable utility pages and junk crawlers.
+# ================================================================
+
+
+# ================================================================
+# SECTION 1 — ALL CRAWLERS (baseline rules)
+# ================================================================
+User-agent: *
+
+# ── Core website — fully open ────────────────────────────────
+Allow: /
+Allow: /treks/
+Allow: /destinations/
+Allow: /blog/
+
+# ── Critical rendering assets ────────────────────────────────
+Allow: /assets/css/
+Allow: /assets/js/
+Allow: /assets/images/
+
+# ── Block dev/build/internal paths ──────────────────────────
+Disallow: /scratch/
+Disallow: /scripts/
+Disallow: /node_modules/
+Disallow: /.agents/
+Disallow: /.git/
+Disallow: /.gitignore
+
+# ── Block utility pages (not useful in search results) ──────
+Disallow: /all-pages.html
+Disallow: /pages.html
+
+# ── Block URL parameters that create duplicate content ───────
+Disallow: /*?utm_source=
+Disallow: /*?utm_medium=
+Disallow: /*?utm_campaign=
+Disallow: /*?ref=
+Disallow: /*?session=
+Disallow: /*?fbclid=
+Disallow: /*?gclid=
+
+# Crawl delay for unknown/generic bots
+Crawl-delay: 2
+
+
+# ================================================================
+# SECTION 2 — GOOGLE (search + images + news)
+# ================================================================
+User-agent: Googlebot
+Allow: /
+Allow: /treks/
+Allow: /destinations/
+Allow: /blog/
+Allow: /assets/
+
+User-agent: Googlebot-Image
+Allow: /assets/images/
+Allow: /treks/
+Allow: /destinations/
+
+User-agent: Googlebot-News
+Allow: /blog/
+Allow: /blog/*.html
+
+User-agent: Google-InspectionTool
+Allow: /
+
+
+# ================================================================
+# SECTION 3 — BING & MICROSOFT
+# ================================================================
+User-agent: Bingbot
+Allow: /
+Allow: /treks/
+Allow: /destinations/
+Allow: /blog/
+Allow: /assets/
+Crawl-delay: 1
+
+User-agent: msnbot
+Allow: /
+Crawl-delay: 2
+
+User-agent: msnbot-media
+Allow: /assets/images/
+
+
+# ================================================================
+# SECTION 4 — AI PLATFORMS (ChatGPT, Claude, Grok, Perplexity)
+# These crawlers power AI search — allowing them helps your site
+# appear as a cited source on AI platforms.
+# ================================================================
+
+# ChatGPT / OpenAI
+User-agent: GPTBot
+Allow: /
+Allow: /treks/
+Allow: /destinations/
+Allow: /blog/
+
+# ChatGPT browsing plugin
+User-agent: ChatGPT-User
+Allow: /
+Allow: /treks/
+Allow: /destinations/
+Allow: /blog/
+
+# Claude / Anthropic
+User-agent: anthropic-ai
+Allow: /
+Allow: /treks/
+Allow: /destinations/
+Allow: /blog/
+
+User-agent: Claude-Web
+Allow: /
+Allow: /treks/
+Allow: /destinations/
+Allow: /blog/
+
+# Perplexity AI
+User-agent: PerplexityBot
+Allow: /
+Allow: /treks/
+Allow: /destinations/
+Allow: /blog/
+
+# Grok / xAI (Elon Musk's AI)
+User-agent: Grok
+Allow: /
+Allow: /treks/
+Allow: /destinations/
+Allow: /blog/
+
+User-agent: xAI
+Allow: /
+Allow: /treks/
+Allow: /destinations/
+Allow: /blog/
+
+# Meta AI (Llama)
+User-agent: Meta-ExternalAgent
+Allow: /
+Allow: /treks/
+Allow: /destinations/
+Allow: /blog/
+
+# Google Gemini / Bard
+User-agent: Google-Extended
+Allow: /
+Allow: /treks/
+Allow: /destinations/
+Allow: /blog/
+
+# Cohere AI
+User-agent: cohere-ai
+Allow: /
+
+# You.com AI Search
+User-agent: YouBot
+Allow: /
+
+# Brave AI Search
+User-agent: Brave
+Allow: /
+
+
+# ================================================================
+# SECTION 5 — OTHER SEARCH ENGINES
+# ================================================================
+
+# DuckDuckGo
+User-agent: DuckDuckBot
+Allow: /
+Crawl-delay: 1
+
+# Yandex (Russia)
+User-agent: YandexBot
+Allow: /
+Allow: /treks/
+Allow: /destinations/
+Allow: /blog/
+Crawl-delay: 2
+
+# Baidu (China)
+User-agent: Baiduspider
+Allow: /
+Crawl-delay: 2
+
+# Naver (South Korea)
+User-agent: Yeti
+Allow: /
+Crawl-delay: 2
+
+
+# ================================================================
+# SECTION 6 — SEO AUDIT TOOLS (throttled — not blocked)
+# ================================================================
+User-agent: SemrushBot
+Allow: /
+Crawl-delay: 10
+
+User-agent: AhrefsBot
+Allow: /
+Crawl-delay: 10
+
+User-agent: MajesticSEO
+Allow: /
+Crawl-delay: 10
+
+
+# ================================================================
+# SECTION 7 — JUNK / SPAM BOTS (blocked entirely)
+# ================================================================
+
+# Scrapers & link spammers
+User-agent: MJ12bot
+Disallow: /
+
+User-agent: DotBot
+Disallow: /
+
+User-agent: Bytespider
+Disallow: /
+
+User-agent: Omgili
+Disallow: /
+
+User-agent: Amazonbot
+Disallow: /
+
+User-agent: DataForSeoBot
+Disallow: /
+
+User-agent: PetalBot
+Disallow: /
+
+
+# ================================================================
+# SITEMAP
+# ================================================================
+Sitemap: https://besttreksnepal.com/sitemap.xml

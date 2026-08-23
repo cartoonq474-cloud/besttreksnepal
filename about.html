@@ -1,0 +1,3356 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About Us | Best Treks Nepal — Local Expert Trekking Company</title>
+  <meta name="description"
+    content="Learn about Best Treks Nepal — a licensed, locally owned trekking company with 15+ years of experience guiding adventurers through the Himalayas. Meet our team and guides.">
+  <link rel="canonical" href="https://besttreksnepal.com/about.html">
+  <meta property="og:title" content="About Us | Best Treks Nepal">
+  <meta property="og:description"
+    content="15+ years guiding adventurers in Nepal. Licensed, expert local guides. Learn our story.">
+  <meta property="og:url" content="https://besttreksnepal.com/about.html">
+  <meta property="og:image" content="https://www.besttreksnepal.com/assets/images/og/about.webp">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="/assets/images/icons/favicon.ico" type="image/x-icon">
+  <link rel="manifest" href="/manifest.json">
+  <meta name="theme-color" content="#0F5257">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="/assets/css/style.css">
+  <style>
+    /* About Hero Redesign */
+    .about-hero {
+      position: relative;
+      background-color: #071e20;
+      background-image: radial-gradient(circle at 85% 15%, rgba(200, 169, 107, 0.22) 0%, transparent 45%),
+        radial-gradient(circle at 15% 85%, rgba(15, 82, 87, 0.5) 0%, transparent 50%),
+        linear-gradient(180deg, rgba(7, 30, 32, 0.82) 0%, rgba(7, 30, 32, 0.94) 100%),
+        url('/assets/images/hero/slide-2-annapurna.jpg');
+      background-size: cover;
+      background-position: center center;
+      padding: 5rem 0 4.5rem;
+      color: #ffffff;
+      overflow: hidden;
+    }
+
+    .about-hero__grid {
+      display: grid;
+      grid-template-columns: 1.15fr 0.85fr;
+      gap: 3.5rem;
+      align-items: center;
+      position: relative;
+      z-index: 2;
+    }
+
+    .about-hero__badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.6rem;
+      background: rgba(200, 169, 107, 0.15);
+      border: 1px solid rgba(200, 169, 107, 0.4);
+      color: #fef08a;
+      font-size: 0.78rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      padding: 0.4rem 1.2rem;
+      border-radius: 999px;
+      margin-bottom: 1.25rem;
+      backdrop-filter: blur(8px);
+    }
+
+    .about-hero__title {
+      font-size: clamp(2.3rem, 4.2vw, 3.6rem);
+      font-weight: 800;
+      color: #ffffff;
+      line-height: 1.15;
+      margin: 0 0 1.25rem;
+      letter-spacing: -0.02em;
+    }
+
+    .about-hero__title span {
+      background: linear-gradient(90deg, #c8a96b 0%, #fef08a 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .about-hero__subtitle {
+      color: #cbd5e1;
+      font-size: 1.08rem;
+      line-height: 1.7;
+      margin: 0 0 2rem;
+      max-width: 620px;
+    }
+
+    .about-hero__card {
+      background: rgba(15, 82, 87, 0.38);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      border-radius: 24px;
+      padding: 2.25rem;
+      box-shadow: 0 20px 50px rgba(0, 0, 0, 0.45);
+    }
+
+    .about-hero__card-title {
+      font-size: 1.2rem;
+      font-weight: 800;
+      color: #ffffff;
+      margin: 0 0 1.25rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .about-hero__card-stat {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.2rem;
+    }
+
+    .about-hero__stat-item {
+      background: rgba(7, 30, 32, 0.65);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      border-radius: 16px;
+      padding: 1.2rem;
+      text-align: center;
+    }
+
+    .about-hero__stat-num {
+      font-size: 1.9rem;
+      font-weight: 800;
+      color: #fef08a;
+      display: block;
+      margin-bottom: 0.2rem;
+    }
+
+    .about-hero__stat-label {
+      font-size: 0.74rem;
+      color: #94a3b8;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      font-weight: 700;
+    }
+
+    /* Timeline Section */
+    .timeline-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+      gap: 1.5rem;
+      margin-top: 3rem;
+    }
+
+    .timeline-card {
+      background: #ffffff;
+      border-radius: 20px;
+      padding: 1.75rem;
+      box-shadow: 0 6px 30px rgba(15, 82, 87, 0.08);
+      border: 1px solid #e2e8f0;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .timeline-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 12px 40px rgba(15, 82, 87, 0.15);
+      border-color: #0f5257;
+    }
+
+    .timeline-card__year {
+      display: inline-block;
+      background: linear-gradient(135deg, #0f5257 0%, #0b3c40 100%);
+      color: #fef08a;
+      font-size: 0.85rem;
+      font-weight: 800;
+      padding: 0.3rem 0.9rem;
+      border-radius: 999px;
+      margin-bottom: 1rem;
+    }
+
+    .timeline-card__title {
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: #0f172a;
+      margin: 0 0 0.6rem;
+    }
+
+    .timeline-card__desc {
+      font-size: 0.88rem;
+      color: #475569;
+      line-height: 1.6;
+    }
+
+    /* Team Sherpa Guides Grid (4 items: 4 cols on desktop, 2x2 on tablet) */
+    .team-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1.75rem;
+      margin-top: 3.5rem;
+    }
+
+    .team-card {
+      background: #ffffff;
+      border-radius: 24px;
+      overflow: hidden;
+      box-shadow: 0 10px 35px rgba(15, 82, 87, 0.08);
+      border: 1px solid #e2e8f0;
+      transition: transform 0.35s ease, box-shadow 0.35s ease, border-color 0.35s ease;
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+    }
+
+    .team-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 20px 45px rgba(15, 82, 87, 0.18);
+      border-color: #0f5257;
+    }
+
+    .team-card__img-wrap {
+      position: relative;
+      height: 250px;
+      overflow: hidden;
+      background: #071e20;
+    }
+
+    .team-card__img-wrap img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: top center;
+      transition: transform 0.5s ease;
+    }
+
+    .team-card:hover .team-card__img-wrap img {
+      transform: scale(1.06);
+    }
+
+    .team-card__badge {
+      position: absolute;
+      top: 0.85rem;
+      right: 0.85rem;
+      background: rgba(7, 30, 32, 0.88);
+      border: 1px solid rgba(200, 169, 107, 0.6);
+      color: #fef08a;
+      font-size: 0.68rem;
+      font-weight: 800;
+      padding: 0.35rem 0.8rem;
+      border-radius: 999px;
+      backdrop-filter: blur(6px);
+      letter-spacing: 0.04em;
+    }
+
+    .team-card__body {
+      padding: 1.5rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      flex: 1;
+    }
+
+    .team-card__info {
+      margin-bottom: 1.25rem;
+    }
+
+    .team-card__name {
+      font-size: 1.25rem;
+      font-weight: 800;
+      color: #0f172a;
+      margin: 0 0 0.25rem;
+      line-height: 1.25;
+    }
+
+    .team-card__role {
+      font-size: 0.82rem;
+      font-weight: 700;
+      color: #0f5257;
+      margin-bottom: 0.75rem;
+      display: block;
+    }
+
+    .team-card__bio {
+      font-size: 0.88rem;
+      color: #475569;
+      line-height: 1.6;
+      margin: 0;
+    }
+
+    .team-card__stats {
+      display: flex;
+      gap: 0.75rem;
+      border: 1px solid #f1f5f9;
+      background: #f8fafc;
+      padding: 0.85rem 1rem;
+      border-radius: 14px;
+    }
+
+    .team-card__stat {
+      flex: 1;
+      text-align: center;
+    }
+
+    .team-card__stat-val {
+      font-size: 0.98rem;
+      font-weight: 800;
+      color: #0f172a;
+      display: block;
+      line-height: 1.2;
+    }
+
+    .team-card__stat-label {
+      font-size: 0.65rem;
+      color: #64748b;
+      text-transform: uppercase;
+      font-weight: 700;
+      letter-spacing: 0.04em;
+    }
+
+    /* Safety & Operations Pillar Grid (White Section Redesign) */
+    .safety-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1.5rem;
+      margin-top: 3.5rem;
+    }
+
+    .safety-card {
+      background: #ffffff;
+      color: #0f172a;
+      border-radius: 20px;
+      padding: 2rem;
+      border: 1px solid #e2e8f0;
+      box-shadow: 0 10px 30px rgba(15, 82, 87, 0.07);
+      transition: transform 0.35s ease, box-shadow 0.35s ease, border-color 0.35s ease;
+    }
+
+    .safety-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 18px 40px rgba(15, 82, 87, 0.16);
+      border-color: #0f5257;
+    }
+
+    .safety-card__icon {
+      font-size: 2.2rem;
+      margin-bottom: 1rem;
+      display: inline-block;
+    }
+
+    .safety-card__title {
+      font-size: 1.15rem;
+      font-weight: 800;
+      color: #0f172a;
+      margin: 0 0 0.6rem;
+      line-height: 1.3;
+    }
+
+    .safety-card__desc {
+      font-size: 0.88rem;
+      color: #475569;
+      line-height: 1.65;
+      margin: 0;
+    }
+
+    /* Porter & Community Welfare Pledge */
+    .pledge-box {
+      background: #ffffff;
+      border: 2px solid #e2e8f0;
+      border-radius: 24px;
+      padding: 2.5rem;
+      margin-top: 3rem;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 2.5rem;
+      align-items: center;
+      box-shadow: 0 10px 40px rgba(15, 82, 87, 0.06);
+    }
+
+    .pledge-box__list {
+      list-style: none;
+      padding: 0;
+      margin: 1.25rem 0 0;
+      display: flex;
+      flex-direction: column;
+      gap: 0.85rem;
+    }
+
+    .pledge-box__item {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.75rem;
+      font-size: 0.92rem;
+      color: #334155;
+      line-height: 1.5;
+    }
+
+    .pledge-box__check {
+      background: rgba(16, 185, 129, 0.15);
+      color: #059669;
+      font-size: 0.85rem;
+      font-weight: 800;
+      width: 24px;
+      height: 24px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      margin-top: 0.1rem;
+    }
+
+    /* MEET OUR TEAM – FLAT PORTRAIT CARD LAYOUT */
+    .team-section-v2 {
+      background: #f8fafc;
+      padding: 4.5rem 0 3.5rem;
+    }
+
+    .team-grid-v2 {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1.5rem;
+      margin-top: 3rem;
+    }
+
+    .team-card-v2 {
+      background: #ffffff;
+      border-radius: 18px;
+      overflow: hidden;
+      border: 1px solid #e2e8f0;
+      box-shadow: 0 4px 18px rgba(15, 82, 87, 0.05);
+      transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .team-card-v2:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 14px 35px rgba(15, 82, 87, 0.13);
+      border-color: rgba(15, 82, 87, 0.3);
+    }
+
+    .team-card-v2__img {
+      width: 100%;
+      aspect-ratio: 3 / 3.2;
+      object-fit: cover;
+      object-position: top center;
+      display: block;
+    }
+
+    .team-card-v2__body {
+      padding: 1.25rem 1.25rem 1.4rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.4rem;
+      flex: 1;
+    }
+
+    .team-card-v2__name {
+      font-size: 1.08rem;
+      font-weight: 800;
+      color: #0f172a;
+      margin: 0;
+      line-height: 1.3;
+    }
+
+    .team-card-v2__role {
+      font-size: 0.72rem;
+      font-weight: 800;
+      color: #0f5257;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      margin: 0;
+      line-height: 1.4;
+    }
+
+    .team-card-v2__desc {
+      font-size: 0.85rem;
+      color: #475569;
+      line-height: 1.55;
+      margin: 0.3rem 0 0;
+    }
+
+    .team-card-v2__badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      font-size: 0.72rem;
+      font-weight: 700;
+      color: #334155;
+      margin-top: 0.85rem;
+      padding-top: 0.85rem;
+      border-top: 1px solid #f1f5f9;
+    }
+
+    .team-card-v2__badge-icon {
+      font-size: 0.85rem;
+    }
+
+    @media (max-width: 1100px) {
+      .team-grid-v2 {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 600px) {
+      .team-grid-v2 {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    /* REDESIGNED INTERACTIVE FAQ ACCORDION SECTION */
+    .faq-section {
+      background: linear-gradient(180deg, #f8fafc 0%, #ffffff 100%);
+      padding: 6rem 0;
+    }
+
+    .faq-accordion-container {
+      max-width: 900px;
+      margin: 3.5rem auto 0;
+      display: flex;
+      flex-direction: column;
+      gap: 1.25rem;
+    }
+
+    .faq-accordion-item {
+      background: #ffffff;
+      border: 1px solid #e2e8f0;
+      border-radius: 20px;
+      overflow: hidden;
+      box-shadow: 0 6px 25px rgba(15, 82, 87, 0.05);
+      transition: all 0.3s ease;
+    }
+
+    .faq-accordion-item:hover {
+      border-color: #0f5257;
+      box-shadow: 0 12px 35px rgba(15, 82, 87, 0.12);
+    }
+
+    .faq-accordion-item[open] {
+      border-color: #0f5257;
+      box-shadow: 0 12px 35px rgba(15, 82, 87, 0.1);
+    }
+
+    .faq-accordion-summary {
+      padding: 1.5rem 1.75rem;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      list-style: none;
+      user-select: none;
+      font-weight: 700;
+      color: #0f172a;
+      font-size: 1.1rem;
+      transition: background 0.25s ease;
+    }
+
+    .faq-accordion-summary::-webkit-details-marker {
+      display: none;
+    }
+
+    .faq-accordion-item[open] .faq-accordion-summary {
+      background: #f8fafc;
+      border-bottom: 1px solid #f1f5f9;
+    }
+
+    .faq-q-text {
+      display: flex;
+      align-items: center;
+      gap: 0.85rem;
+      flex: 1;
+    }
+
+    .faq-tag-badge {
+      font-size: 0.68rem;
+      font-weight: 800;
+      color: #0f5257;
+      background: rgba(15, 82, 87, 0.08);
+      border: 1px solid rgba(15, 82, 87, 0.2);
+      padding: 0.25rem 0.65rem;
+      border-radius: 999px;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      flex-shrink: 0;
+    }
+
+    .faq-chevron-box {
+      width: 34px;
+      height: 34px;
+      border-radius: 50%;
+      background: rgba(15, 82, 87, 0.08);
+      color: #0f5257;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: transform 0.3s ease, background 0.3s ease, color 0.3s ease;
+      flex-shrink: 0;
+    }
+
+    .faq-accordion-item[open] .faq-chevron-box {
+      transform: rotate(180deg);
+      background: #0f5257;
+      color: #ffffff;
+    }
+
+    .faq-accordion-content {
+      padding: 1.5rem 1.75rem;
+      color: #475569;
+      font-size: 0.95rem;
+      line-height: 1.7;
+      background: #ffffff;
+    }
+
+    .faq-help-card {
+      max-width: 900px;
+      margin: 3rem auto 0;
+      background: linear-gradient(135deg, #071e20 0%, #0f5257 100%);
+      border-radius: 20px;
+      padding: 2rem 2.5rem;
+      color: #ffffff;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1.5rem;
+      box-shadow: 0 15px 40px rgba(7, 30, 32, 0.2);
+    }
+
+    .faq-help-card__title {
+      font-size: 1.2rem;
+      font-weight: 800;
+      color: #ffffff;
+      margin: 0 0 0.35rem;
+    }
+
+    .faq-help-card__desc {
+      font-size: 0.9rem;
+      color: #cbd5e1;
+      margin: 0;
+    }
+
+    @media (max-width: 768px) {
+      .faq-help-card {
+        flex-direction: column;
+        text-align: center;
+        padding: 1.75rem;
+      }
+
+      .faq-accordion-summary {
+        padding: 1.25rem;
+        font-size: 1rem;
+      }
+    }
+
+    /* LEADERSHIP SPOTLIGHT SECTION (COMPACT SLEEK REDESIGN) */
+    .leadership-spotlight-section {
+      background: #ffffff;
+      padding: 3.5rem 0 2rem;
+    }
+
+    .leadership-spotlight-card {
+      max-width: 860px;
+      margin: 2.25rem auto 0;
+      background: #ffffff;
+      border: 1px solid #e2e8f0;
+      border-radius: 20px;
+      overflow: hidden;
+      box-shadow: 0 10px 30px rgba(15, 82, 87, 0.07);
+      display: grid;
+      grid-template-columns: 0.88fr 1.12fr;
+      align-items: stretch;
+      transition: box-shadow 0.35s ease, border-color 0.35s ease;
+    }
+
+    .leadership-spotlight-card:hover {
+      box-shadow: 0 16px 40px rgba(15, 82, 87, 0.13);
+      border-color: rgba(15, 82, 87, 0.25);
+    }
+
+    .leadership-spotlight-img-wrap {
+      position: relative;
+      min-height: 280px;
+      background: #071e20;
+      overflow: hidden;
+    }
+
+    .leadership-spotlight-img-wrap img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: top center;
+      display: block;
+      transition: transform 0.6s ease;
+    }
+
+    .leadership-spotlight-card:hover .leadership-spotlight-img-wrap img {
+      transform: scale(1.04);
+    }
+
+    .leadership-spotlight-img-badge {
+      position: absolute;
+      bottom: 1rem;
+      left: 1rem;
+      right: 1rem;
+      background: rgba(15, 23, 42, 0.88);
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      border-radius: 12px;
+      padding: 0.75rem 1rem;
+      color: #ffffff;
+      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.3);
+    }
+
+    .leadership-spotlight-img-name {
+      font-size: 0.98rem;
+      font-weight: 800;
+      color: #ffffff;
+      margin: 0 0 0.15rem;
+    }
+
+    .leadership-spotlight-img-title {
+      font-size: 0.72rem;
+      color: #94a3b8;
+      font-weight: 600;
+      margin: 0;
+    }
+
+    .leadership-spotlight-content {
+      padding: 1.75rem 2rem 1.75rem 1.75rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .leadership-spotlight-eyebrow {
+      font-size: 0.72rem;
+      font-weight: 800;
+      color: #059669;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      margin-bottom: 0.4rem;
+    }
+
+    .leadership-spotlight-headline {
+      font-size: 1.3rem;
+      font-weight: 800;
+      color: #0f172a;
+      line-height: 1.3;
+      margin: 0 0 0.85rem;
+      font-family: var(--font-heading);
+    }
+
+    .leadership-spotlight-quote-box {
+      background: #f8fafc;
+      border-left: 3.5px solid #059669;
+      border-radius: 0 12px 12px 0;
+      padding: 0.85rem 1.1rem;
+      margin-bottom: 0.85rem;
+    }
+
+    .leadership-spotlight-quote-text {
+      font-size: 0.86rem;
+      font-style: italic;
+      color: #334155;
+      line-height: 1.55;
+      margin: 0;
+    }
+
+    .leadership-spotlight-bio {
+      font-size: 0.86rem;
+      color: #475569;
+      line-height: 1.55;
+      margin: 0 0 1rem;
+    }
+
+    .leadership-spotlight-author {
+      margin-top: auto;
+    }
+
+    .leadership-spotlight-author-name {
+      font-size: 0.98rem;
+      font-weight: 800;
+      color: #0f172a;
+      margin: 0 0 0.1rem;
+    }
+
+    .leadership-spotlight-author-role {
+      font-size: 0.78rem;
+      color: #64748b;
+      font-weight: 600;
+      margin: 0;
+    }
+
+    @media (max-width: 900px) {
+      .leadership-spotlight-card {
+        grid-template-columns: 1fr;
+        max-width: 100%;
+      }
+
+      .leadership-spotlight-img-wrap {
+        min-height: 260px;
+      }
+
+      .leadership-spotlight-content {
+        padding: 1.5rem 1.25rem;
+      }
+
+      .leadership-spotlight-headline {
+        font-size: 1.18rem;
+      }
+    }
+
+    /* OUR JOURNEY & HERITAGE Section Redesign */
+    .journey-story-split {
+      display: grid;
+      grid-template-columns: 1.15fr 0.85fr;
+      gap: 3.5rem;
+      align-items: center;
+      margin-bottom: 4rem;
+    }
+
+    .journey-story__badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: rgba(15, 82, 87, 0.08);
+      color: #0f5257;
+      font-size: 0.78rem;
+      font-weight: 800;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      padding: 0.4rem 1.1rem;
+      border-radius: 999px;
+      margin-bottom: 1rem;
+    }
+
+    .journey-story__title {
+      font-size: clamp(2rem, 3.5vw, 2.7rem);
+      font-weight: 800;
+      color: #0f172a;
+      line-height: 1.2;
+      margin: 0 0 1.25rem;
+    }
+
+    .journey-story__title span {
+      color: #0f5257;
+    }
+
+    .journey-story__text {
+      font-size: 1.02rem;
+      color: #475569;
+      line-height: 1.7;
+      margin-bottom: 1.25rem;
+    }
+
+    .journey-quote-box {
+      background: linear-gradient(135deg, #071e20 0%, #0f5257 100%);
+      color: #ffffff;
+      border-radius: 24px;
+      padding: 2.25rem;
+      position: relative;
+      overflow: hidden;
+      border: 1px solid rgba(200, 169, 107, 0.35);
+      box-shadow: 0 16px 45px rgba(7, 30, 32, 0.25);
+    }
+
+    .journey-quote-box::before {
+      content: '"';
+      position: absolute;
+      top: -15px;
+      right: 25px;
+      font-size: 8.5rem;
+      font-family: Georgia, serif;
+      color: rgba(200, 169, 107, 0.18);
+      line-height: 1;
+      pointer-events: none;
+    }
+
+    .journey-quote__text {
+      font-size: 1.05rem;
+      font-style: italic;
+      line-height: 1.65;
+      color: #cbd5e1;
+      margin: 0 0 1.5rem;
+      position: relative;
+      z-index: 2;
+    }
+
+    .journey-quote__author {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+
+    .journey-quote__avatar {
+      width: 52px;
+      height: 52px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 2px solid #c8a96b;
+    }
+
+    .journey-quote__name {
+      font-size: 1rem;
+      font-weight: 800;
+      color: #fef08a;
+      display: block;
+    }
+
+    .journey-quote__role {
+      font-size: 0.76rem;
+      color: #94a3b8;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    /* 6-Stage Timeline Vertical/Horizontal Roadmap */
+    .journey-roadmap-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 2rem;
+      margin-top: 2.5rem;
+    }
+
+    .journey-node {
+      background: #ffffff;
+      border-radius: 20px;
+      padding: 2rem;
+      border: 1px solid #e2e8f0;
+      box-shadow: 0 8px 30px rgba(15, 82, 87, 0.06);
+      position: relative;
+      transition: all 0.35s ease;
+    }
+
+    .journey-node:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 16px 40px rgba(15, 82, 87, 0.15);
+      border-color: #0f5257;
+    }
+
+    .journey-node__header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 1rem;
+    }
+
+    .journey-node__year {
+      background: linear-gradient(135deg, #0f5257 0%, #0b3c40 100%);
+      color: #fef08a;
+      font-size: 0.9rem;
+      font-weight: 800;
+      padding: 0.35rem 1rem;
+      border-radius: 999px;
+    }
+
+    .journey-node__tag {
+      font-size: 0.72rem;
+      font-weight: 800;
+      color: #059669;
+      background: rgba(16, 185, 129, 0.12);
+      padding: 0.3rem 0.8rem;
+      border-radius: 999px;
+      text-transform: uppercase;
+    }
+
+    .journey-node__title {
+      font-size: 1.2rem;
+      font-weight: 800;
+      color: #0f172a;
+      margin: 0 0 0.6rem;
+    }
+
+    .journey-node__desc {
+      font-size: 0.9rem;
+      color: #475569;
+      line-height: 1.65;
+      margin: 0;
+    }
+
+    /* WHY CHOOSE US Section & Comparison Table */
+    .why-choose-section {
+      background: #f8fafc;
+      padding: 5.5rem 0;
+    }
+
+    .why-choose-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem;
+      margin-top: 3rem;
+    }
+
+    .why-choose-card {
+      background: #ffffff;
+      border: 1px solid #e2e8f0;
+      border-radius: 20px;
+      padding: 2rem;
+      box-shadow: 0 8px 30px rgba(15, 82, 87, 0.06);
+      transition: all 0.35s ease;
+      position: relative;
+    }
+
+    .why-choose-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 16px 40px rgba(15, 82, 87, 0.14);
+      border-color: #0f5257;
+    }
+
+    .why-choose-card__icon-box {
+      width: 56px;
+      height: 56px;
+      border-radius: 16px;
+      background: linear-gradient(135deg, rgba(15, 82, 87, 0.1) 0%, rgba(200, 169, 107, 0.15) 100%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.8rem;
+      margin-bottom: 1.25rem;
+    }
+
+    .why-choose-card__title {
+      font-size: 1.2rem;
+      font-weight: 800;
+      color: #0f172a;
+      margin: 0 0 0.6rem;
+    }
+
+    .why-choose-card__desc {
+      font-size: 0.9rem;
+      color: #475569;
+      line-height: 1.65;
+      margin: 0;
+    }
+
+    /* Comparison Table Styling */
+    .comparison-box {
+      background: #ffffff;
+      border-radius: 24px;
+      border: 1px solid #e2e8f0;
+      box-shadow: 0 12px 40px rgba(15, 82, 87, 0.08);
+      overflow: hidden;
+      margin-top: 4rem;
+    }
+
+    .comparison-header {
+      background: #071e20;
+      color: #ffffff;
+      padding: 1.5rem 2rem;
+      display: grid;
+      grid-template-columns: 1.2fr 1fr 1fr;
+      gap: 1.5rem;
+      font-weight: 800;
+      align-items: center;
+    }
+
+    .comparison-header__col--us {
+      color: #fef08a;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .comparison-row {
+      display: grid;
+      grid-template-columns: 1.2fr 1fr 1fr;
+      gap: 1.5rem;
+      padding: 1.25rem 2rem;
+      border-bottom: 1px solid #f1f5f9;
+      align-items: center;
+      font-size: 0.92rem;
+    }
+
+    .comparison-row:nth-child(even) {
+      background: #f8fafc;
+    }
+
+    .comparison-row__feature {
+      font-weight: 700;
+      color: #0f172a;
+    }
+
+    .comparison-row__us {
+      color: #059669;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+    }
+
+    .comparison-row__them {
+      color: #94a3b8;
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+    }
+
+    /* REDESIGNED HIGH-CONTRAST GUIDING PRINCIPLES SECTION */
+    .principles-section-v2 {
+      position: relative;
+      background: linear-gradient(180deg, #f8fafc 0%, #f1f5f9 100%);
+      padding: 5.5rem 0;
+      color: #0f172a;
+    }
+
+    .principles-v2__badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: rgba(15, 82, 87, 0.08);
+      border: 1px solid rgba(15, 82, 87, 0.2);
+      color: #0f5257;
+      font-size: 0.8rem;
+      font-weight: 800;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      padding: 0.45rem 1.2rem;
+      border-radius: 999px;
+      margin-bottom: 1rem;
+    }
+
+    .principles-v2__title {
+      font-size: clamp(2rem, 3.5vw, 2.75rem);
+      font-weight: 800;
+      color: #0f172a;
+      line-height: 1.2;
+      margin: 0 0 1rem;
+    }
+
+    .principles-v2__title span {
+      color: #0f5257;
+    }
+
+    .principles-v2-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2rem;
+      margin-top: 3.5rem;
+    }
+
+    .principle-v2-card {
+      background: #ffffff;
+      border: 1px solid #e2e8f0;
+      border-radius: 24px;
+      padding: 2.25rem;
+      position: relative;
+      transition: all 0.35s ease;
+      box-shadow: 0 10px 30px rgba(15, 82, 87, 0.06);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .principle-v2-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 20px 45px rgba(15, 82, 87, 0.15);
+      border-color: #0f5257;
+    }
+
+    .principle-v2-card__num {
+      position: absolute;
+      top: 1.5rem;
+      right: 1.5rem;
+      font-size: 2.75rem;
+      font-weight: 900;
+      color: rgba(15, 82, 87, 0.12);
+      line-height: 1;
+      font-family: inherit;
+    }
+
+    .principle-v2-card__icon-box {
+      width: 58px;
+      height: 58px;
+      border-radius: 18px;
+      background: linear-gradient(135deg, rgba(15, 82, 87, 0.1) 0%, rgba(200, 169, 107, 0.15) 100%);
+      border: 1px solid rgba(15, 82, 87, 0.2);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.75rem;
+      margin-bottom: 1.25rem;
+    }
+
+    .principle-v2-card__tag {
+      font-size: 0.72rem;
+      font-weight: 800;
+      color: #0f5257;
+      background: rgba(15, 82, 87, 0.08);
+      border: 1px solid rgba(15, 82, 87, 0.18);
+      padding: 0.3rem 0.8rem;
+      border-radius: 999px;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      display: inline-block;
+      margin-bottom: 0.85rem;
+    }
+
+    .principle-v2-card__title {
+      font-size: 1.35rem;
+      font-weight: 800;
+      color: #0f172a;
+      margin: 0 0 0.75rem;
+      line-height: 1.25;
+    }
+
+    .principle-v2-card__desc {
+      font-size: 0.92rem;
+      color: #475569;
+      line-height: 1.65;
+      margin: 0 0 1.25rem;
+    }
+
+    .principle-v2-card__points {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      border-top: 1px solid #f1f5f9;
+      padding-top: 1rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+
+    .principle-v2-card__point {
+      font-size: 0.85rem;
+      color: #334155;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-weight: 600;
+    }
+
+    .principle-v2-card__point-check {
+      color: #059669;
+      font-weight: 800;
+    }
+
+    @media (max-width: 1200px) {
+
+      .team-grid,
+      .safety-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 992px) {
+
+      .about-hero__grid,
+      .pledge-box,
+      .faq-grid,
+      .journey-story-split {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+      }
+    }
+
+    @media (max-width: 768px) {
+
+      .comparison-header,
+      .comparison-row {
+        grid-template-columns: 1fr;
+        gap: 0.5rem;
+      }
+    }
+
+    @media (max-width: 640px) {
+
+      .team-grid,
+      .safety-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "LocalBusiness",
+    "name": "Best Treks Nepal",
+    "url": "https://www.besttreksnepal.com/",
+    "telephone": "+977-1-4700000",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Thamel, Kathmandu",
+      "addressLocality": "Kathmandu",
+      "addressCountry": "NP"
+    },
+    "description": "Licensed trekking company in Nepal offering guided Himalayan treks.",
+    "foundingDate": "2009",
+    "numberOfEmployees": "25"
+  }
+  </script>
+  <!-- No-JS: reveal all content hidden by JS animation system -->
+  <noscript><style>
+    /* Hide the page loader overlay */
+    .page-loader { display: none !important; }
+    body { visibility: visible !important; opacity: 1 !important; }
+
+    /* Reveal all scroll-animated elements immediately */
+    .reveal,
+    .reveal.reveal--left,
+    .reveal.reveal--right,
+    .reveal.reveal--scale {
+      opacity: 1 !important;
+      transform: none !important;
+      transition: none !important;
+    }
+
+    /* Show counters and stats at their final values */
+    [data-counter] { opacity: 1 !important; }
+
+    /* Show all lazy-hidden sections */
+    [data-animate],
+    [data-scroll-reveal] {
+      opacity: 1 !important;
+      transform: none !important;
+    }
+
+    /* Hide JS-only widgets that serve no purpose without JS */
+    .floating-whatsapp { display: none !important; }
+    .cookie-banner     { display: none !important; }
+    .back-to-top       { display: none !important; }
+
+    /* Ensure navbar links are always visible */
+    .navbar__nav { display: flex !important; }
+  </style></noscript>
+</head>
+
+<body>
+  <!-- Skip Navigation (Accessibility) -->
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  <!-- Page Loader -->
+  <div class="page-loader" aria-hidden="true">
+    <div class="page-loader__logo">
+      <svg viewBox="0 0 120 40" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <text x="0" y="30" font-family="Poppins, sans-serif" font-weight="700" font-size="18" fill="#FCEEDF">Best
+          Treks</text>
+        <text x="0" y="42" font-family="Poppins, sans-serif" font-weight="400" font-size="10" fill="#7FB3B0"
+          letter-spacing="3">NEPAL</text>
+      </svg>
+    </div>
+  </div>
+
+  <!-- Scroll Progress Bar -->
+  <div class="navbar-progress" id="navbar-progress" aria-hidden="true"></div>
+
+  <!-- =====================================================================
+       SITE HEADER (sticky wrapper: top-bar + navbar)
+       ===================================================================== -->
+  <div class="site-header">
+
+    <!-- =====================================================================
+       TOP INFORMATION BAR
+       ===================================================================== -->
+    <div class="top-bar" role="banner" aria-label="Contact information">
+      <div class="container">
+        <div class="top-bar__inner">
+          <div class="top-bar__contacts">
+            <a href="tel:+97714700000" aria-label="Call us at +977 1 470 0000">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path
+                  d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.79 19.79 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z" />
+              </svg>
+              +977 1 470 0000
+            </a>
+            <a href="mailto:info@besttreksnepal.com" aria-label="Email us at info@besttreksnepal.com">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+                <polyline points="22,6 12,13 2,6" />
+              </svg>
+              info@besttreksnepal.com
+            </a>
+          </div>
+          <div class="top-bar__social" aria-label="Follow us on social media">
+            <a href="https://www.facebook.com/besttreksnepal" aria-label="Facebook">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" />
+              </svg>
+            </a>
+            <a href="https://www.instagram.com/besttreksnepal" aria-label="Instagram">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
+                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" />
+              </svg>
+            </a>
+            <a href="https://wa.me/9771234567890" aria-label="WhatsApp">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                <path
+                  d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z" />
+                <path
+                  d="M12 2C6.477 2 2 6.477 2 12c0 1.89.525 3.66 1.438 5.168L2 22l4.832-1.438A9.946 9.946 0 0 0 12 22c5.523 0 10-4.477 10-10S17.523 2 12 2z" />
+              </svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- =====================================================================
+       NAVBAR
+       ===================================================================== -->
+    <header>
+      <nav class="navbar" aria-label="Main navigation" id="navbar">
+        <div class="container">
+          <div class="navbar__inner">
+
+            <!-- Logo -->
+            <a class="navbar__logo" href="/" aria-label="Best Treks Nepal — Homepage">
+              <div class="navbar__logo-text">
+                Best Treks Nepal
+                <span>Adventure Awaits</span>
+              </div>
+            </a>
+
+            <!-- Desktop Navigation -->
+            <ul class="navbar__nav" role="list">
+
+              <li class="navbar__nav-item">
+                <a href="/" class="navbar__nav-link" aria-current="page">Home</a>
+              </li>
+
+              <!-- Destinations — Mega Menu -->
+              <li class="navbar__nav-item">
+                <a href="destinations.html" class="navbar__nav-link" aria-haspopup="true" aria-expanded="false">
+                  Destinations
+                  <svg class="navbar__caret" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+                    stroke="currentColor" stroke-width="2.5" aria-hidden="true">
+                    <polyline points="6 9 12 15 18 9" />
+                  </svg>
+                </a>
+                <div class="mega-menu" role="region" aria-label="Destinations menu">
+                  <div class="mega-menu__header">
+                    <div class="mega-menu__header-title-wrap">
+                      <span class="mega-menu__header-icon">🏔️</span>
+                      <span class="mega-menu__header-label">Himalayan Regions &amp; Travel Guides</span>
+                    </div>
+                    <a href="/destinations.html" class="mega-menu__header-link">
+                      Explore All Destinations
+                      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="none" stroke="currentColor"
+                        stroke-width="2" width="12" height="12" aria-hidden="true">
+                        <path d="M3 8h10M9 4l4 4-4 4" />
+                      </svg>
+                    </a>
+                  </div>
+                  <div class="mega-menu__body">
+                    <div class="mega-menu__layout">
+
+                      <!-- Left Column: 6 Destination Regions Grid -->
+                      <div class="mega-menu__regions-section">
+                        <div class="mega-menu__section-title">Featured Trekking Regions</div>
+                        <div class="mega-menu__grid">
+
+                          <a href="/destinations.html#everest" class="mega-menu__item">
+                            <div class="mega-menu__item-thumb">
+                              <img src="/assets/images/destinations/everest.jpg" alt="Everest Region" loading="lazy">
+                              <span class="mega-menu__item-alt-tag">5,545m</span>
+                            </div>
+                            <div class="mega-menu__item-info">
+                              <div class="mega-menu__item-title">Everest Region</div>
+                              <div class="mega-menu__item-desc">World's highest peaks &amp; Sherpa culture</div>
+                            </div>
+                          </a>
+
+                          <a href="/destinations.html#annapurna" class="mega-menu__item">
+                            <div class="mega-menu__item-thumb">
+                              <img src="/assets/images/destinations/annapurna.jpg" alt="Annapurna Region"
+                                loading="lazy">
+                              <span class="mega-menu__item-alt-tag">5,416m</span>
+                            </div>
+                            <div class="mega-menu__item-info">
+                              <div class="mega-menu__item-title">Annapurna Region</div>
+                              <div class="mega-menu__item-desc">Diverse alpine trails &amp; sanctuaries</div>
+                            </div>
+                          </a>
+
+                          <a href="/destinations.html#langtang" class="mega-menu__item">
+                            <div class="mega-menu__item-thumb">
+                              <img src="/assets/images/destinations/langtang.jpg" alt="Langtang Region" loading="lazy">
+                              <span class="mega-menu__item-alt-tag">4,773m</span>
+                            </div>
+                            <div class="mega-menu__item-info">
+                              <div class="mega-menu__item-title">Langtang Valley</div>
+                              <div class="mega-menu__item-desc">Glaciers &amp; Tamang heritage</div>
+                            </div>
+                          </a>
+
+                          <a href="/destinations.html#manaslu" class="mega-menu__item">
+                            <div class="mega-menu__item-thumb">
+                              <img src="/assets/images/destinations/manaslu.jpg" alt="Manaslu Region" loading="lazy">
+                              <span class="mega-menu__item-alt-tag">5,106m</span>
+                            </div>
+                            <div class="mega-menu__item-info">
+                              <div class="mega-menu__item-title">Manaslu Circuit</div>
+                              <div class="mega-menu__item-desc">Uncrowded high-altitude circuit</div>
+                            </div>
+                          </a>
+
+                          <a href="/destinations.html#mustang" class="mega-menu__item">
+                            <div class="mega-menu__item-thumb">
+                              <img src="/assets/images/destinations/mustang.jpg" alt="Upper Mustang" loading="lazy">
+                              <span class="mega-menu__item-alt-tag">3,840m</span>
+                            </div>
+                            <div class="mega-menu__item-info">
+                              <div class="mega-menu__item-title">Upper Mustang</div>
+                              <div class="mega-menu__item-desc">Forbidden walled Buddhist kingdom</div>
+                            </div>
+                          </a>
+
+                          <a href="/destinations.html#dolpo" class="mega-menu__item">
+                            <div class="mega-menu__item-thumb">
+                              <img src="/assets/images/destinations/dolpo.jpg" alt="Dolpo Region" loading="lazy">
+                              <span class="mega-menu__item-alt-tag">5,350m</span>
+                            </div>
+                            <div class="mega-menu__item-info">
+                              <div class="mega-menu__item-title">Dolpo &amp; Far-West</div>
+                              <div class="mega-menu__item-desc">Remote turquoise lake wilderness</div>
+                            </div>
+                          </a>
+
+                        </div>
+                      </div>
+
+                      <!-- Right Column: Regional Articles & Guides -->
+                      <div class="mega-menu__articles-section">
+                        <div class="mega-menu__section-title">
+                          <span>📰 Regional Guides &amp; Articles</span>
+                        </div>
+                        <div class="mega-menu__articles-list">
+
+                          <a href="/blog/everest-base-camp-packing-list.html" class="mega-menu__article-card">
+                            <div class="mega-menu__article-tag mega-menu__article-tag--everest">Everest Guide</div>
+                            <h4 class="mega-menu__article-title">Everest Base Camp Altitude &amp; Packing List</h4>
+                            <span class="mega-menu__article-meta">⏱️ 8 min read · Gear &amp; Altitude</span>
+                          </a>
+
+                          <a href="/blog/best-time-trek-nepal.html" class="mega-menu__article-card">
+                            <div class="mega-menu__article-tag mega-menu__article-tag--annapurna">Annapurna Guide</div>
+                            <h4 class="mega-menu__article-title">Best Time to Trek: Weather &amp; Seasons</h4>
+                            <span class="mega-menu__article-meta">⏱️ 6 min read · Spring vs. Autumn</span>
+                          </a>
+
+                          <a href="/blog/nepal-trekking-permits.html" class="mega-menu__article-card">
+                            <div class="mega-menu__article-tag mega-menu__article-tag--permits">Permits Guide</div>
+                            <h4 class="mega-menu__article-title">Nepal Trekking Permits &amp; Clearances 2026</h4>
+                            <span class="mega-menu__article-meta">⏱️ 7 min read · TIMS &amp; Restricted Areas</span>
+                          </a>
+
+                        </div>
+
+                        <!-- Featured Trip Help Banner -->
+                        <div class="mega-menu__promo-banner">
+                          <div class="mega-menu__promo-text">Unsure which region fits your goals?</div>
+                          <a href="/contact.html" class="mega-menu__promo-btn">Ask a Sherpa Guide →</a>
+                        </div>
+                      </div>
+
+                    </div>
+                  </div>
+                </div>
+              </li>
+
+              <!-- Trek Packages dropdown -->
+              <li class="navbar__nav-item">
+                <a href="/treks.html" class="navbar__nav-link">Trek Packages</a>
+              </li>
+
+              <li class="navbar__nav-item">
+                <a href="/blog.html" class="navbar__nav-link">Blog</a>
+              </li>
+
+              <li class="navbar__nav-item">
+                <a href="/about.html" class="navbar__nav-link">About</a>
+              </li>
+
+              <li class="navbar__nav-item">
+                <a href="/contact.html" class="navbar__nav-link">Contact</a>
+              </li>
+            </ul>
+
+            <!-- Navbar Actions -->
+            <div class="navbar__actions">
+              <button class="navbar__search-btn" aria-label="Open search" data-search-open type="button">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                  stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <circle cx="11" cy="11" r="8" />
+                  <line x1="21" y1="21" x2="16.65" y2="16.65" />
+                </svg>
+              </button>
+              <a href="/booking.html" class="btn btn--primary btn--sm" aria-label="Book a trek">
+                Book a Trek
+              </a>
+            </div>
+
+            <!-- Mobile Hamburger -->
+            <button class="navbar__hamburger" aria-label="Open navigation menu" aria-expanded="false"
+              aria-controls="mobile-menu" type="button">
+              <span></span>
+              <span></span>
+              <span></span>
+            </button>
+
+          </div>
+        </div>
+      </nav>
+    </header>
+
+  </div><!-- /.site-header -->
+
+  <!-- Mobile Menu Overlay -->
+  <div class="mobile-menu-overlay" aria-hidden="true"></div>
+
+  <!-- Mobile Menu Panel -->
+  <div class="mobile-menu" id="mobile-menu" role="dialog" aria-modal="true" aria-label="Navigation menu"
+    aria-hidden="true">
+    <div class="mobile-menu__header">
+      <span class="navbar__logo-text" aria-hidden="true">Best Treks Nepal</span>
+      <button class="mobile-menu__close" aria-label="Close navigation menu" type="button">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+          stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <line x1="18" y1="6" x2="6" y2="18" />
+          <line x1="6" y1="6" x2="18" y2="18" />
+        </svg>
+      </button>
+    </div>
+    <nav class="mobile-menu__nav" aria-label="Mobile navigation">
+      <a href="/" class="mobile-menu__link">Home</a>
+      <a href="/about.html" class="mobile-menu__link">About</a>
+      <a href="/blog.html" class="mobile-menu__link">Blog</a>
+      <a href="/gallery.html" class="mobile-menu__link">Gallery</a>
+      <a href="/contact.html" class="mobile-menu__link">Contact</a>
+      <div class="mobile-menu__group-title">Destinations</div>
+      <a href="/destinations/everest.html" class="mobile-menu__sub-link">Everest Region</a>
+      <a href="/destinations/annapurna.html" class="mobile-menu__sub-link">Annapurna Region</a>
+      <a href="/destinations/langtang.html" class="mobile-menu__sub-link">Langtang Region</a>
+      <a href="/destinations/manaslu.html" class="mobile-menu__sub-link">Manaslu Region</a>
+      <a href="/destinations/mustang.html" class="mobile-menu__sub-link">Mustang</a>
+      <a href="/destinations/dolpo.html" class="mobile-menu__sub-link">Dolpo</a>
+      <a href="/destinations/kanchenjunga.html" class="mobile-menu__sub-link">Kanchenjunga</a>
+      <div class="mobile-menu__group-title">Popular Treks</div>
+      <a href="/treks/everest-base-camp.html" class="mobile-menu__sub-link">Everest Base Camp</a>
+      <a href="/treks/annapurna-circuit.html" class="mobile-menu__sub-link">Annapurna Circuit</a>
+      <a href="/treks/manaslu-circuit.html" class="mobile-menu__sub-link">Manaslu Circuit</a>
+      <a href="/treks/gokyo-lakes.html" class="mobile-menu__sub-link">Gokyo Lakes</a>
+      <a href="/treks/upper-mustang.html" class="mobile-menu__sub-link">Upper Mustang</a>
+    </nav>
+    <div class="mobile-menu__footer">
+      <a href="/booking.html" class="btn btn--primary btn--full">Book a Trek</a>
+      <a href="tel:+97714700000" class="btn btn--secondary btn--full">Call Us Now</a>
+    </div>
+  </div>
+
+  <!-- Search Modal -->
+  <div class="search-modal" role="dialog" aria-modal="true" aria-label="Search treks and destinations"
+    aria-hidden="true">
+    <div class="search-modal__inner">
+      <div class="search-modal__bar">
+        <div class="search-modal__icon" aria-hidden="true">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="11" cy="11" r="8" />
+            <line x1="21" y1="21" x2="16.65" y2="16.65" />
+          </svg>
+        </div>
+        <input class="search-modal__input" type="search" placeholder="Search treks, destinations…"
+          aria-label="Search treks and destinations" autocomplete="off" data-search-input aria-controls="search-results"
+          aria-expanded="false">
+        <button class="btn btn--sm btn--secondary" data-search-close aria-label="Close search"
+          type="button">ESC</button>
+      </div>
+      <div class="search-modal__results" id="search-results" role="listbox" aria-label="Search results" hidden></div>
+    </div>
+  </div>
+
+
+  <main id="main-content">
+
+    <!-- ==================================================================
+         HERO SECTION (Matching Homepage Hero Architecture)
+         ================================================================== -->
+    <section class="hero" aria-label="About Us — Best Treks Nepal" aria-roledescription="carousel">
+
+      <!-- Background Image Slides Carousel -->
+      <div class="hero__slides" aria-live="off">
+        <div class="hero__slide is-active" role="group" aria-roledescription="slide" aria-label="Slide 1 of 3">
+          <img class="hero__slide-bg" src="/assets/images/hero/slide-2-annapurna.jpg" alt="Annapurna Mountain Range"
+            loading="eager" fetchpriority="high" width="1920" height="1080">
+          <div class="hero__overlay"></div>
+        </div>
+
+        <div class="hero__slide" role="group" aria-roledescription="slide" aria-label="Slide 2 of 3">
+          <img class="hero__slide-bg" src="/assets/images/hero/slide-1-everest.jpg" alt="Everest Base Camp Valley"
+            loading="lazy" width="1920" height="1080">
+          <div class="hero__overlay"></div>
+        </div>
+
+        <div class="hero__slide" role="group" aria-roledescription="slide" aria-label="Slide 3 of 3">
+          <img class="hero__slide-bg" src="/assets/images/destinations/manaslu.jpg" alt="Manaslu Mountain Circuit"
+            loading="lazy" width="1920" height="1080">
+          <div class="hero__overlay"></div>
+        </div>
+      </div>
+
+      <!-- Slide Navigation Arrows -->
+      <button class="hero__arrow hero__arrow--prev" aria-label="Previous slide" type="button">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+          stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <polyline points="15 18 9 12 15 6" />
+        </svg>
+      </button>
+      <button class="hero__arrow hero__arrow--next" aria-label="Next slide" type="button">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+          stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <polyline points="9 18 15 12 19 6" />
+        </svg>
+      </button>
+
+      <!-- Hero Content Block -->
+      <div class="container">
+        <div class="hero__content reveal-group">
+
+          <!-- Breadcrumbs -->
+          <nav class="breadcrumb breadcrumb--white" aria-label="Breadcrumb" style="margin-bottom:1.25rem;">
+            <ol style="display:flex;align-items:center;gap:.375rem;list-style:none;padding:0;margin:0;">
+              <li class="breadcrumb__item"><a href="/" class="breadcrumb__link">Home</a></li>
+              <li class="breadcrumb__item" aria-hidden="true">
+                <svg class="breadcrumb__separator" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"
+                  stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" width="14"
+                  height="14">
+                  <polyline points="9 18 15 12 9 6" />
+                </svg>
+              </li>
+              <li class="breadcrumb__item" style="color:#fef08a;" aria-current="page">About Us</li>
+            </ol>
+          </nav>
+
+          <!-- 1. Google / Rating Pill -->
+          <div class="hero__rating-badge reveal">
+            <div class="hero__rating-box">
+              <svg class="hero__google-icon" width="18" height="18" viewBox="0 0 24 24">
+                <path fill="#4285F4"
+                  d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" />
+                <path fill="#34A853"
+                  d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" />
+                <path fill="#FBBC05"
+                  d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.06H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.94l2.85-2.22.81-.63z" />
+                <path fill="#EA4335"
+                  d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.06l3.66 2.84c.87-2.6 3.3-4.52 6.16-4.52z" />
+              </svg>
+              <div class="hero__rating-text-group">
+                <span class="hero__rating-brand">Reviews</span>
+                <span class="hero__stars-mini">★★★★★</span>
+              </div>
+            </div>
+            <div class="hero__rating-divider"></div>
+            <div class="hero__rating-info">
+              <span>Excellent <strong>4.9</strong> out of 5</span>
+              <div class="hero__stars-yellow">★★★★★</div>
+            </div>
+          </div>
+
+          <!-- 2. Headline with Title Badge -->
+          <h1 class="hero__title reveal">
+            <span class="hero__title-badge">100% Local Sherpa Owned</span><br>
+            Guiding Himalayan Dreams
+          </h1>
+
+          <!-- 3. Subtitle Paragraph -->
+          <p class="hero__subtitle reveal">
+            15+ years of certified high-altitude leadership, emergency safety standards, and sustainable porter welfare
+            across Nepal's most breathtaking mountain trails. <a href="#our-story-heading"
+              class="hero__subtitle-link">Our story &rarr;</a>
+          </p>
+
+          <!-- 4. Action Row (Play Thumb + White Floating Trust Pill with Avatars) -->
+          <div class="hero__action-row reveal">
+            <a href="/about.html" class="hero__play-thumb" aria-label="Watch Sherpa team intro preview">
+              <img loading="lazy" src="/assets/images/destinations/everest.jpg" alt="Sherpa expedition preview">
+              <div class="hero__play-btn">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="12" height="12">
+                  <path d="M8 5v14l11-7z" />
+                </svg>
+              </div>
+            </a>
+
+            <div class="hero__trust-pill">
+              <div class="hero__avatars">
+                <img loading="lazy" src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=80&auto=format&fit=crop&q=80"
+                  alt="Pasang Sherpa" class="hero__avatar">
+                <img loading="lazy" src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=80&auto=format&fit=crop&q=80"
+                  alt="Raj Lama" class="hero__avatar">
+                <img loading="lazy" src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=80&auto=format&fit=crop&q=80"
+                  alt="Karma Gurung" class="hero__avatar">
+                <img loading="lazy" src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=80&auto=format&fit=crop&q=80"
+                  alt="Trekker" class="hero__avatar">
+              </div>
+              <span class="hero__trust-text">Led By <strong>25+ Native Sherpas</strong></span>
+              <a href="/booking.html" class="btn hero__trust-btn">Plan Your Expedition</a>
+            </div>
+          </div>
+
+          <!-- Hero Search Widget -->
+          <div class="hero__search-widget reveal" role="search" aria-label="Trek Finder">
+            <div class="hero__search-input-group">
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                stroke="rgba(255,255,255,0.7)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                aria-hidden="true">
+                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                <circle cx="12" cy="10" r="3"></circle>
+              </svg>
+              <input class="hero__search-input" type="search" placeholder="Search guides, safety, regions, permits..."
+                aria-label="Search guides, safety, regions, permits" autocomplete="off" data-search-input
+                aria-controls="hero-search-results">
+            </div>
+
+            <button class="btn hero__search-submit" type="button" aria-label="Submit search">
+              Search
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" width="16"
+                height="16">
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+                <polyline points="12 5 19 12 12 19"></polyline>
+              </svg>
+            </button>
+            <div id="hero-search-results" class="search-modal__results" role="listbox"
+              style="position:absolute;top:100%;left:0;right:0;margin-top:8px;z-index:200;" aria-label="Search results"
+              hidden></div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- Hero Bottom Moving Marquee Strip -->
+      <div class="hero__bottom-strip">
+        <div class="hero__feature-marquee">
+          <div class="hero__feature-track">
+            <!-- Set 1 -->
+            <div class="hero__feature-pill">
+              <span class="hero__feature-check">✓</span>
+              <span>100% Local Sherpa Ownership</span>
+              <span class="hero__feature-info">ⓘ</span>
+            </div>
+            <div class="hero__feature-pill">
+              <span class="hero__feature-check">✓</span>
+              <span>15+ Years Himalayan Heritage</span>
+              <span class="hero__feature-info">ⓘ</span>
+            </div>
+            <div class="hero__feature-pill">
+              <span class="hero__feature-check">✓</span>
+              <span>Wilderness First Aid Certified</span>
+              <span class="hero__feature-info">ⓘ</span>
+            </div>
+            <div class="hero__feature-pill">
+              <span class="hero__feature-check">✓</span>
+              <span>Ethical Porter Welfare Charter</span>
+              <span class="hero__feature-info">ⓘ</span>
+            </div>
+            <div class="hero__feature-pill">
+              <span class="hero__feature-check">✓</span>
+              <span>24/7 Helicopter Evacuation Network</span>
+              <span class="hero__feature-info">ⓘ</span>
+            </div>
+            <!-- Set 2 (Duplicate for Seamless Loop) -->
+            <div class="hero__feature-pill">
+              <span class="hero__feature-check">✓</span>
+              <span>100% Local Sherpa Ownership</span>
+              <span class="hero__feature-info">ⓘ</span>
+            </div>
+            <div class="hero__feature-pill">
+              <span class="hero__feature-check">✓</span>
+              <span>15+ Years Himalayan Heritage</span>
+              <span class="hero__feature-info">ⓘ</span>
+            </div>
+            <div class="hero__feature-pill">
+              <span class="hero__feature-check">✓</span>
+              <span>Wilderness First Aid Certified</span>
+              <span class="hero__feature-info">ⓘ</span>
+            </div>
+            <div class="hero__feature-pill">
+              <span class="hero__feature-check">✓</span>
+              <span>Ethical Porter Welfare Charter</span>
+              <span class="hero__feature-info">ⓘ</span>
+            </div>
+            <div class="hero__feature-pill">
+              <span class="hero__feature-check">✓</span>
+              <span>24/7 Helicopter Evacuation Network</span>
+              <span class="hero__feature-info">ⓘ</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </section>
+
+    <!-- SECTION 1: OUR JOURNEY & HERITAGE (Complete Story Redesign) -->
+    <section class="section journey-section" aria-labelledby="our-story-heading">
+      <div class="container">
+
+        <!-- Story Overview Split Grid -->
+        <div class="journey-story-split reveal">
+          <div>
+            <span class="journey-story__badge">🏔️ OUR HERITAGE &amp; ORIGINS</span>
+            <h2 class="journey-story__title" id="our-story-heading">
+              Born in the High Himalayas, <span>Crafted by Local Sherpas</span>
+            </h2>
+            <p class="journey-story__text">
+              Before Best Treks Nepal was a recognized agency, our founders — <strong>Pasang Sherpa</strong> and
+              <strong>Dawa Sherpa</strong> — were young porters carrying supplies up the steep stone staircases of the
+              Khumbu Valley. Born and raised in high-altitude Sherpa villages near Namche Bazaar (3,440m), the mountains
+              were not just a workplace, but home.
+            </p>
+            <p class="journey-story__text">
+              After earning government lead-guide licenses and guiding over 50 successful Everest Base Camp and summit
+              expeditions for international companies, they noticed a glaring flaw in standard tourism: foreign agencies
+              took massive margins while local guides, porters, and mountain teahouse families received minimal support
+              and safety gear.
+            </p>
+            <p class="journey-story__text">
+              In <strong>2009</strong>, with a tiny rented room in Thamel, 3 pairs of sturdy boots, and an unshakeable
+              vision, <strong>Best Treks Nepal</strong> was born — built on 100% local Sherpa ownership, uncompromising
+              wilderness safety, and ethical porter dignity.
+            </p>
+          </div>
+
+          <div>
+            <div class="journey-quote-box reveal">
+              <p class="journey-quote__text">
+                "We didn't build Best Treks Nepal to be the biggest agency in Kathmandu — we built it to be the safest,
+                most genuine, and most respectful bridge between global adventurers and our Himalayan home."
+              </p>
+              <div class="journey-quote__author">
+                <img loading="lazy" src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&auto=format&fit=crop&q=80"
+                  alt="Pasang Sherpa" class="journey-quote__avatar">
+                <div>
+                  <span class="journey-quote__name">Pasang Sherpa</span>
+                  <span class="journey-quote__role">Co-Founder &amp; Lead Expedition Director</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Section Title for Milestone Roadmap -->
+        <div class="section-heading section-heading--center reveal" style="margin-top:2rem;">
+          <span class="section-heading__eyebrow">15-YEAR CHRONOLOGICAL ROADMAP</span>
+          <h2 class="section-heading__title">Key Milestones of Our Himalayan Journey</h2>
+          <p class="section-heading__subtitle" style="max-width:680px;margin:0 auto;">
+            From a humble 3-person guiding team in 2009 to leading over 5,000 global trekkers with a 99.8% safety
+            completion record.
+          </p>
+        </div>
+
+        <!-- 6-Stage Timeline Roadmap Grid -->
+        <div class="journey-roadmap-grid reveal-group">
+
+          <!-- Stage 1: 2009 -->
+          <div class="journey-node reveal">
+            <div class="journey-node__header">
+              <span class="journey-node__year">2009</span>
+              <span class="journey-node__tag">FOUNDING YEAR</span>
+            </div>
+            <h3 class="journey-node__title">1. The Thamel Genesis</h3>
+            <p class="journey-node__desc">
+              Founded in Thamel, Kathmandu by Pasang &amp; Dawa Sherpa. Launched with classic 14-Day Everest Base Camp
+              and Annapurna Circuit guided itineraries.
+            </p>
+          </div>
+
+          <!-- Stage 2: 2012 -->
+          <div class="journey-node reveal">
+            <div class="journey-node__header">
+              <span class="journey-node__year">2012</span>
+              <span class="journey-node__tag">EXPANSION</span>
+            </div>
+            <h3 class="journey-node__title">2. Restricted Trail Pioneers</h3>
+            <p class="journey-node__desc">
+              Expanded into off-the-beaten-path restricted circuits — Manaslu Circuit, Upper Mustang &amp; Langtang
+              Valley, securing official TAAN &amp; NMA accreditation.
+            </p>
+          </div>
+
+          <!-- Stage 3: 2015 -->
+          <div class="journey-node reveal">
+            <div class="journey-node__header">
+              <span class="journey-node__year">2015</span>
+              <span class="journey-node__tag">ETHICAL REFORM</span>
+            </div>
+            <h3 class="journey-node__title">3. Porter Protection Charter</h3>
+            <p class="journey-node__desc">
+              Pioneered high-altitude porter wage protection: enforcing 20kg maximum load caps, full thermal
+              jackets/boots, and emergency rescue insurance.
+            </p>
+          </div>
+
+          <!-- Stage 4: 2018 -->
+          <div class="journey-node reveal">
+            <div class="journey-node__header">
+              <span class="journey-node__year">2018</span>
+              <span class="journey-node__tag">SAFETY FIRST</span>
+            </div>
+            <h3 class="journey-node__title">4. Emergency Heli-Triage Link</h3>
+            <p class="journey-node__desc">
+              Established direct 24/7 satellite links with Kathmandu ER hospitals &amp; helicopter fleets, guaranteeing
+              instant evacuation dispatch without delay.
+            </p>
+          </div>
+
+          <!-- Stage 5: 2021 -->
+          <div class="journey-node reveal">
+            <div class="journey-node__header">
+              <span class="journey-node__year">2021</span>
+              <span class="journey-node__tag">ECO RESPONSIBILITY</span>
+            </div>
+            <h3 class="journey-node__title">5. Plastic-Free Trail Pledge</h3>
+            <p class="journey-node__desc">
+              Banned single-use plastic water bottles across all expeditions, funding UV SteriPEN water filtration
+              stations across Khumbu &amp; Annapurna lodges.
+            </p>
+          </div>
+
+          <!-- Stage 6: 2026 -->
+          <div class="journey-node reveal">
+            <div class="journey-node__header">
+              <span class="journey-node__year">2026</span>
+              <span class="journey-node__tag">MODERN TECH</span>
+            </div>
+            <h3 class="journey-node__title">6. Starlink &amp; Digital TIMS</h3>
+            <p class="journey-node__desc">
+              Equipped all high-pass leads with Garmin Satellite SOS trackers, digital TIMS QR verification, and
+              Starlink high-altitude lodge connectivity.
+            </p>
+          </div>
+
+        </div>
+
+      </div>
+      <!-- SECTION 2: DEDICATED WHY CHOOSE US SECTION (Feature Cards & Side-by-Side Comparison Table) -->
+      <section class="section why-choose-section" aria-labelledby="why-choose-heading">
+        <div class="container">
+
+          <div class="section-heading section-heading--center reveal">
+            <span class="section-heading__eyebrow">THE BEST TREKS NEPAL DIFFERENCE</span>
+            <h2 class="section-heading__title" id="why-choose-heading">Why Thousands of Global Trekkers Choose Us</h2>
+            <p class="section-heading__subtitle" style="max-width:700px;margin:0 auto;">
+              We combine high-altitude Sherpa expertise with rigorous safety protocols, ethical porter welfare, and 100%
+              price transparency.
+            </p>
+          </div>
+
+          <!-- 6 Feature Cards Grid -->
+          <div class="why-choose-grid reveal-group">
+
+            <div class="why-choose-card reveal">
+              <div class="why-choose-card__icon-box">🏔️</div>
+              <h3 class="why-choose-card__title">100% Native Sherpa Leaders</h3>
+              <p class="why-choose-card__desc">
+                Every expedition is led by native mountain guides born in Solukhumbu, Manang &amp; Mustang, possessing
+                deep cultural knowledge and high-pass weather foresight.
+              </p>
+            </div>
+
+            <div class="why-choose-card reveal">
+              <div class="why-choose-card__icon-box">🚑</div>
+              <h3 class="why-choose-card__title">Medical Oxygen &amp; Daily SpO₂</h3>
+              <p class="why-choose-card__desc">
+                We monitor daily blood-oxygen saturation, carry portable Gamow bags and emergency oxygen cylinders on
+                all passes over 4,000m.
+              </p>
+            </div>
+
+            <div class="why-choose-card reveal">
+              <div class="why-choose-card__icon-box">💼</div>
+              <h3 class="why-choose-card__title">Ethical Porter Protection Pledge</h3>
+              <p class="why-choose-card__desc">
+                Enforcing a strict 20kg maximum load cap, complete high-altitude thermal gear, fair living wages, and
+                full medical rescue insurance.
+              </p>
+            </div>
+
+            <div class="why-choose-card reveal">
+              <div class="why-choose-card__icon-box">👥</div>
+              <h3 class="why-choose-card__title">Small Intimate Groups (Max 1:4)</h3>
+              <p class="why-choose-card__desc">
+                With a 1:4 guide-to-trekker ratio, you receive personal care, flexible acclimatization pacing, and
+                private lodge attention.
+              </p>
+            </div>
+
+            <div class="why-choose-card reveal">
+              <div class="why-choose-card__icon-box">💰</div>
+              <h3 class="why-choose-card__title">100% All-Inclusive Guarantee</h3>
+              <p class="why-choose-card__desc">
+                Zero hidden costs on trail. All permits, TIMS cards, domestic flights, teahouse lodging, and 3 meals
+                daily are completely covered.
+              </p>
+            </div>
+
+            <div class="why-choose-card reveal">
+              <div class="why-choose-card__icon-box">🚁</div>
+              <h3 class="why-choose-card__title">24/7 Satellite SOS Response</h3>
+              <p class="why-choose-card__desc">
+                Garmin Satellite InReach devices provide real-time GPS tracking and instant helicopter dispatch linked
+                to Kathmandu ER hospitals.
+              </p>
+            </div>
+
+          </div>
+
+          <!-- Side-by-Side Feature Comparison Table -->
+          <div class="comparison-box reveal">
+            <div class="comparison-header">
+              <div>Expedition Feature</div>
+              <div class="comparison-header__col--us">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="#fef08a">
+                  <path
+                    d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" />
+                </svg>
+                Best Treks Nepal
+              </div>
+              <div>Standard Agencies</div>
+            </div>
+
+            <div class="comparison-row">
+              <div class="comparison-row__feature">Guide Leadership</div>
+              <div class="comparison-row__us">✓ 100% Native Licensed Sherpas</div>
+              <div class="comparison-row__them">✗ City guides / Freelance contractors</div>
+            </div>
+
+            <div class="comparison-row">
+              <div class="comparison-row__feature">High-Altitude Safety</div>
+              <div class="comparison-row__us">✓ Daily Oximeter &amp; Medical Oxygen</div>
+              <div class="comparison-row__them">✗ Basic first aid kit, no oximeters</div>
+            </div>
+
+            <div class="comparison-row">
+              <div class="comparison-row__feature">Porter Welfare</div>
+              <div class="comparison-row__us">✓ 20kg cap, full gear &amp; fair wages</div>
+              <div class="comparison-row__them">✗ Overloaded (30kg+), minimal gear</div>
+            </div>
+
+            <div class="comparison-row">
+              <div class="comparison-row__feature">Group Size Ratio</div>
+              <div class="comparison-row__us">✓ Max 1:4 Guide-to-Client ratio</div>
+              <div class="comparison-row__them">✗ Large crowded groups (1:12+)</div>
+            </div>
+
+            <div class="comparison-row">
+              <div class="comparison-row__feature">Emergency Evacuation</div>
+              <div class="comparison-row__us">✓ 24/7 Satellite SOS + Instant Dispatch</div>
+              <div class="comparison-row__them">✗ Delayed phone calls &amp; payment hold</div>
+            </div>
+
+            <div class="comparison-row">
+              <div class="comparison-row__feature">Pricing Transparency</div>
+              <div class="comparison-row__us">✓ All-Inclusive, no hidden fees</div>
+              <div class="comparison-row__them">✗ Surprise costs for shower, Wi-Fi, gear</div>
+            </div>
+
+          </div>
+
+          <!-- SECTION 3: PREMIUM GUIDING PRINCIPLES SECTION -->
+          <section class="section principles-section-v2" aria-labelledby="principles-heading">
+            <div class="container">
+
+              <div class="section-heading section-heading--center reveal">
+                <span class="principles-v2__badge">✨ OUR CORE ETHOS &amp; UNYIELDING CODE</span>
+                <h2 class="principles-v2__title" id="principles-heading">
+                  Guiding Principles That Define <span>Every Step We Take</span>
+                </h2>
+                <p class="section-heading__subtitle" style="max-width:720px;margin:0 auto;color:#475569;">
+                  Every expedition we lead across the Himalayas is anchored in six non-negotiable commitments to safety,
+                  dignity, ecology, and cultural heritage.
+                </p>
+              </div>
+
+              <div class="principles-v2-grid reveal-group">
+
+                <!-- Principle 1 -->
+                <div class="principle-v2-card reveal">
+                  <span class="principle-v2-card__num">01</span>
+                  <div>
+                    <div class="principle-v2-card__icon-box">🛡️</div>
+                    <span class="principle-v2-card__tag">SAFETY FIRST</span>
+                    <h3 class="principle-v2-card__title">Life Over Summits</h3>
+                    <p class="principle-v2-card__desc">
+                      No summit photo or itinerary schedule ever takes priority over human life. We turn back when
+                      safety dictates, backed by certified Wilderness First Aid leaders and satellite emergency triage.
+                    </p>
+                  </div>
+                  <ul class="principle-v2-card__points">
+                    <li class="principle-v2-card__point"><span class="principle-v2-card__point-check">✓</span> Daily
+                      pulse oximetry ($SpO_2$) readings</li>
+                    <li class="principle-v2-card__point"><span class="principle-v2-card__point-check">✓</span> Emergency
+                      medical oxygen on high passes</li>
+                  </ul>
+                </div>
+
+                <!-- Principle 2 -->
+                <div class="principle-v2-card reveal">
+                  <span class="principle-v2-card__num">02</span>
+                  <div>
+                    <div class="principle-v2-card__icon-box">🤝</div>
+                    <span class="principle-v2-card__tag">HUMAN DIGNITY</span>
+                    <h3 class="principle-v2-card__title">Ethical Porter Protection</h3>
+                    <p class="principle-v2-card__desc">
+                      Porters are the true heroes of the Himalayas. We guarantee strict 20kg load limits, furnish
+                      complete high-altitude thermal gear, pay living wages above union rates, and cover medical rescue
+                      insurance.
+                    </p>
+                  </div>
+                  <ul class="principle-v2-card__points">
+                    <li class="principle-v2-card__point"><span class="principle-v2-card__point-check">✓</span> Strict
+                      20kg load cap per support staff</li>
+                    <li class="principle-v2-card__point"><span class="principle-v2-card__point-check">✓</span> 100%
+                      emergency medical &amp; rescue policy</li>
+                  </ul>
+                </div>
+
+                <!-- Principle 3 -->
+                <div class="principle-v2-card reveal">
+                  <span class="principle-v2-card__num">03</span>
+                  <div>
+                    <div class="principle-v2-card__icon-box">🌿</div>
+                    <span class="principle-v2-card__tag">ECO STEWARDSHIP</span>
+                    <h3 class="principle-v2-card__title">Leave No Trace Trails</h3>
+                    <p class="principle-v2-card__desc">
+                      We preserve fragile alpine ecosystems by banning single-use plastic water bottles across all
+                      trips, funding SteriPEN UV filtration stations at lodges, and conducting trail cleanups on return
+                      ascents.
+                    </p>
+                  </div>
+                  <ul class="principle-v2-card__points">
+                    <li class="principle-v2-card__point"><span class="principle-v2-card__point-check">✓</span>
+                      Single-use plastic water bottle ban</li>
+                    <li class="principle-v2-card__point"><span class="principle-v2-card__point-check">✓</span> UV
+                      SteriPEN lodge filtration stations</li>
+                  </ul>
+                </div>
+
+                <!-- Principle 4 -->
+                <div class="principle-v2-card reveal">
+                  <span class="principle-v2-card__num">04</span>
+                  <div>
+                    <div class="principle-v2-card__icon-box">🏮</div>
+                    <span class="principle-v2-card__tag">CULTURAL RESPECT</span>
+                    <h3 class="principle-v2-card__title">Local Community Empowerment</h3>
+                    <p class="principle-v2-card__desc">
+                      As a 100% native Sherpa-owned company, we honor ancient mountain customs, stay in family-run
+                      teahouses, and reinvest 1% of tour revenues directly into mountain village schools and health
+                      clinics.
+                    </p>
+                  </div>
+                  <ul class="principle-v2-card__points">
+                    <li class="principle-v2-card__point"><span class="principle-v2-card__point-check">✓</span> 100%
+                      Sherpa family-owned business</li>
+                    <li class="principle-v2-card__point"><span class="principle-v2-card__point-check">✓</span> 1% tour
+                      revenue to mountain schools</li>
+                  </ul>
+                </div>
+
+                <!-- Principle 5 -->
+                <div class="principle-v2-card reveal">
+                  <span class="principle-v2-card__num">05</span>
+                  <div>
+                    <div class="principle-v2-card__icon-box">💎</div>
+                    <span class="principle-v2-card__tag">TRANSPARENCY</span>
+                    <h3 class="principle-v2-card__title">Uncompromising Honesty</h3>
+                    <p class="principle-v2-card__desc">
+                      We believe in complete pricing transparency with zero hidden fees. Our advice is honest, realistic
+                      about high-altitude difficulty levels, and tailored to each trekker's physical fitness.
+                    </p>
+                  </div>
+                  <ul class="principle-v2-card__points">
+                    <li class="principle-v2-card__point"><span class="principle-v2-card__point-check">✓</span>
+                      All-inclusive transparent pricing</li>
+                    <li class="principle-v2-card__point"><span class="principle-v2-card__point-check">✓</span> Realistic
+                      altitude difficulty advice</li>
+                  </ul>
+                </div>
+
+                <!-- Principle 6 -->
+                <div class="principle-v2-card reveal">
+                  <span class="principle-v2-card__num">06</span>
+                  <div>
+                    <div class="principle-v2-card__icon-box">🎯</div>
+                    <span class="principle-v2-card__tag">EXCELLENCE</span>
+                    <h3 class="principle-v2-card__title">Continuous Technical Mastery</h3>
+                    <p class="principle-v2-card__desc">
+                      We never settle. Our expedition leaders undergo annual Wilderness Medical Institute
+                      recertifications, technical ice &amp; rope rescue drills, and modern satellite communications
+                      training before every season.
+                    </p>
+                  </div>
+                  <ul class="principle-v2-card__points">
+                    <li class="principle-v2-card__point"><span class="principle-v2-card__point-check">✓</span> Annual
+                      WFA medical recertification</li>
+                    <li class="principle-v2-card__point"><span class="principle-v2-card__point-check">✓</span> Technical
+                      ice &amp; rope rescue drills</li>
+                  </ul>
+                </div>
+
+              </div>
+
+            </div>
+          </section>
+
+          <!-- SECTION: Leadership Spotlight (Meet Our Founder) -->
+          <section class="section leadership-spotlight-section" aria-labelledby="leadership-heading">
+            <div class="container">
+
+              <!-- Section Header -->
+              <div class="section-heading section-heading--center reveal">
+                <span class="section-heading__eyebrow"
+                  style="background:#e6f4f5;color:#0f5257;border:1px solid rgba(15,82,87,0.2);padding:0.35rem 1.1rem;border-radius:999px;">LEADERSHIP
+                  SPOTLIGHT</span>
+                <h2 class="section-heading__title" id="leadership-heading" style="color:#0f172a;margin-top:0.75rem;">
+                  Meet Our Founder</h2>
+              </div>
+
+              <!-- Founder Card -->
+              <div class="leadership-spotlight-card reveal">
+
+                <!-- Left Image Box (Authentic Sherpa Founder Portrait) -->
+                <div class="leadership-spotlight-img-wrap">
+                  <img
+                    src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?w=900&auto=format&fit=crop&q=80"
+                    alt="Ang Tshering Sherpa — Founder & Managing Director, Best Treks Nepal" loading="lazy">
+                  <div class="leadership-spotlight-img-badge">
+                    <h4 class="leadership-spotlight-img-name">Ang Tshering Sherpa</h4>
+                    <p class="leadership-spotlight-img-title">5x Everest Summitteer &amp; Managing Director</p>
+                  </div>
+                </div>
+
+                <!-- Right Content Box -->
+                <div class="leadership-spotlight-content">
+                  <span class="leadership-spotlight-eyebrow">FOUNDER'S MESSAGE</span>
+                  <h3 class="leadership-spotlight-headline">"Mountains Are Our Home, Safety Is Our Unyielding Code."
+                  </h3>
+
+                  <div class="leadership-spotlight-quote-box">
+                    <p class="leadership-spotlight-quote-text">
+                      "Growing up in Pangboche near Everest, the Himalayas taught me resilience, humbleness, and
+                      respect. When I founded Best Treks Nepal, my mission was clear: treat every trekker like family,
+                      and every porter like a brother."
+                    </p>
+                  </div>
+
+                  <p class="leadership-spotlight-bio">
+                    With over 22 years of high-altitude mountaineering experience and 5 successful Everest summits, Ang
+                    Tshering personally oversees guide training, medical safety protocols, and field operations across
+                    all Nepal trekking routes.
+                  </p>
+
+                  <div class="leadership-spotlight-author">
+                    <h4 class="leadership-spotlight-author-name">Ang Tshering Sherpa</h4>
+                    <p class="leadership-spotlight-author-role">Founder &amp; CEO, Best Treks Nepal</p>
+                  </div>
+                </div>
+
+              </div>
+
+            </div>
+          </section>
+
+          <!-- SECTION 4: Meet Our Certified Expedition Leaders -->
+          <section class="section section--white" aria-labelledby="team-heading">
+            <div class="container">
+              <div class="section-heading section-heading--center reveal">
+                <span class="section-heading__eyebrow">HIGH-ALTITUDE EXPERTS</span>
+                <h2 class="section-heading__title" id="team-heading">Meet Our Senior Expedition Leaders</h2>
+                <p class="section-heading__subtitle" style="max-width:680px;margin:0 auto;">
+                  Our team comprises licensed, certified Nepali mountain leaders with decades of combined Himalayan
+                  summits and thousands of safe trekker guidance trips.
+                </p>
+              </div>
+
+              <div class="team-grid reveal-group">
+                <!-- Guide 1 -->
+                <div class="team-card reveal">
+                  <div class="team-card__img-wrap">
+                    <img
+                      src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=800&auto=format&fit=crop&q=80"
+                      alt="Pasang Sherpa — Lead Expedition Director" loading="lazy">
+                    <span class="team-card__badge">SOLUKHUMBU NATIVE</span>
+                  </div>
+                  <div class="team-card__body">
+                    <div class="team-card__info">
+                      <h3 class="team-card__name">Pasang Sherpa</h3>
+                      <span class="team-card__role">Lead Expedition Director</span>
+                      <p class="team-card__bio">Born in Namche Bazaar with 16+ years of leading Everest Base Camp, Gokyo
+                        Lakes, and Kala Patthar climbs.</p>
+                    </div>
+                    <div class="team-card__stats">
+                      <div class="team-card__stat">
+                        <span class="team-card__stat-val">22</span>
+                        <span class="team-card__stat-label">EBC Summits</span>
+                      </div>
+                      <div class="team-card__stat">
+                        <span class="team-card__stat-val">16 Yrs</span>
+                        <span class="team-card__stat-label">Experience</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Guide 2 -->
+                <div class="team-card reveal">
+                  <div class="team-card__img-wrap">
+                    <img
+                      src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=800&auto=format&fit=crop&q=80"
+                      alt="Raj Lama — Senior Annapurna Guide" loading="lazy">
+                    <span class="team-card__badge">ANNAPURNA SPECIALIST</span>
+                  </div>
+                  <div class="team-card__body">
+                    <div class="team-card__info">
+                      <h3 class="team-card__name">Raj Lama</h3>
+                      <span class="team-card__role">Senior Annapurna &amp; Langtang Lead</span>
+                      <p class="team-card__bio">Expert in Thorong La Pass weather forecasting, Tamang cultural heritage,
+                        and flora/fauna tracking.</p>
+                    </div>
+                    <div class="team-card__stats">
+                      <div class="team-card__stat">
+                        <span class="team-card__stat-val">14</span>
+                        <span class="team-card__stat-label">Pass Crossings</span>
+                      </div>
+                      <div class="team-card__stat">
+                        <span class="team-card__stat-val">12 Yrs</span>
+                        <span class="team-card__stat-label">Experience</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Guide 3 -->
+                <div class="team-card reveal">
+                  <div class="team-card__img-wrap">
+                    <img
+                      src="https://images.unsplash.com/photo-1492562080023-ab3db95bfbce?w=800&auto=format&fit=crop&q=80"
+                      alt="Karma Gurung — Manaslu & Mustang Specialist" loading="lazy">
+                    <span class="team-card__badge">RESTRICTED AREAS</span>
+                  </div>
+                  <div class="team-card__body">
+                    <div class="team-card__info">
+                      <h3 class="team-card__name">Karma Gurung</h3>
+                      <span class="team-card__role">Manaslu &amp; Upper Mustang Specialist</span>
+                      <p class="team-card__bio">Licensed restricted area permit lead fluent in Tibetan dialects,
+                        monastery history, and high-pass logistics.</p>
+                    </div>
+                    <div class="team-card__stats">
+                      <div class="team-card__stat">
+                        <span class="team-card__stat-val">18</span>
+                        <span class="team-card__stat-label">Larke Pass</span>
+                      </div>
+                      <div class="team-card__stat">
+                        <span class="team-card__stat-val">14 Yrs</span>
+                        <span class="team-card__stat-label">Experience</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Guide 4 -->
+                <div class="team-card reveal">
+                  <div class="team-card__img-wrap">
+                    <img
+                      src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=800&auto=format&fit=crop&q=80"
+                      alt="Dr. Dawa Sherpa — High-Altitude Safety Officer" loading="lazy">
+                    <span class="team-card__badge">WILDERNESS MD</span>
+                  </div>
+                  <div class="team-card__body">
+                    <div class="team-card__info">
+                      <h3 class="team-card__name">Dr. Dawa Sherpa</h3>
+                      <span class="team-card__role">High-Altitude Safety Officer</span>
+                      <p class="team-card__bio">Wilderness medicine certified advisor overseeing altitude protocols,
+                        pulse oximetry, and evacuation triage.</p>
+                    </div>
+                    <div class="team-card__stats">
+                      <div class="team-card__stat">
+                        <span class="team-card__stat-val">WFA</span>
+                        <span class="team-card__stat-label">Certified</span>
+                      </div>
+                      <div class="team-card__stat">
+                        <span class="team-card__stat-val">10 Yrs</span>
+                        <span class="team-card__stat-label">Experience</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!-- SECTION: Meet Our Team (Expedition Experts – Flat Portrait Card Layout) -->
+          <section class="section team-section-v2" aria-labelledby="team-v2-heading">
+            <div class="container">
+
+              <div class="section-heading section-heading--center reveal">
+                <span class="section-heading__eyebrow">EXPEDITION EXPERTS</span>
+                <h2 class="section-heading__title" id="team-v2-heading">Meet Our Team</h2>
+                <p class="section-heading__subtitle">
+                  Our licensed Sherpa leaders, wilderness medical officers, high-altitude guides, and responsible
+                  tourism advocates.
+                </p>
+              </div>
+
+              <div class="team-grid-v2 reveal-group">
+
+                <!-- Member 1: Lead Guide -->
+                <div class="team-card-v2 reveal">
+                  <img class="team-card-v2__img"
+                    src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=600&auto=format&fit=crop&q=80"
+                    alt="Pasang Sherpa — Senior IFMGA Lead Guide" loading="lazy">
+                  <div class="team-card-v2__body">
+                    <h3 class="team-card-v2__name">Pasang Sherpa</h3>
+                    <span class="team-card-v2__role">Senior IFMGA Lead Guide</span>
+                    <p class="team-card-v2__desc">16+ years leading Everest Base Camp, Gokyo Lakes, and Three Passes
+                      expeditions. Fluent in English, Nepali &amp; Sherpa.</p>
+                    <span class="team-card-v2__badge">
+                      <span class="team-card-v2__badge-icon">🛡️</span>
+                      WFR Medical Certified
+                    </span>
+                  </div>
+                </div>
+
+                <!-- Member 2: Wilderness Medical Officer -->
+                <div class="team-card-v2 reveal">
+                  <img class="team-card-v2__img"
+                    src="https://images.unsplash.com/photo-1530268729831-4b0b9e170218?w=600&auto=format&fit=crop&q=80"
+                    alt="Dr. Dawa Sherpa — High-Altitude Medical Officer" loading="lazy">
+                  <div class="team-card-v2__body">
+                    <h3 class="team-card-v2__name">Dr. Dawa Sherpa</h3>
+                    <span class="team-card-v2__role">High-Altitude Medical Officer</span>
+                    <p class="team-card-v2__desc">Specialist in AMS prevention, emergency medical triage, and wilderness
+                      altitude protocols. Carries full oxygen kit on every expedition.</p>
+                    <span class="team-card-v2__badge">
+                      <span class="team-card-v2__badge-icon">➕</span>
+                      Altitude Medicine Lead
+                    </span>
+                  </div>
+                </div>
+
+                <!-- Member 3: Travel & Logistics Manager -->
+                <div class="team-card-v2 reveal">
+                  <img class="team-card-v2__img"
+                    src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=600&auto=format&fit=crop&q=80"
+                    alt="Sunita Gurung — Travel & Logistics Manager" loading="lazy">
+                  <div class="team-card-v2__body">
+                    <h3 class="team-card-v2__name">Sunita Gurung</h3>
+                    <span class="team-card-v2__role">Travel &amp; Logistics Manager</span>
+                    <p class="team-card-v2__desc">Manages client customized itineraries, Lukla &amp; Pokhara flight
+                      schedules, TIMS permits, and teahouse hotel bookings in Kathmandu.</p>
+                    <span class="team-card-v2__badge">
+                      <span class="team-card-v2__badge-icon">🌐</span>
+                      Speaks EN, NE, HI
+                    </span>
+                  </div>
+                </div>
+
+                <!-- Member 4: Head of Porter Welfare -->
+                <div class="team-card-v2 reveal">
+                  <img class="team-card-v2__img"
+                    src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=600&auto=format&fit=crop&q=80"
+                    alt="Mingma Tenzing — Head of Porter Welfare" loading="lazy">
+                  <div class="team-card-v2__body">
+                    <h3 class="team-card-v2__name">Mingma Tenzing</h3>
+                    <span class="team-card-v2__role">Head of Porter Welfare</span>
+                    <p class="team-card-v2__desc">Ensures strict 20kg weight limits, high-altitude gear distribution,
+                      living wage compliance, and emergency rescue insurance for all porters.</p>
+                    <span class="team-card-v2__badge">
+                      <span class="team-card-v2__badge-icon">🤝</span>
+                      IPKO Ethical Lead
+                    </span>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          </section>
+
+          <!-- SECTION 4: High-Altitude Safety & Medical Operations -->
+          <section class="section" style="background:#ffffff;color:#0f172a;" aria-labelledby="safety-heading">
+            <div class="container">
+              <div class="section-heading section-heading--center reveal">
+                <span class="section-heading__eyebrow" style="color:#0f5257;">ZERO COMPROMISE SAFETY</span>
+                <h2 class="section-heading__title" id="safety-heading" style="color:#0f172a;">High-Altitude Safety &amp;
+                  Emergency Protocols</h2>
+                <p class="section-heading__subtitle" style="color:#475569;max-width:700px;margin:0 auto;">
+                  We operate with the strict medical rigor of high-altitude expeditions. Your health and security are
+                  safeguarded by advanced monitoring and satellite response systems.
+                </p>
+              </div>
+
+              <div class="safety-grid reveal-group">
+                <div class="safety-card reveal">
+                  <span class="safety-card__icon">🩸</span>
+                  <h3 class="safety-card__title">Daily Oximeter &amp; Pulse Tracking</h3>
+                  <p class="safety-card__desc">Morning and evening blood-oxygen (SpO₂) readings logged for every trekker
+                    to detect early AMS symptoms before ascending higher.</p>
+                </div>
+
+                <div class="safety-card reveal">
+                  <span class="safety-card__icon">💨</span>
+                  <h3 class="safety-card__title">Emergency Oxygen &amp; Gamow Bags</h3>
+                  <p class="safety-card__desc">Portable medical oxygen cylinders and pressure chambers accompany all
+                    high-pass itineraries above 4,000m for rapid hyperbaric relief.</p>
+                </div>
+
+                <div class="safety-card reveal">
+                  <span class="safety-card__icon">📡</span>
+                  <h3 class="safety-card__title">Garmin Satellite SOS Connectivity</h3>
+                  <p class="safety-card__desc">Satellite InReach units provide 24/7 global position tracking and instant
+                    SOS messaging independent of cellular phone signal availability.</p>
+                </div>
+
+                <div class="safety-card reveal">
+                  <span class="safety-card__icon">🚁</span>
+                  <h3 class="safety-card__title">Direct Hospital Triage Partnership</h3>
+                  <p class="safety-card__desc">Pre-approved helicopter evacuation dispatch linked directly with CIWEC
+                    Hospital &amp; Era Health Clinic in Kathmandu for fast medical intake.</p>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!-- SECTION 5: Porter Welfare & Responsible Tourism Charter -->
+          <section class="section section--light" aria-labelledby="welfare-heading">
+            <div class="container">
+              <div class="pledge-box reveal">
+                <div>
+                  <div class="section-heading" style="margin-bottom:1rem;">
+                    <span class="section-heading__eyebrow">ETHICAL RESPONSIBILITY</span>
+                    <h2 class="section-heading__title" id="welfare-heading">Porter Protection &amp; Community Charter
+                    </h2>
+                  </div>
+                  <p style="color:#475569;line-height:1.65;font-size:0.95rem;margin:0 0 1rem;">
+                    Porters are the backbone of Himalayan trekking. We believe ethical treatment, fair pay, and safe
+                    equipment are essential to sustainable tourism in Nepal.
+                  </p>
+                  <a href="/contact.html" class="btn btn--primary" style="margin-top:0.5rem;">Join Our Eco-Trek
+                    Initiative</a>
+                </div>
+
+                <div>
+                  <ul class="pledge-box__list">
+                    <li class="pledge-box__item">
+                      <span class="pledge-box__check">✓</span>
+                      <div><strong>Strict 20kg Carrying Limit:</strong> We enforce rigid maximum weight limits per
+                        porter to prevent strain and injury.</div>
+                    </li>
+                    <li class="pledge-box__item">
+                      <span class="pledge-box__check">✓</span>
+                      <div><strong>Full High-Altitude Gear Provided:</strong> Windproof jackets, thermal trousers,
+                        insulated boots, sunglasses &amp; gloves supplied.</div>
+                    </li>
+                    <li class="pledge-box__item">
+                      <span class="pledge-box__check">✓</span>
+                      <div><strong>Fair Wages &amp; Medical Insurance:</strong> Salaries paid well above official union
+                        minimums, with full rescue &amp; health policy coverage.</div>
+                    </li>
+                    <li class="pledge-box__item">
+                      <span class="pledge-box__check">✓</span>
+                      <div><strong>1% Community Education Fund:</strong> 1% of all trek revenue is directly donated to
+                        support Sherpa mountain schools in Solukhumbu.</div>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <!-- SECTION 6: Frequently Asked Questions (Home-Page Style Search & Filter Accordion) -->
+          <section class="section section--light faq-section" aria-labelledby="faq-about-heading">
+            <div class="container container--narrow">
+
+              <!-- Section Heading -->
+              <div class="section-heading section-heading--center reveal">
+                <span class="section-heading__eyebrow">GOT QUESTIONS? WE HAVE ANSWERS</span>
+                <h2 class="section-heading__title" id="faq-about-heading">Frequently Asked Questions</h2>
+                <p class="section-heading__subtitle">
+                  Everything you need to know about our Himalayan guiding standards, altitude medical safety, permits,
+                  and ethical Sherpa operations.
+                </p>
+              </div>
+
+              <!-- FAQ Search & Filter Bar -->
+              <div class="faq-filter-bar reveal">
+                <!-- Search input -->
+                <div class="faq-search-box">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="11" cy="11" r="8" />
+                    <line x1="21" y1="21" x2="16.65" y2="16.65" />
+                  </svg>
+                  <input type="text" id="faqSearchInput"
+                    placeholder="Search questions (e.g. guides, altitude, permits, safety)..."
+                    aria-label="Search FAQ questions">
+                </div>
+
+                <!-- Category Pills -->
+                <div class="faq-category-pills" role="tablist" aria-label="FAQ Categories">
+                  <button class="faq-pill-btn is-active" data-faq-cat="all" role="tab">All Questions</button>
+                  <button class="faq-pill-btn" data-faq-cat="guides" role="tab">Guides &amp; Leadership</button>
+                  <button class="faq-pill-btn" data-faq-cat="safety" role="tab">Safety &amp; Altitude</button>
+                  <button class="faq-pill-btn" data-faq-cat="welfare" role="tab">Porter Welfare</button>
+                  <button class="faq-pill-btn" data-faq-cat="booking" role="tab">Booking &amp; Cost</button>
+                </div>
+              </div>
+
+              <!-- FAQ Accordion List -->
+              <div class="faq-list reveal-group" id="faqAccordionList">
+
+                <!-- Q1: Lead Guides -->
+                <details class="faq-item reveal" data-category="guides">
+                  <summary class="faq-item__trigger">
+                    <div class="faq-item__question-group">
+                      <span class="faq-item__badge faq-item__badge--teal">Guides</span>
+                      <h3 class="faq-item__question">How experienced and certified are your lead Sherpa guides?</h3>
+                    </div>
+                    <div class="faq-item__toggle-icon" aria-hidden="true">
+                      <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor"
+                        stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                        <line x1="12" y1="5" x2="12" y2="19" />
+                        <line x1="5" y1="12" x2="19" y2="12" />
+                      </svg>
+                    </div>
+                  </summary>
+                  <div class="faq-item__body">
+                    <div class="faq-item__content">
+                      <p class="faq-item__answer">
+                        All our expedition directors and lead guides are 100% licensed Nepali mountain leaders born in
+                        high-altitude Sherpa villages near Namche Bazaar (3,440m), Manang, and Mustang. Each lead holds
+                        Wilderness First Aid (WFA) certification, NMA rope rescue credentials, and 10 to 18 years of
+                        continuous high-pass guiding experience across Everest Base Camp, Annapurna Circuit, and
+                        Manaslu.
+                      </p>
+                      <div class="faq-item__callout faq-item__callout--green">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#059669" stroke-width="2.5"
+                          stroke-linecap="round" stroke-linejoin="round"
+                          style="display:inline-block;vertical-align:-3px;margin-right:4px;">
+                          <polyline points="20 6 9 17 4 12" />
+                        </svg>
+                        <strong>1:4 Ratio:</strong> Maximum 4 trekkers per lead guide for safety and personal care.
+                      </div>
+                    </div>
+                  </div>
+                </details>
+
+                <!-- Q2: Altitude Sickness -->
+                <details class="faq-item reveal" data-category="safety">
+                  <summary class="faq-item__trigger">
+                    <div class="faq-item__question-group">
+                      <span class="faq-item__badge faq-item__badge--amber">Safety</span>
+                      <h3 class="faq-item__question">What medical protocols are followed if altitude sickness (AMS)
+                        occurs?</h3>
+                    </div>
+                    <div class="faq-item__toggle-icon" aria-hidden="true">
+                      <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor"
+                        stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                        <line x1="12" y1="5" x2="12" y2="19" />
+                        <line x1="5" y1="12" x2="19" y2="12" />
+                      </svg>
+                    </div>
+                  </summary>
+                  <div class="faq-item__body">
+                    <div class="faq-item__content">
+                      <p class="faq-item__answer">
+                        Our guides conduct mandatory daily blood-oxygen (SpO₂) and pulse monitoring every morning and
+                        evening. If mild AMS symptoms develop, we pause ascent and execute acclimatization rest
+                        protocols. If symptoms persist, immediate guide-assisted descent is executed, supported by
+                        portable medical oxygen cylinders, Gamow hyperbaric bags, and 24/7 Garmin Satellite InReach
+                        helicopter dispatch to Kathmandu ER hospitals.
+                      </p>
+                    </div>
+                  </div>
+                </details>
+
+                <!-- Q3: Porter Protection -->
+                <details class="faq-item reveal" data-category="welfare">
+                  <summary class="faq-item__trigger">
+                    <div class="faq-item__question-group">
+                      <span class="faq-item__badge faq-item__badge--emerald">Porter Welfare</span>
+                      <h3 class="faq-item__question">How do you protect porters and enforce fair weight limits?</h3>
+                    </div>
+                    <div class="faq-item__toggle-icon" aria-hidden="true">
+                      <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor"
+                        stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                        <line x1="12" y1="5" x2="12" y2="19" />
+                        <line x1="5" y1="12" x2="19" y2="12" />
+                      </svg>
+                    </div>
+                  </summary>
+                  <div class="faq-item__body">
+                    <div class="faq-item__content">
+                      <p class="faq-item__answer">
+                        Porters are the backbone of Himalayan trekking. Under our Ethical Porter Protection Pledge, we
+                        enforce a strict 20kg maximum weight cap per porter, furnish complete high-altitude thermal gear
+                        (windproof jackets, insulated pants, boots, and gloves), pay fair living wages above union
+                        minimums, and cover 100% of emergency medical &amp; helicopter rescue insurance.
+                      </p>
+                    </div>
+                  </div>
+                </details>
+
+                <!-- Q4: Small Group Ratio -->
+                <details class="faq-item reveal" data-category="guides">
+                  <summary class="faq-item__trigger">
+                    <div class="faq-item__question-group">
+                      <span class="faq-item__badge faq-item__badge--teal">Group Ratio</span>
+                      <h3 class="faq-item__question">Are small group departures and private custom dates available?</h3>
+                    </div>
+                    <div class="faq-item__toggle-icon" aria-hidden="true">
+                      <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor"
+                        stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                        <line x1="12" y1="5" x2="12" y2="19" />
+                        <line x1="5" y1="12" x2="19" y2="12" />
+                      </svg>
+                    </div>
+                  </summary>
+                  <div class="faq-item__body">
+                    <div class="faq-item__content">
+                      <p class="faq-item__answer">
+                        Yes! We maintain a maximum 1:4 guide-to-trekker ratio on all small group departures to ensure
+                        personalized care and acclimatization pacing. We also organize private tailored treks for solo
+                        travelers, couples, families, and private charity groups with custom start dates and itinerary
+                        modifications.
+                      </p>
+                    </div>
+                  </div>
+                </details>
+
+                <!-- Q5: Meals & Water -->
+                <details class="faq-item reveal" data-category="safety">
+                  <summary class="faq-item__trigger">
+                    <div class="faq-item__question-group">
+                      <span class="faq-item__badge faq-item__badge--blue">Meals &amp; Water</span>
+                      <h3 class="faq-item__question">Do you cater to dietary requirements and provide clean drinking
+                        water?</h3>
+                    </div>
+                    <div class="faq-item__toggle-icon" aria-hidden="true">
+                      <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor"
+                        stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                        <line x1="12" y1="5" x2="12" y2="19" />
+                        <line x1="5" y1="12" x2="19" y2="12" />
+                      </svg>
+                    </div>
+                  </summary>
+                  <div class="faq-item__body">
+                    <div class="faq-item__content">
+                      <p class="faq-item__answer">
+                        All mountain teahouses along our routes provide fresh vegetarian, vegan, gluten-free, and
+                        dairy-free meal choices. To preserve fragile alpine ecosystems, we banned single-use plastic
+                        water bottles across all expeditions and furnish SteriPEN UV water purification stations at
+                        lodges.
+                      </p>
+                    </div>
+                  </div>
+                </details>
+
+                <!-- Q6: Pricing & Deposit -->
+                <details class="faq-item reveal" data-category="booking">
+                  <summary class="faq-item__trigger">
+                    <div class="faq-item__question-group">
+                      <span class="faq-item__badge faq-item__badge--amber">Pricing</span>
+                      <h3 class="faq-item__question">Are there any hidden costs or surprise fees on trail?</h3>
+                    </div>
+                    <div class="faq-item__toggle-icon" aria-hidden="true">
+                      <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor"
+                        stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                        <line x1="12" y1="5" x2="12" y2="19" />
+                        <line x1="5" y1="12" x2="19" y2="12" />
+                      </svg>
+                    </div>
+                  </summary>
+                  <div class="faq-item__body">
+                    <div class="faq-item__content">
+                      <p class="faq-item__answer">
+                        Zero hidden costs. Our 100% All-Inclusive Guarantee covers all TIMS permits, national park
+                        passes, domestic mountain flights, licensed guide and porter salaries, lodge accommodation, and
+                        3 full meals daily. Optional personal add-ons (like hot showers or Wi-Fi cards) are disclosed
+                        transparently before departure.
+                      </p>
+                    </div>
+                  </div>
+                </details>
+
+              </div>
+
+              <!-- Still Have Questions Support Banner Card (Home-Page Style) -->
+              <div class="faq-support-card reveal" style="margin-top: 3.5rem;">
+                <div class="faq-support-card__content">
+                  <h3 class="faq-support-card__title">Still have questions about your trek?</h3>
+                  <p class="faq-support-card__text">
+                    Our native Sherpa team in Kathmandu is available 24/7. Ask us anything about permits, physical
+                    fitness, equipment, or custom dates.
+                  </p>
+                </div>
+                <div class="faq-support-card__actions">
+                  <a href="/contact.html" class="btn btn--primary btn--md">Talk to a Guide</a>
+                  <a href="https://wa.me/9779800000000" class="btn btn--secondary btn--md" target="_blank"
+                    rel="noopener noreferrer">WhatsApp Us</a>
+                </div>
+              </div>
+
+            </div>
+          </section>
+
+          <!-- SECTION 7: Call to Action Banner -->
+          <section class="section section--white" style="padding-top:0;" aria-label="Book a trek call to action">
+            <div class="container">
+              <div class="cta-banner reveal">
+                <div class="cta-banner__content">
+                  <h2 class="cta-banner__title">Ready to Experience the Himalayas with Local Experts?</h2>
+                  <p class="cta-banner__subtitle">Send us an inquiry and receive a custom itinerary &amp; transparent
+                    quote within 24 hours.</p>
+                </div>
+                <div class="cta-banner__actions">
+                  <a href="/booking.html" class="btn btn--accent btn--lg">Book Your Trek</a>
+                  <a href="/contact.html" class="btn btn--white-outline btn--lg">Talk to a Guide</a>
+                </div>
+              </div>
+            </div>
+          </section>
+
+  </main>
+
+  <section class="section cert-partners-section" aria-labelledby="cert-partners-heading">
+    <div class="container">
+
+      <!-- Section Header -->
+      <div class="section-heading section-heading--center reveal">
+        <span class="cert-partners-eyebrow">CERTIFIED &amp; TRUSTED</span>
+        <h2 class="cert-partners-title" id="cert-partners-heading">
+          Our Certifications &amp; Trusted Partnerships
+        </h2>
+        <p class="cert-partners-subtitle">
+          We are proud to be recognized by leading organizations and associations that promote responsible, safe, and
+          sustainable travel.
+        </p>
+      </div>
+
+      <!-- 12-Card Grid -->
+      <div class="cert-partners-grid reveal-group">
+
+        <!-- Card 1: Travelife Certified -->
+        <div class="cert-partner-card reveal">
+          <div class="cert-partner-logo">
+            <svg width="120" height="42" viewBox="0 0 120 42" fill="none">
+              <text x="5" y="26" font-family="'Plus Jakarta Sans', sans-serif" font-weight="700" font-size="18"
+                fill="#1e293b">Travelife</text>
+              <path d="M90 12C90 12 98 10 102 18C106 26 96 30 96 30C96 30 106 24 100 16C94 8 90 12 90 12Z"
+                fill="#10b981" />
+              <path d="M96 30C96 30 108 28 112 20" stroke="#f59e0b" stroke-width="2" stroke-linecap="round" />
+            </svg>
+          </div>
+          <h3 class="cert-partner-name">Travelife Certified</h3>
+          <span class="cert-line-indicator cert-line--green"></span>
+          <p class="cert-partner-desc">Excellence in sustainability and responsible tourism.</p>
+        </div>
+
+        <!-- Card 2: TAAN Member -->
+        <div class="cert-partner-card reveal">
+          <div class="cert-partner-logo">
+            <svg width="48" height="48" viewBox="0 0 48 48" fill="none">
+              <circle cx="24" cy="24" r="22" stroke="#059669" stroke-width="2.5" fill="#f0fdf4" />
+              <path d="M24 10L14 34H34L24 10Z" fill="#059669" />
+              <path d="M24 18L18 32H30L24 18Z" fill="#ffffff" />
+              <text x="14" y="42" font-family="sans-serif" font-weight="800" font-size="8" fill="#059669"
+                letter-spacing="1">TAAN</text>
+            </svg>
+          </div>
+          <h3 class="cert-partner-name">TAAN Member</h3>
+          <span class="cert-line-indicator cert-line--green"></span>
+          <p class="cert-partner-desc">Official member of Trekking Agencies' Association of Nepal.</p>
+        </div>
+
+        <!-- Card 3: NMA Registered -->
+        <div class="cert-partner-card reveal">
+          <div class="cert-partner-logo">
+            <svg width="48" height="48" viewBox="0 0 48 48" fill="none">
+              <path d="M24 8L38 34H10L24 8Z" fill="#1e3a8a" />
+              <circle cx="24" cy="20" r="4" fill="#dc2626" />
+              <text x="12" y="44" font-family="sans-serif" font-weight="900" font-size="10" fill="#1e3a8a"
+                letter-spacing="2">NMA</text>
+            </svg>
+          </div>
+          <h3 class="cert-partner-name">NMA Registered</h3>
+          <span class="cert-line-indicator cert-line--blue"></span>
+          <p class="cert-partner-desc">Registered with Nepal Mountaineering Association.</p>
+        </div>
+
+        <!-- Card 4: ATTA Member -->
+        <div class="cert-partner-card reveal">
+          <div class="cert-partner-logo">
+            <svg width="120" height="40" viewBox="0 0 120 40" fill="none">
+              <rect x="4" y="10" width="20" height="20" rx="4" fill="#ea580c" />
+              <circle cx="14" cy="20" r="4" stroke="#ffffff" stroke-width="2" />
+              <text x="30" y="20" font-family="sans-serif" font-weight="800" font-size="9" fill="#ea580c">MEMBER</text>
+              <text x="30" y="28" font-family="sans-serif" font-weight="700" font-size="7" fill="#1e293b">ADVENTURE
+                TRAVEL</text>
+              <text x="30" y="34" font-family="sans-serif" font-weight="600" font-size="6" fill="#64748b">TRADE
+                ASSOCIATION</text>
+            </svg>
+          </div>
+          <h3 class="cert-partner-name">ATTA Member</h3>
+          <span class="cert-line-indicator cert-line--orange"></span>
+          <p class="cert-partner-desc">Member of Adventure Travel Trade Association.</p>
+        </div>
+
+        <!-- Card 5: KEEP Member -->
+        <div class="cert-partner-card reveal">
+          <div class="cert-partner-logo">
+            <svg width="48" height="48" viewBox="0 0 48 48" fill="none">
+              <rect x="8" y="8" width="32" height="32" rx="4" fill="#1e3a8a" />
+              <path d="M24 14L32 26H16L24 14Z" fill="#10b981" />
+              <circle cx="24" cy="18" r="2.5" fill="#ffffff" />
+              <text x="11" y="45" font-family="sans-serif" font-weight="800" font-size="9" fill="#1e3a8a"
+                letter-spacing="1">KEEP</text>
+            </svg>
+          </div>
+          <h3 class="cert-partner-name">KEEP Member</h3>
+          <span class="cert-line-indicator cert-line--green"></span>
+          <p class="cert-partner-desc">Committed to responsible environmental practices.</p>
+        </div>
+
+        <!-- Card 6: Conservation Partner -->
+        <div class="cert-partner-card reveal">
+          <div class="cert-partner-logo">
+            <svg width="48" height="48" viewBox="0 0 48 48" fill="none">
+              <path d="M14 32L24 14L34 32H14Z" fill="#ea580c" />
+              <path d="M26 32L34 18L42 32H26Z" fill="#c2410c" />
+            </svg>
+          </div>
+          <h3 class="cert-partner-name">Conservation Partner</h3>
+          <span class="cert-line-indicator cert-line--orange"></span>
+          <p class="cert-partner-desc">Supporting conservation through the ATCF.</p>
+        </div>
+
+        <!-- Card 7: Nepal Tourism Board -->
+        <div class="cert-partner-card reveal">
+          <div class="cert-partner-logo">
+            <svg width="48" height="48" viewBox="0 0 48 48" fill="none">
+              <path d="M24 10L32 24H16L24 10Z" fill="#dc2626" />
+              <path d="M24 18L38 34H10L24 18Z" fill="#1e3a8a" />
+              <path d="M24 6L26 12H22L24 6Z" fill="#f59e0b" />
+              <text x="15" y="44" font-family="sans-serif" font-weight="900" font-size="9" fill="#dc2626"
+                letter-spacing="1">NTB</text>
+            </svg>
+          </div>
+          <h3 class="cert-partner-name">Nepal Tourism Board</h3>
+          <span class="cert-line-indicator cert-line--blue"></span>
+          <p class="cert-partner-desc">Officially recognized by Nepal Tourism Board.</p>
+        </div>
+
+        <!-- Card 8: Nepal Airlines -->
+        <div class="cert-partner-card reveal">
+          <div class="cert-partner-logo">
+            <svg width="48" height="48" viewBox="0 0 48 48" fill="none">
+              <path d="M8 24C14 16 20 16 24 24C28 16 34 16 40 24C34 30 28 30 24 24C20 30 14 30 8 24Z" fill="#dc2626" />
+              <path d="M22 18L24 14L26 18L24 22L22 18Z" fill="#1e3a8a" />
+            </svg>
+          </div>
+          <h3 class="cert-partner-name">Nepal Airlines</h3>
+          <span class="cert-line-indicator cert-line--red"></span>
+          <p class="cert-partner-desc">Authorized partner of Nepal Airlines.</p>
+        </div>
+
+        <!-- Card 9: NATTA Member -->
+        <div class="cert-partner-card reveal">
+          <div class="cert-partner-logo">
+            <svg width="48" height="48" viewBox="0 0 48 48" fill="none">
+              <path d="M24 8L34 26H14L24 8Z" fill="#1d4ed8" />
+              <path d="M12 30H36L24 38L12 30Z" fill="#1e40af" />
+              <text x="8" y="46" font-family="sans-serif" font-weight="900" font-size="8" fill="#1d4ed8"
+                letter-spacing="1">NATTA</text>
+            </svg>
+          </div>
+          <h3 class="cert-partner-name">NATTA Member</h3>
+          <span class="cert-line-indicator cert-line--blue"></span>
+          <p class="cert-partner-desc">Member of Nepal Association of Tour &amp; Travel Agents.</p>
+        </div>
+
+        <!-- Card 10: HAN Member -->
+        <div class="cert-partner-card reveal">
+          <div class="cert-partner-logo">
+            <svg width="100" height="40" viewBox="0 0 100 40" fill="none">
+              <text x="10" y="24" font-family="'Plus Jakarta Sans', sans-serif" font-weight="900" font-size="20"
+                fill="#1e3a8a" letter-spacing="2">HAN</text>
+              <text x="10" y="34" font-family="sans-serif" font-weight="600" font-size="6" fill="#64748b"
+                letter-spacing="0.5">HOTEL ASSOCIATION NEPAL</text>
+            </svg>
+          </div>
+          <h3 class="cert-partner-name">HAN Member</h3>
+          <span class="cert-line-indicator cert-line--blue"></span>
+          <p class="cert-partner-desc">Member of Hotel Association Nepal.</p>
+        </div>
+
+        <!-- Card 11: TURGAN Member -->
+        <div class="cert-partner-card reveal">
+          <div class="cert-partner-logo">
+            <svg width="48" height="48" viewBox="0 0 48 48" fill="none">
+              <circle cx="24" cy="22" r="16" fill="#fef08a" stroke="#15803d" stroke-width="2" />
+              <path d="M24 10L28 20H20L24 10Z" fill="#15803d" />
+              <text x="7" y="44" font-family="sans-serif" font-weight="900" font-size="8" fill="#15803d"
+                letter-spacing="1">TURGAN</text>
+            </svg>
+          </div>
+          <h3 class="cert-partner-name">TURGAN Member</h3>
+          <span class="cert-line-indicator cert-line--green"></span>
+          <p class="cert-partner-desc">Member of Tourist Guide Association of Nepal.</p>
+        </div>
+
+        <!-- Card 12: Sustainable Travel -->
+        <div class="cert-partner-card reveal">
+          <div class="cert-partner-logo">
+            <svg width="110" height="40" viewBox="0 0 110 40" fill="none">
+              <circle cx="16" cy="20" r="10" stroke="#0284c7" stroke-width="2.5" />
+              <circle cx="16" cy="20" r="4" fill="#0284c7" />
+              <text x="32" y="18" font-family="sans-serif" font-weight="800" font-size="7" fill="#0284c7"
+                letter-spacing="0.5">SUSTAINABLE</text>
+              <text x="32" y="26" font-family="sans-serif" font-weight="700" font-size="6" fill="#0369a1"
+                letter-spacing="0.5">TRAVEL INTERNATIONAL</text>
+            </svg>
+          </div>
+          <h3 class="cert-partner-name">Sustainable Travel</h3>
+          <span class="cert-line-indicator cert-line--green"></span>
+          <p class="cert-partner-desc">Partnering for a sustainable future of travel.</p>
+        </div>
+
+      </div><!-- /cert-partners-grid -->
+
+      <!-- Bottom 4-Pillar Trust Strip -->
+      <div class="cert-trust-strip reveal">
+        <div class="cert-trust-item">
+          <div class="cert-trust-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#2563eb" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+            </svg>
+          </div>
+          <div class="cert-trust-text">
+            <div class="cert-trust-title">Trusted &amp; Verified</div>
+            <div class="cert-trust-sub">Verified by leading organizations</div>
+          </div>
+        </div>
+
+        <div class="cert-trust-item">
+          <div class="cert-trust-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#2563eb" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round">
+              <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
+              <circle cx="9" cy="7" r="4" />
+              <path d="M23 21v-2a4 4 0 0 0-3-3.87" />
+              <path d="M16 3.13a4 4 0 0 1 0 7.75" />
+            </svg>
+          </div>
+          <div class="cert-trust-text">
+            <div class="cert-trust-title">Safety First</div>
+            <div class="cert-trust-sub">Your safety is our top priority</div>
+          </div>
+        </div>
+
+        <div class="cert-trust-item">
+          <div class="cert-trust-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#2563eb" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round">
+              <path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.4 19 2c1 2 2 4.1 2 7 0 6-4.5 11-10 11Z" />
+            </svg>
+          </div>
+          <div class="cert-trust-text">
+            <div class="cert-trust-title">Responsible Travel</div>
+            <div class="cert-trust-sub">We protect the places we visit</div>
+          </div>
+        </div>
+
+        <div class="cert-trust-item">
+          <div class="cert-trust-icon">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#2563eb" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round">
+              <path
+                d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z" />
+            </svg>
+          </div>
+          <div class="cert-trust-text">
+            <div class="cert-trust-title">Community Focused</div>
+            <div class="cert-trust-sub">Supporting local communities</div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- =====================================================================
+       FOOTER
+       ===================================================================== -->
+  <footer class="footer" role="contentinfo" aria-label="Site footer">
+    <div class="container">
+
+      <div class="footer__grid">
+
+        <!-- Brand -->
+        <div class="footer__brand">
+          <a class="footer__logo" href="/" aria-label="Best Treks Nepal — Homepage">
+            <div class="footer__logo-text">
+              Best Treks Nepal
+              <span>Adventure Awaits</span>
+            </div>
+          </a>
+          <p class="footer__desc">
+            Nepal's trusted trekking company, crafting unforgettable Himalayan
+            adventures since 2009. Licensed, expert, and passionate about Nepal.
+          </p>
+          <div class="footer__social" aria-label="Social media links">
+            <a href="https://www.facebook.com/besttreksnepal" class="footer__social-link" aria-label="Facebook">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" />
+              </svg>
+            </a>
+            <a href="https://www.instagram.com/besttreksnepal" class="footer__social-link" aria-label="Instagram">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
+                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" />
+              </svg>
+            </a>
+            <a href="https://youtube.com/besttreksnepal" class="footer__social-link" aria-label="YouTube">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                <path
+                  d="M22.54 6.42a2.78 2.78 0 0 0-1.95-1.96C18.88 4 12 4 12 4s-6.88 0-8.59.46A2.78 2.78 0 0 0 1.46 6.42 29 29 0 0 0 1 12a29 29 0 0 0 .46 5.58 2.78 2.78 0 0 0 1.95 1.96C5.12 20 12 20 12 20s6.88 0 8.59-.46a2.78 2.78 0 0 0 1.96-1.96A29 29 0 0 0 23 12a29 29 0 0 0-.46-5.58z" />
+                <polygon fill="#0F5257" points="9.75 15.02 15.5 12 9.75 8.98 9.75 15.02" />
+              </svg>
+            </a>
+            <a href="https://wa.me/9771234567890" class="footer__social-link" aria-label="WhatsApp">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                <path
+                  d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z" />
+                <path
+                  d="M12 2C6.477 2 2 6.477 2 12c0 1.89.525 3.66 1.438 5.168L2 22l4.832-1.438A9.946 9.946 0 0 0 12 22c5.523 0 10-4.477 10-10S17.523 2 12 2z" />
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Quick Links -->
+        <div>
+          <h3 class="footer__col-title">Quick Links</h3>
+          <nav class="footer__links" aria-label="Footer quick links">
+            <a href="/" class="footer__link">Home</a>
+            <a href="/about.html" class="footer__link">About Us</a>
+            <a href="/gallery.html" class="footer__link">Gallery</a>
+            <a href="/blog.html" class="footer__link">Blog</a>
+            <a href="/faq.html" class="footer__link">FAQ</a>
+            <a href="/contact.html" class="footer__link">Contact</a>
+            <a href="/booking.html" class="footer__link">Book a Trek</a>
+            <a href="/pages.html" class="footer__link">All Pages</a>
+          </nav>
+        </div>
+
+        <!-- Destinations -->
+        <div>
+          <h3 class="footer__col-title">Destinations</h3>
+          <nav class="footer__links" aria-label="Footer destination links">
+            <a href="/destinations/everest.html" class="footer__link">Everest Region</a>
+            <a href="/destinations/annapurna.html" class="footer__link">Annapurna Region</a>
+            <a href="/destinations/langtang.html" class="footer__link">Langtang Region</a>
+            <a href="/destinations/manaslu.html" class="footer__link">Manaslu Region</a>
+            <a href="/destinations/mustang.html" class="footer__link">Mustang</a>
+            <a href="/destinations/dolpo.html" class="footer__link">Dolpo</a>
+            <a href="/destinations/kanchenjunga.html" class="footer__link">Kanchenjunga</a>
+          </nav>
+        </div>
+
+        <!-- Contact -->
+        <div>
+          <h3 class="footer__col-title">Contact Us</h3>
+          <address style="font-style:normal;">
+            <div class="footer__contact-item">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
+                <circle cx="12" cy="10" r="3" />
+              </svg>
+              Thamel, Kathmandu, Nepal
+            </div>
+            <div class="footer__contact-item">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path
+                  d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.19 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.12 1.18l3-.017a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L7.09 8.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" />
+              </svg>
+              <a href="tel:+97714700000">+977 1 470 0000</a>
+            </div>
+            <div class="footer__contact-item">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+                <polyline points="22,6 12,13 2,6" />
+              </svg>
+              <a href="mailto:info@besttreksnepal.com">info@besttreksnepal.com</a>
+            </div>
+            <div class="footer__contact-item">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <circle cx="12" cy="12" r="10" />
+                <polyline points="12 6 12 12 16 14" />
+              </svg>
+              Response within 24 hours
+            </div>
+          </address>
+        </div>
+
+      </div><!-- /footer__grid -->
+
+      <div class="footer__bottom">
+        <div class="footer__bottom-inner">
+          <p class="footer__copyright">
+            © <span data-year>2026</span> Best Treks Nepal. All rights reserved.
+            Registered with Nepal Tourism Board.
+          </p>
+          <nav class="footer__bottom-links" aria-label="Legal links">
+            <a href="/privacy-policy.html" class="footer__bottom-link">Privacy Policy</a>
+            <a href="/terms.html" class="footer__bottom-link">Terms &amp; Conditions</a>
+            <a href="/pages.html" class="footer__bottom-link">All Pages</a>
+            <a href="/sitemap.xml" class="footer__bottom-link">Sitemap</a>
+          </nav>
+        </div>
+      </div>
+
+    </div>
+  </footer>
+
+  <button class="back-to-top" aria-label="Scroll back to top" type="button">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
+      stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+      <polyline points="18 15 12 9 6 15" />
+    </svg>
+  </button>
+
+  <script type="module" src="/assets/js/main.js" defer></script>
+
+  <!-- Static fallback for no-JS environments -->
+  <noscript>
+    <style>
+      .noscript-notice{position:fixed;bottom:0;left:0;right:0;z-index:99999;
+        background:#0f5257;color:#fff;text-align:center;padding:12px 20px;
+        font-family:Inter,sans-serif;font-size:14px;font-weight:500;
+        border-top:3px solid #c8a96b;}
+      .noscript-notice a{color:#c8a96b;text-decoration:underline;}
+    </style>
+    <div class="noscript-notice">
+      ⚠️ Some interactive features (filters, search, map) require JavaScript.
+      All trek pages, content &amp; booking links work without it.
+      <a href="/contact.html">Contact us directly</a> if you need help.
+    </div>
+  </noscript>
+</body>
+
+</html>

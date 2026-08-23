@@ -1,0 +1,528 @@
+/* ==========================================================================
+   responsive.css — Best Treks Nepal Responsive Overrides
+   Version: 1.0 | August 2026
+
+   Mobile-first: base styles are mobile (375px+).
+   Media queries progressively enhance for larger screens.
+
+   Breakpoints:
+     sm:  576px
+     md:  768px
+     lg:  992px
+     xl:  1200px
+     2xl: 1440px
+   ========================================================================== */
+
+
+/* --------------------------------------------------------------------------
+   Small (576px+)
+   -------------------------------------------------------------------------- */
+@media (min-width: 576px) {
+
+  /* Hero */
+  .hero {
+    padding-top: calc(var(--navbar-height) + var(--space-4));
+  }
+
+  /* Testimonials items-per-view: handled by JS slider */
+
+  /* Stats */
+  .stats-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  /* Footer */
+  .footer__grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* --------------------------------------------------------------------------
+   Medium (768px+) — Tablet
+   -------------------------------------------------------------------------- */
+@media (min-width: 768px) {
+
+  /* Navbar — hamburger hidden, show desktop nav */
+  .navbar__nav,
+  .navbar__actions {
+    display: flex;
+  }
+
+  .navbar__hamburger {
+    display: none;
+  }
+
+  /* Hero */
+  .hero {
+    min-height: 92vh;
+    padding-top: calc(var(--navbar-height) + var(--space-6));
+  }
+
+  .hero__stats {
+    display: flex;
+  }
+
+  /* Content Split */
+  .content-split {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  /* Gallery */
+  .gallery-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  /* Footer */
+  .footer__grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-6);
+  }
+
+  /* Feature items — 3 columns */
+  .features-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  /* Quick facts — more columns */
+  .quick-facts {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  /* Newsletter form horizontal */
+  .newsletter__form {
+    flex-direction: row;
+  }
+
+  /* Destination grid — 3 columns */
+  .destinations-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* --------------------------------------------------------------------------
+   Large (992px+) — Laptop / Desktop
+   -------------------------------------------------------------------------- */
+@media (min-width: 992px) {
+
+  /* Footer — 4-column layout */
+  .footer__grid {
+    grid-template-columns: 2fr 1fr 1fr 1fr;
+  }
+
+  /* Trek cards — 3 columns */
+  .treks-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  /* Blog — 3 columns */
+  .blog-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  /* Hero arrows visible */
+  .hero__arrow {
+    display: flex;
+  }
+
+  /* Stats — horizontal */
+  .stat-item {
+    padding: var(--space-4);
+  }
+
+  /* Lightbox arrows positioned outside image */
+  .lightbox__arrow--prev {
+    left: -4rem;
+  }
+
+  .lightbox__arrow--next {
+    right: -4rem;
+  }
+
+  /* Testimonials — show 3 */
+  /* Handled by JS */
+
+  /* CTA Banner — side by side */
+  .cta-banner {
+    flex-wrap: nowrap;
+    padding: var(--space-8);
+  }
+
+  /* Mega menu desktop styles are defined in components.css */
+
+  /* Destinations grid */
+  .destinations-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+/* --------------------------------------------------------------------------
+   XL (1200px+)
+   -------------------------------------------------------------------------- */
+@media (min-width: 1200px) {
+
+  /* Trek cards — 4 per row on wide screens */
+  .treks-grid--wide {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  /* Hero title bigger */
+  .hero__title {
+    font-size: 4rem;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   2XL (1440px+)
+   -------------------------------------------------------------------------- */
+@media (min-width: 1440px) {
+
+  /* Even more generous spacing at very large screens */
+  .hero__content {
+    max-width: 56rem;
+  }
+
+  /* Stats number bigger */
+  .stat-item__number {
+    font-size: 3.5rem;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   Mobile-only corrections (max 767px)
+   -------------------------------------------------------------------------- */
+@media (max-width: 767px) {
+
+  /* Navbar */
+  .navbar__nav,
+  .navbar__actions .btn {
+    display: none;
+  }
+
+  .navbar__hamburger {
+    display: flex;
+  }
+
+  /* Top bar — only show phone on mobile */
+  .top-bar__social {
+    display: none;
+  }
+
+  /* Hero */
+  .hero {
+    min-height: 85vh;
+  }
+
+  .hero__title {
+    font-size: clamp(1.75rem, 7vw, 2.5rem);
+  }
+
+  .hero__stats {
+    display: none;
+  }
+
+  .hero__arrow {
+    display: none;
+  }
+
+  .hero__search-widget {
+    flex-direction: column;
+    border-radius: var(--radius-lg);
+    padding: var(--space-3);
+  }
+
+  .hero__search-input-group {
+    width: 100%;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    padding-bottom: var(--space-2);
+    margin-bottom: var(--space-2);
+  }
+
+  .hero__search-input {
+    width: 100%;
+  }
+
+  .hero__search-submit {
+    width: 100%;
+    height: 3rem;
+    justify-content: center;
+  }
+
+  .hero__trust-pill {
+    flex-wrap: wrap;
+    justify-content: center;
+    border-radius: var(--radius-xl);
+    padding: 8px 12px;
+    gap: 8px;
+  }
+
+  .hero__feature-track {
+    gap: 1rem;
+  }
+
+  .hero__feature-pill {
+    font-size: 11px;
+    padding: 5px 9px;
+    flex-shrink: 0;
+  }
+
+  /* Destinations grid — 2 columns on mobile */
+  .destinations-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  /* Stats — 2 × 2 */
+  .stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  /* Mega menu becomes simple dropdown on mobile */
+  .mega-menu {
+    position: static;
+    transform: none;
+    min-width: auto;
+    box-shadow: none;
+    border: none;
+    border-radius: 0;
+    padding: 0 0 0 var(--space-2);
+    background: var(--color-background);
+  }
+
+  /* Booking form card */
+  .booking-form-card {
+    padding: var(--space-4);
+  }
+
+  /* Gallery — 2 columns */
+  .gallery-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  /* Wide gallery items take full row */
+  .gallery-item--wide {
+    grid-column: span 1;
+    aspect-ratio: 4 / 3;
+  }
+
+  /* Lightbox arrows hidden */
+  .lightbox__arrow {
+    display: none;
+  }
+
+  /* Footer */
+  .footer__desc {
+    max-width: none;
+  }
+
+  /* CTA Banner stack */
+  .cta-banner {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: var(--space-6) var(--space-4);
+  }
+
+  /* Feature items — single column */
+  .features-grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* Testimonial track — 1 at a time on mobile */
+  .reviews-marquee-track .review-rich-card {
+    min-width: 280px;
+    max-width: 280px;
+  }
+
+  /* Video reviews — 1 column on mobile */
+  .video-reviews-grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* Platform Reviews — 2x2 on mobile */
+  .platform-scores-row {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+
+  .platform-review-card {
+    min-width: 260px;
+    max-width: 260px;
+  }
+
+  .platform-subtabs-strip {
+    gap: 1rem;
+  }
+
+  .verified-summary-banner {
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+  }
+
+  /* Trust bar — 2x2 grid layout on mobile */
+  .trust-bar {
+    padding: 1.25rem 0;
+  }
+
+  .trust-bar__inner {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.25rem 0.75rem;
+    align-items: center;
+  }
+
+  .trust-card {
+    gap: 0.65rem;
+  }
+
+  .trust-card__icon-box {
+    width: 44px;
+    height: 44px;
+    border-radius: 12px;
+  }
+
+  .trust-card__icon-box svg {
+    width: 20px;
+    height: 20px;
+  }
+
+  .trust-card__title {
+    font-size: 1.05rem;
+  }
+
+  .trust-card__subtitle {
+    font-size: 0.72rem;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   Extra small (max 374px) — small phones
+   -------------------------------------------------------------------------- */
+@media (max-width: 374px) {
+
+  .hero__title {
+    font-size: 1.75rem;
+  }
+
+  .hero__actions .btn {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .destinations-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .stats-grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* Trust bar fine-tuning on small phones */
+  .trust-bar__inner {
+    gap: 1rem 0.5rem;
+  }
+
+  .trust-card {
+    gap: 0.5rem;
+  }
+
+  .trust-card__icon-box {
+    width: 38px;
+    height: 38px;
+    border-radius: 10px;
+  }
+
+  .trust-card__icon-box svg {
+    width: 18px;
+    height: 18px;
+  }
+
+  .trust-card__title {
+    font-size: 0.95rem;
+  }
+
+  .trust-card__subtitle {
+    font-size: 0.68rem;
+  }
+}
+
+/* =========================================================
+   GALLERY BENTO — Tablet (≤ 1024px)
+   ========================================================= */
+@media (max-width: 1024px) {
+  .gallery-bento {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto;
+  }
+
+  .gallery-bento__cell--hero,
+  .gallery-bento__cell--wide {
+    grid-column: span 2;
+    aspect-ratio: 16 / 7;
+  }
+
+  .gallery-bento__cell--tall {
+    grid-row: span 1;
+    aspect-ratio: 4 / 3;
+  }
+
+  .gallery-bento__cell:not(.gallery-bento__cell--hero):not(.gallery-bento__cell--wide):not(.gallery-bento__cell--tall) {
+    aspect-ratio: 4 / 3;
+  }
+}
+
+/* =========================================================
+   GALLERY BENTO — Mobile (≤ 640px)
+   ========================================================= */
+@media (max-width: 640px) {
+  .gallery-bento {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    gap: 0.625rem;
+  }
+
+  .gallery-bento__cell--hero,
+  .gallery-bento__cell--wide,
+  .gallery-bento__cell--tall {
+    grid-column: span 1;
+    grid-row: span 1;
+    aspect-ratio: 4 / 3;
+  }
+
+  .gallery-bento__overlay {
+    opacity: 1;
+    background: linear-gradient(
+      to top,
+      rgba(0,0,0,0.6) 0%,
+      transparent 60%
+    );
+  }
+
+  .gallery-filter-btn {
+    font-size: 0.8rem;
+    padding: 0.4rem 0.9rem;
+  }
+
+  .blog-grid {
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+  }
+
+  .faq-support-card {
+    flex-direction: column;
+    text-align: center;
+    padding: 1.25rem 1rem;
+  }
+
+  .faq-support-card__actions {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .faq-support-card__actions .btn {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .faq-item__trigger {
+    padding: 1rem;
+  }
+}
