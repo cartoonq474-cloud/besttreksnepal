@@ -5,7 +5,8 @@
   "private": true,
   "scripts": {
     "dev":   "serve . --listen 3000 --no-clipboard",
-    "start": "serve . --listen 3000 --no-clipboard"
+    "start": "serve . --listen 3000 --no-clipboard",
+    "build": "echo \"Static site: No build step required\""
   },
   "keywords": ["nepal", "trekking", "himalaya"],
   "license": "UNLICENSED",
