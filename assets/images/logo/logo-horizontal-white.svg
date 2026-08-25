@@ -1,0 +1,120 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 100" width="100%" height="100%" fill="none">
+  <defs>
+    <linearGradient id="horizSunW" x1="0%" y1="100%" x2="0%" y2="0%">
+      <stop offset="0%" stop-color="#E88C38"/>
+      <stop offset="100%" stop-color="#F2A65A"/>
+    </linearGradient>
+    <clipPath id="horizClipW">
+      <circle cx="50" cy="50" r="42"/>
+    </clipPath>
+    <style>
+      .h-title-w {
+        font-family: 'Plus Jakarta Sans', 'Inter', system-ui, sans-serif;
+        font-weight: 900;
+        font-size: 24px;
+        fill: #FFFFFF;
+        letter-spacing: 0.5px;
+      }
+      .h-est-w {
+        font-family: 'Plus Jakarta Sans', 'Inter', system-ui, sans-serif;
+        font-weight: 700;
+        font-size: 8px;
+        fill: #F2A65A;
+        letter-spacing: 2.2px;
+      }
+      .h-tagline-w {
+        font-family: 'Plus Jakarta Sans', 'Inter', system-ui, sans-serif;
+        font-weight: 800;
+        font-size: 10px;
+        fill: #F2A65A;
+        letter-spacing: 3.8px;
+      }
+    </style>
+  </defs>
+
+  <!-- ================= LEFT DETAILED EMBLEM (WHITE) ================= -->
+  <g transform="translate(6, 0)">
+    <circle cx="50" cy="50" r="46" stroke="#FFFFFF" stroke-width="1.8" opacity="0.8" fill="none"/>
+    <circle cx="50" cy="50" r="42" stroke="#F2A65A" stroke-width="0.8" stroke-dasharray="2,2" fill="#0A3E42"/>
+
+    <polygon points="50,0 52,6 50,4 48,6" fill="#F2A65A"/>
+    <polygon points="50,100 52,94 50,96 48,94" fill="#F2A65A"/>
+    <polygon points="98,50 92,52 94,50 92,48" fill="#F2A65A"/>
+    <polygon points="2,50 8,52 6,50 8,48" fill="#F2A65A"/>
+
+    <g clip-path="url(#horizClipW)">
+      <rect x="0" y="0" width="100" height="100" fill="#093538"/>
+
+      <g stroke="#F2A65A" stroke-width="0.7" opacity="0.75">
+        <line x1="50" y1="36" x2="50" y2="8"/>
+        <line x1="50" y1="36" x2="59" y2="9"/>
+        <line x1="50" y1="36" x2="68" y2="13"/>
+        <line x1="50" y1="36" x2="76" y2="20"/>
+        <line x1="50" y1="36" x2="81" y2="29"/>
+        <line x1="50" y1="36" x2="41" y2="9"/>
+        <line x1="50" y1="36" x2="32" y2="13"/>
+        <line x1="50" y1="36" x2="24" y2="20"/>
+        <line x1="50" y1="36" x2="19" y2="29"/>
+      </g>
+
+      <circle cx="50" cy="36" r="17" fill="url(#horizSunW)"/>
+
+      <path d="M12,22 Q50,34 88,22" stroke="#FFFFFF" stroke-width="0.6" opacity="0.7" fill="none"/>
+      <polygon points="18,22 22,23 21,27 17,26" fill="#60A5FA"/>
+      <polygon points="24,24 28,25 27,29 23,28" fill="#FFFFFF"/>
+      <polygon points="30,26 34,27 33,31 29,30" fill="#F87171"/>
+      <polygon points="36,28 40,29 39,33 35,32" fill="#4ADE80"/>
+      <polygon points="42,30 46,31 45,35 41,34" fill="#FACC15"/>
+      <polygon points="48,31 52,31 52,35 48,35" fill="#60A5FA"/>
+      <polygon points="54,31 58,30 59,34 55,35" fill="#F87171"/>
+      <polygon points="60,29 64,28 65,32 61,33" fill="#4ADE80"/>
+      <polygon points="66,27 70,26 71,30 67,31" fill="#FACC15"/>
+      <polygon points="72,25 76,24 77,28 73,29" fill="#60A5FA"/>
+      <polygon points="78,23 82,22 83,26 79,27" fill="#F87171"/>
+
+      <polygon points="10,75 30,40 50,75" fill="#7FB3B0" opacity="0.5"/>
+      <polygon points="55,75 75,38 95,75" fill="#7FB3B0" opacity="0.5"/>
+
+      <!-- Peaks (White & Soft Teal) -->
+      <polygon points="8,80 30,42 52,80" fill="#FFFFFF"/>
+      <polygon points="30,42 52,80 30,80" fill="#7FB3B0" opacity="0.5"/>
+      <polygon points="48,80 70,40 92,80" fill="#FFFFFF"/>
+      <polygon points="70,40 92,80 70,80" fill="#7FB3B0" opacity="0.5"/>
+
+      <polygon points="22,85 50,22 78,85" fill="#FFFFFF"/>
+      <polygon points="50,22 50,85 78,85" fill="#7FB3B0" opacity="0.45"/>
+      <polygon points="50,22 42,38 36,50 42,48 44,56 49,49 50,58 50,22" fill="#FFFFFF"/>
+      <polygon points="50,22 52,36 55,47 50,55 50,22" fill="#FFFFFF"/>
+
+      <path d="M5,72 Q35,70 45,82 L45,100 L5,100 Z" fill="#0F5257"/>
+      <path d="M95,72 Q65,70 55,82 L55,100 L95,100 Z" fill="#0F5257"/>
+
+      <path d="M50,72 Q52,78 47,83 Q42,88 52,93 Q58,97 45,100" stroke="#FCEEDF" stroke-width="4.5" fill="none" stroke-linecap="round"/>
+      <path d="M50,72 Q52,78 47,83 Q42,88 52,93 Q58,97 45,100" stroke="#F2A65A" stroke-width="1.2" stroke-dasharray="1.8,2" fill="none"/>
+
+      <g transform="translate(49, 87)">
+        <circle cx="0" cy="-5.5" r="1.2" fill="#FFFFFF"/>
+        <path d="M-1,-4 C-1,-4 -2.5,-3.5 -2.5,-1.5 C-2.5,0 -1.8,0.5 -0.8,0.5 L0.8,0.5 L0.8,-4 Z" fill="#FFFFFF"/>
+        <line x1="-0.4" y1="0.5" x2="-1.5" y2="4.5" stroke="#FFFFFF" stroke-width="1" stroke-linecap="round"/>
+        <line x1="0.4" y1="0.5" x2="1.5" y2="4.2" stroke="#FFFFFF" stroke-width="1" stroke-linecap="round"/>
+        <line x1="0.8" y1="-2" x2="2.4" y2="4.5" stroke="#FFFFFF" stroke-width="0.7" stroke-linecap="round"/>
+        <line x1="-0.8" y1="-2" x2="-2.4" y2="4.2" stroke="#FFFFFF" stroke-width="0.7" stroke-linecap="round"/>
+      </g>
+    </g>
+  </g>
+
+  <!-- ================= RIGHT TYPOGRAPHY (WHITE) ================= -->
+  <g transform="translate(125, 0)">
+    <g transform="translate(0, 22)">
+      <rect x="0" y="-8" width="168" height="12" rx="2" fill="#0A3E42" stroke="#F2A65A" stroke-width="0.7"/>
+      <text x="6" y="1" class="h-est-w">EST. 2009 · HIMALAYAN EXPEDITIONS</text>
+    </g>
+
+    <text x="0" y="48" class="h-title-w">BEST TREKS NEPAL</text>
+
+    <path d="M0,58 L85,58 L92,51 L97,58 L101,54 L105,58 L280,58" stroke="#F2A65A" stroke-width="1.6" fill="none" stroke-linejoin="round"/>
+    <circle cx="92" cy="51" r="1.5" fill="#FFFFFF"/>
+
+    <text x="2" y="74" class="h-tagline-w">ADVENTURE AWAITS</text>
+  </g>
+</svg>

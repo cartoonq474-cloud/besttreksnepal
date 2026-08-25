@@ -1,48 +1,100 @@
 /* ==========================================================================
    responsive.css — Best Treks Nepal Responsive Overrides
-   Version: 1.0 | August 2026
+   Version: 3.0 | August 2026
 
-   Mobile-first: base styles are mobile (375px+).
+   Mobile-first: base styles target mobile (200px+).
    Media queries progressively enhance for larger screens.
 
    Breakpoints:
-     sm:  576px
-     md:  768px
-     lg:  992px
-     xl:  1200px
-     2xl: 1440px
+     xs:  320px  (small phones — iPhone SE etc.)
+     sm:  480px  (large mobile)
+     md:  640px  (small tablet / large mobile)
+     lg:  768px  (tablet)
+     xl:  992px  (laptop)
+     2xl: 1200px (desktop)
+     3xl: 1440px (large desktop)
    ========================================================================== */
 
 
-/* --------------------------------------------------------------------------
-   Small (576px+)
-   -------------------------------------------------------------------------- */
-@media (min-width: 576px) {
+/* ==========================================================================
+   GLOBAL MOBILE BASELINE — Prevent horizontal overflow on every page
+   ========================================================================== */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
 
-  /* Hero */
+html,
+body {
+  overflow-x: clip;
+  -webkit-text-size-adjust: 100%;
+  scroll-behavior: smooth;
+}
+
+img,
+video,
+iframe,
+svg {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Tables scroll horizontally on mobile */
+table {
+  display: block;
+  overflow-x: auto;
+  white-space: nowrap;
+  -webkit-overflow-scrolling: touch;
+}
+
+/* Prevent any element from causing horizontal scroll */
+.container {
+  overflow-x: clip;
+}
+
+/* Word-break on narrow containers to prevent text overflow */
+h1, h2, h3, h4, h5, h6, p {
+  overflow-wrap: break-word;
+  word-break: break-word;
+}
+
+
+/* ==========================================================================
+   SMALL (480px+)
+   ========================================================================== */
+@media (min-width: 480px) {
+
   .hero {
     padding-top: calc(var(--navbar-height) + var(--space-4));
   }
 
-  /* Testimonials items-per-view: handled by JS slider */
-
-  /* Stats */
   .stats-grid {
     grid-template-columns: repeat(4, 1fr);
   }
 
-  /* Footer */
   .footer__grid {
     grid-template-columns: repeat(2, 1fr);
   }
 }
 
-/* --------------------------------------------------------------------------
-   Medium (768px+) — Tablet
-   -------------------------------------------------------------------------- */
+
+/* ==========================================================================
+   MEDIUM (640px+) — Large Mobile / Small Tablet
+   ========================================================================== */
+@media (min-width: 640px) {
+
+  .blog-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+
+/* ==========================================================================
+   LARGE (768px+) — Tablet
+   ========================================================================== */
 @media (min-width: 768px) {
 
-  /* Navbar — hamburger hidden, show desktop nav */
   .navbar__nav,
   .navbar__actions {
     display: flex;
@@ -52,7 +104,6 @@
     display: none;
   }
 
-  /* Hero */
   .hero {
     min-height: 92vh;
     padding-top: calc(var(--navbar-height) + var(--space-6));
@@ -62,74 +113,62 @@
     display: flex;
   }
 
-  /* Content Split */
   .content-split {
     grid-template-columns: 1fr 1fr;
   }
 
-  /* Gallery */
   .gallery-grid {
     grid-template-columns: repeat(3, 1fr);
   }
 
-  /* Footer */
   .footer__grid {
     grid-template-columns: repeat(2, 1fr);
     gap: var(--space-6);
   }
 
-  /* Feature items — 3 columns */
   .features-grid {
     grid-template-columns: repeat(3, 1fr);
   }
 
-  /* Quick facts — more columns */
   .quick-facts {
     grid-template-columns: repeat(4, 1fr);
   }
 
-  /* Newsletter form horizontal */
   .newsletter__form {
     flex-direction: row;
   }
 
-  /* Destination grid — 3 columns */
   .destinations-grid {
     grid-template-columns: repeat(3, 1fr);
   }
 }
 
-/* --------------------------------------------------------------------------
-   Large (992px+) — Laptop / Desktop
-   -------------------------------------------------------------------------- */
+
+/* ==========================================================================
+   XL (992px+) — Laptop / Desktop
+   ========================================================================== */
 @media (min-width: 992px) {
 
-  /* Footer — 4-column layout */
   .footer__grid {
     grid-template-columns: 2fr 1fr 1fr 1fr;
   }
 
-  /* Trek cards — 3 columns */
   .treks-grid {
     grid-template-columns: repeat(3, 1fr);
   }
 
-  /* Blog — 3 columns */
   .blog-grid {
     grid-template-columns: repeat(3, 1fr);
   }
 
-  /* Hero arrows visible */
   .hero__arrow {
     display: flex;
   }
 
-  /* Stats — horizontal */
   .stat-item {
     padding: var(--space-4);
   }
 
-  /* Lightbox arrows positioned outside image */
   .lightbox__arrow--prev {
     left: -4rem;
   }
@@ -138,61 +177,53 @@
     right: -4rem;
   }
 
-  /* Testimonials — show 3 */
-  /* Handled by JS */
-
-  /* CTA Banner — side by side */
   .cta-banner {
     flex-wrap: nowrap;
     padding: var(--space-8);
   }
 
-  /* Mega menu desktop styles are defined in components.css */
-
-  /* Destinations grid */
   .destinations-grid {
     grid-template-columns: repeat(4, 1fr);
   }
 }
 
-/* --------------------------------------------------------------------------
-   XL (1200px+)
-   -------------------------------------------------------------------------- */
+
+/* ==========================================================================
+   2XL (1200px+)
+   ========================================================================== */
 @media (min-width: 1200px) {
 
-  /* Trek cards — 4 per row on wide screens */
   .treks-grid--wide {
     grid-template-columns: repeat(4, 1fr);
   }
 
-  /* Hero title bigger */
   .hero__title {
     font-size: 4rem;
   }
 }
 
-/* --------------------------------------------------------------------------
-   2XL (1440px+)
-   -------------------------------------------------------------------------- */
+
+/* ==========================================================================
+   3XL (1440px+)
+   ========================================================================== */
 @media (min-width: 1440px) {
 
-  /* Even more generous spacing at very large screens */
   .hero__content {
     max-width: 56rem;
   }
 
-  /* Stats number bigger */
   .stat-item__number {
     font-size: 3.5rem;
   }
 }
 
-/* --------------------------------------------------------------------------
-   Mobile-only corrections (max 767px)
-   -------------------------------------------------------------------------- */
+
+/* ==========================================================================
+   MOBILE-ONLY CORRECTIONS (max 767px)
+   ========================================================================== */
 @media (max-width: 767px) {
 
-  /* Navbar */
+  /* ---- Navbar ---- */
   .navbar__nav,
   .navbar__actions .btn {
     display: none;
@@ -202,18 +233,59 @@
     display: flex;
   }
 
-  /* Top bar — only show phone on mobile */
+  .navbar__search-btn {
+    display: flex;
+  }
+
   .top-bar__social {
     display: none;
   }
 
-  /* Hero */
+  .top-bar__inner {
+    justify-content: center;
+  }
+
+  /* Top bar contacts smaller text */
+  .top-bar__contacts a {
+    font-size: 0.7rem;
+    gap: 0.25rem;
+  }
+
+  /* ---- Logo ---- */
+  .navbar__logo-img {
+    height: 2.25rem;
+  }
+
+  .navbar__logo-text {
+    font-size: 0.95rem;
+  }
+
+  .navbar__logo-text span {
+    font-size: 0.58rem;
+  }
+
+  .footer__logo-img {
+    height: 2.25rem;
+  }
+
+  /* ---- Hero ---- */
   .hero {
     min-height: 85vh;
+    padding-top: calc(var(--navbar-height-mobile, 4rem) + var(--space-4));
+  }
+
+  .hero > .container {
+    margin-top: -40px;
   }
 
   .hero__title {
     font-size: clamp(1.75rem, 7vw, 2.5rem);
+  }
+
+  .hero__subtitle {
+    font-size: 0.95rem;
+    max-width: 100%;
+    padding: 0 var(--space-1);
   }
 
   .hero__stats {
@@ -224,39 +296,68 @@
     display: none;
   }
 
+  .hero__rating-badge {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.5rem;
+    padding: 0.4rem 0.85rem;
+  }
+
+  .hero__action-row {
+    flex-direction: column;
+    align-items: center;
+    gap: 0.75rem;
+  }
+
+  .hero__trust-pill {
+    flex-wrap: nowrap;
+    border-radius: var(--radius-full);
+    padding: 5px 8px 5px 12px;
+    max-width: 100%;
+    overflow: hidden;
+  }
+
+  .hero__trust-text {
+    font-size: 0.8rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .hero__trust-btn {
+    padding: 0.5rem 1rem !important;
+    font-size: 0.8rem !important;
+    white-space: nowrap;
+  }
+
   .hero__search-widget {
     flex-direction: column;
     border-radius: var(--radius-lg);
-    padding: var(--space-3);
+    padding: var(--space-2);
+    gap: var(--space-1);
   }
 
   .hero__search-input-group {
     width: 100%;
     border-bottom: 1px solid rgba(255, 255, 255, 0.2);
     padding-bottom: var(--space-2);
-    margin-bottom: var(--space-2);
+    margin-bottom: var(--space-1);
   }
 
   .hero__search-input {
     width: 100%;
+    font-size: 1rem;
   }
 
   .hero__search-submit {
     width: 100%;
     height: 3rem;
     justify-content: center;
-  }
-
-  .hero__trust-pill {
-    flex-wrap: wrap;
-    justify-content: center;
-    border-radius: var(--radius-xl);
-    padding: 8px 12px;
-    gap: 8px;
+    border-radius: var(--radius-md);
   }
 
   .hero__feature-track {
-    gap: 1rem;
+    gap: 0.75rem;
   }
 
   .hero__feature-pill {
@@ -265,17 +366,73 @@
     flex-shrink: 0;
   }
 
-  /* Destinations grid — 2 columns on mobile */
-  .destinations-grid {
-    grid-template-columns: repeat(2, 1fr);
+  /* Hero bottom marquee strip — prevent overflow */
+  .hero__bottom-strip {
+    overflow: hidden;
   }
 
-  /* Stats — 2 × 2 */
+  /* ---- Section Spacing ---- */
+  .section {
+    padding-top: var(--space-8);
+    padding-bottom: var(--space-8);
+  }
+
+  .section--sm {
+    padding-top: var(--space-4);
+    padding-bottom: var(--space-4);
+  }
+
+  .section-header {
+    margin-bottom: var(--space-4);
+  }
+
+  .section__title,
+  .section-header__title {
+    font-size: clamp(1.5rem, 5vw, 2rem);
+  }
+
+  .section__subtitle,
+  .section-header__subtitle {
+    font-size: 0.9rem;
+  }
+
+  .section-heading__subtitle {
+    font-size: 1rem;
+  }
+
+  /* ---- Grids ---- */
+  .destinations-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-2);
+  }
+
   .stats-grid {
     grid-template-columns: repeat(2, 1fr);
   }
 
-  /* Mega menu becomes simple dropdown on mobile */
+  .treks-grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-3);
+  }
+
+  .trek-card__body {
+    padding: var(--space-2);
+  }
+
+  .features-grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-2);
+  }
+
+  .feature-item {
+    padding: 1.5rem;
+  }
+
+  .booking-form-card {
+    padding: var(--space-3);
+  }
+
+  /* ---- Mega menu -> simple list on mobile ---- */
   .mega-menu {
     position: static;
     transform: none;
@@ -287,56 +444,81 @@
     background: var(--color-background);
   }
 
-  /* Booking form card */
-  .booking-form-card {
-    padding: var(--space-4);
-  }
-
-  /* Gallery — 2 columns */
+  /* ---- Gallery ---- */
   .gallery-grid {
     grid-template-columns: repeat(2, 1fr);
   }
 
-  /* Wide gallery items take full row */
   .gallery-item--wide {
     grid-column: span 1;
     aspect-ratio: 4 / 3;
   }
 
-  /* Lightbox arrows hidden */
   .lightbox__arrow {
     display: none;
   }
 
-  /* Footer */
+  /* ---- Blog Grid ---- */
+  .blog-grid {
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+  }
+
+  /* ---- CTA Banner ---- */
+  .cta-banner {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: var(--space-4);
+    gap: var(--space-3);
+  }
+
+  .cta-banner__actions {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .cta-banner__actions .btn {
+    width: 100%;
+    justify-content: center;
+  }
+
+  /* ---- Footer ---- */
+  .footer__grid {
+    grid-template-columns: 1fr;
+    gap: var(--space-4);
+  }
+
   .footer__desc {
     max-width: none;
   }
 
-  /* CTA Banner stack */
-  .cta-banner {
+  .footer__logo-text .footer__tagline {
+    font-size: 0.7rem;
+  }
+
+  .footer__bottom-inner {
     flex-direction: column;
-    align-items: flex-start;
-    padding: var(--space-6) var(--space-4);
+    text-align: center;
+    gap: var(--space-2);
   }
 
-  /* Feature items — single column */
-  .features-grid {
-    grid-template-columns: 1fr;
+  .footer__bottom-links {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: var(--space-1);
   }
 
-  /* Testimonial track — 1 at a time on mobile */
+  /* ---- Testimonials ---- */
   .reviews-marquee-track .review-rich-card {
     min-width: 280px;
     max-width: 280px;
   }
 
-  /* Video reviews — 1 column on mobile */
   .video-reviews-grid {
     grid-template-columns: 1fr;
   }
 
-  /* Platform Reviews — 2x2 on mobile */
+  /* ---- Platform Reviews ---- */
   .platform-scores-row {
     grid-template-columns: repeat(2, 1fr);
     gap: 1rem;
@@ -348,16 +530,26 @@
   }
 
   .platform-subtabs-strip {
-    gap: 1rem;
+    gap: 0.75rem;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    padding-bottom: 4px;
+    justify-content: flex-start;
+  }
+
+  .platform-subtabs-strip::-webkit-scrollbar {
+    display: none;
   }
 
   .verified-summary-banner {
     flex-direction: column;
     text-align: center;
     align-items: center;
+    gap: var(--space-2);
   }
 
-  /* Trust bar — 2x2 grid layout on mobile */
+  /* ---- Trust Bar ---- */
   .trust-bar {
     padding: 1.25rem 0;
   }
@@ -391,11 +583,191 @@
   .trust-card__subtitle {
     font-size: 0.72rem;
   }
+
+  /* ---- Newsletter ---- */
+  .newsletter__form {
+    flex-direction: column;
+  }
+
+  .newsletter__input {
+    width: 100%;
+  }
+
+  .newsletter__btn {
+    width: 100%;
+    justify-content: center;
+  }
+
+  /* ---- Content Split ---- */
+  .content-split {
+    grid-template-columns: 1fr;
+    gap: var(--space-4);
+  }
+
+  .content-split--reverse .content-split__media {
+    order: -1;
+  }
+
+  /* ---- FAQ ---- */
+  .faq-support-card {
+    flex-direction: column;
+    text-align: center;
+    padding: 1.25rem;
+    align-items: center;
+  }
+
+  .faq-support-card__actions {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .faq-support-card__actions .btn {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .faq-item__trigger {
+    padding: 1rem;
+    gap: 0.5rem;
+  }
+
+  .faq-item__badge {
+    display: none;
+  }
+
+  /* ---- Map ---- */
+  .map-wrapper,
+  .trek-map-wrapper {
+    height: 300px !important;
+  }
+
+  /* ---- Sticky Booking Bar ---- */
+  .booking-sticky-bar {
+    flex-wrap: wrap;
+    padding: 0.75rem 1rem;
+    gap: 0.5rem;
+  }
+
+  .booking-sticky-bar__price {
+    font-size: 1.1rem;
+  }
+
+  .booking-sticky-bar__btn {
+    width: 100%;
+    justify-content: center;
+  }
+
+  /* ---- Comparison / Inclusion Grid ---- */
+  .comparison-grid,
+  .inclusion-grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* ---- Quick Facts ---- */
+  .quick-facts {
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-2);
+  }
+
+  /* ---- About Page ---- */
+  .about-hero-content {
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+  }
+
+  .team-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-3);
+  }
+
+  /* ---- Contact Page ---- */
+  .contact-grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* ---- Tabs / Filter strips ---- */
+  .tabs-strip,
+  .filter-strip,
+  .subnav-strip {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    padding-bottom: 4px;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+  }
+
+  .tabs-strip::-webkit-scrollbar,
+  .filter-strip::-webkit-scrollbar,
+  .subnav-strip::-webkit-scrollbar {
+    display: none;
+  }
+
+  .trek-subnav-sticky .container,
+  .region-subnav-sticky .container {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+  }
+
+  .trek-subnav-sticky .container::-webkit-scrollbar,
+  .region-subnav-sticky .container::-webkit-scrollbar {
+    display: none;
+  }
+
+  .trek-subnav-links,
+  .region-subnav-links {
+    flex-wrap: nowrap;
+    min-width: max-content;
+    padding-bottom: 2px;
+  }
+
+  /* ---- Destination cards ---- */
+  .dest-card__title {
+    font-size: 1.2rem;
+  }
+
+  .dest-card__content {
+    padding: 1rem;
+  }
+
+  /* ---- Booking steps ---- */
+  .booking-steps {
+    flex-direction: column;
+  }
+
+  /* ---- Buttons — minimum touch target 44px ---- */
+  .btn {
+    min-height: 44px;
+  }
 }
 
-/* --------------------------------------------------------------------------
-   Extra small (max 374px) — small phones
-   -------------------------------------------------------------------------- */
+
+/* ==========================================================================
+   EXTRA SMALL (max 479px) — phones
+   ========================================================================== */
+@media (max-width: 479px) {
+
+  .section {
+    padding-top: var(--space-6);
+    padding-bottom: var(--space-6);
+  }
+
+  .blog-grid {
+    grid-template-columns: 1fr;
+  }
+
+  /* Platform scores — 1 column at very small sizes */
+  .platform-scores-row {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+/* ==========================================================================
+   EXTRA SMALL (max 374px) — small phones (iPhone SE, old Androids)
+   ========================================================================== */
 @media (max-width: 374px) {
 
   .hero__title {
@@ -407,6 +779,10 @@
     justify-content: center;
   }
 
+  .hero > .container {
+    margin-top: -20px;
+  }
+
   .destinations-grid {
     grid-template-columns: 1fr;
   }
@@ -415,7 +791,14 @@
     grid-template-columns: 1fr;
   }
 
-  /* Trust bar fine-tuning on small phones */
+  .team-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .gallery-grid {
+    grid-template-columns: 1fr;
+  }
+
   .trust-bar__inner {
     gap: 1rem 0.5rem;
   }
@@ -442,11 +825,168 @@
   .trust-card__subtitle {
     font-size: 0.68rem;
   }
+
+  .section-heading__title {
+    font-size: 1.5rem;
+  }
+
+  .feature-item {
+    padding: 1.25rem;
+  }
+
+  .booking-sticky-bar {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .quick-facts {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
 
-/* =========================================================
-   GALLERY BENTO — Tablet (≤ 1024px)
-   ========================================================= */
+
+/* ========================================================================
+   MICRO VIEWPORTS (200px-239px) — keep every primary control usable
+   ======================================================================== */
+@media (max-width: 239px) {
+
+  :root {
+    --top-bar-height: 2rem;
+    --navbar-height: 4rem;
+  }
+
+  .top-bar__inner {
+    justify-content: flex-start;
+  }
+
+  .top-bar__contacts {
+    gap: 0;
+  }
+
+  .top-bar__contacts a {
+    font-size: 0.62rem;
+  }
+
+  .top-bar__contacts a[href^="mailto"] {
+    display: none;
+  }
+
+  .navbar__inner {
+    gap: 0.25rem;
+  }
+
+  .navbar__logo-text,
+  .navbar__search-btn {
+    display: none;
+  }
+
+  .navbar__logo-img {
+    height: 2.15rem;
+  }
+
+  .navbar__hamburger {
+    width: 2.25rem;
+    height: 2.25rem;
+    padding: 0.4rem;
+  }
+
+  .container {
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+  }
+
+  .quick-facts,
+  .trust-bar__inner,
+  .platform-scores-row,
+  .destination-stats-bar,
+  .feature-grid,
+  .comparison-grid,
+  .inclusion-grid,
+  .stats-grid,
+  .team-grid,
+  .gallery-grid,
+  .destinations-grid {
+    grid-template-columns: 1fr !important;
+  }
+
+  .gallery-masonry {
+    grid-template-columns: minmax(0, 1fr) !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    padding-left: 0.5rem !important;
+    padding-right: 0.5rem !important;
+  }
+
+  .faq-layout {
+    grid-template-columns: minmax(0, 1fr) !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    padding: 1.5rem 0.5rem !important;
+  }
+
+  .faq-nav-sticky {
+    display: none !important;
+  }
+
+  .article-layout-grid {
+    grid-template-columns: minmax(0, 1fr) !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    padding-left: 0.5rem !important;
+    padding-right: 0.5rem !important;
+  }
+
+  .article-content,
+  .article-content > * {
+    min-width: 0 !important;
+    max-width: 100% !important;
+  }
+
+  .destinations-search-wrap,
+  .destinations-search-wrap input,
+  .newsletter__form input,
+  .newsletter__form button,
+  .btn {
+    min-width: 0;
+    width: 100%;
+  }
+
+  .hero__actions,
+  .trek-hero-showcase__actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .hero__actions .btn,
+  .trek-hero-showcase__actions .btn {
+    justify-content: center;
+  }
+
+  .dest-region-card__footer {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0.5rem;
+  }
+
+  .dest-region-card__footer .btn-intel,
+  .dest-region-card__footer .dest-card-btn {
+    width: 100%;
+    min-width: 0;
+    white-space: normal;
+    overflow-wrap: anywhere;
+  }
+
+  .section-heading__title,
+  .hero__title,
+  .trek-hero-showcase__title {
+    overflow-wrap: anywhere;
+  }
+}
+
+
+/* ==========================================================================
+   GALLERY BENTO — Tablet (max 1024px)
+   ========================================================================== */
 @media (max-width: 1024px) {
   .gallery-bento {
     grid-template-columns: repeat(2, 1fr);
@@ -469,9 +1009,10 @@
   }
 }
 
-/* =========================================================
-   GALLERY BENTO — Mobile (≤ 640px)
-   ========================================================= */
+
+/* ==========================================================================
+   GALLERY BENTO — Mobile (max 640px)
+   ========================================================================== */
 @media (max-width: 640px) {
   .gallery-bento {
     grid-template-columns: 1fr;
@@ -489,11 +1030,7 @@
 
   .gallery-bento__overlay {
     opacity: 1;
-    background: linear-gradient(
-      to top,
-      rgba(0,0,0,0.6) 0%,
-      transparent 60%
-    );
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.6) 0%, transparent 60%);
   }
 
   .gallery-filter-btn {
@@ -510,6 +1047,7 @@
     flex-direction: column;
     text-align: center;
     padding: 1.25rem 1rem;
+    align-items: center;
   }
 
   .faq-support-card__actions {
@@ -525,4 +1063,632 @@
   .faq-item__trigger {
     padding: 1rem;
   }
+
+  .blog-grid--4cols {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+/* ==========================================================================
+   TREK DETAIL PAGE — Mobile Optimizations
+   ========================================================================== */
+@media (max-width: 767px) {
+
+  .trek-hero-showcase {
+    padding: 1.75rem 0 1.5rem;
+  }
+
+  .trek-hero-showcase__title {
+    font-size: clamp(1.6rem, 6vw, 2.4rem) !important;
+  }
+
+  .trek-hero-showcase__badges {
+    gap: 0.4rem;
+  }
+
+  .trek-hero-showcase__actions {
+    flex-direction: column;
+    gap: 0.6rem;
+  }
+
+  .trek-hero-showcase__actions .btn {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .hero-trip-facts-bar {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 0.85rem !important;
+    padding: 0.9rem !important;
+  }
+
+  .hero-bento-gallery {
+    grid-template-columns: 1fr !important;
+    grid-template-rows: 240px repeat(4, 160px) !important;
+    gap: 0.5rem !important;
+    border-radius: 12px !important;
+  }
+
+  .hero-bento-item--main {
+    grid-row: span 1 !important;
+  }
+
+  .hero-video-play-btn {
+    padding: 0.6rem 1rem !important;
+    font-size: 0.8rem !important;
+  }
+
+  .hero-video-play-icon {
+    width: 28px !important;
+    height: 28px !important;
+  }
+
+  .trek-detail-layout,
+  .trek-page-layout {
+    grid-template-columns: 1fr !important;
+    gap: var(--space-4) !important;
+  }
+
+  .trek-booking-sidebar,
+  .booking-sidebar {
+    position: static !important;
+    order: 10;
+    width: 100% !important;
+  }
+
+  .trek-sticky-cta,
+  .sticky-booking-bar {
+    left: 0 !important;
+    right: 0 !important;
+    bottom: 0 !important;
+    border-radius: 0 !important;
+    padding: 0.75rem 1rem !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    gap: 0.75rem;
+  }
+
+  .trek-sticky-cta__price,
+  .sticky-booking-bar__price {
+    flex-shrink: 0;
+  }
+
+  .trek-sticky-cta__btn,
+  .sticky-booking-bar__btn {
+    flex: 1;
+    justify-content: center;
+  }
+
+  .itinerary-day {
+    padding: 1rem !important;
+  }
+
+  .itinerary-day__header {
+    gap: 0.5rem !important;
+  }
+
+  .itinerary-day__number {
+    width: 36px !important;
+    height: 36px !important;
+    font-size: 0.8rem !important;
+    flex-shrink: 0;
+  }
+
+  .itinerary-day__title {
+    font-size: 0.95rem !important;
+  }
+
+  .itinerary-day__meta {
+    flex-wrap: wrap !important;
+    gap: 0.4rem !important;
+  }
+
+  .inclusion-exclusion-grid {
+    grid-template-columns: 1fr !important;
+  }
+
+  .trek-tabs-nav {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    flex-wrap: nowrap;
+    gap: 0.25rem;
+    padding-bottom: 4px;
+  }
+
+  .trek-tabs-nav::-webkit-scrollbar {
+    display: none;
+  }
+
+  .trek-tab-btn {
+    white-space: nowrap;
+    flex-shrink: 0;
+    padding: 0.5rem 0.875rem !important;
+    font-size: 0.8rem !important;
+  }
+
+  .trek-map-container,
+  .trek-route-map {
+    height: 300px !important;
+  }
+
+  .cost-table-wrapper {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .cost-table {
+    min-width: 480px;
+  }
+
+  .price-cards-grid,
+  .group-price-grid {
+    grid-template-columns: 1fr !important;
+  }
+
+  .similar-treks-grid {
+    grid-template-columns: 1fr !important;
+  }
+
+  .trek-reviews-grid {
+    grid-template-columns: 1fr !important;
+  }
+
+  .trek-hero-showcase__meta-route {
+    flex-wrap: wrap !important;
+    gap: 0.25rem !important;
+  }
+}
+
+
+/* ==========================================================================
+   TREK DETAIL — Tablet tweaks (640-767px)
+   ========================================================================== */
+@media (min-width: 640px) and (max-width: 767px) {
+
+  .hero-bento-gallery {
+    grid-template-columns: 1fr 1fr !important;
+    grid-template-rows: 240px 180px !important;
+  }
+
+  .hero-bento-item--main {
+    grid-column: 1 / -1 !important;
+    grid-row: span 1 !important;
+  }
+}
+
+
+/* ==========================================================================
+   DESTINATION PAGE — Mobile Optimizations
+   ========================================================================== */
+@media (max-width: 767px) {
+
+  .article-layout-grid {
+    grid-template-columns: minmax(0, 1fr) !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    gap: 1.5rem !important;
+    padding-left: 1rem !important;
+    padding-right: 1rem !important;
+  }
+
+  .article-content,
+  .article-content > section,
+  .article-sidebar {
+    min-width: 0 !important;
+    max-width: 100% !important;
+    width: 100% !important;
+  }
+
+  .article-sidebar {
+    position: static !important;
+  }
+
+  .article-content img,
+  .article-content video,
+  .article-content iframe {
+    max-width: 100% !important;
+  }
+
+  .article-table-wrap,
+  .article-content pre {
+    max-width: 100% !important;
+    overflow-x: auto !important;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .article-content h1,
+  .article-content h2,
+  .article-content h3,
+  .article-content h4 {
+    overflow-wrap: anywhere;
+  }
+
+  .destination-hero {
+    min-height: 65vh !important;
+  }
+
+  .destination-hero__title {
+    font-size: clamp(1.75rem, 7vw, 2.75rem) !important;
+  }
+
+  .destination-stats-bar {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 0.85rem !important;
+  }
+
+  .destination-treks-grid {
+    grid-template-columns: 1fr !important;
+  }
+
+  .destination-subnav {
+    overflow-x: auto;
+    scrollbar-width: none;
+  }
+
+  .destination-subnav::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+
+/* ==========================================================================
+   TREKS LISTING PAGE — Mobile Optimizations
+   ========================================================================== */
+@media (max-width: 767px) {
+
+  .treks-layout {
+    grid-template-columns: 1fr !important;
+  }
+
+  .treks-sidebar {
+    order: -1;
+  }
+
+  .filter-panel {
+    position: static !important;
+    width: 100% !important;
+    border-radius: var(--radius-lg);
+    max-height: none !important;
+  }
+
+  .filter-bar {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    flex-wrap: nowrap;
+    padding-bottom: 4px;
+  }
+
+  .filter-bar::-webkit-scrollbar {
+    display: none;
+  }
+
+  .filter-pill {
+    white-space: nowrap;
+    flex-shrink: 0;
+  }
+
+  .results-bar {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.75rem;
+  }
+
+  .results-bar__sort {
+    width: 100%;
+  }
+
+  .treks-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .pagination {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.35rem;
+  }
+}
+
+
+/* ==========================================================================
+   ABOUT PAGE — Mobile Optimizations
+   ========================================================================== */
+@media (max-width: 767px) {
+
+  .about-intro-grid {
+    grid-template-columns: 1fr !important;
+    gap: var(--space-4) !important;
+  }
+
+  .about-values-grid {
+    grid-template-columns: 1fr !important;
+    gap: var(--space-2);
+  }
+
+  .timeline {
+    padding-left: 1.5rem !important;
+  }
+
+  .timeline-item {
+    padding-left: 1rem !important;
+  }
+
+  .team-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-3);
+  }
+
+  .certifications-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+
+/* ==========================================================================
+   CONTACT PAGE — Mobile Optimizations
+   ========================================================================== */
+@media (max-width: 767px) {
+
+  .contact-layout {
+    grid-template-columns: 1fr !important;
+    gap: var(--space-4) !important;
+  }
+
+  .contact-form {
+    padding: var(--space-3) !important;
+  }
+
+  .contact-info-card {
+    padding: var(--space-3) !important;
+  }
+
+  .contact-methods {
+    grid-template-columns: 1fr !important;
+  }
+}
+
+
+/* ==========================================================================
+   BLOG PAGE — Mobile Optimizations
+   ========================================================================== */
+@media (max-width: 767px) {
+
+  .blog-hero__title {
+    font-size: clamp(1.5rem, 6vw, 2rem) !important;
+  }
+
+  .blog-filter-tabs {
+    overflow-x: auto;
+    scrollbar-width: none;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    padding-bottom: 4px;
+  }
+
+  .blog-filter-tabs::-webkit-scrollbar {
+    display: none;
+  }
+
+  .blog-featured-grid {
+    grid-template-columns: 1fr !important;
+  }
+
+  .blog-sidebar {
+    order: 10;
+  }
+}
+
+
+/* ==========================================================================
+   BOOKING PAGE — Mobile Optimizations
+   ========================================================================== */
+@media (max-width: 767px) {
+
+  .booking-layout {
+    grid-template-columns: 1fr !important;
+  }
+
+  .booking-form-section {
+    order: 1;
+  }
+
+  .booking-sidebar-section {
+    order: 2;
+  }
+
+  .booking-step-indicator {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .booking-hero__title {
+    font-size: clamp(1.5rem, 6vw, 2rem) !important;
+  }
+}
+
+
+/* ==========================================================================
+   MODAL / LIGHTBOX — Mobile
+   ========================================================================== */
+@media (max-width: 767px) {
+
+  .lightbox__image-wrap {
+    max-height: 60vh;
+  }
+
+  .lightbox__caption {
+    font-size: 0.8rem;
+  }
+
+  .gallery-lightbox__topbar {
+    padding: 0.75rem 1rem;
+  }
+
+  .gallery-lightbox__filter-tabs {
+    display: none;
+  }
+
+  .trek-video-modal__container {
+    width: 96% !important;
+    border-radius: 12px !important;
+  }
+}
+
+
+/* ==========================================================================
+   FORMS — Mobile
+   ========================================================================== */
+@media (max-width: 767px) {
+
+  .form-row--2col,
+  .form-grid--2col {
+    grid-template-columns: 1fr !important;
+  }
+
+  .form-row--3col {
+    grid-template-columns: 1fr !important;
+  }
+
+  .date-picker-wrap {
+    width: 100%;
+  }
+
+  .form-submit-row {
+    flex-direction: column;
+  }
+
+  .form-submit-row .btn {
+    width: 100%;
+    justify-content: center;
+  }
+
+  /* font-size 16px prevents iOS Safari from zooming on input focus */
+  input[type="text"],
+  input[type="email"],
+  input[type="tel"],
+  input[type="number"],
+  input[type="date"],
+  select,
+  textarea {
+    width: 100%;
+    font-size: 16px;
+  }
+}
+
+
+/* ==========================================================================
+   UTILITY DISPLAY HELPERS
+   ========================================================================== */
+@media (max-width: 767px) {
+  .hide-mobile { display: none !important; }
+  .show-mobile { display: block !important; }
+  .show-mobile-flex { display: flex !important; }
+  .show-mobile-grid { display: grid !important; }
+  .text-center-mobile { text-align: center !important; }
+  .w-full-mobile { width: 100% !important; }
+  .p-mobile { padding: var(--space-2) !important; }
+  .gap-mobile { gap: var(--space-2) !important; }
+}
+
+@media (min-width: 768px) {
+  .hide-desktop { display: none !important; }
+  .show-desktop { display: block !important; }
+  .show-desktop-flex { display: flex !important; }
+}
+
+
+/* ==========================================================================
+   SCROLLBAR UTILITY
+   ========================================================================== */
+.scroll-x {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: thin;
+  scrollbar-color: rgba(15, 82, 87, 0.3) transparent;
+}
+
+.scroll-x::-webkit-scrollbar { height: 4px; }
+.scroll-x::-webkit-scrollbar-track { background: transparent; }
+.scroll-x::-webkit-scrollbar-thumb {
+  background: rgba(15, 82, 87, 0.3);
+  border-radius: 4px;
+}
+
+.scroll-x-hide {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+}
+.scroll-x-hide::-webkit-scrollbar { display: none; }
+
+
+/* ==========================================================================
+   SAFE-AREA INSETS — Notched / Rounded Phones (iPhone X+)
+   ========================================================================== */
+@supports (padding-bottom: env(safe-area-inset-bottom)) {
+
+  .mobile-menu {
+    padding-bottom: env(safe-area-inset-bottom);
+  }
+
+  .booking-sticky-bar,
+  .trek-sticky-cta,
+  .sticky-booking-bar {
+    padding-bottom: calc(0.75rem + env(safe-area-inset-bottom)) !important;
+  }
+
+  .site-header,
+  .navbar {
+    padding-top: env(safe-area-inset-top);
+  }
+}
+
+
+/* ==========================================================================
+   REDUCED MOTION
+   ========================================================================== */
+@media (prefers-reduced-motion: reduce) {
+
+  .hero__feature-track {
+    animation: none;
+  }
+
+  .hero__slide.is-active .hero__slide-bg {
+    animation: none;
+  }
+
+  .card:hover,
+  .trek-card:hover,
+  .dest-card:hover,
+  .feature-item:hover,
+  .blog-card:hover {
+    transform: none;
+  }
+}
+
+
+/* ==========================================================================
+   PRINT STYLES
+   ========================================================================== */
+@media print {
+
+  .site-header,
+  .mobile-menu,
+  .mobile-menu-overlay,
+  .booking-sticky-bar,
+  .trek-sticky-cta,
+  .footer,
+  .cta-banner,
+  .newsletter-section,
+  .hero__arrow,
+  .hero__controls {
+    display: none !important;
+  }
+
+  body { font-size: 12pt; color: #000; }
+  a { color: inherit; text-decoration: none; }
+  .container { max-width: 100%; padding: 0; }
 }

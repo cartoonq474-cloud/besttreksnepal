@@ -1,0 +1,80 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 200" width="100%" height="100%" fill="none">
+  <defs>
+    <style>
+      .primary-title-white {
+        font-family: 'Plus Jakarta Sans', 'Inter', system-ui, -apple-system, sans-serif;
+        font-weight: 800;
+        font-size: 22px;
+        fill: #FFFFFF;
+        letter-spacing: -0.4px;
+        text-anchor: middle;
+      }
+      .primary-tagline-white {
+        font-family: 'Plus Jakarta Sans', 'Inter', system-ui, -apple-system, sans-serif;
+        font-weight: 700;
+        font-size: 8.5px;
+        fill: #F2A65A;
+        letter-spacing: 3.5px;
+        text-anchor: middle;
+      }
+    </style>
+  </defs>
+
+  <!-- Centered Emblem (White variant) -->
+  <g transform="translate(40, 8)">
+    <!-- Warm Adventure Orange Rising Sun -->
+    <circle cx="80" cy="56" r="38" fill="#F2A65A"/>
+
+    <!-- Back Mountain Silhouettes -->
+    <polygon points="18,88 48,50 78,88" fill="#7FB3B0" opacity="0.75"/>
+    <polygon points="84,88 114,48 144,88" fill="#7FB3B0" opacity="0.75"/>
+
+    <!-- Main Himalayan Mountain Body -->
+    <polygon points="8,92 50,42 80,18 110,46 152,92" fill="#FFFFFF"/>
+    <polygon points="80,18 80,92 110,46 152,92" fill="#7FB3B0" opacity="0.5"/>
+    <polygon points="50,42 38,58 30,70 50,64" fill="#E2F1F0"/>
+
+    <!-- Facets -->
+    <polygon points="68,54 74,66 80,60 76,74 80,72 80,92 58,92 56,58" fill="#FFFFFF"/>
+    <polygon points="46,55 50,60 56,54 48,74 38,72 30,70" fill="#FFFFFF"/>
+
+    <!-- Base & Trail -->
+    <path d="M6,92 C35,88 65,88 80,82 C98,75 125,78 154,92 L154,96 L6,96 Z" fill="#FFFFFF"/>
+    <path d="M52,94 C68,91 82,88 92,82 C98,78 103,75 106,73 L108,74 C104,78 97,83 88,88 C74,93 60,95 52,94 Z" fill="#F2A65A"/>
+
+    <!-- Explorer Silhouette -->
+    <circle cx="94.5" cy="67" r="2.2" fill="#FFFFFF"/>
+    <path d="M94.5,65.5 L97.5,66.8 L94.5,67.2 Z" fill="#FFFFFF"/>
+    <path d="M92.2,69.5 C91,69.5 90.2,71 90.2,73.5 C90.2,75.5 91.5,76.5 92.8,76.5 L94.5,76.5 L95.5,69.5 Z" fill="#FFFFFF"/>
+    <path d="M93.5,69.2 L96.5,69.2 L96.8,77 L93.8,77 Z" fill="#FFFFFF"/>
+    <line x1="94" y1="76.5" x2="92.5" y2="83" stroke="#FFFFFF" stroke-width="1.6" stroke-linecap="round"/>
+    <line x1="95.5" y1="76.5" x2="97.5" y2="82.5" stroke="#FFFFFF" stroke-width="1.6" stroke-linecap="round"/>
+    <line x1="96.5" y1="71.5" x2="99.5" y2="82.8" stroke="#FFFFFF" stroke-width="1.6" stroke-linecap="round"/>
+    <line x1="93" y1="72" x2="90.5" y2="82" stroke="#FFFFFF" stroke-width="1.6" stroke-linecap="round"/>
+
+    <!-- Pines -->
+    <polygon points="122,86 125,79 128,86" fill="#FFFFFF"/>
+    <polygon points="121,83 125,75 129,83" fill="#FFFFFF"/>
+    <polygon points="122,78 125,70 128,78" fill="#FFFFFF"/>
+    <line x1="125" y1="86" x2="125" y2="89" stroke="#FFFFFF" stroke-width="1.2"/>
+
+    <polygon points="131,88 135,80 139,88" fill="#FFFFFF"/>
+    <polygon points="130,83 135,73 140,83" fill="#FFFFFF"/>
+    <polygon points="132,76 135,66 138,76" fill="#FFFFFF"/>
+    <line x1="135" y1="88" x2="135" y2="91" stroke="#FFFFFF" stroke-width="1.4"/>
+
+    <polygon points="142,89 145,82 148,89" fill="#FFFFFF"/>
+    <polygon points="141,85 145,77 149,85" fill="#FFFFFF"/>
+    <polygon points="142,79 145,72 148,79" fill="#FFFFFF"/>
+    <line x1="145" y1="89" x2="145" y2="92" stroke="#FFFFFF" stroke-width="1.2"/>
+  </g>
+
+  <!-- Typography -->
+  <text x="120" y="132" class="primary-title-white">Best Treks Nepal</text>
+
+  <!-- Mountain Peak Divider Line -->
+  <path d="M25,148 L100,148 L106,141 L112,148 L116,144 L120,148 L124,144 L128,148 L134,141 L140,148 L215,148" stroke="#F2A65A" stroke-width="1.5" fill="none" stroke-linejoin="round"/>
+
+  <!-- Tagline -->
+  <text x="122" y="166" class="primary-tagline-white">ADVENTURE AWAITS</text>
+</svg>

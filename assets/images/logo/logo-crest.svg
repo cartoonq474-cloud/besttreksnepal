@@ -1,0 +1,312 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" width="100%" height="100%" fill="none">
+  <defs>
+    <linearGradient id="sunGrad" x1="0%" y1="100%" x2="0%" y2="0%">
+      <stop offset="0%" stop-color="#E88C38"/>
+      <stop offset="100%" stop-color="#F2A65A"/>
+    </linearGradient>
+    <linearGradient id="skyGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#FCEEDF" stop-opacity="0.9"/>
+      <stop offset="100%" stop-color="#FFFFFF" stop-opacity="0.2"/>
+    </linearGradient>
+    <linearGradient id="bannerGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#0A3E42"/>
+      <stop offset="50%" stop-color="#0F5257"/>
+      <stop offset="100%" stop-color="#0A3E42"/>
+    </linearGradient>
+    <clipPath id="crestClip">
+      <circle cx="200" cy="180" r="145"/>
+    </clipPath>
+    <style>
+      .crest-title {
+        font-family: 'Plus Jakarta Sans', 'Inter', 'Cinzel', serif, sans-serif;
+        font-weight: 900;
+        font-size: 23px;
+        letter-spacing: 1.5px;
+        fill: #FFFFFF;
+        text-anchor: middle;
+      }
+      .crest-sub {
+        font-family: 'Plus Jakarta Sans', 'Inter', sans-serif;
+        font-weight: 700;
+        font-size: 9px;
+        letter-spacing: 3px;
+        fill: #FCEEDF;
+        text-anchor: middle;
+      }
+      .crest-tagline {
+        font-family: 'Plus Jakarta Sans', 'Inter', sans-serif;
+        font-weight: 800;
+        font-size: 11.5px;
+        letter-spacing: 3.5px;
+        fill: #FFFFFF;
+        text-anchor: middle;
+      }
+    </style>
+  </defs>
+
+  <!-- ================= BACKGROUND & OUTER CREST RINGS ================= -->
+  <!-- Outer Decorative Ring -->
+  <circle cx="200" cy="180" r="156" stroke="#0F5257" stroke-width="2.5" fill="none"/>
+  <circle cx="200" cy="180" r="150" stroke="#7FB3B0" stroke-width="1" stroke-dasharray="3,3" fill="none"/>
+  <circle cx="200" cy="180" r="145" stroke="#0F5257" stroke-width="4" fill="#FFFFFF"/>
+
+  <!-- Compass Cardinal Star Points -->
+  <!-- North Star -->
+  <polygon points="200,16 205,34 200,31 195,34" fill="#0F5257"/>
+  <polygon points="200,16 200,31 195,34" fill="#0A3E42"/>
+  <!-- South Star -->
+  <polygon points="200,344 205,326 200,329 195,326" fill="#0F5257"/>
+  <polygon points="200,344 200,329 195,326" fill="#0A3E42"/>
+  <!-- East Star -->
+  <polygon points="364,180 346,185 349,180 346,175" fill="#0F5257"/>
+  <polygon points="364,180 349,180 346,175" fill="#0A3E42"/>
+  <!-- West Star -->
+  <polygon points="36,180 54,185 51,180 54,175" fill="#0F5257"/>
+  <polygon points="36,180 51,180 54,175" fill="#0A3E42"/>
+
+  <!-- Inner Illustration Clipped Area -->
+  <g clip-path="url(#crestClip)">
+    <!-- Sky Wash -->
+    <rect x="40" y="30" width="320" height="300" fill="url(#skyGrad)"/>
+
+    <!-- Radiant Sunbeams / Rays -->
+    <g stroke="#F2A65A" stroke-width="1.2" opacity="0.65">
+      <line x1="200" y1="130" x2="200" y2="40"/>
+      <line x1="200" y1="130" x2="225" y2="44"/>
+      <line x1="200" y1="130" x2="250" y2="55"/>
+      <line x1="200" y1="130" x2="272" y2="72"/>
+      <line x1="200" y1="130" x2="288" y2="95"/>
+      <line x1="200" y1="130" x2="298" y2="120"/>
+      <line x1="200" y1="130" x2="175" y2="44"/>
+      <line x1="200" y1="130" x2="150" y2="55"/>
+      <line x1="200" y1="130" x2="128" y2="72"/>
+      <line x1="200" y1="130" x2="112" y2="95"/>
+      <line x1="200" y1="130" x2="102" y2="120"/>
+    </g>
+
+    <!-- Glowing Rising Sun Disk -->
+    <circle cx="200" cy="130" r="48" fill="url(#sunGrad)"/>
+
+    <!-- Himalayan Prayer Flags Arch -->
+    <path d="M75,90 Q200,125 325,90" stroke="#0F5257" stroke-width="1.2" fill="none"/>
+    <!-- Prayer Flag Buntings (Blue, White, Red, Green, Yellow) -->
+    <!-- Flag 1 (Blue) -->
+    <polygon points="90,89 102,93 100,105 88,101" fill="#2563EB"/>
+    <!-- Flag 2 (White) -->
+    <polygon points="106,94 118,98 116,110 104,106" fill="#FFFFFF" stroke="#0F5257" stroke-width="0.5"/>
+    <!-- Flag 3 (Red) -->
+    <polygon points="122,99 134,103 132,115 120,111" fill="#DC2626"/>
+    <!-- Flag 4 (Green) -->
+    <polygon points="138,104 150,107 148,119 136,116" fill="#16A34A"/>
+    <!-- Flag 5 (Yellow) -->
+    <polygon points="154,108 166,110 164,122 152,120" fill="#EAB308"/>
+    <!-- Flag 6 (Blue) -->
+    <polygon points="170,111 182,112 180,124 168,123" fill="#2563EB"/>
+    <!-- Flag 7 (White - Center) -->
+    <polygon points="186,113 198,113 197,125 185,125" fill="#FFFFFF" stroke="#0F5257" stroke-width="0.5"/>
+    <!-- Flag 8 (Red) -->
+    <polygon points="202,113 214,113 215,125 203,125" fill="#DC2626"/>
+    <!-- Flag 9 (Green) -->
+    <polygon points="218,112 230,111 232,123 220,124" fill="#16A34A"/>
+    <!-- Flag 10 (Yellow) -->
+    <polygon points="234,110 246,108 248,120 236,122" fill="#EAB308"/>
+    <!-- Flag 11 (Blue) -->
+    <polygon points="250,107 262,104 264,116 252,119" fill="#2563EB"/>
+    <!-- Flag 12 (White) -->
+    <polygon points="266,103 278,99 280,111 268,115" fill="#FFFFFF" stroke="#0F5257" stroke-width="0.5"/>
+    <!-- Flag 13 (Red) -->
+    <polygon points="282,98 294,94 296,106 284,110" fill="#DC2626"/>
+    <!-- Flag 14 (Green) -->
+    <polygon points="298,93 310,89 312,101 300,105" fill="#16A34A"/>
+
+    <!-- ================= HIMALAYAN MOUNTAINS ================= -->
+    <!-- Distant Mountain Ridges (Soft Teal) -->
+    <polygon points="50,220 95,145 140,210" fill="#7FB3B0" opacity="0.6"/>
+    <polygon points="260,210 305,140 350,220" fill="#7FB3B0" opacity="0.6"/>
+
+    <!-- Left Flank Mountain (Angular Jagged Peak) -->
+    <polygon points="50,230 115,130 175,225" fill="#0F5257"/>
+    <!-- Left Flank Shading -->
+    <polygon points="115,130 175,225 115,225" fill="#0A3E42" opacity="0.5"/>
+    <!-- Left Snow Cap & Couloirs -->
+    <polygon points="115,130 96,158 106,155 115,165 125,152 135,162 115,130" fill="#FFFFFF"/>
+    <polygon points="115,130 96,158 84,180 102,172 108,190 115,165" fill="#FFFFFF" opacity="0.95"/>
+    <polygon points="96,158 88,188 78,210 88,205 98,185" fill="#E2F1F0" opacity="0.85"/>
+
+    <!-- Right Flank Mountain (Sharp Ridge) -->
+    <polygon points="225,225 285,125 350,230" fill="#0F5257"/>
+    <!-- Right Flank Shading -->
+    <polygon points="285,125 350,230 285,230" fill="#0A3E42" opacity="0.6"/>
+    <!-- Right Snow Cap -->
+    <polygon points="285,125 268,155 278,150 285,160 296,148 308,160 285,125" fill="#FFFFFF"/>
+    <polygon points="285,125 296,148 315,178 305,182 320,205 285,160" fill="#FFFFFF" opacity="0.95"/>
+
+    <!-- Center Main Summit (Ama Dablam / Everest Pyramid) -->
+    <polygon points="100,240 200,85 300,240" fill="#0F5257"/>
+    <!-- Summit Shading (East Face Shadow) -->
+    <polygon points="200,85 200,240 300,240" fill="#0A3E42" opacity="0.45"/>
+    <polygon points="200,85 240,165 220,185 260,240 200,240" fill="#072B2E" opacity="0.3"/>
+
+    <!-- Summit Snow Flutes & Crystalline Ice Facets (Pure White & Light Teal) -->
+    <polygon points="200,85 178,125 188,120 196,132 205,122 215,128 224,118 200,85" fill="#FFFFFF"/>
+    <!-- Main West Snow Face (Light-catching) -->
+    <polygon points="200,85 178,125 162,155 178,150 185,170 196,155 200,175 200,85" fill="#FFFFFF"/>
+    <polygon points="178,150 152,190 168,182 176,210 185,170" fill="#FFFFFF" opacity="0.95"/>
+    <polygon points="162,155 138,205 152,198 152,225 168,182" fill="#E2F1F0" opacity="0.9"/>
+    <!-- Glacier Crevasse & Couloir Ribs -->
+    <polygon points="200,85 205,122 212,145 200,165 200,85" fill="#FFFFFF" opacity="0.9"/>
+    <polygon points="212,145 228,175 218,195 200,215 200,165" fill="#FFFFFF" opacity="0.8"/>
+    <polygon points="228,175 252,210 238,220 215,240 218,195" fill="#E2F1F0" opacity="0.75"/>
+
+    <!-- Midground Lateral Moraines (Glacial Valley Slopes) -->
+    <path d="M50,225 Q130,220 170,250 L170,300 L50,300 Z" fill="#0D4B50"/>
+    <path d="M350,225 Q270,220 230,250 L230,300 L350,300 Z" fill="#0D4B50"/>
+
+    <!-- Moraine Contour Hatching Lines -->
+    <g stroke="#7FB3B0" stroke-width="1" opacity="0.4">
+      <line x1="80" y1="235" x2="130" y2="238"/>
+      <line x1="70" y1="245" x2="140" y2="249"/>
+      <line x1="60" y1="255" x2="150" y2="260"/>
+      <line x1="320" y1="235" x2="270" y2="238"/>
+      <line x1="330" y1="245" x2="260" y2="249"/>
+      <line x1="340" y1="255" x2="250" y2="260"/>
+    </g>
+
+    <!-- Foreground Valley Floor & Alpine Hills -->
+    <path d="M40,265 C110,255 160,265 180,270 L180,330 L40,330 Z" fill="#093538"/>
+    <path d="M360,265 C290,255 240,265 220,270 L220,330 L360,330 Z" fill="#093538"/>
+
+    <!-- Winding Alpine Expedition Trail with Stepping Stones -->
+    <path d="M198,225 Q205,240 190,255 Q175,270 205,285 Q220,295 185,320" stroke="#FCEEDF" stroke-width="12" fill="none" stroke-linecap="round"/>
+    <path d="M198,225 Q205,240 190,255 Q175,270 205,285 Q220,295 185,320" stroke="#F2A65A" stroke-width="3" stroke-dasharray="4,5" fill="none"/>
+    <!-- Trail Edge Boulders / Stepping Stones -->
+    <circle cx="184" cy="262" r="3.5" fill="#7FB3B0"/>
+    <circle cx="196" cy="272" r="4" fill="#7FB3B0"/>
+    <circle cx="212" cy="288" r="4.5" fill="#7FB3B0"/>
+    <circle cx="178" cy="298" r="4" fill="#7FB3B0"/>
+    <circle cx="192" cy="315" r="5" fill="#7FB3B0"/>
+
+    <!-- Detailed Trekker Silhouette on Trail -->
+    <g transform="translate(196, 266)">
+      <!-- Head & Expedition Sun Hat -->
+      <circle cx="0" cy="-14" r="3.2" fill="#0F5257"/>
+      <path d="M-4,-15 L4,-15 L3,-13 L-3,-13 Z" fill="#0F5257"/>
+      <!-- Body & Technical Expedition Backpack -->
+      <path d="M-2.5,-10 C-2.5,-10 -6,-9 -6,-4 C-6,0 -4,1 -2,1 L2,1 L2,-10 Z" fill="#0F5257"/>
+      <path d="M-1,-10 L3,-10 L3,1 L-1,1 Z" fill="#0A3E42"/>
+      <!-- Walking Legs in Motion -->
+      <line x1="-1" y1="1" x2="-4" y2="10" stroke="#0F5257" stroke-width="2.2" stroke-linecap="round"/>
+      <line x1="1" y1="1" x2="4" y2="9" stroke="#0F5257" stroke-width="2.2" stroke-linecap="round"/>
+      <!-- Dual Trekking Poles -->
+      <line x1="2" y1="-5" x2="6" y2="10" stroke="#0F5257" stroke-width="1.4" stroke-linecap="round"/>
+      <line x1="-2" y1="-5" x2="-6" y2="9.5" stroke="#0F5257" stroke-width="1.4" stroke-linecap="round"/>
+    </g>
+
+    <!-- ================= DENSE ALPINE PINE FORESTS ================= -->
+    <!-- Left Flank Pine Grove (Multi-tiered needles) -->
+    <!-- Tree L1 -->
+    <g transform="translate(68, 230)">
+      <polygon points="0,-22 4,-14 -4,-14" fill="#0A3E42"/>
+      <polygon points="0,-16 6,-7 -6,-7" fill="#0A3E42"/>
+      <polygon points="0,-9 8,0 -8,0" fill="#0A3E42"/>
+      <rect x="-1" y="0" width="2" height="6" fill="#072B2E"/>
+    </g>
+    <!-- Tree L2 (Taller) -->
+    <g transform="translate(85, 222)">
+      <polygon points="0,-28 5,-18 -5,-18" fill="#0F5257"/>
+      <polygon points="0,-20 7,-9 -7,-9" fill="#0F5257"/>
+      <polygon points="0,-11 9,1 -9,1" fill="#0F5257"/>
+      <rect x="-1.5" y="1" width="3" height="7" fill="#072B2E"/>
+    </g>
+    <!-- Tree L3 -->
+    <g transform="translate(102, 236)">
+      <polygon points="0,-24 4,-15 -4,-15" fill="#0A3E42"/>
+      <polygon points="0,-17 6,-7 -6,-7" fill="#0A3E42"/>
+      <polygon points="0,-9 8,1 -8,1" fill="#0A3E42"/>
+      <rect x="-1" y="1" width="2" height="6" fill="#072B2E"/>
+    </g>
+    <!-- Tree L4 -->
+    <g transform="translate(118, 245)">
+      <polygon points="0,-20 4,-12 -4,-12" fill="#0F5257"/>
+      <polygon points="0,-14 5,-5 -5,-5" fill="#0F5257"/>
+      <polygon points="0,-7 7,2 -7,2" fill="#0F5257"/>
+      <rect x="-1" y="2" width="2" height="5" fill="#072B2E"/>
+    </g>
+    <!-- Tree L5 (Foreground) -->
+    <g transform="translate(135, 258)">
+      <polygon points="0,-18 4,-10 -4,-10" fill="#0A3E42"/>
+      <polygon points="0,-12 5,-3 -5,-3" fill="#0A3E42"/>
+      <polygon points="0,-5 6,3 -6,3" fill="#0A3E42"/>
+      <rect x="-1" y="3" width="2" height="5" fill="#072B2E"/>
+    </g>
+
+    <!-- Right Flank Pine Grove -->
+    <!-- Tree R1 -->
+    <g transform="translate(332, 230)">
+      <polygon points="0,-22 4,-14 -4,-14" fill="#0A3E42"/>
+      <polygon points="0,-16 6,-7 -6,-7" fill="#0A3E42"/>
+      <polygon points="0,-9 8,0 -8,0" fill="#0A3E42"/>
+      <rect x="-1" y="0" width="2" height="6" fill="#072B2E"/>
+    </g>
+    <!-- Tree R2 (Taller) -->
+    <g transform="translate(315, 222)">
+      <polygon points="0,-28 5,-18 -5,-18" fill="#0F5257"/>
+      <polygon points="0,-20 7,-9 -7,-9" fill="#0F5257"/>
+      <polygon points="0,-11 9,1 -9,1" fill="#0F5257"/>
+      <rect x="-1.5" y="1" width="3" height="7" fill="#072B2E"/>
+    </g>
+    <!-- Tree R3 -->
+    <g transform="translate(298, 236)">
+      <polygon points="0,-24 4,-15 -4,-15" fill="#0A3E42"/>
+      <polygon points="0,-17 6,-7 -6,-7" fill="#0A3E42"/>
+      <polygon points="0,-9 8,1 -8,1" fill="#0A3E42"/>
+      <rect x="-1" y="1" width="2" height="6" fill="#072B2E"/>
+    </g>
+    <!-- Tree R4 -->
+    <g transform="translate(282, 245)">
+      <polygon points="0,-20 4,-12 -4,-12" fill="#0F5257"/>
+      <polygon points="0,-14 5,-5 -5,-5" fill="#0F5257"/>
+      <polygon points="0,-7 7,2 -7,2" fill="#0F5257"/>
+      <rect x="-1" y="2" width="2" height="5" fill="#072B2E"/>
+    </g>
+    <!-- Tree R5 -->
+    <g transform="translate(265, 258)">
+      <polygon points="0,-18 4,-10 -4,-10" fill="#0A3E42"/>
+      <polygon points="0,-12 5,-3 -5,-3" fill="#0A3E42"/>
+      <polygon points="0,-5 6,3 -6,3" fill="#0A3E42"/>
+      <rect x="-1" y="3" width="2" height="5" fill="#072B2E"/>
+    </g>
+  </g><!-- /clip-path -->
+
+  <!-- ================= BANNER & EXPEDITION TYPOGRAPHY ================= -->
+  <!-- Upper Ribbon Shadow / Backing -->
+  <path d="M42,286 L358,286 L340,326 L60,326 Z" fill="#072B2E"/>
+
+  <!-- Main Dark Teal Brand Banner Ribbon -->
+  <path d="M48,280 L352,280 L340,322 L60,322 Z" fill="url(#bannerGrad)" stroke="#7FB3B0" stroke-width="1.5"/>
+  <line x1="58" y1="284" x2="342" y2="284" stroke="#F2A65A" stroke-width="1"/>
+  <line x1="68" y1="318" x2="332" y2="318" stroke="#F2A65A" stroke-width="1"/>
+
+  <!-- Ribbon Filigree Ends -->
+  <!-- Left Scroll -->
+  <path d="M48,280 C36,280 32,295 44,302 C32,306 38,322 60,322" stroke="#F2A65A" stroke-width="2" fill="none"/>
+  <!-- Right Scroll -->
+  <path d="M352,280 C364,280 368,295 356,302 C368,306 362,322 340,322" stroke="#F2A65A" stroke-width="2" fill="none"/>
+
+  <!-- Brand Title Text -->
+  <text x="200" y="308" class="crest-title">BEST TREKS NEPAL</text>
+
+  <!-- Lower Curved Orange Tagline Rocker Banner -->
+  <path d="M95,322 C130,345 270,345 305,322 L316,352 C265,380 135,380 84,352 Z" fill="url(#sunGrad)" stroke="#0F5257" stroke-width="2.5"/>
+
+  <!-- Small Mountain Accent & EST. 2009 Ribbon Overlay -->
+  <g transform="translate(200, 322)">
+    <rect x="-48" y="-7" width="96" height="14" rx="3" fill="#0A3E42" stroke="#F2A65A" stroke-width="1"/>
+    <!-- Mini Mountain Peak -->
+    <polygon points="0,-12 6,-6 -6,-6" fill="#F2A65A"/>
+    <text x="0" y="3.5" class="crest-sub">EST. 2009</text>
+  </g>
+
+  <!-- Tagline Text on Orange Rocker -->
+  <text x="200" y="358" class="crest-tagline">ADVENTURE AWAITS</text>
+</svg>

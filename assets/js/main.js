@@ -74,7 +74,12 @@ const initSmoothScroll = () => {
         10
       );
 
-      const top = target.getBoundingClientRect().top + window.scrollY - navHeight - 16;
+      const header = document.querySelector('.site-header');
+      const headerHeight = header ? header.getBoundingClientRect().height : navHeight;
+      const subnav = link.closest('.trek-subnav-sticky, .region-subnav-sticky');
+      const subnavHeight = subnav ? subnav.getBoundingClientRect().height : 0;
+      const top = target.getBoundingClientRect().top + window.scrollY - headerHeight - subnavHeight - 16;
+      e.stopImmediatePropagation();
       window.scrollTo({ top, behavior: 'smooth' });
     });
   });

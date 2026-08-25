@@ -23,17 +23,11 @@ import {
  * Initialize sticky navbar scroll behavior + smart hide/reveal
  */
 const initStickyNavbar = () => {
-  const navbar  = $('.navbar');
-  const siteHeader = $('.site-header');
-  const mobileMenu = $('.mobile-menu');
-  const searchModal = $('.search-modal');
+  const navbar = $('.navbar');
   if (!navbar) return;
-
-  let lastScrollY = window.scrollY;
 
   const handleScroll = throttle(() => {
     const currentY = window.scrollY;
-    const diff = currentY - lastScrollY;
 
     // Scrolled class — glassmorphism effect on navbar
     if (currentY > 40) {
@@ -41,27 +35,6 @@ const initStickyNavbar = () => {
     } else {
       removeClass(navbar, 'is-scrolled');
     }
-
-    // Do not hide navbar if mobile menu or search modal is open
-    const isOverlayOpen = (mobileMenu && hasClass(mobileMenu, 'is-open')) ||
-                          (searchModal && hasClass(searchModal, 'is-open'));
-
-    if (siteHeader && !isOverlayOpen) {
-      // 1. Always reveal at the top of the page
-      if (currentY <= 100) {
-        removeClass(siteHeader, 'is-hidden');
-      }
-      // 2. Hide on fast scroll down past threshold
-      else if (diff > 8 && currentY > 150) {
-        addClass(siteHeader, 'is-hidden');
-      }
-      // 3. Reveal on scroll up
-      else if (diff < -6) {
-        removeClass(siteHeader, 'is-hidden');
-      }
-    }
-
-    lastScrollY = currentY;
   }, 60);
 
   window.addEventListener('scroll', handleScroll, { passive: true });
@@ -77,7 +50,7 @@ const initScrollProgress = () => {
 
   const update = throttle(() => {
     const docH = document.documentElement.scrollHeight - window.innerHeight;
-    const pct  = docH > 0 ? Math.min((window.scrollY / docH) * 100, 100) : 0;
+    const pct = docH > 0 ? Math.min((window.scrollY / docH) * 100, 100) : 0;
     bar.style.width = pct + '%';
   }, 40);
 
@@ -109,6 +82,29 @@ const initActiveNav = () => {
 };
 
 /**
+ * Add the primary directory links to the mobile navigation.
+ */
+const initMobileDirectoryLinks = () => {
+  const menuNav = $('.mobile-menu__nav');
+  if (!menuNav || menuNav.querySelector('[data-mobile-directory-links]')) return;
+
+  const links = [
+    { href: '/destinations/', label: 'Destinations' },
+    { href: '/treks', label: 'Trek Packages' }
+  ];
+
+  const firstLink = menuNav.querySelector('.mobile-menu__link');
+  links.forEach(({ href, label }) => {
+    const link = document.createElement('a');
+    link.href = href;
+    link.className = 'mobile-menu__link';
+    link.textContent = label;
+    link.dataset.mobileDirectoryLinks = 'true';
+    menuNav.insertBefore(link, firstLink);
+  });
+};
+
+/**
  * Add ripple click micro-animation to nav links
  */
 const initNavRipple = () => {
@@ -123,7 +119,7 @@ const initNavRipple = () => {
         width: ${size}px;
         height: ${size}px;
         left: ${e.clientX - rect.left - size / 2}px;
-        top:  ${e.clientY - rect.top  - size / 2}px;
+        top:  ${e.clientY - rect.top - size / 2}px;
       `;
       link.appendChild(ripple);
       ripple.addEventListener('animationend', () => ripple.remove());
@@ -181,17 +177,6 @@ const initMobileMenu = () => {
     if (hasClass(menu, 'is-open')) trapFocus(menu, e);
   });
 
-  // Mobile accordion sub-menus
-  const groupTriggers = $$('.mobile-menu__group-trigger', menu);
-  groupTriggers.forEach(trigger => {
-    on(trigger, 'click', () => {
-      const group = trigger.nextElementSibling;
-      if (!group) return;
-      const isOpen = hasClass(trigger, 'is-open');
-      toggleClass(trigger, 'is-open');
-      group.style.maxHeight = isOpen ? '0' : `${group.scrollHeight}px`;
-    });
-  });
 };
 
 /**
@@ -305,6 +290,7 @@ export const initNavbar = () => {
   initStickyNavbar();
   initScrollProgress();
   initActiveNav();
+  initMobileDirectoryLinks();
   initNavRipple();
   initMobileMenu();
   initDropdowns();
