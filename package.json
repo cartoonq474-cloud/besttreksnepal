@@ -4,14 +4,20 @@
   "description": "Best Treks Nepal — Static trekking website",
   "private": true,
   "scripts": {
-    "dev":   "serve . --listen 3000 --no-clipboard",
-    "start": "serve . --listen 3000 --no-clipboard",
+    "dev": "node scripts/server.js",
+    "start": "node scripts/server.js",
     "build": "echo \"Static site: No build step required\""
   },
-  "keywords": ["nepal", "trekking", "himalaya"],
+  "keywords": [
+    "nepal",
+    "trekking",
+    "himalaya"
+  ],
   "license": "UNLICENSED",
   "devDependencies": {
-    "serve": "^14.2.1"
+    "esbuild": "^0.28.2",
+    "purgecss": "^8.0.0",
+    "serve": "^14.2.1",
+    "sharp": "^0.35.4"
   }
 }
-

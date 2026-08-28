@@ -1,26 +1,28 @@
 /**
  * navbar.js — Best Treks Nepal Navigation Module
- * Version: 1.0 | August 2026
+ * Version: 2.0 | August 2026
  *
  * Responsibilities:
  *  - Sticky navbar with scroll-triggered shadow
  *  - Mobile hamburger toggle (slide-in panel)
- *  - Mega menu + dropdown management
+ *  - Mobile menu accordions (Destinations, Popular Treks)
+ *  - Mega menu + dropdown management (desktop + touch devices)
  *  - Active link detection based on current URL
  *  - Search modal open/close
- *  - Close menu on outside click / ESC key
- *  - Focus trapping in mobile menu
+ *  - Close menu on outside click / ESC key / nav link click
+ *  - Focus trapping in mobile menu & search modal
+ *  - Lock/unlock background scrolling
  */
 
 'use strict';
 
 import {
-  $, $$, on, addClass, removeClass, hasClass,
+  $, $$, on, addClass, removeClass, hasClass, toggleClass,
   throttle, lockScroll, unlockScroll, trapFocus
 } from './utils.js';
 
 /**
- * Initialize sticky navbar scroll behavior + smart hide/reveal
+ * Initialize sticky navbar scroll behavior + smart shadow
  */
 const initStickyNavbar = () => {
   const navbar = $('.navbar');
@@ -30,7 +32,7 @@ const initStickyNavbar = () => {
     const currentY = window.scrollY;
 
     // Scrolled class — glassmorphism effect on navbar
-    if (currentY > 40) {
+    if (currentY > 30) {
       addClass(navbar, 'is-scrolled');
     } else {
       removeClass(navbar, 'is-scrolled');
@@ -61,46 +63,68 @@ const initScrollProgress = () => {
  * Set active state on nav link matching current URL
  */
 const initActiveNav = () => {
-  const navLinks = $$('.navbar__nav-link, .mobile-menu__link');
+  const navLinks = $$('.navbar__nav-link, .mobile-menu__link, .mobile-menu__sub-link');
   const currentPath = window.location.pathname;
 
   navLinks.forEach(link => {
     const href = link.getAttribute('href');
     if (!href) return;
 
-    // Match exact path or closest parent segment
-    const linkPath = new URL(href, window.location.origin).pathname;
+    try {
+      const linkPath = new URL(href, window.location.origin).pathname;
 
-    if (
-      linkPath === currentPath ||
-      (linkPath !== '/' && currentPath.startsWith(linkPath))
-    ) {
-      addClass(link, 'is-active');
-      link.setAttribute('aria-current', 'page');
+      if (
+        linkPath === currentPath ||
+        (linkPath !== '/' && currentPath === linkPath)
+      ) {
+        addClass(link, 'is-active');
+        link.setAttribute('aria-current', 'page');
+      }
+    } catch {
+      // Relative or anchor href
+      if (href === currentPath) {
+        addClass(link, 'is-active');
+        link.setAttribute('aria-current', 'page');
+      }
     }
   });
 };
 
 /**
- * Add the primary directory links to the mobile navigation.
+ * Add the primary directory links to the mobile navigation if missing.
  */
 const initMobileDirectoryLinks = () => {
   const menuNav = $('.mobile-menu__nav');
   if (!menuNav || menuNav.querySelector('[data-mobile-directory-links]')) return;
 
-  const links = [
-    { href: '/destinations/', label: 'Destinations' },
-    { href: '/treks', label: 'Trek Packages' }
-  ];
+  const existingHrefs = Array.from(menuNav.querySelectorAll('a')).map(a => a.getAttribute('href'));
+  const linksToAdd = [];
 
-  const firstLink = menuNav.querySelector('.mobile-menu__link');
-  links.forEach(({ href, label }) => {
+  if (!existingHrefs.includes('/destinations.html') && !existingHrefs.includes('/destinations/')) {
+    linksToAdd.push({ href: '/destinations.html', label: 'Destinations' });
+  }
+  if (!existingHrefs.includes('/treks.html') && !existingHrefs.includes('/treks')) {
+    linksToAdd.push({ href: '/treks.html', label: 'Trek Packages' });
+  }
+
+  if (linksToAdd.length === 0) return;
+
+  // Insert after the Home link if present, or at the start
+  const homeLink = Array.from(menuNav.querySelectorAll('.mobile-menu__link')).find(
+    link => link.getAttribute('href') === '/' || link.textContent.trim().toLowerCase() === 'home'
+  );
+
+  linksToAdd.reverse().forEach(({ href, label }) => {
     const link = document.createElement('a');
     link.href = href;
     link.className = 'mobile-menu__link';
     link.textContent = label;
     link.dataset.mobileDirectoryLinks = 'true';
-    menuNav.insertBefore(link, firstLink);
+    if (homeLink && homeLink.nextSibling) {
+      menuNav.insertBefore(link, homeLink.nextSibling);
+    } else {
+      menuNav.prepend(link);
+    }
   });
 };
 
@@ -128,6 +152,47 @@ const initNavRipple = () => {
 };
 
 /**
+ * Initialize mobile menu accordions for grouped links (Destinations, Popular Treks)
+ */
+const initMobileAccordions = () => {
+  const groupTitles = $$('.mobile-menu__group-title');
+
+  groupTitles.forEach(title => {
+    title.setAttribute('role', 'button');
+    title.setAttribute('tabindex', '0');
+    title.setAttribute('aria-expanded', 'true');
+
+    // Collect subsequent sub-links belonging to this group
+    const subLinks = [];
+    let sibling = title.nextElementSibling;
+    while (sibling && sibling.classList.contains('mobile-menu__sub-link')) {
+      subLinks.push(sibling);
+      sibling = sibling.nextElementSibling;
+    }
+
+    const toggleGroup = () => {
+      const isExpanded = title.getAttribute('aria-expanded') === 'true';
+      const nextState = !isExpanded;
+
+      title.setAttribute('aria-expanded', String(nextState));
+      toggleClass(title, 'is-collapsed', !nextState);
+
+      subLinks.forEach(subLink => {
+        toggleClass(subLink, 'is-hidden', !nextState);
+      });
+    };
+
+    title.addEventListener('click', toggleGroup);
+    title.addEventListener('keydown', (e) => {
+      if (e.key === 'Enter' || e.key === ' ') {
+        e.preventDefault();
+        toggleGroup();
+      }
+    });
+  });
+};
+
+/**
  * Initialize mobile menu (hamburger → slide panel → overlay)
  */
 const initMobileMenu = () => {
@@ -139,18 +204,22 @@ const initMobileMenu = () => {
   if (!hamburger || !menu) return;
 
   const openMenu = () => {
-    addClass(hamburger, 'is-open');
-    addClass(menu, 'is-open');
-    if (overlay) addClass(overlay, 'is-open');
-    hamburger.setAttribute('aria-expanded', 'true');
-    menu.setAttribute('aria-hidden', 'false');
-    lockScroll();
+    menu.removeAttribute('hidden');
+    if (overlay) overlay.removeAttribute('hidden');
+    requestAnimationFrame(() => {
+      addClass(hamburger, 'is-open');
+      addClass(menu, 'is-open');
+      if (overlay) addClass(overlay, 'is-open');
+      hamburger.setAttribute('aria-expanded', 'true');
+      menu.setAttribute('aria-hidden', 'false');
+      menu.removeAttribute('inert');
+      lockScroll();
 
-    // Move focus into menu
-    setTimeout(() => {
-      const firstFocusable = menu.querySelector('a, button');
-      if (firstFocusable) firstFocusable.focus();
-    }, 350);
+      setTimeout(() => {
+        const firstFocusable = menu.querySelector('a, button');
+        if (firstFocusable) firstFocusable.focus();
+      }, 150);
+    });
   };
 
   const closeMenu = () => {
@@ -159,13 +228,32 @@ const initMobileMenu = () => {
     if (overlay) removeClass(overlay, 'is-open');
     hamburger.setAttribute('aria-expanded', 'false');
     menu.setAttribute('aria-hidden', 'true');
+    menu.setAttribute('inert', '');
     unlockScroll();
     hamburger.focus();
+    setTimeout(() => {
+      if (!hasClass(menu, 'is-open')) {
+        menu.setAttribute('hidden', '');
+        if (overlay) overlay.setAttribute('hidden', '');
+      }
+    }, 350);
   };
 
-  on(hamburger, 'click', openMenu);
+  const toggleMenu = () => {
+    hasClass(menu, 'is-open') ? closeMenu() : openMenu();
+  };
+
+  on(hamburger, 'click', toggleMenu);
   if (closeBtn) on(closeBtn, 'click', closeMenu);
   if (overlay) on(overlay, 'click', closeMenu);
+
+  // Close menu when clicking any link inside the mobile menu
+  const menuLinks = menu.querySelectorAll('a');
+  menuLinks.forEach(link => {
+    link.addEventListener('click', () => {
+      closeMenu();
+    });
+  });
 
   // ESC key closes menu
   document.addEventListener('keydown', (e) => {
@@ -177,10 +265,26 @@ const initMobileMenu = () => {
     if (hasClass(menu, 'is-open')) trapFocus(menu, e);
   });
 
+  // Close mobile menu if window is resized to desktop width (>= 992px)
+  const mediaQuery = window.matchMedia('(min-width: 992px)');
+  const handleResize = (e) => {
+    if (e.matches && hasClass(menu, 'is-open')) {
+      closeMenu();
+    }
+  };
+  if (mediaQuery.addEventListener) {
+    mediaQuery.addEventListener('change', handleResize);
+  } else {
+    window.addEventListener('resize', throttle(() => {
+      if (window.innerWidth >= 992 && hasClass(menu, 'is-open')) {
+        closeMenu();
+      }
+    }, 100));
+  }
 };
 
 /**
- * Mega menu & dropdown hover/click management (desktop)
+ * Mega menu & dropdown hover/click management (desktop + touch devices)
  */
 const initDropdowns = () => {
   const navItems = $$('.navbar__nav-item');
@@ -197,6 +301,15 @@ const initDropdowns = () => {
     }
 
     const open = () => {
+      // Close other open items
+      navItems.forEach(otherItem => {
+        if (otherItem !== item) {
+          removeClass(otherItem, 'is-open');
+          const otherLink = otherItem.querySelector('.navbar__nav-link');
+          if (otherLink) otherLink.setAttribute('aria-expanded', 'false');
+        }
+      });
+
       addClass(item, 'is-open');
       if (link) link.setAttribute('aria-expanded', 'true');
     };
@@ -206,22 +319,31 @@ const initDropdowns = () => {
       if (link) link.setAttribute('aria-expanded', 'false');
     };
 
-    // Hover (desktop)
+    // Hover (desktop pointer)
     item.addEventListener('mouseenter', open);
     item.addEventListener('mouseleave', close);
 
-    // Click toggle (touch / keyboard)
+    // Click / Touch toggle
     if (link) {
       link.addEventListener('click', (e) => {
-        const href = link.getAttribute('href');
-        if (href && href !== '#' && href !== 'javascript:void(0)') {
-          // Valid URL present — allow standard page navigation
+        const isTouch = window.matchMedia('(hover: none) and (pointer: coarse)').matches;
+        const isOpen = hasClass(item, 'is-open');
+
+        // On touch screens: first tap opens the menu, second tap navigates
+        if (isTouch && !isOpen) {
+          e.preventDefault();
+          open();
           return;
         }
-        if (hasMega || hasDropdown) {
-          e.preventDefault();
-          hasClass(item, 'is-open') ? close() : open();
+
+        const href = link.getAttribute('href');
+        if (href && href !== '#' && href !== 'javascript:void(0)') {
+          // Standard URL navigation allowed
+          return;
         }
+
+        e.preventDefault();
+        isOpen ? close() : open();
       });
     }
   });
@@ -240,7 +362,11 @@ const initDropdowns = () => {
   // ESC closes open dropdowns
   document.addEventListener('keydown', (e) => {
     if (e.key === 'Escape') {
-      navItems.forEach(item => removeClass(item, 'is-open'));
+      navItems.forEach(item => {
+        removeClass(item, 'is-open');
+        const link = item.querySelector('.navbar__nav-link');
+        if (link) link.setAttribute('aria-expanded', 'false');
+      });
     }
   });
 };
@@ -292,6 +418,7 @@ export const initNavbar = () => {
   initActiveNav();
   initMobileDirectoryLinks();
   initNavRipple();
+  initMobileAccordions();
   initMobileMenu();
   initDropdowns();
   initSearchModal();

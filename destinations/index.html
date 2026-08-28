@@ -20,11 +20,13 @@
   <!-- Preconnect to Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link
-    href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Inter:wght@400;500;600&family=Playfair+Display:ital,wght@1,700&display=swap"
-    rel="stylesheet">
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Inter:wght@400;500;600&family=Playfair+Display:ital,wght@1,700&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Inter:wght@400;500;600&family=Playfair+Display:ital,wght@1,700&display=swap" media="print" onload="this.media='all'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Inter:wght@400;500;600&family=Playfair+Display:ital,wght@1,700&display=swap"></noscript>
 
   <!-- Single Master CSS Entry Point -->
+  <link rel="preload" as="style" href="/assets/css/style.css">
+  <link rel="preload" as="image" href="/assets/images/hero/slide-2-annapurna.jpg" fetchpriority="high">
   <link rel="stylesheet" href="/assets/css/style.css">
 
   <style>
@@ -439,18 +441,6 @@
   <!-- Skip Navigation (Accessibility) -->
   <a class="skip-link" href="#main-content">Skip to main content</a>
 
-  <!-- Page Loader -->
-  <div class="page-loader" aria-hidden="true">
-    <div class="page-loader__logo">
-      <svg viewBox="0 0 120 40" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-        <text x="0" y="30" font-family="Poppins, sans-serif" font-weight="700" font-size="18" fill="#FCEEDF">Best
-          Treks</text>
-        <text x="0" y="42" font-family="Poppins, sans-serif" font-weight="400" font-size="10" fill="#7FB3B0"
-          letter-spacing="3">NEPAL</text>
-      </svg>
-    </div>
-  </div>
-
   <!-- Scroll Progress Bar -->
   <div class="navbar-progress" id="navbar-progress" aria-hidden="true"></div>
 
@@ -466,21 +456,21 @@
       <div class="container">
         <div class="top-bar__inner">
           <div class="top-bar__contacts">
-            <a href="tel:+97714700000" aria-label="Call us at +977 1 470 0000">
+            <a href="tel:+9779748343015" aria-label="Call us at +977 9748343015">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
                 stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                 <path
                   d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.79 19.79 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z" />
               </svg>
-              +977 1 470 0000
+              +977 9748343015
             </a>
-            <a href="mailto:info@besttreksnepal.com" aria-label="Email us at info@besttreksnepal.com">
+            <a href="mailto:kotlyan204@gmail.com" aria-label="Email us at kotlyan204@gmail.com">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
                 stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                 <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
                 <polyline points="22,6 12,13 2,6" />
               </svg>
-              info@besttreksnepal.com
+              kotlyan204@gmail.com
             </a>
           </div>
           <div class="top-bar__social" aria-label="Follow us on social media">
@@ -497,7 +487,7 @@
                 <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" />
               </svg>
             </a>
-            <a href="https://wa.me/9771234567890" aria-label="WhatsApp">
+            <a href="https://wa.me/9779748343015" aria-label="WhatsApp">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
                 <path
                   d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z" />
@@ -756,11 +746,11 @@
   </div><!-- /.site-header -->
 
   <!-- Mobile Menu Overlay -->
-  <div class="mobile-menu-overlay" aria-hidden="true"></div>
+  <div class="mobile-menu-overlay" aria-hidden="true" inert></div>
 
   <!-- Mobile Menu Panel -->
   <div class="mobile-menu" id="mobile-menu" role="dialog" aria-modal="true" aria-label="Navigation menu"
-    aria-hidden="true">
+    aria-hidden="true" inert>
     <div class="mobile-menu__header">
       <a class="mobile-menu__logo" href="/" aria-label="Best Treks Nepal — Homepage">
         <img src="/assets/images/logo/logo-icon.svg" alt="Best Treks Nepal Emblem" class="mobile-menu__logo-img" width="32" height="32">
@@ -798,16 +788,16 @@
     </nav>
     <div class="mobile-menu__footer">
       <a href="/booking.html" class="btn btn--primary btn--full">Book a Trek</a>
-      <a href="tel:+97714700000" class="btn btn--secondary btn--full">Call Us Now</a>
+      <a href="tel:+9779748343015" class="btn btn--secondary btn--full">Call Us Now</a>
     </div>
   </div>
 
   <!-- Search Modal -->
   <div class="search-modal" role="dialog" aria-modal="true" aria-label="Search treks and destinations"
-    aria-hidden="true">
+    aria-hidden="true" inert>
     <div class="search-modal__inner">
       <div class="search-modal__bar">
-        <div class="search-modal__icon" aria-hidden="true">
+        <div class="search-modal__icon" aria-hidden="true" inert>
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
             stroke-linecap="round" stroke-linejoin="round">
             <circle cx="11" cy="11" r="8" />
@@ -835,7 +825,7 @@
 
         <!-- Slide 1 — Everest Region -->
         <div class="hero__slide is-active" role="group" aria-roledescription="slide" aria-label="Slide 1 of 3">
-          <img class="hero__slide-bg" src="26f4c9c059a14b185b70a8e66f6ea60f.jpg" alt="Everest Khumbu Region"
+          <img class="hero__slide-bg" src="/assets/images/treks/upper-mustang.jpg" alt="Everest Khumbu Region"
             aria-hidden="true" loading="eager" fetchpriority="high" width="1920" height="1080">
           <div class="hero__overlay"></div>
         </div>
@@ -927,7 +917,7 @@
           <!-- 4. Action Row (Play Thumb + White Floating Pill with Avatars) -->
           <div class="hero__action-row reveal">
             <a href="/treks/everest-base-camp.html" class="hero__play-thumb" aria-label="Watch trek video preview">
-              <img loading="lazy" src="/assets/images/hero/slide-1-everest.jpg" alt="Everest trek preview">
+              <img loading="lazy" src="/assets/images/treks/everest-base-camp.jpg" alt="Everest trek preview">
               <div class="hero__play-btn">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="12" height="12">
                   <path d="M8 5v14l11-7z" />
@@ -937,13 +927,13 @@
 
             <div class="hero__trust-pill">
               <div class="hero__avatars">
-                <img loading="lazy" src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=80&auto=format&fit=crop&q=80"
+                <img loading="lazy" src="/assets/images/team/pasang-sherpa.jpg" referrerpolicy="no-referrer" crossorigin="anonymous"
                   alt="Trekker" class="hero__avatar">
-                <img loading="lazy" src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=80&auto=format&fit=crop&q=80"
+                <img loading="lazy" src="/assets/images/team/maya-gurung.jpg" referrerpolicy="no-referrer" crossorigin="anonymous"
                   alt="Trekker" class="hero__avatar">
-                <img loading="lazy" src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=80&auto=format&fit=crop&q=80"
+                <img loading="lazy" src="/assets/images/team/pemba-nuru.jpg" referrerpolicy="no-referrer" crossorigin="anonymous"
                   alt="Trekker" class="hero__avatar">
-                <img loading="lazy" src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=80&auto=format&fit=crop&q=80"
+                <img loading="lazy" src="/assets/images/team/lhakpa-tenzing.jpg" referrerpolicy="no-referrer" crossorigin="anonymous"
                   alt="Trekker" class="hero__avatar">
               </div>
               <span class="hero__trust-text">Trusted By <strong>+15,000 Trekkers</strong></span>
@@ -1423,7 +1413,7 @@
           <!-- 2. Annapurna Region -->
           <article class="dest-region-card reveal is-visible" id="annapurna" data-category="classic moderate">
             <div class="dest-region-card__img-wrap">
-              <img src="/assets/images/destinations/annapurna.jpg" alt="Annapurna Sanctuary & Circuit Region"
+              <img src="/assets/images/treks/gokyo-lakes.jpg" alt="Annapurna Sanctuary & Circuit Region"
                 class="dest-region-card__img" loading="lazy">
               <span class="dest-region-card__badge badge--conservation">
                 <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
@@ -1541,7 +1531,7 @@
           <!-- 3. Langtang Region -->
           <article class="dest-region-card reveal is-visible" id="langtang" data-category="moderate">
             <div class="dest-region-card__img-wrap">
-              <img src="/assets/images/destinations/langtang.jpg" alt="Langtang Valley & Gosaikunda"
+              <img src="/assets/images/treks/mardi-himal.jpg" alt="Langtang Valley & Gosaikunda"
                 class="dest-region-card__img" loading="lazy">
               <span class="dest-region-card__badge badge--conservation">
                 <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
@@ -1659,7 +1649,7 @@
           <!-- 4. Manaslu Region -->
           <article class="dest-region-card reveal is-visible" id="manaslu" data-category="high-altitude restricted">
             <div class="dest-region-card__img-wrap">
-              <img src="/assets/images/destinations/manaslu.jpg" alt="Manaslu Conservation Area Trek"
+              <img src="/assets/images/treks/langtang-valley.jpg" alt="Manaslu Conservation Area Trek"
                 class="dest-region-card__img" loading="lazy">
               <span class="dest-region-card__badge badge--restricted">
                 <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect width="18" height="11" x="3" y="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
@@ -1773,7 +1763,7 @@
           <!-- 5. Upper Mustang -->
           <article class="dest-region-card reveal is-visible" id="mustang" data-category="restricted moderate">
             <div class="dest-region-card__img-wrap">
-              <img src="/assets/images/destinations/mustang.jpg" alt="Upper Mustang Walled Kingdom"
+              <img src="/assets/images/treks/manaslu-circuit.jpg" alt="Upper Mustang Walled Kingdom"
                 class="dest-region-card__img" loading="lazy">
               <span class="dest-region-card__badge badge--restricted">
                 <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect width="18" height="11" x="3" y="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
@@ -1887,7 +1877,7 @@
           <!-- 6. Dolpo Region -->
           <article class="dest-region-card reveal is-visible" id="dolpo" data-category="restricted high-altitude">
             <div class="dest-region-card__img-wrap">
-              <img src="/assets/images/destinations/dolpo.jpg" alt="Dolpo Remote Wilderness Region"
+              <img src="/assets/images/treks/upper-mustang.jpg" alt="Dolpo Remote Wilderness Region"
                 class="dest-region-card__img" loading="lazy">
               <span class="dest-region-card__badge badge--wilderness">
                 <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
@@ -2608,7 +2598,7 @@
               </p>
               <div class="blog-card__footer">
                 <div class="blog-card__author">
-                  <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=80&auto=format&fit=crop&q=80"
+                  <img src="/assets/images/team/jai-taneja.jpg" referrerpolicy="no-referrer" crossorigin="anonymous"
                     alt="Pasang Sherpa" class="blog-card__author-avatar" loading="lazy">
                   <div class="blog-card__author-info">
                     <span class="blog-card__author-name">Pasang Sherpa</span>
@@ -2647,7 +2637,7 @@
               </p>
               <div class="blog-card__footer">
                 <div class="blog-card__author">
-                  <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=80&auto=format&fit=crop&q=80"
+                  <img src="/assets/images/team/pasang-sherpa.jpg" referrerpolicy="no-referrer" crossorigin="anonymous"
                     alt="Dawa Nuru Sherpa" class="blog-card__author-avatar" loading="lazy">
                   <div class="blog-card__author-info">
                     <span class="blog-card__author-name">Dawa Nuru</span>
@@ -2686,7 +2676,7 @@
               </p>
               <div class="blog-card__footer">
                 <div class="blog-card__author">
-                  <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=80&auto=format&fit=crop&q=80"
+                  <img src="/assets/images/team/maya-gurung.jpg" referrerpolicy="no-referrer" crossorigin="anonymous"
                     alt="Lakpa Gelbu Sherpa" class="blog-card__author-avatar" loading="lazy">
                   <div class="blog-card__author-info">
                     <span class="blog-card__author-name">Lakpa Gelbu</span>
@@ -2725,7 +2715,7 @@
               </p>
               <div class="blog-card__footer">
                 <div class="blog-card__author">
-                  <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=80&auto=format&fit=crop&q=80"
+                  <img src="/assets/images/team/pemba-nuru.jpg" referrerpolicy="no-referrer" crossorigin="anonymous"
                     alt="Dr. Sarah Jenkins" class="blog-card__author-avatar" loading="lazy">
                   <div class="blog-card__author-info">
                     <span class="blog-card__author-name">Dr. Sarah J.</span>
@@ -2764,7 +2754,7 @@
               </p>
               <div class="blog-card__footer">
                 <div class="blog-card__author">
-                  <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=80&auto=format&fit=crop&q=80"
+                  <img src="/assets/images/team/lhakpa-tenzing.jpg" referrerpolicy="no-referrer" crossorigin="anonymous"
                     alt="Pemba Tamang" class="blog-card__author-avatar" loading="lazy">
                   <div class="blog-card__author-info">
                     <span class="blog-card__author-name">Pemba Tamang</span>
@@ -2803,7 +2793,7 @@
               </p>
               <div class="blog-card__footer">
                 <div class="blog-card__author">
-                  <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=80&auto=format&fit=crop&q=80"
+                  <img src="/assets/images/team/jai-taneja.jpg" referrerpolicy="no-referrer" crossorigin="anonymous"
                     alt="Nima Sherpa" class="blog-card__author-avatar" loading="lazy">
                   <div class="blog-card__author-info">
                     <span class="blog-card__author-name">Nima Sherpa</span>
@@ -2908,7 +2898,7 @@
                 <span>Ask a Sherpa Guide</span>
                 <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
               </a>
-              <a href="https://wa.me/9771234567890" target="_blank" rel="noopener noreferrer"
+              <a href="https://wa.me/9779748343015" target="_blank" rel="noopener noreferrer"
                 class="faq-sidebar-card__btn-wa" style="display:inline-flex;align-items:center;justify-content:center;gap:0.5rem;">
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/></svg>
                 <span>WhatsApp Chat</span>
@@ -3386,7 +3376,7 @@
                 <polygon fill="#0F5257" points="9.75 15.02 15.5 12 9.75 8.98 9.75 15.02" />
               </svg>
             </a>
-            <a href="https://wa.me/9771234567890" class="footer__social-link" aria-label="WhatsApp">
+            <a href="https://wa.me/9779748343015" class="footer__social-link" aria-label="WhatsApp">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
                 <path
                   d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z" />
@@ -3445,7 +3435,7 @@
                 <path
                   d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.19 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.12 1.18l3-.017a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L7.09 8.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" />
               </svg>
-              <a href="tel:+97714700000">+977 1 470 0000</a>
+              <a href="tel:+9779748343015">+977 9748343015</a>
             </div>
             <div class="footer__contact-item">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
@@ -3453,7 +3443,7 @@
                 <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
                 <polyline points="22,6 12,13 2,6" />
               </svg>
-              <a href="mailto:info@besttreksnepal.com">info@besttreksnepal.com</a>
+              <a href="mailto:kotlyan204@gmail.com">kotlyan204@gmail.com</a>
             </div>
             <div class="footer__contact-item">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
@@ -3496,7 +3486,7 @@
   <!-- =====================================================================
        JavaScript — ES6 modules, deferred
        ===================================================================== -->
-  <script type="module" src="/assets/js/main.js" defer></script>
+  <script type="module" src="/assets/js/main.bundle.js" defer></script>
 
   <!-- Reviews Tab Switching -->
   <script>

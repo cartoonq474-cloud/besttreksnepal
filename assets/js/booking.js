@@ -1,12 +1,13 @@
 /**
  * booking.js — Best Treks Nepal Booking & Contact Form Validation + Quick Booking Engine
- * Version: 2.0 | August 2026
+ * Version: 2.5 | August 2026
  *
  * Responsibilities:
  *  - Validate required fields, email, and phone
- *  - Interactive 4-step Quick Booking Portal controller (Trek -> Travelers -> Add-ons -> Payment)
- *  - Real-time dynamic expedition price & 15% deposit calculator
+ *  - Interactive 4-step Quick Booking Portal controller (Trek -> Travelers -> Add-ons -> Cash on Arrival)
+ *  - Real-time dynamic expedition price calculator (100% Cash on Arrival in KTM)
  *  - URL Query parameter synchronization (?trek=...&tier=...&pax=...&date=...)
+ *  - Direct Email dispatch to kotlyan204@gmail.com
  *  - Live summary sidebar rendering
  *  - Success modal and dispatch confirmation
  */
@@ -17,6 +18,44 @@ import {
   $, $$, addClass, removeClass, hasClass,
   isValidEmail, isValidPhone
 } from './utils.js';
+
+/**
+ * Direct Email Dispatcher to kotlyan204@gmail.com via FormSubmit AJAX API
+ * @param {Object} data - Form key-value pairs
+ * @param {string} subject - Email subject line
+ * @returns {Promise<boolean>}
+ */
+export const dispatchToEmail = async (data, subject = 'New Himalayan Trek Booking / Inquiry') => {
+  try {
+    const payload = {
+      _subject: subject,
+      _template: 'table',
+      _captcha: 'false',
+      'Submission Timestamp': new Date().toLocaleString('en-US', { timeZone: 'Asia/Kathmandu' }) + ' (NPT)',
+      ...data
+    };
+
+    const controller = new AbortController();
+    const timeoutId = setTimeout(() => controller.abort(), 6000);
+
+    const response = await fetch('https://formsubmit.co/ajax/kotlyan204@gmail.com', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        'Accept': 'application/json'
+      },
+      body: JSON.stringify(payload),
+      signal: controller.signal
+    });
+
+    clearTimeout(timeoutId);
+    const result = await response.json();
+    return result.success === 'true' || result.success === true;
+  } catch (err) {
+    console.warn('Form email dispatch notice (handled):', err);
+    return false;
+  }
+};
 
 /**
  * Validate a single form field
@@ -98,14 +137,14 @@ const initQuickBookingPortal = () => {
     $('#bookStepTab3'),
     $('#bookStepTab4')
   ];
-  const panels = [
+  const stepPanels = [
     $('#bookPanel1'),
     $('#bookPanel2'),
     $('#bookPanel3'),
     $('#bookPanel4')
   ];
 
-  // Sidebar Summary DOM Elements
+  // Summary Elements
   const summaryThumb = $('#summaryThumb');
   const summaryTitle = $('#summaryTitle');
   const summaryDuration = $('#summaryDuration');
@@ -119,11 +158,12 @@ const initQuickBookingPortal = () => {
   const summaryTotalVal = $('#summaryTotalVal');
   const summaryDepositVal = $('#summaryDepositVal');
   const summaryBalanceVal = $('#summaryBalanceVal');
+
+  // Final Step 4 Displays
   const finalTotalDisplay = $('#finalTotalDisplay');
   const finalDepositDisplay = $('#finalDepositDisplay');
   const finalBalanceDisplay = $('#finalBalanceDisplay');
 
-  // Tier names map
   const tierLabels = {
     standard: 'Standard Teahouse',
     comfort: 'Comfort Plus',
@@ -131,148 +171,142 @@ const initQuickBookingPortal = () => {
   };
 
   /**
-   * Set minimum date to +3 days from today
+   * Set default departure date to 14 days in future
    */
   const setDefaultDate = () => {
     const d = new Date();
     d.setDate(d.getDate() + 14);
-    const dateStr = d.toISOString().split('T')[0];
+    const yyyyMmDd = d.toISOString().split('T')[0];
     if (dateInput && !dateInput.value) {
-      dateInput.value = dateStr;
+      dateInput.value = yyyyMmDd;
       dateInput.min = new Date().toISOString().split('T')[0];
     }
   };
 
   /**
-   * Parse URL search parameters on load
+   * Parse URL Query parameters if user came from a trek card
    */
   const parseUrlParams = () => {
     const params = new URLSearchParams(window.location.search);
-    const paramTrek = params.get('trek');
-    const paramTier = params.get('tier');
-    const paramPax = parseInt(params.get('pax'), 10);
-    const paramDate = params.get('date');
+    const trekParam = params.get('trek');
+    const tierParam = params.get('tier');
+    const paxParam = parseInt(params.get('pax'), 10);
+    const dateParam = params.get('date');
 
-    if (paramTrek && trekSelect) {
-      const opt = trekSelect.querySelector(`option[value="${paramTrek}"]`);
-      if (opt) {
-        trekSelect.value = paramTrek;
-      }
+    if (trekParam && trekSelect) {
+      const match = trekSelect.querySelector(`option[value="${trekParam}"]`);
+      if (match) trekSelect.value = trekParam;
     }
 
-    if (paramTier) {
-      const targetCard = Array.from(tierCards).find(c => c.dataset.tier === paramTier);
-      if (targetCard) {
+    if (tierParam) {
+      const tierMatch = Array.from(tierCards).find(c => c.dataset.tier === tierParam);
+      if (tierMatch) {
         tierCards.forEach(c => removeClass(c, 'is-selected'));
-        addClass(targetCard, 'is-selected');
-        const radio = targetCard.querySelector('input[type="radio"]');
+        addClass(tierMatch, 'is-selected');
+        const radio = tierMatch.querySelector('input[type="radio"]');
         if (radio) radio.checked = true;
-        selectedTier = paramTier;
-        tierMultiplier = parseFloat(targetCard.dataset.multiplier) || 1.0;
+        selectedTier = tierParam;
+        tierMultiplier = parseFloat(tierMatch.dataset.multiplier) || 1.0;
       }
     }
 
-    if (paramPax && !isNaN(paramPax) && paramPax >= 1) {
-      paxCount = Math.min(24, Math.max(1, paramPax));
+    if (paxParam && !isNaN(paxParam) && paxParam >= 1) {
+      paxCount = Math.min(24, Math.max(1, paxParam));
     }
 
-    if (paramDate && dateInput) {
-      dateInput.value = paramDate;
+    if (dateParam && dateInput) {
+      dateInput.value = dateParam;
     }
   };
 
   /**
-   * Recalculate all pricing and update summary sidebar
+   * Recalculate and update all UI prices & summary
    */
   const updateCalculation = () => {
-    // 1. Read Trek data
-    const selectedOption = trekSelect ? trekSelect.options[trekSelect.selectedIndex] : null;
-    if (selectedOption) {
-      selectedTrekSlug = selectedOption.value;
-      baseRatePerPax = parseFloat(selectedOption.dataset.base) || 1390;
-      const days = selectedOption.dataset.days || 14;
-      const alt = selectedOption.dataset.alt || '5,364m';
-      const img = selectedOption.dataset.img || '/assets/images/destinations/everest.jpg';
+    // 1. Trek details
+    const selOption = trekSelect ? trekSelect.options[trekSelect.selectedIndex] : null;
+    if (selOption) {
+      selectedTrekSlug = selOption.value;
+      baseRatePerPax = parseFloat(selOption.dataset.base) || 1390;
+      const days = selOption.dataset.days || 14;
+      const alt = selOption.dataset.alt || '5,364m';
+      const img = selOption.dataset.img || '/assets/images/destinations/everest.jpg';
 
-      if (summaryTitle) summaryTitle.textContent = selectedOption.text.split('(')[0].trim();
+      if (summaryTitle) summaryTitle.textContent = selOption.text.split('(')[0].trim();
       if (summaryDuration) summaryDuration.textContent = `${days} Days`;
       if (summaryAltitude) summaryAltitude.textContent = `Max: ${alt}`;
       if (summaryThumb) summaryThumb.src = img;
     }
 
-    // 2. Update Tier Price Displays
-    const standardRate = Math.round(baseRatePerPax * 1.0);
-    const comfortRate = Math.round(baseRatePerPax * 1.35);
-    const luxuryRate = Math.round(baseRatePerPax * 2.4);
+    // 2. Update tier prices in Step 1 cards
+    const stdPrice = Math.round(baseRatePerPax * 1.0);
+    const comPrice = Math.round(baseRatePerPax * 1.35);
+    const luxPrice = Math.round(baseRatePerPax * 2.4);
 
-    const elPriceStd = $('#tierPriceStandard');
-    const elPriceComf = $('#tierPriceComfort');
-    const elPriceLux = $('#tierPriceLuxury');
+    const elStd = $('#tierPriceStandard');
+    const elCom = $('#tierPriceComfort');
+    const elLux = $('#tierPriceLuxury');
 
-    if (elPriceStd) elPriceStd.innerHTML = `$${standardRate.toLocaleString()} <small>USD/pax</small>`;
-    if (elPriceComf) elPriceComf.innerHTML = `$${comfortRate.toLocaleString()} <small>USD/pax</small>`;
-    if (elPriceLux) elPriceLux.innerHTML = `$${luxuryRate.toLocaleString()} <small>USD/pax</small>`;
+    if (elStd) elStd.innerHTML = `$${stdPrice.toLocaleString()} <small>USD/pax</small>`;
+    if (elCom) elCom.innerHTML = `$${comPrice.toLocaleString()} <small>USD/pax</small>`;
+    if (elLux) elLux.innerHTML = `$${luxPrice.toLocaleString()} <small>USD/pax</small>`;
 
-    // 3. Compute Current Tier Rate
+    // 3. Current active tier rate
     const currentRatePerPax = Math.round(baseRatePerPax * tierMultiplier);
 
-    // 4. Calculate Add-ons
-    let addonsTotal = 0;
+    // 4. Addons calculation
+    let totalAddons = 0;
     addonCards.forEach(card => {
-      const checkbox = card.querySelector('input[type="checkbox"]');
-      if (checkbox && checkbox.checked) {
-        const cost = parseFloat(checkbox.dataset.cost) || 0;
-        const isPerPax = checkbox.dataset.perPax === 'true';
-        addonsTotal += isPerPax ? (cost * paxCount) : cost;
+      const chk = card.querySelector('input[type="checkbox"]');
+      if (chk && chk.checked) {
+        const cost = parseFloat(chk.dataset.cost) || 0;
+        const perPax = chk.dataset.perPax === 'true';
+        totalAddons += perPax ? cost * paxCount : cost;
         addClass(card, 'is-selected');
       } else {
         removeClass(card, 'is-selected');
       }
     });
 
-    // 5. Total and 15% Deposit
-    const trekBaseTotal = currentRatePerPax * paxCount;
-    const grandTotal = trekBaseTotal + addonsTotal;
-    const depositAmount = Math.round(grandTotal * 0.15);
-    const balanceAmount = grandTotal - depositAmount;
+    // 5. Total Calculations (100% Cash on Arrival)
+    const baseTotal = currentRatePerPax * paxCount;
+    const total = baseTotal + totalAddons;
 
-    // 6. Update Sidebar & Review Elements
+    // 6. Update DOM Summary
     if (paxText) paxText.textContent = `${paxCount} Trekker${paxCount > 1 ? 's' : ''}`;
     if (summaryPaxVal) summaryPaxVal.textContent = `${paxCount} Trekker${paxCount > 1 ? 's' : ''}`;
     if (summaryTierVal) summaryTierVal.textContent = tierLabels[selectedTier] || 'Standard Teahouse';
     if (summaryRateVal) summaryRateVal.textContent = `$${currentRatePerPax.toLocaleString()} USD`;
-    if (summaryDateVal) {
-      summaryDateVal.textContent = dateInput && dateInput.value ? dateInput.value : 'Select a date';
-    }
+    if (summaryDateVal) summaryDateVal.textContent = dateInput && dateInput.value ? dateInput.value : 'Select a date';
 
     if (summaryAddonRow && summaryAddonVal) {
-      if (addonsTotal > 0) {
+      if (totalAddons > 0) {
         summaryAddonRow.style.display = 'flex';
-        summaryAddonVal.textContent = `+$${addonsTotal.toLocaleString()} USD`;
+        summaryAddonVal.textContent = `+$${totalAddons.toLocaleString()} USD`;
       } else {
         summaryAddonRow.style.display = 'none';
       }
     }
 
-    if (summaryTotalVal) summaryTotalVal.textContent = `$${grandTotal.toLocaleString()} USD`;
-    if (summaryDepositVal) summaryDepositVal.textContent = `$${depositAmount.toLocaleString()} USD`;
-    if (summaryBalanceVal) summaryBalanceVal.textContent = `$${balanceAmount.toLocaleString()} USD`;
+    if (summaryTotalVal) summaryTotalVal.textContent = `$${total.toLocaleString()} USD`;
+    if (summaryDepositVal) summaryDepositVal.textContent = `$0 Advance`;
+    if (summaryBalanceVal) summaryBalanceVal.textContent = `$${total.toLocaleString()} USD`;
 
-    if (finalTotalDisplay) finalTotalDisplay.textContent = `$${grandTotal.toLocaleString()} USD`;
-    if (finalDepositDisplay) finalDepositDisplay.textContent = `$${depositAmount.toLocaleString()} USD`;
-    if (finalBalanceDisplay) finalBalanceDisplay.textContent = `$${balanceAmount.toLocaleString()} USD`;
+    if (finalTotalDisplay) finalTotalDisplay.textContent = `$${total.toLocaleString()} USD`;
+    if (finalDepositDisplay) finalDepositDisplay.textContent = `$0 USD (Pay on Arrival)`;
+    if (finalBalanceDisplay) finalBalanceDisplay.textContent = `$${total.toLocaleString()} USD`;
   };
 
   /**
-   * Set current active step in 4-step wizard
-   * @param {number} step
+   * Set active step
+   * @param {number} step (1-4)
    */
   const setStep = (step) => {
     if (step < 1 || step > 4) return;
     currentStep = step;
 
-    // Update Panels
-    panels.forEach((panel, idx) => {
+    // Panels
+    stepPanels.forEach((panel, idx) => {
       if (panel) {
         if (idx + 1 === currentStep) {
           addClass(panel, 'is-active');
@@ -282,20 +316,20 @@ const initQuickBookingPortal = () => {
       }
     });
 
-    // Update Stepper Tabs
+    // Step Tabs
     stepTabs.forEach((tab, idx) => {
       if (tab) {
-        const stepNum = idx + 1;
+        const tabStep = idx + 1;
         removeClass(tab, 'is-active', 'is-completed');
-        if (stepNum === currentStep) {
+        if (tabStep === currentStep) {
           addClass(tab, 'is-active');
-        } else if (stepNum < currentStep) {
+        } else if (tabStep < currentStep) {
           addClass(tab, 'is-completed');
         }
       }
     });
 
-    // Scroll smoothly to top of form card on mobile
+    // Scroll to top of portal on mobile
     if (window.innerWidth < 1024) {
       portalForm.scrollIntoView({ behavior: 'smooth', block: 'start' });
     }
@@ -382,16 +416,7 @@ const initQuickBookingPortal = () => {
     }
   });
 
-  // 6. Payment method pills
-  const paymentPills = $$('.payment-method-pill');
-  paymentPills.forEach(pill => {
-    pill.addEventListener('click', () => {
-      paymentPills.forEach(p => removeClass(p, 'is-selected'));
-      addClass(pill, 'is-selected');
-    });
-  });
-
-  // 7. Navigation buttons
+  // 6. Navigation buttons
   const btnNext1 = $('#btnNextBook1');
   const btnPrev2 = $('#btnPrevBook2');
   const btnNext2 = $('#btnNextBook2');
@@ -406,7 +431,7 @@ const initQuickBookingPortal = () => {
   if (btnNext3) btnNext3.addEventListener('click', () => setStep(4));
   if (btnPrev4) btnPrev4.addEventListener('click', () => setStep(3));
 
-  // 8. Stepper tab direct clicks
+  // 7. Stepper tab direct clicks
   stepTabs.forEach((tab, idx) => {
     if (tab) {
       tab.addEventListener('click', () => {
@@ -422,7 +447,7 @@ const initQuickBookingPortal = () => {
     }
   });
 
-  // 9. Booking Form Submit Handler
+  // 8. Booking Form Submit Handler
   portalForm.addEventListener('submit', async (e) => {
     e.preventDefault();
     if (!validateStep(1) || !validateStep(2)) {
@@ -439,11 +464,47 @@ const initQuickBookingPortal = () => {
     const submitBtn = $('#btnConfirmBooking');
     if (submitBtn) {
       submitBtn.disabled = true;
-      submitBtn.innerHTML = '<span>Processing Secure Reservation…</span>';
+      submitBtn.innerHTML = '<span>Processing Reservation…</span>';
     }
 
-    // Simulate SSL Reservation processing
-    await new Promise(resolve => setTimeout(resolve, 1500));
+    // Collect all booking configuration details
+    const leadName = $('#leadFullName')?.value?.trim() || 'Valued Trekker';
+    const leadEmail = $('#leadEmail')?.value?.trim() || '';
+    const leadPhone = $('#leadPhone')?.value?.trim() || '';
+    const leadCountry = $('#leadCountry')?.value?.trim() || 'Not specified';
+    const trekTitle = summaryTitle ? summaryTitle.textContent.trim() : 'Himalayan Trek';
+    const departureDate = dateInput ? dateInput.value : 'Flexible';
+    const tierName = tierLabels[selectedTier] || 'Standard Teahouse';
+    const totalAmount = summaryTotalVal ? summaryTotalVal.textContent.trim() : '';
+
+    // Collect selected addons
+    const selectedAddonsList = [];
+    addonCards.forEach(c => {
+      const chk = c.querySelector('input[type="checkbox"]');
+      if (chk && chk.checked) {
+        selectedAddonsList.push(c.querySelector('.addon-card__title')?.textContent?.trim() || chk.name);
+      }
+    });
+
+    const specialReqs = $('#specialDiet')?.value?.trim() || 'None specified';
+
+    // Dispatch directly to kotlyan204@gmail.com
+    await dispatchToEmail({
+      'Lead Traveler Name': leadName,
+      'Email Address': leadEmail,
+      'Phone / WhatsApp': leadPhone,
+      'Country of Residence': leadCountry,
+      'Trek Package': trekTitle,
+      'Accommodation Tier': tierName,
+      'Number of Trekkers': paxCount,
+      'Target Departure Date': departureDate,
+      'Selected Add-ons': selectedAddonsList.length ? selectedAddonsList.join(', ') : 'Standard (No Add-ons)',
+      'Total Estimated Package Cost': totalAmount,
+      'Payment Method': '100% Cash on Arrival in Kathmandu (Zero Advance Deposit Required)',
+      'Advance Deposit': '$0 USD (Zero Advance)',
+      'Total Cash Due on Arrival in Kathmandu': totalAmount,
+      'Dietary / Special Notes': specialReqs
+    }, `🎯 New Trek Booking: ${trekTitle} - ${leadName} (${paxCount} Pax)`);
 
     // Show Confirmation Modal
     const modal = $('#bookingSuccessModal');
@@ -460,6 +521,7 @@ const initQuickBookingPortal = () => {
 
     if (modal) {
       addClass(modal, 'is-active');
+      modal.style.display = 'flex';
     }
 
     if (submitBtn) {
@@ -505,4 +567,3 @@ if (typeof document !== 'undefined') {
     initBooking();
   }
 }
-

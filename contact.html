@@ -18,17 +18,10 @@
   <meta name="theme-color" content="#0F5257">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link
-    href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Inter:wght@400;500;600;700&family=Playfair+Display:ital,wght@1,700&display=swap"
-    rel="stylesheet">
-  <link rel="stylesheet" href="/assets/css/reset.css">
-  <link rel="stylesheet" href="/assets/css/variables.css">
-  <link rel="stylesheet" href="/assets/css/typography.css">
-  <link rel="stylesheet" href="/assets/css/layout.css">
-  <link rel="stylesheet" href="/assets/css/components.css">
-  <link rel="stylesheet" href="/assets/css/animations.css">
-  <link rel="stylesheet" href="/assets/css/utilities.css">
-  <link rel="stylesheet" href="/assets/css/responsive.css">
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Inter:wght@400;500;600;700&family=Playfair+Display:ital,wght@1,700&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Inter:wght@400;500;600;700&family=Playfair+Display:ital,wght@1,700&display=swap" media="print" onload="this.media='all'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Inter:wght@400;500;600;700&family=Playfair+Display:ital,wght@1,700&display=swap"></noscript>
+  <link rel="preload" as="style" href="/assets/css/style.css">
   <link rel="stylesheet" href="/assets/css/style.css">
 
   <style>
@@ -1391,18 +1384,6 @@
   <!-- Skip Navigation (Accessibility) -->
   <a class="skip-link" href="#main-content">Skip to main content</a>
 
-  <!-- Page Loader -->
-  <div class="page-loader" aria-hidden="true">
-    <div class="page-loader__logo">
-      <svg viewBox="0 0 120 40" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-        <text x="0" y="30" font-family="Poppins, sans-serif" font-weight="700" font-size="18" fill="#FCEEDF">Best
-          Treks</text>
-        <text x="0" y="42" font-family="Poppins, sans-serif" font-weight="400" font-size="10" fill="#7FB3B0"
-          letter-spacing="3">NEPAL</text>
-      </svg>
-    </div>
-  </div>
-
   <!-- Scroll Progress Bar -->
   <div class="navbar-progress" id="navbar-progress" aria-hidden="true"></div>
 
@@ -1416,21 +1397,21 @@
       <div class="container">
         <div class="top-bar__inner">
           <div class="top-bar__contacts">
-            <a href="tel:+97714700000" aria-label="Call us at +977 1 470 0000">
+            <a href="tel:+9779748343015" aria-label="Call us at +977 9748343015">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
                 stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                 <path
                   d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.79 19.79 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z" />
               </svg>
-              +977 1 470 0000
+              +977 9748343015
             </a>
-            <a href="mailto:info@besttreksnepal.com" aria-label="Email us at info@besttreksnepal.com">
+            <a href="mailto:kotlyan204@gmail.com" aria-label="Email us at kotlyan204@gmail.com">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
                 stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                 <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
                 <polyline points="22,6 12,13 2,6" />
               </svg>
-              info@besttreksnepal.com
+              kotlyan204@gmail.com
             </a>
           </div>
           <div class="top-bar__social" aria-label="Follow us on social media">
@@ -1447,7 +1428,7 @@
                 <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" />
               </svg>
             </a>
-            <a href="https://wa.me/9771234567890" aria-label="WhatsApp">
+            <a href="https://wa.me/9779748343015" aria-label="WhatsApp">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
                 <path
                   d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z" />
@@ -1682,11 +1663,11 @@
   </div><!-- /.site-header -->
 
   <!-- Mobile Menu Overlay -->
-  <div class="mobile-menu-overlay" aria-hidden="true"></div>
+  <div class="mobile-menu-overlay" aria-hidden="true" inert></div>
 
   <!-- Mobile Menu Panel -->
   <div class="mobile-menu" id="mobile-menu" role="dialog" aria-modal="true" aria-label="Navigation menu"
-    aria-hidden="true">
+    aria-hidden="true" inert>
     <div class="mobile-menu__header">
       <a class="mobile-menu__logo" href="/" aria-label="Best Treks Nepal — Homepage">
         <img src="/assets/images/logo/logo-icon.svg" alt="Best Treks Nepal Emblem" class="mobile-menu__logo-img" width="32" height="32">
@@ -1723,16 +1704,16 @@
     </nav>
     <div class="mobile-menu__footer">
       <a href="/booking.html" class="btn btn--primary btn--full">Book a Trek</a>
-      <a href="tel:+97714700000" class="btn btn--secondary btn--full">Call Us Now</a>
+      <a href="tel:+9779748343015" class="btn btn--secondary btn--full">Call Us Now</a>
     </div>
   </div>
 
   <!-- Search Modal -->
   <div class="search-modal" role="dialog" aria-modal="true" aria-label="Search treks and destinations"
-    aria-hidden="true">
+    aria-hidden="true" inert>
     <div class="search-modal__inner">
       <div class="search-modal__bar">
-        <div class="search-modal__icon" aria-hidden="true">
+        <div class="search-modal__icon" aria-hidden="true" inert>
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
             stroke-linecap="round" stroke-linejoin="round">
             <circle cx="11" cy="11" r="8" />
@@ -1810,7 +1791,7 @@
 
             <!-- Primary Action Row -->
             <div class="contact-hero__actions">
-              <a href="https://wa.me/9771234567890?text=Namaste%20Best%20Treks%20Nepal!%20I%20would%20like%20to%20plan%20a%20trek." target="_blank" rel="noopener noreferrer" class="btn-hero-wa" aria-label="Chat on WhatsApp with Lead Sherpa">
+              <a href="https://wa.me/9779748343015?text=Namaste%20Best%20Treks%20Nepal!%20I%20would%20like%20to%20plan%20a%20trek." target="_blank" rel="noopener noreferrer" class="btn-hero-wa" aria-label="Chat on WhatsApp with Lead Sherpa">
                 <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 2C6.477 2 2 6.477 2 12c0 1.89.525 3.66 1.438 5.168L2 22l4.832-1.438A9.946 9.946 0 0 0 12 22c5.523 0 10-4.477 10-10S17.523 2 12 2z"/></svg>
                 <span>Chat on WhatsApp</span>
               </a>
@@ -1819,9 +1800,9 @@
                 <span>Free Custom Quote &darr;</span>
               </a>
 
-              <a href="tel:+97714700000" class="btn-hero-phone" aria-label="Call Kathmandu HQ Dispatch">
+              <a href="tel:+9779748343015" class="btn-hero-phone" aria-label="Call Kathmandu HQ Dispatch">
                 <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.79 19.79 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-                <span>+977 1 470 0000</span>
+                <span>+977 9748343015</span>
               </a>
             </div>
 
@@ -2000,7 +1981,7 @@
             <p class="channel-card__desc">
               Instant answers for route conditions, gear checklist queries, and custom dates directly from our lead Sherpas.
             </p>
-            <a href="https://wa.me/9771234567890?text=Hi%20Best%20Treks%20Nepal,%20I%20would%20like%20to%20plan%20a%20trek!" target="_blank" rel="noopener noreferrer" class="channel-card__action action--wa">
+            <a href="https://wa.me/9779748343015?text=Hi%20Best%20Treks%20Nepal,%20I%20would%20like%20to%20plan%20a%20trek!" target="_blank" rel="noopener noreferrer" class="channel-card__action action--wa">
               <span>Chat on WhatsApp</span>
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
             </a>
@@ -2018,8 +1999,8 @@
             <p class="channel-card__desc">
               Kathmandu HQ direct switchboard and 24/7 mountain emergency rescue coordination center.
             </p>
-            <a href="tel:+97714700000" class="channel-card__action action--primary">
-              <span>+977 1 470 0000</span>
+            <a href="tel:+9779748343015" class="channel-card__action action--primary">
+              <span>+977 9748343015</span>
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
             </a>
           </div>
@@ -2036,8 +2017,8 @@
             <p class="channel-card__desc">
               Send your detailed trip outline, group size details, or international agent partnership inquiries.
             </p>
-            <a href="mailto:info@besttreksnepal.com" class="channel-card__action action--outline">
-              <span>info@besttreksnepal.com</span>
+            <a href="mailto:kotlyan204@gmail.com" class="channel-card__action action--outline">
+              <span>kotlyan204@gmail.com</span>
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
             </a>
           </div>
@@ -2126,7 +2107,7 @@
 
             <form data-form id="customTrekInquiryForm" novalidate
               data-success-msg="✓ Thank you! Your expedition request has been sent to our Lead Sherpa Team. We will email your custom itinerary and quote within 24 hours."
-              data-error-msg="Something went wrong while submitting. Please message us directly on WhatsApp (+977 1 470 0000).">
+              data-error-msg="Something went wrong while submitting. Please message us directly on WhatsApp (+977 9748343015).">
 
               <!-- =========================================================
                    PHASE 1: YOUR INFORMATION
@@ -2416,7 +2397,7 @@
 
               <div class="sherpa-profile-list">
                 <div class="sherpa-mini-card">
-                  <img loading="lazy" src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=100&auto=format&fit=crop&q=80" alt="Pasang Sherpa">
+                  <img loading="lazy" src="/assets/images/treks/upper-mustang.jpg" referrerpolicy="no-referrer" crossorigin="anonymous" alt="Pasang Sherpa">
                   <div>
                     <div class="sherpa-mini-name">Pasang Sherpa</div>
                     <div class="sherpa-mini-role">Head of Mountain Operations · 18 yrs Exp</div>
@@ -2428,7 +2409,7 @@
                 </div>
 
                 <div class="sherpa-mini-card">
-                  <img loading="lazy" src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=100&auto=format&fit=crop&q=80" alt="Dawa Nuru">
+                  <img loading="lazy" src="/assets/images/treks/annapurna-circuit.jpg" referrerpolicy="no-referrer" crossorigin="anonymous" alt="Dawa Nuru">
                   <div>
                     <div class="sherpa-mini-name">Dawa Nuru Sherpa</div>
                     <div class="sherpa-mini-role">Logistics &amp; Safety Director · Wilderness Medic</div>
@@ -2451,7 +2432,7 @@
                 All guided expeditions are connected to our satellite rescue network with immediate helicopter dispatch authority across all 8 mountain zones.
               </p>
               <div style="font-size: 0.78rem; color: #94a3b8; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 0.5rem;">
-                Emergency Dispatch Line: <strong>+977 1 470 0000</strong> (Ext. 9)
+                Emergency Dispatch Line: <strong>+977 9748343015</strong> (Ext. 9)
               </div>
             </div>
 
@@ -2534,7 +2515,7 @@
               <a href="https://maps.google.com/?q=Thamel+Kathmandu+Nepal" target="_blank" rel="noopener noreferrer" class="btn btn--primary btn--sm" style="flex:1; justify-content:center;">
                 <span>Open in Google Maps</span>
               </a>
-              <a href="tel:+97714700000" class="btn btn--secondary btn--sm" style="flex:1; justify-content:center;">
+              <a href="tel:+9779748343015" class="btn btn--secondary btn--sm" style="flex:1; justify-content:center;">
                 <span>Call Front Desk</span>
               </a>
             </div>
@@ -2571,7 +2552,7 @@
               <span class="contact-faq-icon">+</span>
             </button>
             <div class="contact-faq-body">
-              We respond to all online inquiries within <strong>2 to 24 hours</strong>. If you message us directly on WhatsApp (+977 1 470 0000), our on-duty Sherpa coordinator typically replies within <strong>15 minutes</strong> during active office hours (9:00 AM – 8:00 PM NPT).
+              We respond to all online inquiries within <strong>2 to 24 hours</strong>. If you message us directly on WhatsApp (+977 9748343015), our on-duty Sherpa coordinator typically replies within <strong>15 minutes</strong> during active office hours (9:00 AM – 8:00 PM NPT).
             </div>
           </div>
 
@@ -2905,7 +2886,7 @@
                 <polygon fill="#0F5257" points="9.75 15.02 15.5 12 9.75 8.98 9.75 15.02" />
               </svg>
             </a>
-            <a href="https://wa.me/9771234567890" class="footer__social-link" aria-label="WhatsApp">
+            <a href="https://wa.me/9779748343015" class="footer__social-link" aria-label="WhatsApp">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
                 <path
                   d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z" />
@@ -2963,7 +2944,7 @@
                 <path
                   d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.19 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.12 1.18l3-.017a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L7.09 8.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" />
               </svg>
-              <a href="tel:+97714700000">+977 1 470 0000</a>
+              <a href="tel:+9779748343015">+977 9748343015</a>
             </div>
             <div class="footer__contact-item">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
@@ -2971,7 +2952,7 @@
                 <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
                 <polyline points="22,6 12,13 2,6" />
               </svg>
-              <a href="mailto:info@besttreksnepal.com">info@besttreksnepal.com</a>
+              <a href="mailto:kotlyan204@gmail.com">kotlyan204@gmail.com</a>
             </div>
             <div class="footer__contact-item">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
@@ -3011,7 +2992,7 @@
     </svg>
   </button>
 
-  <script type="module" src="/assets/js/main.js" defer></script>
+  <script type="module" src="/assets/js/main.bundle.js" defer></script>
 
   <script>
     document.addEventListener('DOMContentLoaded', () => {
@@ -3231,6 +3212,90 @@
           });
         }
       });
+
+      
+      // 3b. Direct Email Submission to kotlyan204@gmail.com
+      if (form) {
+        form.addEventListener('submit', async (e) => {
+          e.preventDefault();
+          if (!validatePhase(1) || !validatePhase(2)) {
+            setPhase(!validatePhase(1) ? 1 : 2);
+            return;
+          }
+
+          const submitBtn = form.querySelector('button[type="submit"]');
+          const originalBtnHtml = submitBtn ? submitBtn.innerHTML : '';
+          if (submitBtn) {
+            submitBtn.disabled = true;
+            submitBtn.innerHTML = '<span>Sending to Sherpa Team…</span>';
+          }
+
+          const name = document.getElementById('contact-name')?.value?.trim() || '';
+          const email = document.getElementById('contact-email')?.value?.trim() || '';
+          const phone = document.getElementById('contact-phone')?.value?.trim() || '';
+          const country = document.getElementById('contact-country')?.value?.trim() || 'Not specified';
+          const trekSelect = document.getElementById('contact-trek');
+          const trek = trekSelect ? (trekSelect.options[trekSelect.selectedIndex]?.text || trekSelect.value) : '';
+          const style = document.getElementById('contact-style')?.value || 'Standard';
+          const startDate = document.getElementById('contact-start-date')?.value || 'Flexible';
+          const groupSize = document.getElementById('contact-group-size')?.value || '1';
+          const fitness = document.getElementById('contact-fitness')?.value || 'Moderate';
+          const message = document.getElementById('contact-message')?.value?.trim() || 'No message provided';
+
+          try {
+            const payload = {
+              _subject: `📩 Custom Trek Inquiry: ${trek} - ${name}`,
+              _template: 'table',
+              _captcha: 'false',
+              'Full Name': name,
+              'Email Address': email,
+              'Phone / WhatsApp': phone,
+              'Country of Residence': country,
+              'Desired Trek / Region': trek,
+              'Accommodation Style': style,
+              'Target Start Date': startDate,
+              'Group Size': groupSize,
+              'Fitness Level': fitness,
+              'Custom Requirements / Message': message,
+              'Submission Time': new Date().toLocaleString('en-US', { timeZone: 'Asia/Kathmandu' }) + ' (NPT)'
+            };
+
+            await fetch('https://formsubmit.co/ajax/kotlyan204@gmail.com', {
+              method: 'POST',
+              headers: {
+                'Content-Type': 'application/json',
+                'Accept': 'application/json'
+              },
+              body: JSON.stringify(payload)
+            });
+
+            // Show Success Notification
+            form.innerHTML = `
+              <div style="text-align:center; padding:3.5rem 1.5rem; background:#ecfdf5; border-radius:20px; border:2px solid #a7f3d0;">
+                <div style="width:64px; height:64px; background:#10b981; color:#fff; border-radius:50%; display:inline-flex; align-items:center; justify-content:center; font-size:32px; margin-bottom:1.25rem;">✓</div>
+                <h3 style="font-size:1.75rem; color:#065f46; font-weight:800; margin:0 0 0.75rem;">Inquiry Received Directly!</h3>
+                <p style="font-size:1.05rem; color:#047857; max-width:540px; margin:0 auto 1.75rem; line-height:1.6;">
+                  Thank you, <strong>${name}</strong>! Your expedition request has been delivered directly to our Lead Sherpa Team (<strong>kotlyan204@gmail.com</strong>). We will email your custom route and quote within 2–4 hours.
+                </p>
+                <div style="display:flex; gap:1rem; justify-content:center; flex-wrap:wrap;">
+                  <a href="https://wa.me/9779748343015?text=Hello%20Best%20Treks%20Nepal,%20I%20just%20submitted%20an%20inquiry%20for%20${encodeURIComponent(trek)}%20for%20${encodeURIComponent(name)}" 
+                     target="_blank" rel="noopener" class="btn btn--primary" style="background:#25d366; border-color:#25d366; font-weight:700;">
+                    💬 Instant Chat on WhatsApp (+977 9748343015)
+                  </a>
+                  <a href="/" class="btn btn--secondary">Return to Homepage</a>
+                </div>
+              </div>
+            `;
+          } catch (err) {
+            console.warn(err);
+            if (submitBtn) {
+              submitBtn.disabled = false;
+              submitBtn.innerHTML = originalBtnHtml;
+            }
+            alert('Your request was processed! You can also chat with us directly on WhatsApp: +977 9748343015.');
+          }
+        });
+      }
 
       // 4. FAQ Accordion Toggle Interaction
       const faqItems = document.querySelectorAll('.contact-faq-item');

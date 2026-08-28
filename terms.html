@@ -23,19 +23,12 @@
   <!-- Google Fonts (Poppins, Inter, Playfair Display) -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link
-    href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&family=Inter:wght@400;500;600;700&family=Playfair+Display:ital,wght@1,700&display=swap"
-    rel="stylesheet">
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&family=Inter:wght@400;500;600;700&family=Playfair+Display:ital,wght@1,700&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&family=Inter:wght@400;500;600;700&family=Playfair+Display:ital,wght@1,700&display=swap" media="print" onload="this.media='all'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&family=Inter:wght@400;500;600;700&family=Playfair+Display:ital,wght@1,700&display=swap"></noscript>
 
   <!-- Core Stylesheets in exact required order -->
-  <link rel="stylesheet" href="/assets/css/reset.css">
-  <link rel="stylesheet" href="/assets/css/variables.css">
-  <link rel="stylesheet" href="/assets/css/typography.css">
-  <link rel="stylesheet" href="/assets/css/layout.css">
-  <link rel="stylesheet" href="/assets/css/components.css">
-  <link rel="stylesheet" href="/assets/css/animations.css">
-  <link rel="stylesheet" href="/assets/css/utilities.css">
-  <link rel="stylesheet" href="/assets/css/responsive.css">
+  <link rel="preload" as="style" href="/assets/css/style.css">
   <link rel="stylesheet" href="/assets/css/style.css">
 
   <!-- Structured Data JSON-LD -->
@@ -412,21 +405,21 @@
       <div class="container">
         <div class="top-bar__inner">
           <div class="top-bar__contacts">
-            <a href="tel:+97714700000" aria-label="Call us at +977 1 470 0000">
+            <a href="tel:+9779748343015" aria-label="Call us at +977 9748343015">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
                 stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                 <path
                   d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.79 19.79 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z" />
               </svg>
-              +977 1 470 0000
+              +977 9748343015
             </a>
-            <a href="mailto:info@besttreksnepal.com" aria-label="Email us at info@besttreksnepal.com">
+            <a href="mailto:kotlyan204@gmail.com" aria-label="Email us at kotlyan204@gmail.com">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
                 stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                 <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
                 <polyline points="22,6 12,13 2,6" />
               </svg>
-              info@besttreksnepal.com
+              kotlyan204@gmail.com
             </a>
           </div>
           <div class="top-bar__social" aria-label="Follow us on social media">
@@ -443,7 +436,7 @@
                 <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" />
               </svg>
             </a>
-            <a href="https://wa.me/9771234567890" aria-label="WhatsApp">
+            <a href="https://wa.me/9779748343015" aria-label="WhatsApp">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
                 <path
                   d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z" />
@@ -651,11 +644,11 @@
   </div><!-- /.site-header -->
 
   <!-- Mobile Menu Overlay -->
-  <div class="mobile-menu-overlay" aria-hidden="true"></div>
+  <div class="mobile-menu-overlay" aria-hidden="true" inert></div>
 
   <!-- Mobile Menu Panel -->
   <div class="mobile-menu" id="mobile-menu" role="dialog" aria-modal="true" aria-label="Navigation menu"
-    aria-hidden="true">
+    aria-hidden="true" inert>
     <div class="mobile-menu__header">
       <a class="mobile-menu__logo" href="/" aria-label="Best Treks Nepal — Homepage">
         <img src="/assets/images/logo/logo-icon.svg" alt="Best Treks Nepal Emblem" class="mobile-menu__logo-img" width="32" height="32">
@@ -679,16 +672,16 @@
     </nav>
     <div class="mobile-menu__footer">
       <a href="/booking.html" class="btn btn--primary btn--full">Book a Trek</a>
-      <a href="tel:+97714700000" class="btn btn--secondary btn--full">Call Us Now</a>
+      <a href="tel:+9779748343015" class="btn btn--secondary btn--full">Call Us Now</a>
     </div>
   </div>
 
   <!-- Search Modal -->
   <div class="search-modal" role="dialog" aria-modal="true" aria-label="Search treks and destinations"
-    aria-hidden="true">
+    aria-hidden="true" inert>
     <div class="search-modal__inner">
       <div class="search-modal__bar">
-        <div class="search-modal__icon" aria-hidden="true">
+        <div class="search-modal__icon" aria-hidden="true" inert>
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
             stroke-linecap="round" stroke-linejoin="round">
             <circle cx="11" cy="11" r="8" />
@@ -784,7 +777,7 @@
           <div style="background:#f8fafc; border:1px solid #e2e8f0; border-radius:14px; padding:1.15rem; margin-top:1.5rem; text-align:center;">
             <div style="font-size:0.82rem; font-weight:800; color:#0f172a; margin-bottom:0.35rem;">💬 Questions About Terms?</div>
             <p style="font-size:0.75rem; color:#64748b; margin:0 0 0.75rem; line-height:1.45;">Our Kathmandu reservation team is available 24/7 on WhatsApp.</p>
-            <a href="https://wa.me/9771234567890" target="_blank" class="btn btn--primary btn--sm btn--full" style="padding:0.5rem 0.75rem; font-size:0.78rem; font-weight:700; border-radius:8px;">
+            <a href="https://wa.me/9779748343015" target="_blank" class="btn btn--primary btn--sm btn--full" style="padding:0.5rem 0.75rem; font-size:0.78rem; font-weight:700; border-radius:8px;" rel="noopener noreferrer">
               Chat on WhatsApp →
             </a>
           </div>
@@ -829,7 +822,7 @@
             <span class="legal-section-num">Clause 3.0</span>
             <h2 class="legal-section-heading">Cancellation, Refunds &amp; Trip Postponement Policy</h2>
             <p class="legal-paragraph">
-              We understand that unforeseen life events, medical emergencies, or international travel restrictions can occur. Cancellation requests must be submitted in writing to <a href="mailto:info@besttreksnepal.com" style="color:#0f5257; font-weight:700;">info@besttreksnepal.com</a>.
+              We understand that unforeseen life events, medical emergencies, or international travel restrictions can occur. Cancellation requests must be submitted in writing to <a href="mailto:kotlyan204@gmail.com" style="color:#0f5257; font-weight:700;">kotlyan204@gmail.com</a>.
             </p>
 
             <div class="legal-table-wrap">
@@ -1019,7 +1012,7 @@
                 <polygon fill="#0F5257" points="9.75 15.02 15.5 12 9.75 8.98 9.75 15.02" />
               </svg>
             </a>
-            <a href="https://wa.me/9771234567890" class="footer__social-link" aria-label="WhatsApp">
+            <a href="https://wa.me/9779748343015" class="footer__social-link" aria-label="WhatsApp">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
                 <path
                   d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z" />
@@ -1077,7 +1070,7 @@
                 <path
                   d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.19 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.12 1.18l3-.017a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L7.09 8.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" />
               </svg>
-              <a href="tel:+97714700000">+977 1 470 0000</a>
+              <a href="tel:+9779748343015">+977 9748343015</a>
             </div>
             <div class="footer__contact-item">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
@@ -1085,7 +1078,7 @@
                 <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
                 <polyline points="22,6 12,13 2,6" />
               </svg>
-              <a href="mailto:info@besttreksnepal.com">info@besttreksnepal.com</a>
+              <a href="mailto:kotlyan204@gmail.com">kotlyan204@gmail.com</a>
             </div>
             <div class="footer__contact-item">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
@@ -1126,7 +1119,7 @@
     </svg>
   </button>
 
-  <script type="module" src="/assets/js/main.js" defer></script>
+  <script type="module" src="/assets/js/main.bundle.js" defer></script>
 
   <!-- Static fallback for no-JS environments -->
   <noscript>

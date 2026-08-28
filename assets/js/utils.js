@@ -183,6 +183,7 @@ export const trapFocus = (container, e) => {
  * Lock body scroll (for modals/menus)
  */
 export const lockScroll = () => {
+  document.documentElement.style.overflow = 'hidden';
   document.body.style.overflow = 'hidden';
   document.body.style.paddingRight = `${window.innerWidth - document.documentElement.clientWidth}px`;
 };
@@ -191,7 +192,8 @@ export const lockScroll = () => {
  * Unlock body scroll
  */
 export const unlockScroll = () => {
-  document.body.style.overflow   = '';
+  document.documentElement.style.overflow = '';
+  document.body.style.overflow = '';
   document.body.style.paddingRight = '';
 };
 

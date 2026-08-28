@@ -14,17 +14,12 @@
   <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,600;0,700;1,400&family=Poppins:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,600;0,700;1,400&family=Poppins:wght@600;700;800&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,600;0,700;1,400&family=Poppins:wght@600;700;800&display=swap" media="print" onload="this.media='all'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,600;0,700;1,400&family=Poppins:wght@600;700;800&display=swap"></noscript>
 
   <!-- 9 Standard CSS Partials in Exact Order -->
-  <link rel="stylesheet" href="/assets/css/reset.css">
-  <link rel="stylesheet" href="/assets/css/variables.css">
-  <link rel="stylesheet" href="/assets/css/typography.css">
-  <link rel="stylesheet" href="/assets/css/layout.css">
-  <link rel="stylesheet" href="/assets/css/components.css">
-  <link rel="stylesheet" href="/assets/css/animations.css">
-  <link rel="stylesheet" href="/assets/css/utilities.css">
-  <link rel="stylesheet" href="/assets/css/responsive.css">
+  <link rel="preload" as="style" href="/assets/css/style.css">
   <link rel="stylesheet" href="/assets/css/style.css">
 
   <link rel="icon" href="/favicon.svg" type="image/svg+xml">
@@ -241,18 +236,19 @@
   </style></noscript>
 </head>
 <body>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
 
   <!-- Top Bar -->
   <div class="top-bar">
     <div class="container top-bar__inner">
       <div class="top-bar__left">
-        <a href="tel:+97714700000" class="top-bar__link">
+        <a href="tel:+9779748343015" class="top-bar__link">
           <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.19 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.12 1.18l3-.017a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L7.09 8.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-          +977 1 470 0000
+          +977 9748343015
         </a>
-        <a href="mailto:info@besttreksnepal.com" class="top-bar__link">
+        <a href="mailto:kotlyan204@gmail.com" class="top-bar__link">
           <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
-          info@besttreksnepal.com
+          kotlyan204@gmail.com
         </a>
       </div>
       <div class="top-bar__right">
@@ -492,8 +488,8 @@
           <h3 class="footer__col-title">Kathmandu Headquarters</h3>
           <address style="font-style:normal;">
             <div class="footer__contact-item">Bhagawati Bahal, Thamel, Kathmandu</div>
-            <div class="footer__contact-item"><a href="tel:+97714700000">+977 1 470 0000</a></div>
-            <div class="footer__contact-item"><a href="mailto:info@besttreksnepal.com">info@besttreksnepal.com</a></div>
+            <div class="footer__contact-item"><a href="tel:+9779748343015">+977 9748343015</a></div>
+            <div class="footer__contact-item"><a href="mailto:kotlyan204@gmail.com">kotlyan204@gmail.com</a></div>
           </address>
         </div>
       </div>
@@ -518,7 +514,7 @@
     <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="18 15 12 9 6 15"/></svg>
   </button>
 
-  <script type="module" src="/assets/js/main.js"></script>
+  <script defer src="/assets/js/main.bundle.js"></script>
   <script>
     function filterFaqs() {
       const q = document.getElementById('faqLiveSearch').value.toLowerCase();

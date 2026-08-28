@@ -13,7 +13,7 @@ export const initWhatsAppWidget = () => {
   const btn = document.createElement('a');
   btn.id = 'floatingWhatsAppBtn';
   btn.className = 'floating-whatsapp';
-  btn.href = 'https://wa.me/9779851000000?text=Hello%20Best%20Treks%20Nepal,%20I\'m%20planning%20a%20trek%20in%20Nepal%20and%20would%20like%20more%20information!';
+  btn.href = 'https://wa.me/9779748343015?text=Hello%20Best%20Treks%20Nepal,%20I\'m%20planning%20a%20trek%20in%20Nepal%20and%20would%20like%20more%20information!';
   btn.target = '_blank';
   btn.rel = 'noopener noreferrer';
   btn.setAttribute('aria-label', 'Chat with our Himalayan Trek Expert on WhatsApp');

@@ -58,19 +58,12 @@
   <!-- Google Fonts Preconnect -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link
-    href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap"
-    rel="stylesheet">
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" media="print" onload="this.media='all'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Inter:wght@400;500;600;700&display=swap"></noscript>
 
   <!-- 9 Standard Stylesheets per AGENTS.md -->
-  <link rel="stylesheet" href="/assets/css/reset.css">
-  <link rel="stylesheet" href="/assets/css/variables.css">
-  <link rel="stylesheet" href="/assets/css/typography.css">
-  <link rel="stylesheet" href="/assets/css/layout.css">
-  <link rel="stylesheet" href="/assets/css/components.css">
-  <link rel="stylesheet" href="/assets/css/animations.css">
-  <link rel="stylesheet" href="/assets/css/utilities.css">
-  <link rel="stylesheet" href="/assets/css/responsive.css">
+  <link rel="preload" as="style" href="/assets/css/style.css">
   <link rel="stylesheet" href="/assets/css/style.css">
 
   <!-- JSON-LD Structured Data Graph (Article + FAQPage + Breadcrumbs) -->
@@ -689,6 +682,7 @@
 </head>
 
 <body>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
   <!-- Reading Progress Bar -->
   <div class="article-reading-progress" id="readingProgress"></div>
 
@@ -708,19 +702,19 @@
       <div class="container">
         <div class="top-bar__inner">
           <div class="top-bar__contacts">
-            <a href="tel:+97714700000" aria-label="Call us at +977 1 470 0000">
+            <a href="tel:+9779748343015" aria-label="Call us at +977 9748343015">
               <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.79 19.79 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-              +977 1 470 0000
+              +977 9748343015
             </a>
-            <a href="mailto:info@besttreksnepal.com" aria-label="Email us at info@besttreksnepal.com">
+            <a href="mailto:kotlyan204@gmail.com" aria-label="Email us at kotlyan204@gmail.com">
               <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
-              info@besttreksnepal.com
+              kotlyan204@gmail.com
             </a>
           </div>
           <div class="top-bar__social" aria-label="Follow us on social media">
             <a href="https://www.facebook.com/besttreksnepal" aria-label="Facebook" target="_blank" rel="noopener noreferrer"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>
             <a href="https://www.instagram.com/besttreksnepal" aria-label="Instagram" target="_blank" rel="noopener noreferrer"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></a>
-            <a href="https://wa.me/9771234567890" aria-label="WhatsApp" target="_blank" rel="noopener noreferrer"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 2C6.477 2 2 6.477 2 12c0 1.89.525 3.66 1.438 5.168L2 22l4.832-1.438A9.946 9.946 0 0 0 12 22c5.523 0 10-4.477 10-10S17.523 2 12 2z"/></svg></a>
+            <a href="https://wa.me/9779748343015" aria-label="WhatsApp" target="_blank" rel="noopener noreferrer"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 2C6.477 2 2 6.477 2 12c0 1.89.525 3.66 1.438 5.168L2 22l4.832-1.438A9.946 9.946 0 0 0 12 22c5.523 0 10-4.477 10-10S17.523 2 12 2z"/></svg></a>
           </div>
         </div>
       </div>
@@ -920,8 +914,8 @@
   </div>
 
   <!-- Mobile Menu Overlay & Drawer -->
-  <div class="mobile-menu-overlay" aria-hidden="true"></div>
-  <div class="mobile-menu" id="mobile-nav" role="dialog" aria-modal="true" aria-label="Mobile navigation" aria-hidden="true">
+  <div class="mobile-menu-overlay" aria-hidden="true" inert></div>
+  <div class="mobile-menu" id="mobile-nav" role="dialog" aria-modal="true" aria-label="Mobile navigation" aria-hidden="true" inert>
     <div class="mobile-menu__header">
       <a class="mobile-menu__logo" href="/" aria-label="Best Treks Nepal — Homepage">
         <div class="mobile-menu__logo-text">Best Treks Nepal<span>Adventure Awaits</span></div>
@@ -953,12 +947,12 @@
     </nav>
     <div class="mobile-menu__footer">
       <a href="/contact.html" class="btn btn--primary btn--full">Get Trekking Permits</a>
-      <a href="tel:+97714700000" class="btn btn--secondary btn--full" style="margin-top:0.5rem;">Call Us: +977 1 470 0000</a>
+      <a href="tel:+9779748343015" class="btn btn--secondary btn--full" style="margin-top:0.5rem;">Call Us: +977 9748343015</a>
     </div>
   </div>
 
   <!-- Search Modal -->
-  <div class="search-modal" role="dialog" aria-modal="true" aria-label="Search treks and destinations" aria-hidden="true">
+  <div class="search-modal" role="dialog" aria-modal="true" aria-label="Search treks and destinations" aria-hidden="true" inert>
     <div class="search-modal__inner">
       <div class="search-modal__bar">
         <div class="search-modal__icon">
@@ -1011,7 +1005,7 @@
       <!-- Author Bar -->
       <div class="article-author-bar">
         <div class="article-author-info">
-          <img src="/assets/images/team/pasang-sherpa.jpg" alt="Pasang Sherpa & Legal Logistics Team" class="article-author-avatar" width="48" height="48" loading="lazy">
+          <img src="/assets/images/treks/upper-mustang.jpg" alt="Pasang Sherpa & Legal Logistics Team" class="article-author-avatar" width="48" height="48" loading="lazy">
           <div>
             <div class="article-author-name">Pasang Sherpa &amp; Government Permit Liaison Team</div>
             <div class="article-author-role">Director of Himalayan Logistics · NTB &amp; TAAN Accredited · 18+ Yrs Expedition Management</div>
@@ -1400,7 +1394,7 @@
             </div>
             <div class="inline-cta-actions">
               <a href="/contact.html?subject=Solo+Permit+Matching" class="inline-cta-btn-primary">Join a Permit Group →</a>
-              <a href="https://wa.me/9779851000000?text=Hi%20Best%20Treks%20Nepal,%20I'm%20a%20solo%20trekker%20looking%20for%20a%20Restricted%20Area%20Permit%20group" class="inline-cta-btn-whatsapp" target="_blank" rel="noopener noreferrer">
+              <a href="https://wa.me/9779748343015?text=Hi%20Best%20Treks%20Nepal,%20I'm%20a%20solo%20trekker%20looking%20for%20a%20Restricted%20Area%20Permit%20group" class="inline-cta-btn-whatsapp" target="_blank" rel="noopener noreferrer">
                 <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 2C6.477 2 2 6.477 2 12c0 1.89.525 3.66 1.438 5.168L2 22l4.832-1.438A9.946 9.946 0 0 0 12 22c5.523 0 10-4.477 10-10S17.523 2 12 2z"/></svg>
                 <span>WhatsApp Permit Desk</span>
               </a>
@@ -1473,7 +1467,7 @@
 
             <div class="calc-cta-actions">
               <a href="/booking.html" class="calc-cta-btn-primary" id="calcBookingBtn">Book All-Inclusive Trek Package →</a>
-              <a href="https://wa.me/9779851000000" class="calc-cta-btn-whatsapp" id="calcWhatsappBtn" target="_blank" rel="noopener noreferrer">
+              <a href="https://wa.me/9779748343015" class="calc-cta-btn-whatsapp" id="calcWhatsappBtn" target="_blank" rel="noopener noreferrer">
                 <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 2C6.477 2 2 6.477 2 12c0 1.89.525 3.66 1.438 5.168L2 22l4.832-1.438A9.946 9.946 0 0 0 12 22c5.523 0 10-4.477 10-10S17.523 2 12 2z"/></svg>
                 <span>Ask Permit Officer on WhatsApp</span>
               </a>
@@ -1931,7 +1925,7 @@
         </div>
 
         <a href="/booking.html" class="tbw-btn">Book All-Inclusive Trek Package →</a>
-        <a href="https://wa.me/9779851000000?text=Hi%20Best%20Treks%20Nepal,%20I%20need%20assistance%20processing%20Nepal%20trekking%20permits" class="tbw-btn-whatsapp" target="_blank" rel="noopener noreferrer">
+        <a href="https://wa.me/9779748343015?text=Hi%20Best%20Treks%20Nepal,%20I%20need%20assistance%20processing%20Nepal%20trekking%20permits" class="tbw-btn-whatsapp" target="_blank" rel="noopener noreferrer">
           <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 2C6.477 2 2 6.477 2 12c0 1.89.525 3.66 1.438 5.168L2 22l4.832-1.438A9.946 9.946 0 0 0 12 22c5.523 0 10-4.477 10-10S17.523 2 12 2z"/></svg>
           <span>Chat with Permit Specialist</span>
         </a>
@@ -1966,7 +1960,7 @@
             Pasang Sherpa leads the permit procurement, emergency medevac, and regulatory logistics division at Best Treks Nepal. Working directly with the Nepal Tourism Board (NTB), Department of Immigration (DoI), and National Park headquarters across Solukhumbu, Mustang, and Manaslu, Pasang ensures every expedition departs with flawless legal documentation.
           </p>
           <div class="author-actions-row">
-            <a href="https://wa.me/9771234567890?text=Hello%20Pasang,%20I%20have%20questions%20about%20Nepal%20trekking%20permits" class="author-btn-whatsapp" target="_blank" rel="noopener noreferrer">
+            <a href="https://wa.me/9779748343015?text=Hello%20Pasang,%20I%20have%20questions%20about%20Nepal%20trekking%20permits" class="author-btn-whatsapp" target="_blank" rel="noopener noreferrer">
               <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 2C6.477 2 2 6.477 2 12c0 1.89.525 3.66 1.438 5.168L2 22l4.832-1.438A9.946 9.946 0 0 0 12 22c5.523 0 10-4.477 10-10S17.523 2 12 2z"/></svg>
               <span>Ask Pasang on WhatsApp</span>
             </a>
@@ -2067,7 +2061,7 @@
           <span>Book an All-Inclusive Trek Package</span>
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
         </a>
-        <a href="https://wa.me/9779851000000?text=Hello%20Pasang,%20I'm%20planning%20a%20trek%20in%20Nepal%20and%20need%20help%20with%20permits" class="cta-btn-whatsapp" target="_blank" rel="noopener noreferrer">
+        <a href="https://wa.me/9779748343015?text=Hello%20Pasang,%20I'm%20planning%20a%20trek%20in%20Nepal%20and%20need%20help%20with%20permits" class="cta-btn-whatsapp" target="_blank" rel="noopener noreferrer">
           <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 2C6.477 2 2 6.477 2 12c0 1.89.525 3.66 1.438 5.168L2 22l4.832-1.438A9.946 9.946 0 0 0 12 22c5.523 0 10-4.477 10-10S17.523 2 12 2z"/></svg>
           <span>Chat with Pasang on WhatsApp</span>
         </a>
@@ -2124,7 +2118,7 @@
                 <polygon fill="#0F5257" points="9.75 15.02 15.5 12 9.75 8.98 9.75 15.02" />
               </svg>
             </a>
-            <a href="https://wa.me/9771234567890" class="footer__social-link" aria-label="WhatsApp">
+            <a href="https://wa.me/9779748343015" class="footer__social-link" aria-label="WhatsApp">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
                 <path
                   d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z" />
@@ -2182,7 +2176,7 @@
                 <path
                   d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.19 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.12 1.18l3-.017a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L7.09 8.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" />
               </svg>
-              <a href="tel:+97714700000">+977 1 470 0000</a>
+              <a href="tel:+9779748343015">+977 9748343015</a>
             </div>
             <div class="footer__contact-item">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
@@ -2190,7 +2184,7 @@
                 <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
                 <polyline points="22,6 12,13 2,6" />
               </svg>
-              <a href="mailto:info@besttreksnepal.com">info@besttreksnepal.com</a>
+              <a href="mailto:kotlyan204@gmail.com">kotlyan204@gmail.com</a>
             </div>
             <div class="footer__contact-item">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
@@ -2403,7 +2397,7 @@
       }
       if (whatsappBtn) {
         const waMsg = encodeURIComponent(`Hello Pasang, I calculated permit costs for ${selectedName} (${trekkers} trekkers, est. $${usdTotal} USD). Can you assist with our permit clearances and package dates?`);
-        whatsappBtn.href = `https://wa.me/9779851000000?text=${waMsg}`;
+        whatsappBtn.href = `https://wa.me/9779748343015?text=${waMsg}`;
       }
     }
 
@@ -2479,7 +2473,7 @@
   </script>
 
   <!-- Global Shared Navigation Scripts -->
-  <script src="/assets/js/main.js" type="module"></script>
+  <script defer src="/assets/js/main.bundle.js"></script>
 </body>
 
 </html>

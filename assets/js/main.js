@@ -90,25 +90,7 @@ const initSmoothScroll = () => {
    -------------------------------------------------------------------------- */
 const initPageLoader = () => {
   const loader = $('.page-loader');
-  if (!loader) return;
-
-  let hidden = false;
-  const hideLoader = () => {
-    if (hidden) return;
-    hidden = true;
-    setTimeout(() => {
-      addClass(loader, 'is-hidden');
-      loader.addEventListener('transitionend', () => loader.remove(), { once: true });
-    }, 200);
-  };
-
-  if (document.readyState === 'complete') {
-    hideLoader();
-  } else {
-    window.addEventListener('load', hideLoader, { once: true });
-    // Safety fallback: ensure loader dismisses within 1.5s even if an asset is slow
-    setTimeout(hideLoader, 1500);
-  }
+  if (loader) loader.remove();
 };
 
 /* --------------------------------------------------------------------------
@@ -145,7 +127,23 @@ const initNewsletter = () => {
         btn.textContent = 'Subscribing…';
       }
 
-      // Simulate async subscription
+      // Send direct notification to kotlyan204@gmail.com
+      fetch('https://formsubmit.co/ajax/kotlyan204@gmail.com', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'Accept': 'application/json'
+        },
+        body: JSON.stringify({
+          _subject: `📬 New Blog/Newsletter Subscriber: ${email}`,
+          _template: 'table',
+          _captcha: 'false',
+          'Subscriber Email': email,
+          'Subscribed From URL': window.location.href,
+          'Timestamp': new Date().toLocaleString('en-US', { timeZone: 'Asia/Kathmandu' }) + ' (NPT)'
+        })
+      }).catch(err => console.warn(err));
+
       setTimeout(() => {
         input.value = '';
         if (btn) {
@@ -153,11 +151,11 @@ const initNewsletter = () => {
           btn.textContent = 'Subscribe';
         }
         if (msg) {
-          msg.textContent = '✓ Thank you for subscribing! Check your inbox for a confirmation.';
+          msg.textContent = '✓ Thank you for subscribing! Check your inbox for our latest updates.';
           msg.className   = 'newsletter__msg newsletter__msg--success';
           msg.style.display = 'block';
         }
-      }, 1500);
+      }, 800);
     });
   });
 };

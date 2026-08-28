@@ -23,19 +23,12 @@
   <!-- Google Fonts (Poppins, Inter, Playfair Display) -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link
-    href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&family=Inter:wght@400;500;600;700&family=Playfair+Display:ital,wght@1,700&display=swap"
-    rel="stylesheet">
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&family=Inter:wght@400;500;600;700&family=Playfair+Display:ital,wght@1,700&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&family=Inter:wght@400;500;600;700&family=Playfair+Display:ital,wght@1,700&display=swap" media="print" onload="this.media='all'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&family=Inter:wght@400;500;600;700&family=Playfair+Display:ital,wght@1,700&display=swap"></noscript>
 
   <!-- Core Stylesheets in exact required order -->
-  <link rel="stylesheet" href="/assets/css/reset.css">
-  <link rel="stylesheet" href="/assets/css/variables.css">
-  <link rel="stylesheet" href="/assets/css/typography.css">
-  <link rel="stylesheet" href="/assets/css/layout.css">
-  <link rel="stylesheet" href="/assets/css/components.css">
-  <link rel="stylesheet" href="/assets/css/animations.css">
-  <link rel="stylesheet" href="/assets/css/utilities.css">
-  <link rel="stylesheet" href="/assets/css/responsive.css">
+  <link rel="preload" as="style" href="/assets/css/style.css">
   <link rel="stylesheet" href="/assets/css/style.css">
 
   <!-- Structured Data JSON-LD -->
@@ -893,21 +886,21 @@
       <div class="container">
         <div class="top-bar__inner">
           <div class="top-bar__contacts">
-            <a href="tel:+97714700000" aria-label="Call us at +977 1 470 0000">
+            <a href="tel:+9779748343015" aria-label="Call us at +977 9748343015">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
                 stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                 <path
                   d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.79 19.79 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z" />
               </svg>
-              +977 1 470 0000
+              +977 9748343015
             </a>
-            <a href="mailto:info@besttreksnepal.com" aria-label="Email us at info@besttreksnepal.com">
+            <a href="mailto:kotlyan204@gmail.com" aria-label="Email us at kotlyan204@gmail.com">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
                 stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                 <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
                 <polyline points="22,6 12,13 2,6" />
               </svg>
-              info@besttreksnepal.com
+              kotlyan204@gmail.com
             </a>
           </div>
           <div class="top-bar__social" aria-label="Follow us on social media">
@@ -924,7 +917,7 @@
                 <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" />
               </svg>
             </a>
-            <a href="https://wa.me/9771234567890" aria-label="WhatsApp">
+            <a href="https://wa.me/9779748343015" aria-label="WhatsApp">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
                 <path
                   d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z" />
@@ -1159,11 +1152,11 @@
   </div><!-- /.site-header -->
 
   <!-- Mobile Menu Overlay -->
-  <div class="mobile-menu-overlay" aria-hidden="true"></div>
+  <div class="mobile-menu-overlay" aria-hidden="true" inert></div>
 
   <!-- Mobile Menu Panel -->
   <div class="mobile-menu" id="mobile-menu" role="dialog" aria-modal="true" aria-label="Navigation menu"
-    aria-hidden="true">
+    aria-hidden="true" inert>
     <div class="mobile-menu__header">
       <a class="mobile-menu__logo" href="/" aria-label="Best Treks Nepal — Homepage">
         <img src="/assets/images/logo/logo-icon.svg" alt="Best Treks Nepal Emblem" class="mobile-menu__logo-img" width="32" height="32">
@@ -1200,16 +1193,16 @@
     </nav>
     <div class="mobile-menu__footer">
       <a href="/booking.html" class="btn btn--primary btn--full">Book a Trek</a>
-      <a href="tel:+97714700000" class="btn btn--secondary btn--full">Call Us Now</a>
+      <a href="tel:+9779748343015" class="btn btn--secondary btn--full">Call Us Now</a>
     </div>
   </div>
 
   <!-- Search Modal -->
   <div class="search-modal" role="dialog" aria-modal="true" aria-label="Search treks and destinations"
-    aria-hidden="true">
+    aria-hidden="true" inert>
     <div class="search-modal__inner">
       <div class="search-modal__bar">
-        <div class="search-modal__icon" aria-hidden="true">
+        <div class="search-modal__icon" aria-hidden="true" inert>
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
             stroke-linecap="round" stroke-linejoin="round">
             <circle cx="11" cy="11" r="8" />
@@ -1564,7 +1557,7 @@
                   <span>Back to Traveler Info</span>
                 </button>
                 <button type="button" class="btn-phase-next" id="btnNextBook3">
-                  <span>Continue to Payment &amp; Deposit</span>
+                  <span>Continue to Cash on Arrival &amp; Confirmation</span>
                   <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
                 </button>
               </div>
@@ -1579,50 +1572,41 @@
               <div class="booking-panel-header">
                 <h2 class="booking-panel-title">
                   <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#0f5257" stroke-width="2.2"><rect width="20" height="14" x="2" y="5" rx="2"/><line x1="2" y1="10" x2="22" y2="10"/></svg>
-                  <span>4. Payment Method &amp; Deposit Confirmation</span>
+                  <span>4. Payment: Cash on Arrival in Kathmandu</span>
                 </h2>
-                <p class="booking-panel-desc">Lock in your dates with a 15% flexible deposit. The remaining 85% balance is payable in Kathmandu.</p>
+                <p class="booking-panel-desc">Zero advance deposit required. Pay 100% in cash upon arrival at our Kathmandu office during your pre-trek briefing.</p>
               </div>
 
               <!-- Payment Method Selector -->
-              <label class="form-label-custom">Preferred Payment Method for 15% Deposit</label>
-              <div class="payment-methods-grid">
-                
-                <div class="payment-method-pill is-selected" data-method="card">
-                  <span style="font-size:1.3rem;">💳</span>
-                  <span>Credit / Debit Card</span>
+              <label class="form-label-custom">Payment Method</label>
+              <div class="payment-method-single is-selected" style="background:#ecfdf5; border:2px solid #10b981; border-radius:16px; padding:1.25rem 1.5rem; display:flex; align-items:center; gap:1.25rem; margin-bottom:1.5rem; box-shadow:0 4px 14px rgba(16, 185, 129, 0.12);">
+                <div style="width:48px; height:48px; min-width:48px; background:#10b981; color:#ffffff; border-radius:50%; display:flex; align-items:center; justify-content:center; font-size:1.5rem; box-shadow:0 2px 8px rgba(16, 185, 129, 0.35);">
+                  💵
                 </div>
-
-                <div class="payment-method-pill" data-method="bank">
-                  <span style="font-size:1.3rem;">🏦</span>
-                  <span>Direct Bank Wire</span>
+                <div style="flex:1;">
+                  <div style="display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:0.5rem; margin-bottom:0.25rem;">
+                    <strong style="font-size:1.05rem; color:#065f46; font-weight:800;">100% Cash on Arrival in Kathmandu</strong>
+                    <span style="background:#d1fae5; color:#047857; font-size:0.75rem; font-weight:800; padding:0.2rem 0.6rem; border-radius:999px; border:1px solid #6ee7b7;">✓ Zero Advance Deposit Required</span>
+                  </div>
+                  <p style="font-size:0.84rem; color:#047857; line-height:1.5; margin:0;">
+                    No online credit card payment or advance deposit required. Pay in full in cash during your pre-trek briefing at our Kathmandu office before departure. Accepted currencies: USD, EUR, GBP, AUD, CAD, and NPR at official bank rates with 0% transaction fees.
+                  </p>
                 </div>
-
-                <div class="payment-method-pill" data-method="paypal">
-                  <span style="font-size:1.3rem;">🅿️</span>
-                  <span>PayPal / Apple Pay</span>
-                </div>
-
-                <div class="payment-method-pill" data-method="cash">
-                  <span style="font-size:1.3rem;">💵</span>
-                  <span>Cash on Arrival (KTM)</span>
-                </div>
-
               </div>
 
               <!-- Deposit Calculation Strip -->
               <div style="background:#f8fafc; border:1.5px solid #e2e8f0; border-radius:16px; padding:1.25rem; margin-bottom:1.5rem;">
-                <div style="display:flex; justify-content:space-between; font-size:0.88rem; color:#64748b; margin-bottom:0.5rem;">
-                  <span>Expedition Package Total:</span>
-                  <strong id="finalTotalDisplay" style="color:#0f172a;">$2,780 USD</strong>
+                <div style="display:flex; justify-content:space-between; font-size:0.88rem; color:#64748b; margin-bottom:0.65rem;">
+                  <span>Total Expedition Package Cost:</span>
+                  <strong id="finalTotalDisplay" style="color:#0f172a; font-size:1rem;">$2,780 USD</strong>
                 </div>
-                <div style="display:flex; justify-content:space-between; font-size:1.05rem; font-weight:800; color:#065f46; background:#ecfdf5; border:1px solid #a7f3d0; border-radius:10px; padding:0.65rem 0.85rem;">
-                  <span>⚡ 15% Deposit Due to Confirm:</span>
-                  <span id="finalDepositDisplay">$417 USD</span>
+                <div style="display:flex; justify-content:space-between; font-size:0.92rem; font-weight:700; color:#0369a1; background:#f0f9ff; border:1px solid #bae6fd; border-radius:10px; padding:0.65rem 0.85rem; margin-bottom:0.65rem;">
+                  <span>Advance Deposit Required Now:</span>
+                  <strong style="color:#0369a1;">$0 USD (Zero Advance Payment)</strong>
                 </div>
-                <div style="display:flex; justify-content:space-between; font-size:0.82rem; color:#64748b; margin-top:0.65rem;">
-                  <span>Remaining 85% Balance Due in Kathmandu:</span>
-                  <span id="finalBalanceDisplay" style="font-weight:700; color:#0f172a;">$2,363 USD</span>
+                <div style="display:flex; justify-content:space-between; font-size:1.05rem; font-weight:800; color:#065f46; background:#ecfdf5; border:1px solid #a7f3d0; border-radius:10px; padding:0.75rem 0.85rem;">
+                  <span>💵 Total Payable in Cash on Arrival:</span>
+                  <span id="finalBalanceDisplay">$2,780 USD</span>
                 </div>
               </div>
 
@@ -1631,7 +1615,7 @@
                 <label class="checkbox-item" style="align-items:flex-start;">
                   <input type="checkbox" id="termsCheck" required checked style="margin-top:3px;">
                   <span style="font-size:0.82rem; color:#475569; line-height:1.45;">
-                    I agree to the <a href="/terms.html" target="_blank" style="color:#0f5257; font-weight:700;">Terms &amp; Conditions</a> and understand that my 15% deposit secures all restricted permits and internal flights with free date transfers up to 30 days prior to departure.
+                    I agree to the <a href="/terms.html" target="_blank" style="color:#0f5257; font-weight:700;" rel="noopener noreferrer">Terms &amp; Conditions</a> and confirm that I will pay the total expedition cost in cash upon arrival at the Kathmandu briefing before trek departure.
                   </span>
                 </label>
               </div>
@@ -1642,7 +1626,7 @@
                   <span>Back to Add-Ons</span>
                 </button>
                 <button type="submit" class="summary-submit-btn" id="btnConfirmBooking" style="width:auto; padding:0.9rem 1.8rem;">
-                  <span>Confirm Reservation (Pay 15% Deposit) →</span>
+                  <span>Confirm Booking (Pay Cash on Arrival) →</span>
                 </button>
               </div>
 
@@ -1657,7 +1641,7 @@
           
           <!-- Trek Info Header -->
           <div class="summary-trek-header">
-            <img loading="lazy" src="/assets/images/destinations/everest.jpg" alt="Selected Trek" class="summary-trek-thumb" id="summaryThumb">
+            <img loading="lazy" src="/assets/images/treks/upper-mustang.jpg" alt="Selected Trek" class="summary-trek-thumb" id="summaryThumb">
             <div>
               <h3 class="summary-trek-title" id="summaryTitle">Everest Base Camp Trek</h3>
               <div class="summary-trek-meta">
@@ -1699,25 +1683,25 @@
             <span id="summaryTotalVal" style="color:#0f5257;">$2,780 USD</span>
           </div>
 
-          <!-- 15% Deposit Highlight -->
-          <div class="summary-deposit-box">
+          <!-- Cash on Arrival Highlight -->
+          <div class="summary-deposit-box" style="background:#ecfdf5; border:1.5px solid #a7f3d0; padding:0.85rem 1rem; border-radius:12px; margin-bottom:0.85rem; display:flex; justify-content:space-between; align-items:center;">
             <div>
-              <div style="font-size:0.75rem; font-weight:800; text-transform:uppercase; color:#065f46; letter-spacing:0.04em;">15% Deposit Due Today</div>
-              <div style="font-size:0.72rem; color:#047857;">Locks in permits &amp; mountain flights</div>
+              <div style="font-size:0.75rem; font-weight:800; text-transform:uppercase; color:#065f46; letter-spacing:0.04em;">Payment Mode</div>
+              <div style="font-size:0.75rem; color:#047857; font-weight:600;">100% Cash on Arrival in KTM</div>
             </div>
-            <strong id="summaryDepositVal">$417 USD</strong>
+            <strong id="summaryDepositVal" style="color:#059669; font-size:1.05rem;">$0 Advance</strong>
           </div>
 
-          <div class="summary-row" style="font-size:0.8rem; color:#64748b; margin-bottom:1.25rem;">
-            <span>Balance in Kathmandu (85%):</span>
-            <strong id="summaryBalanceVal" style="color:#0f172a;">$2,363 USD</strong>
+          <div class="summary-row" style="font-size:0.85rem; color:#0f172a; margin-bottom:1.25rem; font-weight:700;">
+            <span>Total Due in Cash (KTM):</span>
+            <strong id="summaryBalanceVal" style="color:#0f5257; font-size:1.05rem;">$2,780 USD</strong>
           </div>
 
           <!-- Fast Sherpa Help Hotline Box -->
           <div style="background:#f8fafc; border:1px solid #e2e8f0; border-radius:14px; padding:1rem; text-align:center;">
             <div style="font-size:0.82rem; font-weight:700; color:#0f172a; margin-bottom:0.35rem;">Need Assistance with Your Dates?</div>
             <p style="font-size:0.76rem; color:#64748b; margin:0 0 0.65rem;">Connect directly with Kathmandu HQ Operations for custom date holds or flight adjustments.</p>
-            <a href="https://wa.me/9771234567890?text=Namaste!%20I%20am%20booking%20a%20trek%20and%20have%20a%20quick%20question." target="_blank" rel="noopener noreferrer" class="btn btn--sm" style="background:#22c55e; color:#ffffff; font-weight:700; border-radius:8px; display:inline-flex; align-items:center; gap:0.4rem; font-size:0.8rem; padding:0.4rem 0.85rem;">
+            <a href="https://wa.me/9779748343015?text=Namaste!%20I%20am%20booking%20a%20trek%20and%20have%20a%20quick%20question." target="_blank" rel="noopener noreferrer" class="btn btn--sm" style="background:#22c55e; color:#ffffff; font-weight:700; border-radius:8px; display:inline-flex; align-items:center; gap:0.4rem; font-size:0.8rem; padding:0.4rem 0.85rem;">
               <span>WhatsApp Lead Sherpa</span>
             </a>
           </div>
@@ -1740,7 +1724,8 @@
         Thank you, <strong id="successLeadName">Traveler</strong>! We have received your booking request for <strong id="successTrekName">Everest Base Camp Trek</strong>.
       </p>
       <div style="background:#f8fafc;border:1.5px solid #e2e8f0;border-radius:14px;padding:1rem;text-align:left;font-size:0.85rem;margin-bottom:1.5rem;">
-        <div style="margin-bottom:0.35rem;">📧 A detailed confirmation voucher has been sent to your email.</div>
+        <div style="margin-bottom:0.35rem;">📧 A detailed booking confirmation voucher has been sent to your email.</div>
+        <div style="margin-bottom:0.35rem;">💵 Payment Mode: <strong>100% Cash on Arrival in Kathmandu (Zero Advance Deposit)</strong></div>
         <div style="margin-bottom:0.35rem;">🏔️ Lead Sherpa assigned: <strong>Pasang Sherpa</strong></div>
         <div>📋 Mountain flight &amp; permit clearance code: <strong style="font-family:monospace;color:#0f5257;">BTN-2026-EXPEDITION</strong></div>
       </div>
@@ -1790,7 +1775,7 @@
                 <polygon fill="#0F5257" points="9.75 15.02 15.5 12 9.75 8.98 9.75 15.02" />
               </svg>
             </a>
-            <a href="https://wa.me/9771234567890" class="footer__social-link" aria-label="WhatsApp">
+            <a href="https://wa.me/9779748343015" class="footer__social-link" aria-label="WhatsApp">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
                 <path
                   d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z" />
@@ -1848,7 +1833,7 @@
                 <path
                   d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.19 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.12 1.18l3-.017a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L7.09 8.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" />
               </svg>
-              <a href="tel:+97714700000">+977 1 470 0000</a>
+              <a href="tel:+9779748343015">+977 9748343015</a>
             </div>
             <div class="footer__contact-item">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
@@ -1856,7 +1841,7 @@
                 <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
                 <polyline points="22,6 12,13 2,6" />
               </svg>
-              <a href="mailto:info@besttreksnepal.com">info@besttreksnepal.com</a>
+              <a href="mailto:kotlyan204@gmail.com">kotlyan204@gmail.com</a>
             </div>
             <div class="footer__contact-item">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
@@ -1897,8 +1882,7 @@
     </svg>
   </button>
 
-  <script type="module" src="/assets/js/main.js" defer></script>
-  <script type="module" src="/assets/js/booking.js" defer></script>
+  <script type="module" src="/assets/js/main.bundle.js" defer></script>
 
   <!-- Static fallback for no-JS environments -->
   <noscript>

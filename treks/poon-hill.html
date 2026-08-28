@@ -29,19 +29,13 @@
   <!-- Google Fonts Preconnect -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link
-    href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&family=Inter:wght@400;500;600;700&family=Playfair+Display:ital,wght@1,700&display=swap"
-    rel="stylesheet">
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&family=Inter:wght@400;500;600;700&family=Playfair+Display:ital,wght@1,700&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&family=Inter:wght@400;500;600;700&family=Playfair+Display:ital,wght@1,700&display=swap" media="print" onload="this.media='all'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&family=Inter:wght@400;500;600;700&family=Playfair+Display:ital,wght@1,700&display=swap"></noscript>
 
   <!-- Core Stylesheets (Exact Order per AGENTS.md) -->
-  <link rel="stylesheet" href="/assets/css/reset.css">
-  <link rel="stylesheet" href="/assets/css/variables.css">
-  <link rel="stylesheet" href="/assets/css/typography.css">
-  <link rel="stylesheet" href="/assets/css/layout.css">
-  <link rel="stylesheet" href="/assets/css/components.css">
-  <link rel="stylesheet" href="/assets/css/animations.css">
-  <link rel="stylesheet" href="/assets/css/utilities.css">
-  <link rel="stylesheet" href="/assets/css/responsive.css">
+  <link rel="preload" as="style" href="/assets/css/style.css">
+  <link rel="preload" as="image" href="/assets/images/treks/poon-hill.jpg" fetchpriority="high">
   <link rel="stylesheet" href="/assets/css/style.css">
 
   <!-- Page-Specific High-End Styles -->
@@ -1587,7 +1581,7 @@
       "@type": "LocalBusiness",
       "name": "Best Treks Nepal Pvt. Ltd.",
       "url": "https://besttreksnepal.com",
-      "telephone": "+977-1-4700000",
+      "telephone": "+977 9748343015",
       "priceRange": "$$"
     },
     "offers": {
@@ -1674,21 +1668,21 @@
       <div class="container">
         <div class="top-bar__inner">
           <div class="top-bar__contacts">
-            <a href="tel:+97714700000" aria-label="Call us at +977 1 470 0000">
+            <a href="tel:+9779748343015" aria-label="Call us at +977 9748343015">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
                 stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                 <path
                   d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6A19.79 19.79 0 0 1 2.12 4.18 2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z" />
               </svg>
-              +977 1 470 0000
+              +977 9748343015
             </a>
-            <a href="mailto:info@besttreksnepal.com" aria-label="Email us at info@besttreksnepal.com">
+            <a href="mailto:kotlyan204@gmail.com" aria-label="Email us at kotlyan204@gmail.com">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
                 stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                 <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
                 <polyline points="22,6 12,13 2,6" />
               </svg>
-              info@besttreksnepal.com
+              kotlyan204@gmail.com
             </a>
           </div>
           <div class="top-bar__social" aria-label="Follow us on social media">
@@ -1705,7 +1699,7 @@
                 <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" />
               </svg>
             </a>
-            <a href="https://wa.me/9771234567890" aria-label="WhatsApp">
+            <a href="https://wa.me/9779748343015" aria-label="WhatsApp">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
                 <path
                   d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z" />
@@ -1991,11 +1985,11 @@
   </div><!-- /.site-header -->
 
   <!-- Mobile Menu Overlay -->
-  <div class="mobile-menu-overlay" aria-hidden="true"></div>
+  <div class="mobile-menu-overlay" aria-hidden="true" inert></div>
 
   <!-- Mobile Menu Panel -->
   <div class="mobile-menu" id="mobile-nav" role="dialog" aria-modal="true" aria-label="Navigation menu"
-    aria-hidden="true">
+    aria-hidden="true" inert>
     <div class="mobile-menu__header">
       <a class="mobile-menu__logo" href="/" aria-label="Best Treks Nepal — Homepage">
         <img src="/assets/images/logo/logo-icon.svg" alt="Best Treks Nepal Emblem" class="mobile-menu__logo-img" width="32" height="32">
@@ -2034,16 +2028,16 @@
     </nav>
     <div class="mobile-menu__footer">
       <a href="/booking.html?trek=poon-hill" class="btn btn--primary btn--full">Book a Trek</a>
-      <a href="tel:+97714700000" class="btn btn--secondary btn--full">Call Us Now</a>
+      <a href="tel:+9779748343015" class="btn btn--secondary btn--full">Call Us Now</a>
     </div>
   </div>
 
   <!-- Search Modal -->
   <div class="search-modal" role="dialog" aria-modal="true" aria-label="Search treks and destinations"
-    aria-hidden="true">
+    aria-hidden="true" inert>
     <div class="search-modal__inner">
       <div class="search-modal__bar">
-        <div class="search-modal__icon" aria-hidden="true">
+        <div class="search-modal__icon" aria-hidden="true" inert>
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
             stroke-linecap="round" stroke-linejoin="round">
             <circle cx="11" cy="11" r="8" />
@@ -2089,9 +2083,9 @@
       <div class="hero-bento-gallery">
         <!-- Main Bento 1 -->
         <div class="hero-bento-item hero-bento-item--main" onclick="openLightbox(0)">
-          <img loading="lazy" src="https://images.unsplash.com/photo-1519681393784-d120267933ba?w=800" alt="Poon Hill Golden Sunrise Panorama over Dhaulagiri and Annapurna" class="hero-bento-img" fetchpriority="high" decoding="async" >
+          <img loading="eager" fetchpriority="high" src="/assets/images/treks/three-passes.jpg" alt="Poon Hill Golden Sunrise Panorama over Dhaulagiri and Annapurna" class="hero-bento-img" fetchpriority="high" decoding="async">>
           <div class="hero-bento-overlay"></div>
-          <button type="button" class="hero-video-play-btn" onclick="event.stopPropagation(); openVideoModal('https://www.youtube.com/embed/dQw4w9WgXcQ')">
+          <button type="button" class="hero-video-play-btn" onclick="event.stopPropagation(); openVideoModal('https://www.youtube-nocookie.com/embed/dQw4w9WgXcQ')">
             <span class="hero-video-play-icon">
               <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"/></svg>
             </span>
@@ -2104,34 +2098,34 @@
 
         <!-- Bento 2 -->
         <div class="hero-bento-item" onclick="openLightbox(1)">
-          <img src="https://images.unsplash.com/photo-1544735716-392fe2489ffa?w=800" alt="Ghorepani Village under Annapurna South" class="hero-bento-img" loading="lazy" decoding="async" >
+          <img src="/assets/images/team/maya-gurung.jpg" referrerpolicy="no-referrer" crossorigin="anonymous" alt="Ghorepani Village under Annapurna South" class="hero-bento-img" loading="eager" decoding="async" >
           <div class="hero-bento-overlay"></div>
           <div class="hero-bento-caption"><span>Ghorepani Village (2,860m)</span></div>
         </div>
 
         <!-- Bento 3 -->
         <div class="hero-bento-item" onclick="openLightbox(2)">
-          <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?w=800" alt="Ghandruk Gurung Heritage Village" class="hero-bento-img" loading="lazy" decoding="async" >
+          <img fetchpriority="high" src="/assets/images/team/pemba-nuru.jpg" referrerpolicy="no-referrer" crossorigin="anonymous" alt="Ghandruk Gurung Heritage Village" class="hero-bento-img" loading="eager" decoding="async" >
           <div class="hero-bento-overlay"></div>
           <div class="hero-bento-caption"><span>Ghandruk Heritage Village (1,940m)</span></div>
         </div>
 
         <!-- Bento 4 -->
         <div class="hero-bento-item" onclick="openLightbox(3)">
-          <img src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=800" alt="Blooming Red Rhododendron Forests" class="hero-bento-img" loading="lazy" decoding="async" >
+          <img fetchpriority="high" src="/assets/images/team/lhakpa-tenzing.jpg" referrerpolicy="no-referrer" crossorigin="anonymous" alt="Blooming Red Rhododendron Forests" class="hero-bento-img" loading="eager" decoding="async" >
           <div class="hero-bento-overlay"></div>
           <div class="hero-bento-caption"><span>Blooming Rhododendron Canopy</span></div>
         </div>
 
         <!-- Bento 5 (View All Trigger) -->
         <div class="hero-bento-item" onclick="openLightbox(4)">
-          <img src="/assets/images/destinations/annapurna.jpg" alt="Machhapuchhre View from Tadapani" class="hero-bento-img" loading="lazy" decoding="async" >
+          <img fetchpriority="high" src="/assets/images/destinations/annapurna.jpg" alt="Machhapuchhre View from Tadapani" class="hero-bento-img" loading="eager" decoding="async" >
           <div class="hero-bento-overlay"></div>
           <div class="hero-gallery-view-all-btn">
             <div class="traveler-avatar-stack">
-              <img loading="lazy" src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=60" alt="Traveler" class="traveler-avatar">
-              <img loading="lazy" src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=60" alt="Traveler" class="traveler-avatar">
-              <img loading="lazy" src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=60" alt="Traveler" class="traveler-avatar">
+              <img loading="lazy" src="/assets/images/team/jai-taneja.jpg" referrerpolicy="no-referrer" crossorigin="anonymous" alt="Traveler" class="traveler-avatar">
+              <img loading="lazy" src="/assets/images/team/pasang-sherpa.jpg" referrerpolicy="no-referrer" crossorigin="anonymous" alt="Traveler" class="traveler-avatar">
+              <img loading="lazy" src="/assets/images/team/maya-gurung.jpg" referrerpolicy="no-referrer" crossorigin="anonymous" alt="Traveler" class="traveler-avatar">
             </div>
             <strong style="font-size:0.95rem;">View All 36 Photos</strong>
             <span style="font-size:0.75rem; opacity:0.85;">+ Sunrise &amp; Forest Views</span>
@@ -2759,7 +2753,7 @@
           </p>
 
           <div class="elevation-chart-card">
-            <svg viewBox="0 0 940 380" width="100%" height="auto" style="overflow:visible; display:block;">
+            <svg viewBox="0 0 940 380" width="100%" style="overflow:visible; display:block;">
               <defs>
                 <linearGradient id="elevGradPoon" x1="0" y1="0" x2="0" y2="1">
                   <stop offset="0%" stop-color="#0f5257" stop-opacity="0.5"/>
@@ -2987,7 +2981,7 @@
               <strong style="font-size:0.92rem; color:#0f172a;">Custom Private Group Departure Needed?</strong>
               <p style="font-size:0.8rem; color:#64748b; margin:0.2rem 0 0 0;">We arrange private tailor-made Ghorepani Poon Hill departures for families, couples, and friends starting on any date.</p>
             </div>
-            <a href="https://wa.me/9771234567890" target="_blank" rel="noopener" class="sidebar-btn-whatsapp" style="padding:0.5rem 1rem; font-size:0.82rem;">WhatsApp Private Trek Request →</a>
+            <a href="https://wa.me/9779748343015" target="_blank" rel="noopener" class="sidebar-btn-whatsapp" style="padding:0.5rem 1rem; font-size:0.82rem;">WhatsApp Private Trek Request →</a>
           </div>
         </section>
 
@@ -3289,7 +3283,7 @@
             
             <div style="background:#ffffff; border:1px solid #e2e8f0; border-radius:16px; padding:1.35rem; box-shadow:0 2px 8px rgba(0,0,0,0.03);">
               <div style="display:flex; align-items:center; gap:0.75rem; margin-bottom:0.75rem;">
-                <img loading="lazy" src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=80" alt="Richard T." style="width:44px; height:44px; border-radius:50%; object-fit:cover;">
+                <img loading="lazy" src="/assets/images/team/pemba-nuru.jpg" referrerpolicy="no-referrer" crossorigin="anonymous" alt="Richard T." style="width:44px; height:44px; border-radius:50%; object-fit:cover;">
                 <div>
                   <strong style="font-size:0.92rem; color:#0f172a;">Richard &amp; Family</strong>
                   <div style="font-size:0.75rem; color:#64748b;">United Kingdom 🇬🇧 · Oct 2025 (Comfort Plus)</div>
@@ -3303,7 +3297,7 @@
 
             <div style="background:#ffffff; border:1px solid #e2e8f0; border-radius:16px; padding:1.35rem; box-shadow:0 2px 8px rgba(0,0,0,0.03);">
               <div style="display:flex; align-items:center; gap:0.75rem; margin-bottom:0.75rem;">
-                <img loading="lazy" src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=80" alt="Laura B." style="width:44px; height:44px; border-radius:50%; object-fit:cover;">
+                <img loading="lazy" src="/assets/images/team/lhakpa-tenzing.jpg" referrerpolicy="no-referrer" crossorigin="anonymous" alt="Laura B." style="width:44px; height:44px; border-radius:50%; object-fit:cover;">
                 <div>
                   <strong style="font-size:0.92rem; color:#0f172a;">Laura B.</strong>
                   <div style="font-size:0.75rem; color:#64748b;">Australia 🇦🇺 · Nov 2025 (Standard Teahouse)</div>
@@ -3317,7 +3311,7 @@
 
             <div style="background:#ffffff; border:1px solid #e2e8f0; border-radius:16px; padding:1.35rem; box-shadow:0 2px 8px rgba(0,0,0,0.03);">
               <div style="display:flex; align-items:center; gap:0.75rem; margin-bottom:0.75rem;">
-                <img loading="lazy" src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=80" alt="Hans G." style="width:44px; height:44px; border-radius:50%; object-fit:cover;">
+                <img loading="lazy" src="/assets/images/team/jai-taneja.jpg" referrerpolicy="no-referrer" crossorigin="anonymous" alt="Hans G." style="width:44px; height:44px; border-radius:50%; object-fit:cover;">
                 <div>
                   <strong style="font-size:0.92rem; color:#0f172a;">Hans &amp; Greta G.</strong>
                   <div style="font-size:0.75rem; color:#64748b;">Germany 🇩🇪 · Apr 2025 (Comfort Plus)</div>
@@ -3331,7 +3325,7 @@
 
             <div style="background:#ffffff; border:1px solid #e2e8f0; border-radius:16px; padding:1.35rem; box-shadow:0 2px 8px rgba(0,0,0,0.03);">
               <div style="display:flex; align-items:center; gap:0.75rem; margin-bottom:0.75rem;">
-                <img loading="lazy" src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?w=80" alt="Camille D." style="width:44px; height:44px; border-radius:50%; object-fit:cover;">
+                <img loading="lazy" src="/assets/images/team/pasang-sherpa.jpg" referrerpolicy="no-referrer" crossorigin="anonymous" alt="Camille D." style="width:44px; height:44px; border-radius:50%; object-fit:cover;">
                 <div>
                   <strong style="font-size:0.92rem; color:#0f172a;">Camille D.</strong>
                   <div style="font-size:0.75rem; color:#64748b;">France 🇫🇷 · May 2025 (Luxury VIP)</div>
@@ -3504,7 +3498,7 @@
               <p style="font-size:0.85rem; color:#64748b; margin:0;">Our Pokhara trail desk and senior Sherpa guides are available 24/7 on WhatsApp.</p>
             </div>
             <div style="display:flex; gap:0.75rem; flex-wrap:wrap;">
-              <a href="https://wa.me/9771234567890" target="_blank" rel="noopener" class="sidebar-btn-whatsapp" style="padding:0.6rem 1.1rem; font-size:0.85rem;">
+              <a href="https://wa.me/9779748343015" target="_blank" rel="noopener" class="sidebar-btn-whatsapp" style="padding:0.6rem 1.1rem; font-size:0.85rem;">
                 <span>WhatsApp Trail Desk</span>
               </a>
               <a href="/contact.html" style="background:#ffffff; border:1px solid #cbd5e1; color:#0f172a; padding:0.6rem 1.1rem; border-radius:10px; font-weight:700; font-size:0.85rem; text-decoration:none;">Custom Inquiry Form →</a>
@@ -3575,7 +3569,7 @@
           <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="9 18 15 12 9 6"/></svg>
         </a>
 
-        <a href="https://wa.me/9771234567890" target="_blank" rel="noopener" class="sidebar-btn-whatsapp">
+        <a href="https://wa.me/9779748343015" target="_blank" rel="noopener" class="sidebar-btn-whatsapp">
           <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 2C6.477 2 2 6.477 2 12c0 1.89.525 3.66 1.438 5.168L2 22l4.832-1.438A9.946 9.946 0 0 0 12 22c5.523 0 10-4.477 10-10S17.523 2 12 2z"/></svg>
           <span>WhatsApp Trek Expert</span>
         </a>
@@ -3606,7 +3600,7 @@
         
         <a href="/treks/mardi-himal.html" class="related-card">
           <div class="related-card__img-wrap">
-            <img src="https://images.unsplash.com/photo-1544735716-392fe2489ffa?w=800" alt="Mardi Himal Ridge Trek" class="related-card__img" loading="lazy" decoding="async" >
+            <img src="/assets/images/treks/mardi-himal.jpg" referrerpolicy="no-referrer" crossorigin="anonymous" alt="Mardi Himal Ridge Trek" class="related-card__img" loading="lazy" decoding="async" >
             <span style="position:absolute; top:0.75rem; left:0.75rem; background:rgba(15,23,42,0.85); color:#34d399; font-size:0.7rem; font-weight:800; padding:0.25rem 0.6rem; border-radius:999px;">5 Days</span>
           </div>
           <div class="related-card__body">
@@ -3625,7 +3619,7 @@
 
         <a href="/treks/annapurna-base-camp.html" class="related-card">
           <div class="related-card__img-wrap">
-            <img src="/assets/images/destinations/annapurna.jpg" alt="Annapurna Base Camp Trek" class="related-card__img" loading="lazy" decoding="async" >
+            <img src="/assets/images/treks/annapurna-base-camp.jpg" alt="Annapurna Base Camp Trek" class="related-card__img" loading="lazy" decoding="async" >
             <span style="position:absolute; top:0.75rem; left:0.75rem; background:rgba(15,23,42,0.85); color:#fbbf24; font-size:0.7rem; font-weight:800; padding:0.25rem 0.6rem; border-radius:999px;">11 Days</span>
           </div>
           <div class="related-card__body">
@@ -3644,7 +3638,7 @@
 
         <a href="/treks/annapurna-circuit.html" class="related-card">
           <div class="related-card__img-wrap">
-            <img src="https://images.unsplash.com/photo-1544735716-392fe2489ffa?w=800" alt="Annapurna Circuit Trek" class="related-card__img" loading="lazy" decoding="async" >
+            <img src="/assets/images/treks/annapurna-circuit.jpg" referrerpolicy="no-referrer" crossorigin="anonymous" alt="Annapurna Circuit Trek" class="related-card__img" loading="lazy" decoding="async" >
             <span style="position:absolute; top:0.75rem; left:0.75rem; background:rgba(15,23,42,0.85); color:#38bdf8; font-size:0.7rem; font-weight:800; padding:0.25rem 0.6rem; border-radius:999px;">14 Days</span>
           </div>
           <div class="related-card__body">
@@ -3663,7 +3657,7 @@
 
         <a href="/treks/langtang-valley.html" class="related-card">
           <div class="related-card__img-wrap">
-            <img src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=800" alt="Langtang Valley Trek" class="related-card__img" loading="lazy" decoding="async" >
+            <img src="/assets/images/treks/langtang-valley.jpg" referrerpolicy="no-referrer" crossorigin="anonymous" alt="Langtang Valley Trek" class="related-card__img" loading="lazy" decoding="async" >
             <span style="position:absolute; top:0.75rem; left:0.75rem; background:rgba(15,23,42,0.85); color:#a855f7; font-size:0.7rem; font-weight:800; padding:0.25rem 0.6rem; border-radius:999px;">7 Days</span>
           </div>
           <div class="related-card__body">
@@ -3704,7 +3698,7 @@
 
       <div class="grand-cta-actions">
         <a href="#book" class="btn-gold-lg">Book Poon Hill Sunrise ($450) →</a>
-        <a href="https://wa.me/9771234567890" target="_blank" rel="noopener" class="btn-whatsapp-lg">
+        <a href="https://wa.me/9779748343015" target="_blank" rel="noopener" class="btn-whatsapp-lg">
           <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.477 2 2 6.477 2 12c0 1.89.525 3.66 1.438 5.168L2 22l4.832-1.438A9.946 9.946 0 0 0 12 22c5.523 0 10-4.477 10-10S17.523 2 12 2z"/></svg>
           <span>Chat with Trek Leader</span>
         </a>
@@ -3754,7 +3748,7 @@
                 <polygon fill="#0F5257" points="9.75 15.02 15.5 12 9.75 8.98 9.75 15.02" />
               </svg>
             </a>
-            <a href="https://wa.me/9771234567890" class="footer__social-link" aria-label="WhatsApp">
+            <a href="https://wa.me/9779748343015" class="footer__social-link" aria-label="WhatsApp">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
                 <path
                   d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z" />
@@ -3812,7 +3806,7 @@
                 <path
                   d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.19 12a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.12 1.18l3-.017a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L7.09 8.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" />
               </svg>
-              <a href="tel:+97714700000">+977 1 470 0000</a>
+              <a href="tel:+9779748343015">+977 9748343015</a>
             </div>
             <div class="footer__contact-item">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
@@ -3820,7 +3814,7 @@
                 <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
                 <polyline points="22,6 12,13 2,6" />
               </svg>
-              <a href="mailto:info@besttreksnepal.com">info@besttreksnepal.com</a>
+              <a href="mailto:kotlyan204@gmail.com">kotlyan204@gmail.com</a>
             </div>
             <div class="footer__contact-item">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor"
@@ -3859,7 +3853,7 @@
     <div class="video-modal-dialog">
       <button type="button" class="modal-close-btn" onclick="closeVideoModal()" aria-label="Close Video">✕</button>
       <div class="video-aspect-wrap">
-        <iframe id="videoIframe" src="" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <iframe loading="lazy" id="videoIframe" src="" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
       </div>
     </div>
   </div>
@@ -4241,10 +4235,10 @@
       // FULLSCREEN GALLERY LIGHTBOX & VIDEO MODAL
       // =======================================================================
       const galleryPhotos = [
-        { src: 'https://images.unsplash.com/photo-1519681393784-d120267933ba?w=1200', title: 'Golden Sunrise from Poon Hill (3,210m) over Dhaulagiri' },
-        { src: 'https://images.unsplash.com/photo-1544735716-392fe2489ffa?w=1200', title: 'Ghorepani Mountain Village beneath Annapurna South' },
-        { src: 'https://images.unsplash.com/photo-1506744038136-46273834b3fb?w=1200', title: 'Ghandruk Gurung Stone Village (1,940m)' },
-        { src: 'https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=1200', title: 'Blooming Red Rhododendron Canopy Trail' },
+        { src: '/assets/images/treks/poon-hill.jpg', title: 'Golden Sunrise from Poon Hill (3,210m) over Dhaulagiri' },
+        { src: '/assets/images/treks/poon-hill.jpg', title: 'Ghorepani Mountain Village beneath Annapurna South' },
+        { src: '/assets/images/treks/poon-hill.jpg', title: 'Ghandruk Gurung Stone Village (1,940m)' },
+        { src: '/assets/images/treks/poon-hill.jpg', title: 'Blooming Red Rhododendron Canopy Trail' },
         { src: '/assets/images/destinations/annapurna.jpg', title: 'Machhapuchhre View from Tadapani (2,630m)' }
       ];
 
