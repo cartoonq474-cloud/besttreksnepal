@@ -1694,21 +1694,21 @@
 
           <div class="calc-grid">
             <label class="calc-tier-option is-selected" id="tier1Option">
-              <input type="radio" name="budgetTier" value="1150" checked style="display:none;">
+              <input type="radio" name="budgetTier" value="1150" checked style="display:none;" id="budgetTier_1150">
               <div style="font-weight:800; font-size:1.05rem; color:#0f172a; margin-bottom:0.25rem;">Standard All-Inclusive</div>
               <div style="font-size:1.35rem; font-weight:800; color:var(--art-teal); margin-bottom:0.5rem;">$1,150 USD</div>
               <div style="font-size:0.78rem; color:#64748b;">Guide, porters, ACAP &amp; TIMS, 4WD transport, lodges &amp; 3 meals daily.</div>
             </label>
 
             <label class="calc-tier-option" id="tier2Option">
-              <input type="radio" name="budgetTier" value="850" style="display:none;">
+              <input type="radio" name="budgetTier" value="850" style="display:none;" id="budgetTier_850">
               <div style="font-weight:800; font-size:1.05rem; color:#0f172a; margin-bottom:0.25rem;">Guide-Only Package</div>
               <div style="font-size:1.35rem; font-weight:800; color:var(--art-teal); margin-bottom:0.5rem;">$850 USD</div>
               <div style="font-size:0.78rem; color:#64748b;">Guide + permits. Pay for meals and lodging directly on trail.</div>
             </label>
 
             <label class="calc-tier-option" id="tier3Option">
-              <input type="radio" name="budgetTier" value="1950" style="display:none;">
+              <input type="radio" name="budgetTier" value="1950" style="display:none;" id="budgetTier_1950">
               <div style="font-weight:800; font-size:1.05rem; color:#0f172a; margin-bottom:0.25rem;">Premium Comfort</div>
               <div style="font-size:1.35rem; font-weight:800; color:var(--art-teal); margin-bottom:0.5rem;">$1,950 USD</div>
               <div style="font-size:0.78rem; color:#64748b;">Ensuite rooms, private 4WD, porter service, and Pokhara luxury stay.</div>
@@ -1719,13 +1719,13 @@
             <div style="font-size:0.85rem; font-weight:800; color:#0f172a; margin-bottom:0.75rem;">Add Optional Trail Extras:</div>
             <div style="display:grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap:0.75rem;">
               <label style="font-size:0.82rem; color:#334155; display:flex; align-items:center; gap:0.5rem; cursor:pointer;">
-                <input type="checkbox" class="calc-extra" value="50"> Hot Showers &amp; Charging ($50)
+                <input type="checkbox" class="calc-extra" value="50" id="formField_4" name="field_4"> Hot Showers &amp; Charging ($50)
               </label>
               <label style="font-size:0.82rem; color:#334155; display:flex; align-items:center; gap:0.5rem; cursor:pointer;">
-                <input type="checkbox" class="calc-extra" value="40"> Wi-Fi Cards &amp; SIM Data ($40)
+                <input type="checkbox" class="calc-extra" value="40" id="formField_5" name="field_5"> Wi-Fi Cards &amp; SIM Data ($40)
               </label>
               <label style="font-size:0.82rem; color:#334155; display:flex; align-items:center; gap:0.5rem; cursor:pointer;">
-                <input type="checkbox" class="calc-extra" value="100"> Sherpa &amp; Porter Tips ($100)
+                <input type="checkbox" class="calc-extra" value="100" id="formField_6" name="field_6"> Sherpa &amp; Porter Tips ($100)
               </label>
             </div>
           </div>
@@ -1773,40 +1773,40 @@
             <div class="ll-rubric-card">
               <div class="ll-rubric-label">1. Headache Severity</div>
               <div class="ll-options-list">
-                <label class="ll-option-label"><input type="radio" name="ll_headache" value="0" checked> None (0)</label>
-                <label class="ll-option-label"><input type="radio" name="ll_headache" value="1"> Mild headache (1)</label>
-                <label class="ll-option-label"><input type="radio" name="ll_headache" value="2"> Moderate headache (2)</label>
-                <label class="ll-option-label"><input type="radio" name="ll_headache" value="3"> Severe / incapacitating (3)</label>
+                <label class="ll-option-label"><input type="radio" name="ll_headache" value="0" checked id="ll_headache_0"> None (0)</label>
+                <label class="ll-option-label"><input type="radio" name="ll_headache" value="1" id="ll_headache_1"> Mild headache (1)</label>
+                <label class="ll-option-label"><input type="radio" name="ll_headache" value="2" id="ll_headache_2"> Moderate headache (2)</label>
+                <label class="ll-option-label"><input type="radio" name="ll_headache" value="3" id="ll_headache_3"> Severe / incapacitating (3)</label>
               </div>
             </div>
 
             <div class="ll-rubric-card">
               <div class="ll-rubric-label">2. Gastrointestinal Symptoms</div>
               <div class="ll-options-list">
-                <label class="ll-option-label"><input type="radio" name="ll_gi" value="0" checked> Good appetite (0)</label>
-                <label class="ll-option-label"><input type="radio" name="ll_gi" value="1"> Poor appetite / nausea (1)</label>
-                <label class="ll-option-label"><input type="radio" name="ll_gi" value="2"> Moderate nausea / vomiting (2)</label>
-                <label class="ll-option-label"><input type="radio" name="ll_gi" value="3"> Severe vomiting (3)</label>
+                <label class="ll-option-label"><input type="radio" name="ll_gi" value="0" checked id="ll_gi_0"> Good appetite (0)</label>
+                <label class="ll-option-label"><input type="radio" name="ll_gi" value="1" id="ll_gi_1"> Poor appetite / nausea (1)</label>
+                <label class="ll-option-label"><input type="radio" name="ll_gi" value="2" id="ll_gi_2"> Moderate nausea / vomiting (2)</label>
+                <label class="ll-option-label"><input type="radio" name="ll_gi" value="3" id="ll_gi_3"> Severe vomiting (3)</label>
               </div>
             </div>
 
             <div class="ll-rubric-card">
               <div class="ll-rubric-label">3. Fatigue / Weakness</div>
               <div class="ll-options-list">
-                <label class="ll-option-label"><input type="radio" name="ll_fatigue" value="0" checked> Normal energy (0)</label>
-                <label class="ll-option-label"><input type="radio" name="ll_fatigue" value="1"> Mild fatigue (1)</label>
-                <label class="ll-option-label"><input type="radio" name="ll_fatigue" value="2"> Moderate fatigue (2)</label>
-                <label class="ll-option-label"><input type="radio" name="ll_fatigue" value="3"> Severe / bedridden (3)</label>
+                <label class="ll-option-label"><input type="radio" name="ll_fatigue" value="0" checked id="ll_fatigue_0"> Normal energy (0)</label>
+                <label class="ll-option-label"><input type="radio" name="ll_fatigue" value="1" id="ll_fatigue_1"> Mild fatigue (1)</label>
+                <label class="ll-option-label"><input type="radio" name="ll_fatigue" value="2" id="ll_fatigue_2"> Moderate fatigue (2)</label>
+                <label class="ll-option-label"><input type="radio" name="ll_fatigue" value="3" id="ll_fatigue_3"> Severe / bedridden (3)</label>
               </div>
             </div>
 
             <div class="ll-rubric-card">
               <div class="ll-rubric-label">4. Dizziness / Lightheadedness</div>
               <div class="ll-options-list">
-                <label class="ll-option-label"><input type="radio" name="ll_dizziness" value="0" checked> None (0)</label>
-                <label class="ll-option-label"><input type="radio" name="ll_dizziness" value="1"> Mild dizziness (1)</label>
-                <label class="ll-option-label"><input type="radio" name="ll_dizziness" value="2"> Moderate dizziness (2)</label>
-                <label class="ll-option-label"><input type="radio" name="ll_dizziness" value="3"> Severe / loss of balance (3)</label>
+                <label class="ll-option-label"><input type="radio" name="ll_dizziness" value="0" checked id="ll_dizziness_0"> None (0)</label>
+                <label class="ll-option-label"><input type="radio" name="ll_dizziness" value="1" id="ll_dizziness_1"> Mild dizziness (1)</label>
+                <label class="ll-option-label"><input type="radio" name="ll_dizziness" value="2" id="ll_dizziness_2"> Moderate dizziness (2)</label>
+                <label class="ll-option-label"><input type="radio" name="ll_dizziness" value="3" id="ll_dizziness_3"> Severe / loss of balance (3)</label>
               </div>
             </div>
           </div>
@@ -1957,12 +1957,12 @@
           </div>
 
           <div class="cl-items-grid">
-            <label class="cl-item-card"><input type="checkbox" class="checklist-checkbox" data-item="item_boots"><div class="cl-item-content"><div class="cl-item-title">Waterproof Gore-Tex Hiking Boots</div><span class="cl-badge badge-mandatory">Mandatory</span></div></label>
-            <label class="cl-item-card"><input type="checkbox" class="checklist-checkbox" data-item="item_sleeping_bag"><div class="cl-item-content"><div class="cl-item-title">-15°C Four-Season Down Sleeping Bag</div><span class="cl-badge badge-mandatory">Mandatory</span></div></label>
-            <label class="cl-item-card"><input type="checkbox" class="checklist-checkbox" data-item="item_down_jacket"><div class="cl-item-content"><div class="cl-item-title">800-Fill Heavy Expedition Down Jacket</div><span class="cl-badge badge-mandatory">Mandatory</span></div></label>
-            <label class="cl-item-card"><input type="checkbox" class="checklist-checkbox" data-item="item_microspikes"><div class="cl-item-content"><div class="cl-item-title">Microspikes / Traction Cleats</div><span class="cl-badge badge-essential">Essential</span></div></label>
-            <label class="cl-item-card"><input type="checkbox" class="checklist-checkbox" data-item="item_poles"><div class="cl-item-content"><div class="cl-item-title">Telescopic Trekking Poles</div><span class="cl-badge badge-essential">Essential</span></div></label>
-            <label class="cl-item-card"><input type="checkbox" class="checklist-checkbox" data-item="item_powerbank"><div class="cl-item-content"><div class="cl-item-title">20,000mAh Power Bank</div><span class="cl-badge badge-essential">Essential</span></div></label>
+            <label class="cl-item-card"><input type="checkbox" class="checklist-checkbox" data-item="item_boots" id="formField_23" name="field_23"><div class="cl-item-content"><div class="cl-item-title">Waterproof Gore-Tex Hiking Boots</div><span class="cl-badge badge-mandatory">Mandatory</span></div></label>
+            <label class="cl-item-card"><input type="checkbox" class="checklist-checkbox" data-item="item_sleeping_bag" id="formField_24" name="field_24"><div class="cl-item-content"><div class="cl-item-title">-15°C Four-Season Down Sleeping Bag</div><span class="cl-badge badge-mandatory">Mandatory</span></div></label>
+            <label class="cl-item-card"><input type="checkbox" class="checklist-checkbox" data-item="item_down_jacket" id="formField_25" name="field_25"><div class="cl-item-content"><div class="cl-item-title">800-Fill Heavy Expedition Down Jacket</div><span class="cl-badge badge-mandatory">Mandatory</span></div></label>
+            <label class="cl-item-card"><input type="checkbox" class="checklist-checkbox" data-item="item_microspikes" id="formField_26" name="field_26"><div class="cl-item-content"><div class="cl-item-title">Microspikes / Traction Cleats</div><span class="cl-badge badge-essential">Essential</span></div></label>
+            <label class="cl-item-card"><input type="checkbox" class="checklist-checkbox" data-item="item_poles" id="formField_27" name="field_27"><div class="cl-item-content"><div class="cl-item-title">Telescopic Trekking Poles</div><span class="cl-badge badge-essential">Essential</span></div></label>
+            <label class="cl-item-card"><input type="checkbox" class="checklist-checkbox" data-item="item_powerbank" id="formField_28" name="field_28"><div class="cl-item-content"><div class="cl-item-title">20,000mAh Power Bank</div><span class="cl-badge badge-essential">Essential</span></div></label>
           </div>
         </div>
       </section>
@@ -2078,7 +2078,7 @@
       </h3>
       <div class="related-grid">
         <a href="/blog/everest-base-camp-complete-guide.html" class="related-card">
-          <img src="/assets/images/destinations/everest.jpg" alt="Everest Base Camp" class="related-card-img" loading="lazy">
+          <img src="/assets/images/destinations/everest.jpg" alt="Everest Base Camp" class="related-card-img" loading="lazy" width="1024" height="1024">
           <div class="related-card-body">
             <div style="font-size:0.75rem; font-weight:800; color:var(--art-teal); text-transform:uppercase;">Everest Region</div>
             <h4 style="margin:0.25rem 0 0.5rem; font-size:1.05rem; color:#0f172a;">Everest Base Camp 2026 Definitive Guide</h4>
@@ -2087,7 +2087,7 @@
         </a>
 
         <a href="/blog/manaslu-circuit-trek-guide.html" class="related-card">
-          <img src="/assets/images/destinations/manaslu.jpg" alt="Manaslu Circuit" class="related-card-img" loading="lazy">
+          <img src="/assets/images/destinations/manaslu.jpg" alt="Manaslu Circuit" class="related-card-img" loading="lazy" width="1024" height="1024">
           <div class="related-card-body">
             <div style="font-size:0.75rem; font-weight:800; color:var(--art-teal); text-transform:uppercase;">Manaslu Region</div>
             <h4 style="margin:0.25rem 0 0.5rem; font-size:1.05rem; color:#0f172a;">Manaslu Circuit Trek Complete Guide 2026</h4>
@@ -2096,7 +2096,7 @@
         </a>
 
         <a href="/destinations/langtang.html" class="related-card">
-          <img src="/assets/images/destinations/langtang.jpg" alt="Langtang Valley" class="related-card-img" loading="lazy">
+          <img src="/assets/images/destinations/langtang.jpg" alt="Langtang Valley" class="related-card-img" loading="lazy" width="1024" height="1024">
           <div class="related-card-body">
             <div style="font-size:0.75rem; font-weight:800; color:var(--art-teal); text-transform:uppercase;">Langtang Region</div>
             <h4 style="margin:0.25rem 0 0.5rem; font-size:1.05rem; color:#0f172a;">Langtang Valley &amp; Kyanjin Gompa Trek</h4>

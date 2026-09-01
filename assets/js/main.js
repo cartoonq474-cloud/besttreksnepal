@@ -22,6 +22,7 @@ import { initFilter }    from './filter.js';
 import { initDestinations } from './destinations.js';
 import { initCookieConsent } from './cookie.js';
 import { initWhatsAppWidget } from './whatsapp.js';
+import { initWebMCP } from './webmcp.js';
 import { $, addClass, removeClass, throttle } from './utils.js';
 
 /* --------------------------------------------------------------------------
@@ -208,6 +209,7 @@ const init = () => {
   initCopyrightYear();
   initCookieConsent();
   initWhatsAppWidget();
+  initWebMCP();
 };
 
 // Wait for DOM to be ready before initializing

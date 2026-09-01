@@ -57,7 +57,7 @@ const createHeroSlider = (container) => {
 
     // Update dot aria
     dots.forEach((dot, i) => {
-      dot.setAttribute('aria-selected', i === current ? 'true' : 'false');
+      dot.setAttribute('aria-current', i === current ? 'true' : 'false');
     });
   };
 
@@ -86,9 +86,8 @@ const createHeroSlider = (container) => {
   // Dot navigation
   dots.forEach((dot, i) => {
     dot.addEventListener('click', () => { goTo(i); startAutoplay(); });
-    dot.setAttribute('role', 'tab');
     dot.setAttribute('aria-label', `Go to slide ${i + 1}`);
-    dot.setAttribute('aria-selected', i === 0 ? 'true' : 'false');
+    dot.setAttribute('aria-current', i === 0 ? 'true' : 'false');
   });
 
   // Keyboard navigation on container

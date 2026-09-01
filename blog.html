@@ -1279,7 +1279,7 @@
     <!-- =====================================================================
        TOP INFORMATION BAR
        ===================================================================== -->
-    <div class="top-bar" role="banner" aria-label="Contact information">
+    <div class="top-bar" aria-label="Contact information">
       <div class="container">
         <div class="top-bar__inner">
           <div class="top-bar__contacts">
@@ -1385,7 +1385,7 @@
 
                           <a href="/destinations.html#everest" class="mega-menu__item">
                             <div class="mega-menu__item-thumb">
-                              <img src="/assets/images/destinations/everest.jpg" alt="Everest Region" loading="lazy">
+                              <img src="/assets/images/destinations/everest.jpg" alt="Everest Region" loading="lazy" width="1024" height="1024">
                               <span class="mega-menu__item-alt-tag">5,545m</span>
                             </div>
                             <div class="mega-menu__item-info">
@@ -1397,7 +1397,7 @@
                           <a href="/destinations.html#annapurna" class="mega-menu__item">
                             <div class="mega-menu__item-thumb">
                               <img src="/assets/images/destinations/annapurna.jpg" alt="Annapurna Region"
-                                loading="lazy">
+                                loading="lazy" width="1024" height="1024">
                               <span class="mega-menu__item-alt-tag">5,416m</span>
                             </div>
                             <div class="mega-menu__item-info">
@@ -1408,7 +1408,7 @@
 
                           <a href="/destinations.html#langtang" class="mega-menu__item">
                             <div class="mega-menu__item-thumb">
-                              <img src="/assets/images/destinations/langtang.jpg" alt="Langtang Region" loading="lazy">
+                              <img src="/assets/images/destinations/langtang.jpg" alt="Langtang Region" loading="lazy" width="1024" height="1024">
                               <span class="mega-menu__item-alt-tag">4,773m</span>
                             </div>
                             <div class="mega-menu__item-info">
@@ -1419,7 +1419,7 @@
 
                           <a href="/destinations.html#manaslu" class="mega-menu__item">
                             <div class="mega-menu__item-thumb">
-                              <img src="/assets/images/destinations/manaslu.jpg" alt="Manaslu Region" loading="lazy">
+                              <img src="/assets/images/destinations/manaslu.jpg" alt="Manaslu Region" loading="lazy" width="1024" height="1024">
                               <span class="mega-menu__item-alt-tag">5,106m</span>
                             </div>
                             <div class="mega-menu__item-info">
@@ -1430,7 +1430,7 @@
 
                           <a href="/destinations.html#mustang" class="mega-menu__item">
                             <div class="mega-menu__item-thumb">
-                              <img src="/assets/images/destinations/mustang.jpg" alt="Upper Mustang" loading="lazy">
+                              <img src="/assets/images/destinations/mustang.jpg" alt="Upper Mustang" loading="lazy" width="1024" height="1024">
                               <span class="mega-menu__item-alt-tag">3,840m</span>
                             </div>
                             <div class="mega-menu__item-info">
@@ -1441,7 +1441,7 @@
 
                           <a href="/destinations.html#dolpo" class="mega-menu__item">
                             <div class="mega-menu__item-thumb">
-                              <img src="/assets/images/destinations/dolpo.jpg" alt="Dolpo Region" loading="lazy">
+                              <img src="/assets/images/destinations/dolpo.jpg" alt="Dolpo Region" loading="lazy" width="1024" height="1024">
                               <span class="mega-menu__item-alt-tag">5,350m</span>
                             </div>
                             <div class="mega-menu__item-info">
@@ -1600,7 +1600,7 @@
         </div>
         <input class="search-modal__input" type="search" placeholder="Search treks, destinations…"
           aria-label="Search treks and destinations" autocomplete="off" data-search-input aria-controls="search-results"
-          aria-expanded="false">
+          aria-expanded="false" id="siteSearchInput" name="searchQuery">
         <button class="btn btn--sm btn--secondary" data-search-close aria-label="Close search"
           type="button">ESC</button>
       </div>
@@ -1632,7 +1632,7 @@
               <div class="blog-search" role="search">
                 <input class="blog-search__input" type="search" id="hero-blog-search"
                   placeholder="Search guides, routes, permits (e.g. EBC, altitude)..."
-                  aria-label="Search blog articles">
+                  aria-label="Search blog articles" name="hero-blog-search">
                 <button class="blog-search__btn" type="button" id="hero-search-btn" aria-label="Search">
                   <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
                     stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
@@ -1663,7 +1663,7 @@
               <div class="blog-spotlight-card is-active" data-index="0">
                 <div class="blog-spotlight-card__img-wrap">
                   <img src="/assets/images/treks/upper-mustang.jpg" alt="Everest Base Camp Trek 2026 Guide"
-                    loading="eager">
+                    loading="eager" width="1024" height="1024">
                   <span class="blog-spotlight-card__badge">⭐ Sherpa Choice</span>
                 </div>
                 <div class="blog-spotlight-card__body">
@@ -1694,7 +1694,7 @@
               <div class="blog-spotlight-card" data-index="1">
                 <div class="blog-spotlight-card__img-wrap">
                   <img src="/assets/images/destinations/annapurna.jpg" alt="Annapurna Circuit 2026 Guide"
-                    loading="lazy">
+                    loading="lazy" width="1024" height="1024">
                   <span class="blog-spotlight-card__badge" style="border-color:#a855f7;color:#c084fc;">⛰️ Classic
                     Circuit</span>
                 </div>
@@ -1726,7 +1726,7 @@
               <!-- Card 3: Manaslu Circuit -->
               <div class="blog-spotlight-card" data-index="2">
                 <div class="blog-spotlight-card__img-wrap">
-                  <img src="/assets/images/destinations/manaslu.jpg" alt="Manaslu Circuit Trek Guide" loading="lazy">
+                  <img src="/assets/images/destinations/manaslu.jpg" alt="Manaslu Circuit Trek Guide" loading="lazy" width="1024" height="1024">
                   <span class="blog-spotlight-card__badge" style="border-color:#f59e0b;color:#fbbf24;">🧭 Restricted
                     Area</span>
                 </div>
@@ -1757,7 +1757,7 @@
               <!-- Card 4: Langtang Valley -->
               <div class="blog-spotlight-card" data-index="3">
                 <div class="blog-spotlight-card__img-wrap">
-                  <img src="/assets/images/destinations/langtang.jpg" alt="Langtang Valley Trek Guide" loading="lazy">
+                  <img src="/assets/images/destinations/langtang.jpg" alt="Langtang Valley Trek Guide" loading="lazy" width="1024" height="1024">
                   <span class="blog-spotlight-card__badge" style="border-color:#10b981;color:#34d399;">🌿 Glacier
                     Valley</span>
                 </div>
@@ -1789,7 +1789,7 @@
               <!-- Card 5: Upper Mustang -->
               <div class="blog-spotlight-card" data-index="4">
                 <div class="blog-spotlight-card__img-wrap">
-                  <img src="/assets/images/destinations/mustang.jpg" alt="Upper Mustang Trek Guide" loading="lazy">
+                  <img src="/assets/images/destinations/mustang.jpg" alt="Upper Mustang Trek Guide" loading="lazy" width="1024" height="1024">
                   <span class="blog-spotlight-card__badge" style="border-color:#b45309;color:#fef08a;">🏛️ Walled
                     Kingdom</span>
                 </div>
@@ -1821,7 +1821,7 @@
               <!-- Card 6: Nepal Trekking Permits -->
               <div class="blog-spotlight-card" data-index="5">
                 <div class="blog-spotlight-card__img-wrap">
-                  <img src="/assets/images/destinations/everest.jpg" alt="Nepal Trekking Permits 2026" loading="lazy">
+                  <img src="/assets/images/destinations/everest.jpg" alt="Nepal Trekking Permits 2026" loading="lazy" width="1024" height="1024">
                   <span class="blog-spotlight-card__badge" style="border-color:#0284c7;color:#7dd3fc;">📜 Official
                     Rules</span>
                 </div>
@@ -1941,7 +1941,7 @@
         <article class="featured-article reveal" data-cat="trek-guides">
           <div class="featured-article__image">
             <img src="/assets/images/destinations/everest.jpg" alt="Everest Base Camp Complete Guide 2026"
-              loading="eager">
+              loading="eager" width="1024" height="1024">
             <span class="featured-article__badge">EVEREST REGION</span>
             <span class="featured-article__featured-pill">⭐ Editor's Pick</span>
           </div>
@@ -1981,7 +1981,7 @@
             <div class="blog-articles-grid reveal-group">
               <article class="blog-article-card reveal" data-cat="trek-guides">
                 <div class="blog-article-card__image"><img src="/assets/images/destinations/everest.jpg"
-                    alt="Everest Base Camp Trek Guide" loading="lazy"><span class="blog-article-card__category"
+                    alt="Everest Base Camp Trek Guide" loading="lazy" width="1024" height="1024"><span class="blog-article-card__category"
                     style="background:#0f5257;">EVEREST</span></div>
                 <div class="blog-article-card__body">
                   <div class="blog-article-card__meta">⏱ 12 min read <span>·</span> Trek Guide</div>
@@ -2004,7 +2004,7 @@
               </article>
               <article class="blog-article-card reveal" data-cat="trek-guides">
                 <div class="blog-article-card__image"><img src="/assets/images/destinations/annapurna.jpg"
-                    alt="Annapurna Circuit Trek Guide" loading="lazy"><span class="blog-article-card__category"
+                    alt="Annapurna Circuit Trek Guide" loading="lazy" width="1024" height="1024"><span class="blog-article-card__category"
                     style="background:#7c3aed;">ANNAPURNA</span></div>
                 <div class="blog-article-card__body">
                   <div class="blog-article-card__meta">⏱ 9 min read <span>·</span> Trek Guide</div>
@@ -2025,7 +2025,7 @@
               </article>
               <article class="blog-article-card reveal" data-cat="trek-guides">
                 <div class="blog-article-card__image"><img src="/assets/images/destinations/manaslu.jpg"
-                    alt="Manaslu Circuit Trek Guide" loading="lazy"><span class="blog-article-card__category"
+                    alt="Manaslu Circuit Trek Guide" loading="lazy" width="1024" height="1024"><span class="blog-article-card__category"
                     style="background:#d97706;">MANASLU</span></div>
                 <div class="blog-article-card__body">
                   <div class="blog-article-card__meta">⏱ 8 min read <span>·</span> Trek Guide</div>
@@ -2046,7 +2046,7 @@
               </article>
               <article class="blog-article-card reveal" data-cat="trek-guides">
                 <div class="blog-article-card__image"><img src="/assets/images/destinations/langtang.jpg"
-                    alt="Langtang Valley Trek Guide" loading="lazy"><span class="blog-article-card__category"
+                    alt="Langtang Valley Trek Guide" loading="lazy" width="1024" height="1024"><span class="blog-article-card__category"
                     style="background:#059669;">LANGTANG</span></div>
                 <div class="blog-article-card__body">
                   <div class="blog-article-card__meta">⏱ 8 min read <span>·</span> Trek Guide</div>
@@ -2067,7 +2067,7 @@
               </article>
               <article class="blog-article-card reveal" data-cat="trek-guides">
                 <div class="blog-article-card__image"><img src="/assets/images/destinations/mustang.jpg"
-                    alt="Upper Mustang Trek Guide" loading="lazy"><span class="blog-article-card__category"
+                    alt="Upper Mustang Trek Guide" loading="lazy" width="1024" height="1024"><span class="blog-article-card__category"
                     style="background:#b45309;">MUSTANG</span></div>
                 <div class="blog-article-card__body">
                   <div class="blog-article-card__meta">⏱ 12 min read <span>·</span> Restricted Area</div>
@@ -2094,7 +2094,7 @@
             <div class="blog-articles-grid reveal-group">
               <article class="blog-article-card reveal" data-cat="packages">
                 <div class="blog-article-card__image"><img src="/assets/images/destinations/mustang.jpg"
-                    alt="Upper Mustang Trek Package" loading="lazy"><span class="blog-article-card__category"
+                    alt="Upper Mustang Trek Package" loading="lazy" width="1024" height="1024"><span class="blog-article-card__category"
                     style="background:#b45309;">MUSTANG</span></div>
                 <div class="blog-article-card__body">
                   <div class="blog-article-card__meta">⏱ 9 min read <span>·</span> Package Guide</div>
@@ -2115,7 +2115,7 @@
               </article>
               <article class="blog-article-card reveal" data-cat="packages">
                 <div class="blog-article-card__image"><img src="/assets/images/destinations/annapurna.jpg"
-                    alt="Annapurna Circuit vs Base Camp" loading="lazy"><span class="blog-article-card__category"
+                    alt="Annapurna Circuit vs Base Camp" loading="lazy" width="1024" height="1024"><span class="blog-article-card__category"
                     style="background:#7c3aed;">COMPARISON</span></div>
                 <div class="blog-article-card__body">
                   <div class="blog-article-card__meta">⏱ 6 min read <span>·</span> Comparison Guide</div>
@@ -2136,7 +2136,7 @@
               </article>
               <article class="blog-article-card reveal" data-cat="packages">
                 <div class="blog-article-card__image"><img src="/assets/images/destinations/langtang.jpg"
-                    alt="What is included in Nepal trek package" loading="lazy"><span
+                    alt="What is included in Nepal trek package" loading="lazy" width="1024" height="1024"><span
                     class="blog-article-card__category" style="background:#0f5257;">PACKAGE GUIDE</span></div>
                 <div class="blog-article-card__body">
                   <div class="blog-article-card__meta">⏱ 7 min read <span>·</span> Beginner's Guide</div>
@@ -2163,7 +2163,7 @@
             <div class="blog-articles-grid reveal-group">
               <article class="blog-article-card reveal" data-cat="safety">
                 <div class="blog-article-card__image"><img src="/assets/images/destinations/kanchenjunga.jpg"
-                    alt="Altitude Sickness Prevention Guide" loading="lazy"><span class="blog-article-card__category"
+                    alt="Altitude Sickness Prevention Guide" loading="lazy" width="1024" height="1024"><span class="blog-article-card__category"
                     style="background:#dc2626;">SAFETY</span></div>
                 <div class="blog-article-card__body">
                   <div class="blog-article-card__meta">⏱ 10 min read <span>·</span> Safety Guide</div>
@@ -2185,7 +2185,7 @@
               </article>
               <article class="blog-article-card reveal" data-cat="permits">
                 <div class="blog-article-card__image"><img src="/assets/images/destinations/mustang.jpg"
-                    alt="Nepal Trekking Permits 2026 Complete Guide" loading="lazy"><span
+                    alt="Nepal Trekking Permits 2026 Complete Guide" loading="lazy" width="1024" height="1024"><span
                     class="blog-article-card__category" style="background:#0f5257;">OFFICIAL PERMITS</span></div>
                 <div class="blog-article-card__body">
                   <div class="blog-article-card__meta">⏱ 15 min read <span>·</span> Permits Guide</div>
@@ -2206,7 +2206,7 @@
               </article>
               <article class="blog-article-card reveal" data-cat="gear">
                 <div class="blog-article-card__image"><img src="/assets/images/destinations/everest.jpg"
-                    alt="Nepal Trekking Gear Packing List" loading="lazy"><span class="blog-article-card__category"
+                    alt="Nepal Trekking Gear Packing List" loading="lazy" width="1024" height="1024"><span class="blog-article-card__category"
                     style="background:#0f5257;">GEAR LIST</span></div>
                 <div class="blog-article-card__body">
                   <div class="blog-article-card__meta">⏱ 11 min read <span>·</span> Gear List</div>
@@ -2229,7 +2229,7 @@
                 <div class="blog-article-card__image"><img
                     src="https://images.unsplash.com/photo-1551632811-561732d1e306?w=800&auto=format&fit=crop&q=80"
                     referrerpolicy="no-referrer" crossorigin="anonymous" alt="Everest Base Camp Packing List"
-                    loading="lazy"><span class="blog-article-card__category" style="background:#0f5257;">GEAR
+                    loading="lazy" width="800" height="533"><span class="blog-article-card__category" style="background:#0f5257;">GEAR
                     LIST</span></div>
                 <div class="blog-article-card__body">
                   <div class="blog-article-card__meta">⏱ 10 min read <span>·</span> Gear List</div>
@@ -2252,7 +2252,7 @@
                 <div class="blog-article-card__image"><img
                     src="https://images.unsplash.com/photo-1544735716-392fe2489ffa?w=800&auto=format&fit=crop&q=80"
                     referrerpolicy="no-referrer" crossorigin="anonymous" alt="Best Time to Trek in Nepal"
-                    loading="lazy"><span class="blog-article-card__category"
+                    loading="lazy" width="800" height="533"><span class="blog-article-card__category"
                     style="background:#eab308;color:#0f172a;">BEST SEASONS</span></div>
                 <div class="blog-article-card__body">
                   <div class="blog-article-card__meta">⏱ 8 min read <span>·</span> Season Guide</div>
@@ -2273,7 +2273,7 @@
               </article>
               <article class="blog-article-card reveal" data-cat="seasons">
                 <div class="blog-article-card__image"><img src="/assets/images/destinations/mustang.jpg"
-                    alt="Upper Mustang Monsoon Trekking" loading="lazy"><span class="blog-article-card__category"
+                    alt="Upper Mustang Monsoon Trekking" loading="lazy" width="1024" height="1024"><span class="blog-article-card__category"
                     style="background:#eab308;color:#0f172a;">BEST SEASONS</span></div>
                 <div class="blog-article-card__body">
                   <div class="blog-article-card__meta">⏱ 13 min read <span>·</span> Rain-Shadow Guide</div>
@@ -2298,7 +2298,7 @@
                 <div class="blog-article-card__image"><img
                     src="https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=800&auto=format&fit=crop&q=80"
                     referrerpolicy="no-referrer" crossorigin="anonymous" alt="Sustainable Himalayan Trekking 2026"
-                    loading="lazy"><span class="blog-article-card__category"
+                    loading="lazy" width="800" height="533"><span class="blog-article-card__category"
                     style="background:#10b981;">SUSTAINABILITY</span></div>
                 <div class="blog-article-card__body">
                   <div class="blog-article-card__meta">⏱ 14 min read <span>·</span> Industry Scenario 2026</div>
@@ -2323,7 +2323,7 @@
                 <div class="blog-article-card__image"><img
                     src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?w=800&auto=format&fit=crop&q=80"
                     referrerpolicy="no-referrer" crossorigin="anonymous"
-                    alt="High-Altitude Tech &amp; Connectivity 2026" loading="lazy"><span
+                    alt="High-Altitude Tech &amp; Connectivity 2026" loading="lazy" width="800" height="533"><span
                     class="blog-article-card__category" style="background:#6366f1;">TECH &amp; SAFETY</span></div>
                 <div class="blog-article-card__body">
                   <div class="blog-article-card__meta">⏱ 14 min read <span>·</span> Tech &amp; Safety Guide</div>
@@ -2409,9 +2409,9 @@
               <div class="newsletter-widget__title">📬 Get Trek Tips</div>
               <p class="newsletter-widget__desc">Latest trek guides, permit updates, and seasonal alerts delivered to
                 your inbox.</p>
-              <form class="newsletter-form" onsubmit="return false;">
+              <form class="newsletter-form" onsubmit="return false;" toolname="newsletterSubscription" tooldescription="Subscribe to Himalayan trekking articles and gear updates.">
                 <input class="newsletter-input" type="email" placeholder="Your email address"
-                  aria-label="Email address">
+                  aria-label="Email address" id="formField_3" name="field_3">
                 <button class="newsletter-btn" type="submit">Subscribe — It's Free</button>
               </form>
             </div>
@@ -2910,7 +2910,7 @@
         card.setAttribute('data-index', index);
         card.innerHTML = `
           <div class="blog-spotlight-card__img-wrap">
-            <img src="${imgSrc}" alt="${imgAlt}" loading="${index === 0 ? 'eager' : 'lazy'}">
+            <img src="${imgSrc}" alt="${imgAlt}" loading="${index === 0 ? 'eager' : 'lazy'}" width="800" height="533">
             <span class="blog-spotlight-card__badge" style="${badgeStyle}">${badgeText}</span>
           </div>
           <div class="blog-spotlight-card__body">

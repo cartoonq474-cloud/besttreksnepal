@@ -19,11 +19,76 @@ const MIME_TYPES = {
   '.gif': 'image/gif',
   '.ico': 'image/x-icon',
   '.xml': 'application/xml',
-  '.txt': 'text/plain',
+  '.txt': 'text/plain; charset=UTF-8',
   '.woff': 'font/woff',
   '.woff2': 'font/woff2',
   '.ttf': 'font/ttf'
 };
+
+// High-speed in-memory buffer and compression cache
+const cache = new Map();
+
+function getCompressed(filePath, rawBuffer, mtimeMs, encoding) {
+  const cacheKey = `${filePath}:${mtimeMs}:${encoding}`;
+  if (cache.has(cacheKey)) {
+    return cache.get(cacheKey);
+  }
+
+  let compressedBuffer = null;
+  if (encoding === 'br') {
+    // Quality 4 delivers ~98% of quality 11 compression in <3ms instead of 1000ms
+    compressedBuffer = zlib.brotliCompressSync(rawBuffer, {
+      params: {
+        [zlib.constants.BROTLI_PARAM_MODE]: zlib.constants.BROTLI_MODE_TEXT,
+        [zlib.constants.BROTLI_PARAM_QUALITY]: 4
+      }
+    });
+  } else if (encoding === 'gzip') {
+    compressedBuffer = zlib.gzipSync(rawBuffer, { level: 6 });
+  }
+
+  if (compressedBuffer) {
+    cache.set(cacheKey, compressedBuffer);
+  }
+  return compressedBuffer;
+}
+
+// Pre-warm critical resources so first load is instant
+function warmUpCache() {
+  const priorityFiles = [
+    'index.html',
+    'booking.html',
+    'about.html',
+    'contact.html',
+    'treks.html',
+    'destinations.html',
+    'blog.html',
+    'manifest.json',
+    'llms.txt',
+    'assets/js/main.bundle.js',
+    'assets/css/style.css',
+    'assets/css/reset.css',
+    'assets/css/variables.css',
+    'assets/css/typography.css',
+    'assets/css/layout.css',
+    'assets/css/components.css',
+    'assets/css/animations.css',
+    'assets/css/utilities.css',
+    'assets/css/responsive.css'
+  ];
+
+  priorityFiles.forEach(relPath => {
+    const fullPath = path.join(PUBLIC_DIR, relPath);
+    if (fs.existsSync(fullPath)) {
+      try {
+        const stats = fs.statSync(fullPath);
+        const data = fs.readFileSync(fullPath);
+        getCompressed(fullPath, data, stats.mtimeMs, 'br');
+        getCompressed(fullPath, data, stats.mtimeMs, 'gzip');
+      } catch (e) {}
+    }
+  });
+}
 
 const server = http.createServer((req, res) => {
   let reqPath = decodeURI(req.url.split('?')[0]);
@@ -40,13 +105,13 @@ const server = http.createServer((req, res) => {
 
   // Security: prevent directory traversal
   if (!filePath.startsWith(PUBLIC_DIR)) {
-    res.writeHead(403, { 'Content-Type': 'text/plain' });
+    res.writeHead(403, { 'Content-Type': 'text/plain; charset=UTF-8' });
     return res.end('403 Forbidden');
   }
 
   fs.stat(filePath, (err, stats) => {
     if (err || !stats.isFile()) {
-      res.writeHead(404, { 'Content-Type': 'text/html' });
+      res.writeHead(404, { 'Content-Type': 'text/html; charset=UTF-8' });
       return res.end('<h1>404 Not Found</h1>');
     }
 
@@ -60,7 +125,7 @@ const server = http.createServer((req, res) => {
       'X-Frame-Options': 'SAMEORIGIN'
     };
 
-    // Cache-Control: 1 year for static assets (images, CSS, JS, fonts)
+    // Cache-Control: 1 year for static assets; short revalidate for HTML
     if (ext === '.html') {
       headers['Cache-Control'] = 'public, max-age=0, must-revalidate';
     } else {
@@ -77,23 +142,45 @@ const server = http.createServer((req, res) => {
       return res.end();
     }
 
+    const isCompressible = ext === '.html' || ext === '.css' || ext === '.js' || ext === '.svg' || ext === '.json' || ext === '.txt' || ext === '.xml';
     const acceptEncoding = req.headers['accept-encoding'] || '';
-    const readStream = fs.createReadStream(filePath);
 
-    if (/\bbr\b/.test(acceptEncoding) && (ext === '.html' || ext === '.css' || ext === '.js' || ext === '.svg' || ext === '.json')) {
-      headers['Content-Encoding'] = 'br';
-      res.writeHead(200, headers);
-      readStream.pipe(zlib.createBrotliCompress()).pipe(res);
-    } else if (/\bgzip\b/.test(acceptEncoding) && (ext === '.html' || ext === '.css' || ext === '.js' || ext === '.svg' || ext === '.json')) {
-      headers['Content-Encoding'] = 'gzip';
-      res.writeHead(200, headers);
-      readStream.pipe(zlib.createGzip()).pipe(res);
+    if (isCompressible && stats.size < 5 * 1024 * 1024) {
+      // Memory-cached fast path
+      fs.readFile(filePath, (readErr, data) => {
+        if (readErr) {
+          res.writeHead(500, { 'Content-Type': 'text/plain; charset=UTF-8' });
+          return res.end('Internal Server Error');
+        }
+
+        if (/\bbr\b/.test(acceptEncoding)) {
+          const brBuffer = getCompressed(filePath, data, stats.mtimeMs, 'br');
+          headers['Content-Encoding'] = 'br';
+          headers['Content-Length'] = brBuffer.length;
+          res.writeHead(200, headers);
+          return res.end(brBuffer);
+        } else if (/\bgzip\b/.test(acceptEncoding)) {
+          const gzBuffer = getCompressed(filePath, data, stats.mtimeMs, 'gzip');
+          headers['Content-Encoding'] = 'gzip';
+          headers['Content-Length'] = gzBuffer.length;
+          res.writeHead(200, headers);
+          return res.end(gzBuffer);
+        } else {
+          headers['Content-Length'] = data.length;
+          res.writeHead(200, headers);
+          return res.end(data);
+        }
+      });
     } else {
+      // Large file or binary image stream
+      headers['Content-Length'] = stats.size;
       res.writeHead(200, headers);
-      readStream.pipe(res);
+      fs.createReadStream(filePath).pipe(res);
     }
   });
 });
+
+warmUpCache();
 
 server.listen(PORT, () => {
   console.log(`High-performance static server running at http://localhost:${PORT}`);

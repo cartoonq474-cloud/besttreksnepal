@@ -542,7 +542,7 @@
   <div class="site-header">
 
     <!-- TOP INFORMATION BAR -->
-    <div class="top-bar" role="banner" aria-label="Contact information">
+    <div class="top-bar" aria-label="Contact information">
       <div class="container">
         <div class="top-bar__inner">
           <div class="top-bar__contacts">
@@ -616,7 +616,7 @@
                         <div class="mega-menu__grid">
                           <a href="/destinations.html#everest" class="mega-menu__item">
                             <div class="mega-menu__item-thumb">
-                              <img src="/assets/images/destinations/everest.jpg" alt="Everest Region" loading="lazy">
+                              <img src="/assets/images/destinations/everest.jpg" alt="Everest Region" loading="lazy" width="1024" height="1024">
                               <span class="mega-menu__item-alt-tag">5,545m</span>
                             </div>
                             <div class="mega-menu__item-info">
@@ -626,7 +626,7 @@
                           </a>
                           <a href="/destinations.html#annapurna" class="mega-menu__item">
                             <div class="mega-menu__item-thumb">
-                              <img src="/assets/images/destinations/annapurna.jpg" alt="Annapurna Region" loading="lazy">
+                              <img src="/assets/images/destinations/annapurna.jpg" alt="Annapurna Region" loading="lazy" width="1024" height="1024">
                               <span class="mega-menu__item-alt-tag">5,416m</span>
                             </div>
                             <div class="mega-menu__item-info">
@@ -636,7 +636,7 @@
                           </a>
                           <a href="/destinations.html#langtang" class="mega-menu__item">
                             <div class="mega-menu__item-thumb">
-                              <img src="/assets/images/destinations/langtang.jpg" alt="Langtang Region" loading="lazy">
+                              <img src="/assets/images/destinations/langtang.jpg" alt="Langtang Region" loading="lazy" width="1024" height="1024">
                               <span class="mega-menu__item-alt-tag">4,773m</span>
                             </div>
                             <div class="mega-menu__item-info">
@@ -646,7 +646,7 @@
                           </a>
                           <a href="/destinations.html#manaslu" class="mega-menu__item">
                             <div class="mega-menu__item-thumb">
-                              <img src="/assets/images/destinations/manaslu.jpg" alt="Manaslu Region" loading="lazy">
+                              <img src="/assets/images/destinations/manaslu.jpg" alt="Manaslu Region" loading="lazy" width="1024" height="1024">
                               <span class="mega-menu__item-alt-tag">5,106m</span>
                             </div>
                             <div class="mega-menu__item-info">
@@ -656,7 +656,7 @@
                           </a>
                           <a href="/destinations.html#mustang" class="mega-menu__item">
                             <div class="mega-menu__item-thumb">
-                              <img src="/assets/images/destinations/mustang.jpg" alt="Upper Mustang" loading="lazy">
+                              <img src="/assets/images/destinations/mustang.jpg" alt="Upper Mustang" loading="lazy" width="1024" height="1024">
                               <span class="mega-menu__item-alt-tag">3,840m</span>
                             </div>
                             <div class="mega-menu__item-info">
@@ -666,7 +666,7 @@
                           </a>
                           <a href="/destinations.html#dolpo" class="mega-menu__item">
                             <div class="mega-menu__item-thumb">
-                              <img src="/assets/images/destinations/dolpo.jpg" alt="Dolpo Region" loading="lazy">
+                              <img src="/assets/images/destinations/dolpo.jpg" alt="Dolpo Region" loading="lazy" width="1024" height="1024">
                               <span class="mega-menu__item-alt-tag">5,350m</span>
                             </div>
                             <div class="mega-menu__item-info">
@@ -795,7 +795,7 @@
         <div class="search-modal__icon" aria-hidden="true" inert>
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8" /><line x1="21" y1="21" x2="16.65" y2="16.65" /></svg>
         </div>
-        <input class="search-modal__input" type="search" placeholder="Search treks, destinations…" aria-label="Search treks and destinations" autocomplete="off" data-search-input aria-controls="search-results" aria-expanded="false">
+        <input class="search-modal__input" type="search" placeholder="Search treks, destinations…" aria-label="Search treks and destinations" autocomplete="off" data-search-input aria-controls="search-results" aria-expanded="false" id="siteSearchInput" name="searchQuery">
         <button class="btn btn--sm btn--secondary" data-search-close aria-label="Close search" type="button">ESC</button>
       </div>
       <div class="search-modal__results" id="search-results" role="listbox" aria-label="Search results" hidden></div>
@@ -842,7 +842,7 @@
 
       <div class="article-author-bar">
         <div class="article-author-left">
-          <img src="/assets/images/treks/upper-mustang.jpg" alt="Maya Bista" class="article-author-avatar" loading="lazy">
+          <img src="/assets/images/treks/upper-mustang.jpg" alt="Maya Bista" class="article-author-avatar" loading="lazy" width="1024" height="1024">
           <div>
             <span class="article-author-name">Maya Bista &amp; Tenzing Gurung</span>
             <span class="article-author-role">Upper Mustang Expedition Directors · Best Treks Nepal</span>
@@ -942,7 +942,7 @@
   <!-- HERO MAIN FIGURE -->
   <div class="container" style="max-width: 960px;">
     <figure class="article-hero-figure">
-      <img fetchpriority="high" src="/assets/images/destinations/mustang.jpg" alt="Lo Manthang Upper Mustang Walled Capital" class="article-hero-img" loading="eager">
+      <img fetchpriority="high" src="/assets/images/destinations/mustang.jpg" alt="Lo Manthang Upper Mustang Walled Capital" class="article-hero-img" loading="eager" width="1024" height="1024">
       <div class="hero-floating-badge">
         <div class="floating-badge-title">
           <span>🛡️ 100% Guaranteed $500 RAP Clearances</span>
@@ -1391,7 +1391,7 @@
             <div class="calc-grid">
               <div class="calc-field">
                 <label for="pkgSelect">Expedition Package Tier</label>
-                <select id="pkgSelect" onchange="calculatePackageCost()">
+                <select id="pkgSelect" onchange="calculatePackageCost()" name="pkgSelect">
                   <option value="classic">14-Day Classic Teahouse Trek ($1,890 base)</option>
                   <option value="jeep">10-Day Overland 4WD Jeep Safari ($2,150 base)</option>
                   <option value="tiji">17-Day Tiji Festival Special Expedition ($2,290 base)</option>
@@ -1401,7 +1401,7 @@
 
               <div class="calc-field">
                 <label for="pkgGroup">Number of Trekkers (Group Discount)</label>
-                <select id="pkgGroup" onchange="calculatePackageCost()">
+                <select id="pkgGroup" onchange="calculatePackageCost()" name="pkgGroup">
                   <option value="2">2 Trekkers (Standard Pair)</option>
                   <option value="3">3–4 Trekkers ($100 Discount / Pax)</option>
                   <option value="5">5–8 Trekkers ($180 Discount / Pax)</option>
@@ -1411,7 +1411,7 @@
 
               <div class="calc-field">
                 <label for="pkgSingle">Room Supplement</label>
-                <select id="pkgSingle" onchange="calculatePackageCost()">
+                <select id="pkgSingle" onchange="calculatePackageCost()" name="pkgSingle">
                   <option value="0">Twin Share (Included in Base Price)</option>
                   <option value="180">Private Single Room Upgrade ($180 USD)</option>
                 </select>
@@ -1419,7 +1419,7 @@
 
               <div class="calc-field">
                 <label for="pkgHelicopter">Return Flight / Helicopter Option</label>
-                <select id="pkgHelicopter" onchange="calculatePackageCost()">
+                <select id="pkgHelicopter" onchange="calculatePackageCost()" name="pkgHelicopter">
                   <option value="scheduled">Scheduled Jomsom–Pokhara Flights (Included)</option>
                   <option value="heli_jomsom">Jomsom–Pokhara Helicopter Scenic ($350 upgrade)</option>
                   <option value="heli_lo">Lo Manthang to Pokhara Direct Helicopter ($850 upgrade)</option>
@@ -1677,22 +1677,22 @@
             </div>
 
             <div class="checklist-items-grid" id="checklistGrid">
-              <label class="check-item-label"><input type="checkbox" onchange="updateChecklist()"> <span>UV400 Polarized Sunglasses (Category 3/4)</span></label>
-              <label class="check-item-label"><input type="checkbox" onchange="updateChecklist()"> <span>SPF 50+ Sunscreen &amp; Zinc Oxide Lip Balm</span></label>
-              <label class="check-item-label"><input type="checkbox" onchange="updateChecklist()"> <span>Windproof Softshell Trekking Jacket</span></label>
-              <label class="check-item-label"><input type="checkbox" onchange="updateChecklist()"> <span>Mid-weight Down Jacket (-10°C rated)</span></label>
-              <label class="check-item-label"><input type="checkbox" onchange="updateChecklist()"> <span>2x Seamless Buff / Neck Gaiters (Dust Filter)</span></label>
-              <label class="check-item-label"><input type="checkbox" onchange="updateChecklist()"> <span>Sturdy Mid-Cut Trekking Boots (Broken in)</span></label>
-              <label class="check-item-label"><input type="checkbox" onchange="updateChecklist()"> <span>3x Merino Wool Breathable Trekking Socks</span></label>
-              <label class="check-item-label"><input type="checkbox" onchange="updateChecklist()"> <span>Trekking Poles with Dust Baskets</span></label>
-              <label class="check-item-label"><input type="checkbox" onchange="updateChecklist()"> <span>20,000 mAh Power Bank (Cold-Resistant)</span></label>
-              <label class="check-item-label"><input type="checkbox" onchange="updateChecklist()"> <span>Headlamp with Extra Batteries / USB Charge</span></label>
-              <label class="check-item-label"><input type="checkbox" onchange="updateChecklist()"> <span>2x 1L Reusable Water Bottles (Nalgene)</span></label>
-              <label class="check-item-label"><input type="checkbox" onchange="updateChecklist()"> <span>Water Purification Tablets (Aquatabs / Chlorine)</span></label>
-              <label class="check-item-label"><input type="checkbox" onchange="updateChecklist()"> <span>Lubricating Eye Drops (For Canyon Dust)</span></label>
-              <label class="check-item-label"><input type="checkbox" onchange="updateChecklist()"> <span>Saline Nasal Spray (For Arid Air)</span></label>
-              <label class="check-item-label"><input type="checkbox" onchange="updateChecklist()"> <span>First Aid Kit (Diamox, Ibuprofen, Blister Plasters)</span></label>
-              <label class="check-item-label"><input type="checkbox" onchange="updateChecklist()"> <span>NPR 20,000 Cash in Small Bills (500 &amp; 1000)</span></label>
+              <label class="check-item-label"><input type="checkbox" onchange="updateChecklist()" id="formField_6" name="field_6"> <span>UV400 Polarized Sunglasses (Category 3/4)</span></label>
+              <label class="check-item-label"><input type="checkbox" onchange="updateChecklist()" id="formField_7" name="field_7"> <span>SPF 50+ Sunscreen &amp; Zinc Oxide Lip Balm</span></label>
+              <label class="check-item-label"><input type="checkbox" onchange="updateChecklist()" id="formField_8" name="field_8"> <span>Windproof Softshell Trekking Jacket</span></label>
+              <label class="check-item-label"><input type="checkbox" onchange="updateChecklist()" id="formField_9" name="field_9"> <span>Mid-weight Down Jacket (-10°C rated)</span></label>
+              <label class="check-item-label"><input type="checkbox" onchange="updateChecklist()" id="formField_10" name="field_10"> <span>2x Seamless Buff / Neck Gaiters (Dust Filter)</span></label>
+              <label class="check-item-label"><input type="checkbox" onchange="updateChecklist()" id="formField_11" name="field_11"> <span>Sturdy Mid-Cut Trekking Boots (Broken in)</span></label>
+              <label class="check-item-label"><input type="checkbox" onchange="updateChecklist()" id="formField_12" name="field_12"> <span>3x Merino Wool Breathable Trekking Socks</span></label>
+              <label class="check-item-label"><input type="checkbox" onchange="updateChecklist()" id="formField_13" name="field_13"> <span>Trekking Poles with Dust Baskets</span></label>
+              <label class="check-item-label"><input type="checkbox" onchange="updateChecklist()" id="formField_14" name="field_14"> <span>20,000 mAh Power Bank (Cold-Resistant)</span></label>
+              <label class="check-item-label"><input type="checkbox" onchange="updateChecklist()" id="formField_15" name="field_15"> <span>Headlamp with Extra Batteries / USB Charge</span></label>
+              <label class="check-item-label"><input type="checkbox" onchange="updateChecklist()" id="formField_16" name="field_16"> <span>2x 1L Reusable Water Bottles (Nalgene)</span></label>
+              <label class="check-item-label"><input type="checkbox" onchange="updateChecklist()" id="formField_17" name="field_17"> <span>Water Purification Tablets (Aquatabs / Chlorine)</span></label>
+              <label class="check-item-label"><input type="checkbox" onchange="updateChecklist()" id="formField_18" name="field_18"> <span>Lubricating Eye Drops (For Canyon Dust)</span></label>
+              <label class="check-item-label"><input type="checkbox" onchange="updateChecklist()" id="formField_19" name="field_19"> <span>Saline Nasal Spray (For Arid Air)</span></label>
+              <label class="check-item-label"><input type="checkbox" onchange="updateChecklist()" id="formField_20" name="field_20"> <span>First Aid Kit (Diamox, Ibuprofen, Blister Plasters)</span></label>
+              <label class="check-item-label"><input type="checkbox" onchange="updateChecklist()" id="formField_21" name="field_21"> <span>NPR 20,000 Cash in Small Bills (500 &amp; 1000)</span></label>
             </div>
           </div>
         </section>
@@ -1940,7 +1940,7 @@
 
       <div class="related-grid">
         <a href="/blog/upper-mustang-trek-guide.html" class="related-card">
-          <img src="/assets/images/destinations/mustang.jpg" alt="Upper Mustang Complete Guide" class="related-card-img" loading="lazy">
+          <img src="/assets/images/destinations/mustang.jpg" alt="Upper Mustang Complete Guide" class="related-card-img" loading="lazy" width="1024" height="1024">
           <div class="related-card-body">
             <span class="article-category-badge" style="background:#fef3c7; color:#92400e; border-color:#fde68a; margin-bottom:0.5rem;">Mustang Guide</span>
             <h3 style="font-size:1.1rem; font-weight:800; color:#0f172a; margin:0.35rem 0 0.5rem;">Upper Mustang 2026: Lo Manthang &amp; Sky Caves</h3>
@@ -1949,7 +1949,7 @@
         </a>
 
         <a href="/blog/nepal-trekking-permits.html" class="related-card">
-          <img src="/assets/images/destinations/everest.jpg" alt="Nepal Trekking Permits 2026" class="related-card-img" loading="lazy">
+          <img src="/assets/images/destinations/everest.jpg" alt="Nepal Trekking Permits 2026" class="related-card-img" loading="lazy" width="1024" height="1024">
           <div class="related-card-body">
             <span class="article-category-badge" style="background:#ecfdf5; color:#047857; border-color:#a7f3d0; margin-bottom:0.5rem;">Permits &amp; Rules</span>
             <h3 style="font-size:1.1rem; font-weight:800; color:#0f172a; margin:0.35rem 0 0.5rem;">Nepal Trekking Permits 2026: TIMS, ACAP &amp; $500 RAP</h3>
@@ -1958,7 +1958,7 @@
         </a>
 
         <a href="/blog/annapurna-circuit-vs-sanctuary.html" class="related-card">
-          <img src="/assets/images/destinations/annapurna.jpg" alt="Annapurna Circuit vs Sanctuary Guide" class="related-card-img" loading="lazy">
+          <img src="/assets/images/destinations/annapurna.jpg" alt="Annapurna Circuit vs Sanctuary Guide" class="related-card-img" loading="lazy" width="1024" height="1024">
           <div class="related-card-body">
             <span class="article-category-badge" style="background:#ede9fe; color:#6d28d9; border-color:#ddd6fe; margin-bottom:0.5rem;">Comparison</span>
             <h3 style="font-size:1.1rem; font-weight:800; color:#0f172a; margin:0.35rem 0 0.5rem;">Annapurna Circuit vs. ABC: Which Trek in 2026?</h3>

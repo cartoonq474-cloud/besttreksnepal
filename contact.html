@@ -1393,7 +1393,7 @@
   <div class="site-header">
 
     <!-- TOP INFORMATION BAR -->
-    <div class="top-bar" role="banner" aria-label="Contact information">
+    <div class="top-bar" aria-label="Contact information">
       <div class="container">
         <div class="top-bar__inner">
           <div class="top-bar__contacts">
@@ -1498,7 +1498,7 @@
 
                           <a href="/destinations.html#everest" class="mega-menu__item">
                             <div class="mega-menu__item-thumb">
-                              <img src="/assets/images/destinations/everest.jpg" alt="Everest Region" loading="lazy">
+                              <img src="/assets/images/destinations/everest.jpg" alt="Everest Region" loading="lazy" width="1024" height="1024">
                               <span class="mega-menu__item-alt-tag">5,545m</span>
                             </div>
                             <div class="mega-menu__item-info">
@@ -1510,7 +1510,7 @@
                           <a href="/destinations.html#annapurna" class="mega-menu__item">
                             <div class="mega-menu__item-thumb">
                               <img src="/assets/images/destinations/annapurna.jpg" alt="Annapurna Region"
-                                loading="lazy">
+                                loading="lazy" width="1024" height="1024">
                               <span class="mega-menu__item-alt-tag">5,416m</span>
                             </div>
                             <div class="mega-menu__item-info">
@@ -1521,7 +1521,7 @@
 
                           <a href="/destinations.html#langtang" class="mega-menu__item">
                             <div class="mega-menu__item-thumb">
-                              <img src="/assets/images/destinations/langtang.jpg" alt="Langtang Region" loading="lazy">
+                              <img src="/assets/images/destinations/langtang.jpg" alt="Langtang Region" loading="lazy" width="1024" height="1024">
                               <span class="mega-menu__item-alt-tag">4,773m</span>
                             </div>
                             <div class="mega-menu__item-info">
@@ -1532,7 +1532,7 @@
 
                           <a href="/destinations.html#manaslu" class="mega-menu__item">
                             <div class="mega-menu__item-thumb">
-                              <img src="/assets/images/destinations/manaslu.jpg" alt="Manaslu Region" loading="lazy">
+                              <img src="/assets/images/destinations/manaslu.jpg" alt="Manaslu Region" loading="lazy" width="1024" height="1024">
                               <span class="mega-menu__item-alt-tag">5,106m</span>
                             </div>
                             <div class="mega-menu__item-info">
@@ -1543,7 +1543,7 @@
 
                           <a href="/destinations.html#mustang" class="mega-menu__item">
                             <div class="mega-menu__item-thumb">
-                              <img src="/assets/images/destinations/mustang.jpg" alt="Upper Mustang" loading="lazy">
+                              <img src="/assets/images/destinations/mustang.jpg" alt="Upper Mustang" loading="lazy" width="1024" height="1024">
                               <span class="mega-menu__item-alt-tag">3,840m</span>
                             </div>
                             <div class="mega-menu__item-info">
@@ -1554,7 +1554,7 @@
 
                           <a href="/destinations.html#dolpo" class="mega-menu__item">
                             <div class="mega-menu__item-thumb">
-                              <img src="/assets/images/destinations/dolpo.jpg" alt="Dolpo Region" loading="lazy">
+                              <img src="/assets/images/destinations/dolpo.jpg" alt="Dolpo Region" loading="lazy" width="1024" height="1024">
                               <span class="mega-menu__item-alt-tag">5,350m</span>
                             </div>
                             <div class="mega-menu__item-info">
@@ -1722,7 +1722,7 @@
         </div>
         <input class="search-modal__input" type="search" placeholder="Search treks, destinations…"
           aria-label="Search treks and destinations" autocomplete="off" data-search-input aria-controls="search-results"
-          aria-expanded="false">
+          aria-expanded="false" id="siteSearchInput" name="searchQuery">
         <button class="btn btn--sm btn--secondary" data-search-close aria-label="Close search"
           type="button">ESC</button>
       </div>
@@ -2105,9 +2105,7 @@
               </div>
             </div>
 
-            <form data-form id="customTrekInquiryForm" novalidate
-              data-success-msg="✓ Thank you! Your expedition request has been sent to our Lead Sherpa Team. We will email your custom itinerary and quote within 24 hours."
-              data-error-msg="Something went wrong while submitting. Please message us directly on WhatsApp (+977 9748343015).">
+            <form data-form id="customTrekInquiryForm" toolname="submitTrekInquiry" tooldescription="Submits an inquiry to Best Treks Nepal trek specialists." novalidate data-success-msg="✓ Thank you! Your expedition request has been sent to our Lead Sherpa Team. We will email your custom itinerary and quote within 24 hours." data-error-msg="Something went wrong while submitting. Please message us directly on WhatsApp (+977 9748343015).">
 
               <!-- =========================================================
                    PHASE 1: YOUR INFORMATION
@@ -2299,19 +2297,19 @@
                 <label class="form-label-custom" style="margin-bottom: 0.5rem;">Included Services Needed:</label>
                 <div class="checkbox-grid">
                   <label class="checkbox-item">
-                    <input type="checkbox" name="services" value="permits" checked>
+                    <input type="checkbox" name="services" value="permits" checked id="services_permits">
                     <span>All Restricted Permits</span>
                   </label>
                   <label class="checkbox-item">
-                    <input type="checkbox" name="services" value="transfers" checked>
+                    <input type="checkbox" name="services" value="transfers" checked id="services_transfers">
                     <span>Airport KTM Pickup &amp; Drop</span>
                   </label>
                   <label class="checkbox-item">
-                    <input type="checkbox" name="services" value="porters" checked>
+                    <input type="checkbox" name="services" value="porters" checked id="services_porters">
                     <span>Dedicated Porter Service</span>
                   </label>
                   <label class="checkbox-item">
-                    <input type="checkbox" name="services" value="gear-rentals">
+                    <input type="checkbox" name="services" value="gear-rentals" id="services_gear-rentals">
                     <span>Down Jacket &amp; Bag Rentals</span>
                   </label>
                 </div>
@@ -2397,7 +2395,7 @@
 
               <div class="sherpa-profile-list">
                 <div class="sherpa-mini-card">
-                  <img loading="lazy" src="/assets/images/treks/upper-mustang.jpg" referrerpolicy="no-referrer" crossorigin="anonymous" alt="Pasang Sherpa">
+                  <img loading="lazy" src="/assets/images/treks/upper-mustang.jpg" referrerpolicy="no-referrer" crossorigin="anonymous" alt="Pasang Sherpa" width="1024" height="1024">
                   <div>
                     <div class="sherpa-mini-name">Pasang Sherpa</div>
                     <div class="sherpa-mini-role">Head of Mountain Operations · 18 yrs Exp</div>
@@ -2409,7 +2407,7 @@
                 </div>
 
                 <div class="sherpa-mini-card">
-                  <img loading="lazy" src="/assets/images/treks/annapurna-circuit.jpg" referrerpolicy="no-referrer" crossorigin="anonymous" alt="Dawa Nuru">
+                  <img loading="lazy" src="/assets/images/treks/annapurna-circuit.jpg" referrerpolicy="no-referrer" crossorigin="anonymous" alt="Dawa Nuru" width="1024" height="1024">
                   <div>
                     <div class="sherpa-mini-name">Dawa Nuru Sherpa</div>
                     <div class="sherpa-mini-role">Logistics &amp; Safety Director · Wilderness Medic</div>
@@ -2992,7 +2990,7 @@
     </svg>
   </button>
 
-  <script type="module" src="/assets/js/main.bundle.js" defer></script>
+  <script defer src="/assets/js/main.bundle.js"></script>
 
   <script>
     document.addEventListener('DOMContentLoaded', () => {

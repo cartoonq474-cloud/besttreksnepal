@@ -5125,7 +5125,7 @@
     <!-- =====================================================================
        TOP INFORMATION BAR
        ===================================================================== -->
-    <div class="top-bar" role="banner" aria-label="Contact information">
+    <div class="top-bar" aria-label="Contact information">
       <div class="container">
         <div class="top-bar__inner">
           <div class="top-bar__contacts">
@@ -5230,7 +5230,7 @@
 
                           <a href="/destinations.html#everest" class="mega-menu__item">
                             <div class="mega-menu__item-thumb">
-                              <img src="/assets/images/destinations/everest.jpg" alt="Everest Region" loading="lazy">
+                              <img src="/assets/images/destinations/everest.jpg" alt="Everest Region" loading="lazy" width="1024" height="1024">
                               <span class="mega-menu__item-alt-tag">5,545m</span>
                             </div>
                             <div class="mega-menu__item-info">
@@ -5242,7 +5242,7 @@
                           <a href="/destinations.html#annapurna" class="mega-menu__item">
                             <div class="mega-menu__item-thumb">
                               <img src="/assets/images/destinations/annapurna.jpg" alt="Annapurna Region"
-                                loading="lazy">
+                                loading="lazy" width="1024" height="1024">
                               <span class="mega-menu__item-alt-tag">5,416m</span>
                             </div>
                             <div class="mega-menu__item-info">
@@ -5253,7 +5253,7 @@
 
                           <a href="/destinations.html#langtang" class="mega-menu__item">
                             <div class="mega-menu__item-thumb">
-                              <img src="/assets/images/destinations/langtang.jpg" alt="Langtang Region" loading="lazy">
+                              <img src="/assets/images/destinations/langtang.jpg" alt="Langtang Region" loading="lazy" width="1024" height="1024">
                               <span class="mega-menu__item-alt-tag">4,773m</span>
                             </div>
                             <div class="mega-menu__item-info">
@@ -5264,7 +5264,7 @@
 
                           <a href="/destinations.html#manaslu" class="mega-menu__item">
                             <div class="mega-menu__item-thumb">
-                              <img src="/assets/images/destinations/manaslu.jpg" alt="Manaslu Region" loading="lazy">
+                              <img src="/assets/images/destinations/manaslu.jpg" alt="Manaslu Region" loading="lazy" width="1024" height="1024">
                               <span class="mega-menu__item-alt-tag">5,106m</span>
                             </div>
                             <div class="mega-menu__item-info">
@@ -5275,7 +5275,7 @@
 
                           <a href="/destinations.html#mustang" class="mega-menu__item">
                             <div class="mega-menu__item-thumb">
-                              <img src="/assets/images/destinations/mustang.jpg" alt="Upper Mustang" loading="lazy">
+                              <img src="/assets/images/destinations/mustang.jpg" alt="Upper Mustang" loading="lazy" width="1024" height="1024">
                               <span class="mega-menu__item-alt-tag">3,840m</span>
                             </div>
                             <div class="mega-menu__item-info">
@@ -5286,7 +5286,7 @@
 
                           <a href="/destinations.html#dolpo" class="mega-menu__item">
                             <div class="mega-menu__item-thumb">
-                              <img src="/assets/images/destinations/dolpo.jpg" alt="Dolpo Region" loading="lazy">
+                              <img src="/assets/images/destinations/dolpo.jpg" alt="Dolpo Region" loading="lazy" width="1024" height="1024">
                               <span class="mega-menu__item-alt-tag">5,350m</span>
                             </div>
                             <div class="mega-menu__item-info">
@@ -5444,7 +5444,7 @@
         </div>
         <input class="search-modal__input" type="search" placeholder="Search treks, destinations…"
           aria-label="Search treks and destinations" autocomplete="off" data-search-input aria-controls="search-results"
-          aria-expanded="false">
+          aria-expanded="false" id="siteSearchInput" name="searchQuery">
         <button class="btn btn--sm btn--secondary" data-search-close aria-label="Close search"
           type="button">ESC</button>
       </div>
@@ -6935,21 +6935,21 @@
               <div class="bc-tier-select-list">
                 <label class="bc-tier-option">
                   <div>
-                    <input type="radio" name="bc_tier" value="1150">
+                    <input type="radio" name="bc_tier" value="1150" id="bc_tier_1150">
                     <span class="bc-tier-name">Budget Independent</span>
                   </div>
                   <span class="bc-tier-price">$1,150 USD</span>
                 </label>
                 <label class="bc-tier-option" style="border-color: var(--art-teal); background: #f0fdfa;">
                   <div>
-                    <input type="radio" name="bc_tier" value="1350" checked>
+                    <input type="radio" name="bc_tier" value="1350" checked id="bc_tier_1350">
                     <span class="bc-tier-name">Best Treks Standard (All-Inclusive)</span>
                   </div>
                   <span class="bc-tier-price">$1,350 USD</span>
                 </label>
                 <label class="bc-tier-option">
                   <div>
-                    <input type="radio" name="bc_tier" value="2850">
+                    <input type="radio" name="bc_tier" value="2850" id="bc_tier_2850">
                     <span class="bc-tier-name">Luxury VIP (Helicopter Return)</span>
                   </div>
                   <span class="bc-tier-price">$2,850 USD</span>
@@ -6965,42 +6965,42 @@
               <div class="bc-extras-list">
                 <label class="bc-extra-item">
                   <div>
-                    <input type="checkbox" name="bc_extra" value="60" checked>
+                    <input type="checkbox" name="bc_extra" value="60" checked id="bc_extra_60">
                     <span>Device Charging (Phones &amp; Power Banks)</span>
                   </div>
                   <span class="bc-extra-cost">+$60</span>
                 </label>
                 <label class="bc-extra-item">
                   <div>
-                    <input type="checkbox" name="bc_extra" value="35" checked>
+                    <input type="checkbox" name="bc_extra" value="35" checked id="bc_extra_35">
                     <span>Hot Gas Showers (3–4 on lower trail)</span>
                   </div>
                   <span class="bc-extra-cost">+$35</span>
                 </label>
                 <label class="bc-extra-item">
                   <div>
-                    <input type="checkbox" name="bc_extra" value="25" checked>
+                    <input type="checkbox" name="bc_extra" value="25" checked id="bc_extra_25">
                     <span>Everest Link Wi-Fi (10GB Card)</span>
                   </div>
                   <span class="bc-extra-cost">+$25</span>
                 </label>
                 <label class="bc-extra-item">
                   <div>
-                    <input type="checkbox" name="bc_extra" value="50" checked>
+                    <input type="checkbox" name="bc_extra" value="50" checked id="bc_extra_50">
                     <span>Namche Bakery Treats &amp; Specialty Coffees</span>
                   </div>
                   <span class="bc-extra-cost">+$50</span>
                 </label>
                 <label class="bc-extra-item">
                   <div>
-                    <input type="checkbox" name="bc_extra" value="55">
+                    <input type="checkbox" name="bc_extra" value="55" id="bc_extra_55">
                     <span>Boiled Teahouse Water (if not using filters)</span>
                   </div>
                   <span class="bc-extra-cost">+$55</span>
                 </label>
                 <label class="bc-extra-item">
                   <div>
-                    <input type="checkbox" name="bc_extra" value="180" checked>
+                    <input type="checkbox" name="bc_extra" value="180" checked id="bc_extra_180">
                     <span>Recommended Guide &amp; Porter Tipping Pool</span>
                   </div>
                   <span class="bc-extra-cost">+$180</span>
@@ -7361,19 +7361,19 @@
               </div>
               <div class="ll-options-list">
                 <label class="ll-option-label">
-                  <input type="radio" name="ll_headache" value="0" checked>
+                  <input type="radio" name="ll_headache" value="0" checked id="ll_headache_0">
                   <span>0 - None at all</span>
                 </label>
                 <label class="ll-option-label">
-                  <input type="radio" name="ll_headache" value="1">
+                  <input type="radio" name="ll_headache" value="1" id="ll_headache_1">
                   <span>1 - Mild headache</span>
                 </label>
                 <label class="ll-option-label">
-                  <input type="radio" name="ll_headache" value="2">
+                  <input type="radio" name="ll_headache" value="2" id="ll_headache_2">
                   <span>2 - Moderate headache</span>
                 </label>
                 <label class="ll-option-label">
-                  <input type="radio" name="ll_headache" value="3">
+                  <input type="radio" name="ll_headache" value="3" id="ll_headache_3">
                   <span>3 - Severe, incapacitating headache</span>
                 </label>
               </div>
@@ -7386,19 +7386,19 @@
               </div>
               <div class="ll-options-list">
                 <label class="ll-option-label">
-                  <input type="radio" name="ll_gi" value="0" checked>
+                  <input type="radio" name="ll_gi" value="0" checked id="ll_gi_0">
                   <span>0 - Good appetite, normal stomach</span>
                 </label>
                 <label class="ll-option-label">
-                  <input type="radio" name="ll_gi" value="1">
+                  <input type="radio" name="ll_gi" value="1" id="ll_gi_1">
                   <span>1 - Poor appetite or mild nausea</span>
                 </label>
                 <label class="ll-option-label">
-                  <input type="radio" name="ll_gi" value="2">
+                  <input type="radio" name="ll_gi" value="2" id="ll_gi_2">
                   <span>2 - Moderate nausea or vomiting once</span>
                 </label>
                 <label class="ll-option-label">
-                  <input type="radio" name="ll_gi" value="3">
+                  <input type="radio" name="ll_gi" value="3" id="ll_gi_3">
                   <span>3 - Severe nausea, frequent vomiting</span>
                 </label>
               </div>
@@ -7411,19 +7411,19 @@
               </div>
               <div class="ll-options-list">
                 <label class="ll-option-label">
-                  <input type="radio" name="ll_fatigue" value="0" checked>
+                  <input type="radio" name="ll_fatigue" value="0" checked id="ll_fatigue_0">
                   <span>0 - Normal energy and strength</span>
                 </label>
                 <label class="ll-option-label">
-                  <input type="radio" name="ll_fatigue" value="1">
+                  <input type="radio" name="ll_fatigue" value="1" id="ll_fatigue_1">
                   <span>1 - Mild fatigue or tiredness</span>
                 </label>
                 <label class="ll-option-label">
-                  <input type="radio" name="ll_fatigue" value="2">
+                  <input type="radio" name="ll_fatigue" value="2" id="ll_fatigue_2">
                   <span>2 - Moderate weakness, heavy legs</span>
                 </label>
                 <label class="ll-option-label">
-                  <input type="radio" name="ll_fatigue" value="3">
+                  <input type="radio" name="ll_fatigue" value="3" id="ll_fatigue_3">
                   <span>3 - Severe exhaustion even while resting</span>
                 </label>
               </div>
@@ -7436,19 +7436,19 @@
               </div>
               <div class="ll-options-list">
                 <label class="ll-option-label">
-                  <input type="radio" name="ll_dizziness" value="0" checked>
+                  <input type="radio" name="ll_dizziness" value="0" checked id="ll_dizziness_0">
                   <span>0 - None, perfectly clear head</span>
                 </label>
                 <label class="ll-option-label">
-                  <input type="radio" name="ll_dizziness" value="1">
+                  <input type="radio" name="ll_dizziness" value="1" id="ll_dizziness_1">
                   <span>1 - Mild lightheadedness upon standing</span>
                 </label>
                 <label class="ll-option-label">
-                  <input type="radio" name="ll_dizziness" value="2">
+                  <input type="radio" name="ll_dizziness" value="2" id="ll_dizziness_2">
                   <span>2 - Moderate dizziness or off-balance</span>
                 </label>
                 <label class="ll-option-label">
-                  <input type="radio" name="ll_dizziness" value="3">
+                  <input type="radio" name="ll_dizziness" value="3" id="ll_dizziness_3">
                   <span>3 - Severe vertigo, stumbling (Check for Ataxia)</span>
                 </label>
               </div>
@@ -8535,7 +8535,7 @@
               <div class="cl-items-grid">
                 
                 <label class="cl-item-card">
-                  <input type="checkbox" class="cl-item-checkbox checklist-checkbox" data-item="clothing-merino-tops">
+                  <input type="checkbox" class="cl-item-checkbox checklist-checkbox" data-item="clothing-merino-tops" id="formField_27" name="field_27">
                   <div class="cl-item-content">
                     <div class="cl-item-top">
                       <span class="cl-item-title">Merino Thermal Tops (2x)</span>
@@ -8549,7 +8549,7 @@
                 </label>
 
                 <label class="cl-item-card">
-                  <input type="checkbox" class="cl-item-checkbox checklist-checkbox" data-item="clothing-merino-bottoms">
+                  <input type="checkbox" class="cl-item-checkbox checklist-checkbox" data-item="clothing-merino-bottoms" id="formField_28" name="field_28">
                   <div class="cl-item-content">
                     <div class="cl-item-top">
                       <span class="cl-item-title">Merino Thermal Leggings (2x)</span>
@@ -8563,7 +8563,7 @@
                 </label>
 
                 <label class="cl-item-card">
-                  <input type="checkbox" class="cl-item-checkbox checklist-checkbox" data-item="clothing-grid-fleece">
+                  <input type="checkbox" class="cl-item-checkbox checklist-checkbox" data-item="clothing-grid-fleece" id="formField_29" name="field_29">
                   <div class="cl-item-content">
                     <div class="cl-item-top">
                       <span class="cl-item-title">Active Grid Fleece Jacket (1x)</span>
@@ -8577,7 +8577,7 @@
                 </label>
 
                 <label class="cl-item-card">
-                  <input type="checkbox" class="cl-item-checkbox checklist-checkbox" data-item="clothing-synthetic-jacket">
+                  <input type="checkbox" class="cl-item-checkbox checklist-checkbox" data-item="clothing-synthetic-jacket" id="formField_30" name="field_30">
                   <div class="cl-item-content">
                     <div class="cl-item-top">
                       <span class="cl-item-title">Active Synthetic Insulated Jacket (1x)</span>
@@ -8591,7 +8591,7 @@
                 </label>
 
                 <label class="cl-item-card">
-                  <input type="checkbox" class="cl-item-checkbox checklist-checkbox" data-item="clothing-down-parka">
+                  <input type="checkbox" class="cl-item-checkbox checklist-checkbox" data-item="clothing-down-parka" id="formField_31" name="field_31">
                   <div class="cl-item-content">
                     <div class="cl-item-top">
                       <span class="cl-item-title">800-Fill Goose Down Parka (1x)</span>
@@ -8605,7 +8605,7 @@
                 </label>
 
                 <label class="cl-item-card">
-                  <input type="checkbox" class="cl-item-checkbox checklist-checkbox" data-item="clothing-hardshell-jacket">
+                  <input type="checkbox" class="cl-item-checkbox checklist-checkbox" data-item="clothing-hardshell-jacket" id="formField_32" name="field_32">
                   <div class="cl-item-content">
                     <div class="cl-item-top">
                       <span class="cl-item-title">GORE-TEX Waterproof Shell Jacket (1x)</span>
@@ -8619,7 +8619,7 @@
                 </label>
 
                 <label class="cl-item-card">
-                  <input type="checkbox" class="cl-item-checkbox checklist-checkbox" data-item="clothing-hardshell-pants">
+                  <input type="checkbox" class="cl-item-checkbox checklist-checkbox" data-item="clothing-hardshell-pants" id="formField_33" name="field_33">
                   <div class="cl-item-content">
                     <div class="cl-item-top">
                       <span class="cl-item-title">Waterproof Shell Rain Pants (1x)</span>
@@ -8633,7 +8633,7 @@
                 </label>
 
                 <label class="cl-item-card">
-                  <input type="checkbox" class="cl-item-checkbox checklist-checkbox" data-item="clothing-trekking-pants">
+                  <input type="checkbox" class="cl-item-checkbox checklist-checkbox" data-item="clothing-trekking-pants" id="formField_34" name="field_34">
                   <div class="cl-item-content">
                     <div class="cl-item-top">
                       <span class="cl-item-title">Stretch Softshell Trekking Pants (2x)</span>
@@ -8646,7 +8646,7 @@
                 </label>
 
                 <label class="cl-item-card">
-                  <input type="checkbox" class="cl-item-checkbox checklist-checkbox" data-item="clothing-trekking-shirts">
+                  <input type="checkbox" class="cl-item-checkbox checklist-checkbox" data-item="clothing-trekking-shirts" id="formField_35" name="field_35">
                   <div class="cl-item-content">
                     <div class="cl-item-top">
                       <span class="cl-item-title">Quick-Dry Trekking Shirts (3x)</span>
@@ -8659,7 +8659,7 @@
                 </label>
 
                 <label class="cl-item-card">
-                  <input type="checkbox" class="cl-item-checkbox checklist-checkbox" data-item="clothing-moisture-underwear">
+                  <input type="checkbox" class="cl-item-checkbox checklist-checkbox" data-item="clothing-moisture-underwear" id="formField_36" name="field_36">
                   <div class="cl-item-content">
                     <div class="cl-item-top">
                       <span class="cl-item-title">Moisture-Wicking Underwear (4–5x)</span>
@@ -8684,7 +8684,7 @@
               <div class="cl-items-grid">
 
                 <label class="cl-item-card">
-                  <input type="checkbox" class="cl-item-checkbox checklist-checkbox" data-item="footwear-hiking-boots">
+                  <input type="checkbox" class="cl-item-checkbox checklist-checkbox" data-item="footwear-hiking-boots" id="formField_37" name="field_37">
                   <div class="cl-item-content">
                     <div class="cl-item-top">
                       <span class="cl-item-title">High-Ankle Waterproof Boots (1 Pair)</span>
@@ -8698,7 +8698,7 @@
                 </label>
 
                 <label class="cl-item-card">
-                  <input type="checkbox" class="cl-item-checkbox checklist-checkbox" data-item="footwear-camp-booties">
+                  <input type="checkbox" class="cl-item-checkbox checklist-checkbox" data-item="footwear-camp-booties" id="formField_38" name="field_38">
                   <div class="cl-item-content">
                     <div class="cl-item-top">
                       <span class="cl-item-title">Camp Shoes / Down Booties (1 Pair)</span>
@@ -8711,7 +8711,7 @@
                 </label>
 
                 <label class="cl-item-card">
-                  <input type="checkbox" class="cl-item-checkbox checklist-checkbox" data-item="footwear-merino-socks">
+                  <input type="checkbox" class="cl-item-checkbox checklist-checkbox" data-item="footwear-merino-socks" id="formField_39" name="field_39">
                   <div class="cl-item-content">
                     <div class="cl-item-top">
                       <span class="cl-item-title">Merino Trekking Socks (4x Heavy + 2x Liners)</span>
@@ -8724,7 +8724,7 @@
                 </label>
 
                 <label class="cl-item-card">
-                  <input type="checkbox" class="cl-item-checkbox checklist-checkbox" data-item="footwear-microspikes">
+                  <input type="checkbox" class="cl-item-checkbox checklist-checkbox" data-item="footwear-microspikes" id="formField_40" name="field_40">
                   <div class="cl-item-content">
                     <div class="cl-item-top">
                       <span class="cl-item-title">Trail MICROspikes (1 Pair)</span>
@@ -8738,7 +8738,7 @@
                 </label>
 
                 <label class="cl-item-card">
-                  <input type="checkbox" class="cl-item-checkbox checklist-checkbox" data-item="footwear-trekking-poles">
+                  <input type="checkbox" class="cl-item-checkbox checklist-checkbox" data-item="footwear-trekking-poles" id="formField_41" name="field_41">
                   <div class="cl-item-content">
                     <div class="cl-item-top">
                       <span class="cl-item-title">Telescopic Trekking Poles (1 Pair)</span>
@@ -8752,7 +8752,7 @@
                 </label>
 
                 <label class="cl-item-card">
-                  <input type="checkbox" class="cl-item-checkbox checklist-checkbox" data-item="footwear-trail-gaiters">
+                  <input type="checkbox" class="cl-item-checkbox checklist-checkbox" data-item="footwear-trail-gaiters" id="formField_42" name="field_42">
                   <div class="cl-item-content">
                     <div class="cl-item-top">
                       <span class="cl-item-title">Low Breathable Trail Gaiters (1 Pair)</span>
@@ -8765,7 +8765,7 @@
                 </label>
 
                 <label class="cl-item-card">
-                  <input type="checkbox" class="cl-item-checkbox checklist-checkbox" data-item="footwear-glacier-sunglasses">
+                  <input type="checkbox" class="cl-item-checkbox checklist-checkbox" data-item="footwear-glacier-sunglasses" id="formField_43" name="field_43">
                   <div class="cl-item-content">
                     <div class="cl-item-top">
                       <span class="cl-item-title">Cat 3/4 Glacier Sunglasses (1x)</span>
@@ -8790,7 +8790,7 @@
               <div class="cl-items-grid">
 
                 <label class="cl-item-card">
-                  <input type="checkbox" class="cl-item-checkbox checklist-checkbox" data-item="sleeping-down-bag">
+                  <input type="checkbox" class="cl-item-checkbox checklist-checkbox" data-item="sleeping-down-bag" id="formField_44" name="field_44">
                   <div class="cl-item-content">
                     <div class="cl-item-top">
                       <span class="cl-item-title">4-Season Sleeping Bag (-20°C Rated) (1x)</span>
@@ -8804,7 +8804,7 @@
                 </label>
 
                 <label class="cl-item-card">
-                  <input type="checkbox" class="cl-item-checkbox checklist-checkbox" data-item="sleeping-bag-liner">
+                  <input type="checkbox" class="cl-item-checkbox checklist-checkbox" data-item="sleeping-bag-liner" id="formField_45" name="field_45">
                   <div class="cl-item-content">
                     <div class="cl-item-top">
                       <span class="cl-item-title">Silk/Fleece Sleeping Bag Liner (1x)</span>
@@ -8817,7 +8817,7 @@
                 </label>
 
                 <label class="cl-item-card">
-                  <input type="checkbox" class="cl-item-checkbox checklist-checkbox" data-item="sleeping-duffel-bag">
+                  <input type="checkbox" class="cl-item-checkbox checklist-checkbox" data-item="sleeping-duffel-bag" id="formField_46" name="field_46">
                   <div class="cl-item-content">
                     <div class="cl-item-top">
                       <span class="cl-item-title">80–100L Waterproof Duffel Bag (1x)</span>
@@ -8830,7 +8830,7 @@
                 </label>
 
                 <label class="cl-item-card">
-                  <input type="checkbox" class="cl-item-checkbox checklist-checkbox" data-item="sleeping-daypack">
+                  <input type="checkbox" class="cl-item-checkbox checklist-checkbox" data-item="sleeping-daypack" id="formField_47" name="field_47">
                   <div class="cl-item-content">
                     <div class="cl-item-top">
                       <span class="cl-item-title">30–36L Technical Daypack (1x)</span>
@@ -8843,7 +8843,7 @@
                 </label>
 
                 <label class="cl-item-card">
-                  <input type="checkbox" class="cl-item-checkbox checklist-checkbox" data-item="sleeping-dry-sacks">
+                  <input type="checkbox" class="cl-item-checkbox checklist-checkbox" data-item="sleeping-dry-sacks" id="formField_48" name="field_48">
                   <div class="cl-item-content">
                     <div class="cl-item-top">
                       <span class="cl-item-title">Compression Dry Sacks (3–4x Assorted)</span>
@@ -8868,7 +8868,7 @@
               <div class="cl-items-grid">
 
                 <label class="cl-item-card">
-                  <input type="checkbox" class="cl-item-checkbox checklist-checkbox" data-item="tech-power-bank">
+                  <input type="checkbox" class="cl-item-checkbox checklist-checkbox" data-item="tech-power-bank" id="formField_49" name="field_49">
                   <div class="cl-item-content">
                     <div class="cl-item-top">
                       <span class="cl-item-title">Power Bank (20,000–26,800 mAh) (1–2x)</span>
@@ -8882,7 +8882,7 @@
                 </label>
 
                 <label class="cl-item-card">
-                  <input type="checkbox" class="cl-item-checkbox checklist-checkbox" data-item="tech-headlamp">
+                  <input type="checkbox" class="cl-item-checkbox checklist-checkbox" data-item="tech-headlamp" id="formField_50" name="field_50">
                   <div class="cl-item-content">
                     <div class="cl-item-top">
                       <span class="cl-item-title">LED Headlamp (300+ Lumens) (1x)</span>
@@ -8895,7 +8895,7 @@
                 </label>
 
                 <label class="cl-item-card">
-                  <input type="checkbox" class="cl-item-checkbox checklist-checkbox" data-item="tech-nepal-adapter">
+                  <input type="checkbox" class="cl-item-checkbox checklist-checkbox" data-item="tech-nepal-adapter" id="formField_51" name="field_51">
                   <div class="cl-item-content">
                     <div class="cl-item-top">
                       <span class="cl-item-title">Universal Travel Plug Adapter (Types C/D/M)</span>
@@ -8908,7 +8908,7 @@
                 </label>
 
                 <label class="cl-item-card">
-                  <input type="checkbox" class="cl-item-checkbox checklist-checkbox" data-item="tech-camera-spare-batteries">
+                  <input type="checkbox" class="cl-item-checkbox checklist-checkbox" data-item="tech-camera-spare-batteries" id="formField_52" name="field_52">
                   <div class="cl-item-content">
                     <div class="cl-item-top">
                       <span class="cl-item-title">Camera / GoPro + 3x Extra Batteries</span>
@@ -8921,7 +8921,7 @@
                 </label>
 
                 <label class="cl-item-card">
-                  <input type="checkbox" class="cl-item-checkbox checklist-checkbox" data-item="tech-cables-waterproof-case">
+                  <input type="checkbox" class="cl-item-checkbox checklist-checkbox" data-item="tech-cables-waterproof-case" id="formField_53" name="field_53">
                   <div class="cl-item-content">
                     <div class="cl-item-top">
                       <span class="cl-item-title">Braided Charging Cables &amp; Case (1x)</span>
@@ -8934,7 +8934,7 @@
                 </label>
 
                 <label class="cl-item-card">
-                  <input type="checkbox" class="cl-item-checkbox checklist-checkbox" data-item="tech-nalgene-bottles">
+                  <input type="checkbox" class="cl-item-checkbox checklist-checkbox" data-item="tech-nalgene-bottles" id="formField_54" name="field_54">
                   <div class="cl-item-content">
                     <div class="cl-item-top">
                       <span class="cl-item-title">Wide-Mouth 1L Nalgene Bottles (2x)</span>
@@ -8959,7 +8959,7 @@
               <div class="cl-items-grid">
 
                 <label class="cl-item-card">
-                  <input type="checkbox" class="cl-item-checkbox checklist-checkbox" data-item="medical-diamox">
+                  <input type="checkbox" class="cl-item-checkbox checklist-checkbox" data-item="medical-diamox" id="formField_55" name="field_55">
                   <div class="cl-item-content">
                     <div class="cl-item-top">
                       <span class="cl-item-title">Diamox (Acetazolamide) 125/250mg (20–30 Tabs)</span>
@@ -8973,7 +8973,7 @@
                 </label>
 
                 <label class="cl-item-card">
-                  <input type="checkbox" class="cl-item-checkbox checklist-checkbox" data-item="medical-water-purifier">
+                  <input type="checkbox" class="cl-item-checkbox checklist-checkbox" data-item="medical-water-purifier" id="formField_56" name="field_56">
                   <div class="cl-item-content">
                     <div class="cl-item-top">
                       <span class="cl-item-title">Grayl Purifier or SteriPEN + Aquatabs</span>
@@ -8986,7 +8986,7 @@
                 </label>
 
                 <label class="cl-item-card">
-                  <input type="checkbox" class="cl-item-checkbox checklist-checkbox" data-item="medical-blister-kit">
+                  <input type="checkbox" class="cl-item-checkbox checklist-checkbox" data-item="medical-blister-kit" id="formField_57" name="field_57">
                   <div class="cl-item-content">
                     <div class="cl-item-top">
                       <span class="cl-item-title">Blister Care Kit (Compeed &amp; Leukotape)</span>
@@ -8999,7 +8999,7 @@
                 </label>
 
                 <label class="cl-item-card">
-                  <input type="checkbox" class="cl-item-checkbox checklist-checkbox" data-item="medical-gi-antibiotics">
+                  <input type="checkbox" class="cl-item-checkbox checklist-checkbox" data-item="medical-gi-antibiotics" id="formField_58" name="field_58">
                   <div class="cl-item-content">
                     <div class="cl-item-top">
                       <span class="cl-item-title">Emergency Meds (ORS, Imodium, Ibuprofen)</span>
@@ -9012,7 +9012,7 @@
                 </label>
 
                 <label class="cl-item-card">
-                  <input type="checkbox" class="cl-item-checkbox checklist-checkbox" data-item="medical-sunscreen-lipbalm">
+                  <input type="checkbox" class="cl-item-checkbox checklist-checkbox" data-item="medical-sunscreen-lipbalm" id="formField_59" name="field_59">
                   <div class="cl-item-content">
                     <div class="cl-item-top">
                       <span class="cl-item-title">Zinc Sunscreen (SPF 50+) &amp; Lip Balm (SPF 30+)</span>
@@ -9025,7 +9025,7 @@
                 </label>
 
                 <label class="cl-item-card">
-                  <input type="checkbox" class="cl-item-checkbox checklist-checkbox" data-item="medical-wet-wipes">
+                  <input type="checkbox" class="cl-item-checkbox checklist-checkbox" data-item="medical-wet-wipes" id="formField_60" name="field_60">
                   <div class="cl-item-content">
                     <div class="cl-item-top">
                       <span class="cl-item-title">Biodegradable Wet Wipes (2x 50s) + Sanitizer</span>
@@ -9038,7 +9038,7 @@
                 </label>
 
                 <label class="cl-item-card">
-                  <input type="checkbox" class="cl-item-checkbox checklist-checkbox" data-item="medical-quickdry-towel">
+                  <input type="checkbox" class="cl-item-checkbox checklist-checkbox" data-item="medical-quickdry-towel" id="formField_61" name="field_61">
                   <div class="cl-item-content">
                     <div class="cl-item-top">
                       <span class="cl-item-title">Microfiber Quick-Dry Towel (1x)</span>
@@ -9051,7 +9051,7 @@
                 </label>
 
                 <label class="cl-item-card">
-                  <input type="checkbox" class="cl-item-checkbox checklist-checkbox" data-item="medical-toilet-paper">
+                  <input type="checkbox" class="cl-item-checkbox checklist-checkbox" data-item="medical-toilet-paper" id="formField_62" name="field_62">
                   <div class="cl-item-content">
                     <div class="cl-item-top">
                       <span class="cl-item-title">Travel Toilet Paper (2x in Ziploc Bags)</span>

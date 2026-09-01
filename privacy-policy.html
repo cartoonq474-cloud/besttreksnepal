@@ -401,7 +401,7 @@
   <div class="site-header">
 
     <!-- TOP INFORMATION BAR -->
-    <div class="top-bar" role="banner" aria-label="Contact information">
+    <div class="top-bar" aria-label="Contact information">
       <div class="container">
         <div class="top-bar__inner">
           <div class="top-bar__contacts">
@@ -502,7 +502,7 @@
                         <div class="mega-menu__grid">
                           <a href="/destinations.html#everest" class="mega-menu__item">
                             <div class="mega-menu__item-thumb">
-                              <img src="/assets/images/destinations/everest.jpg" alt="Everest Region" loading="lazy">
+                              <img src="/assets/images/destinations/everest.jpg" alt="Everest Region" loading="lazy" width="1024" height="1024">
                               <span class="mega-menu__item-alt-tag">5,545m</span>
                             </div>
                             <div class="mega-menu__item-info">
@@ -512,7 +512,7 @@
                           </a>
                           <a href="/destinations.html#annapurna" class="mega-menu__item">
                             <div class="mega-menu__item-thumb">
-                              <img src="/assets/images/destinations/annapurna.jpg" alt="Annapurna Region" loading="lazy">
+                              <img src="/assets/images/destinations/annapurna.jpg" alt="Annapurna Region" loading="lazy" width="1024" height="1024">
                               <span class="mega-menu__item-alt-tag">5,416m</span>
                             </div>
                             <div class="mega-menu__item-info">
@@ -522,7 +522,7 @@
                           </a>
                           <a href="/destinations.html#langtang" class="mega-menu__item">
                             <div class="mega-menu__item-thumb">
-                              <img src="/assets/images/destinations/langtang.jpg" alt="Langtang Region" loading="lazy">
+                              <img src="/assets/images/destinations/langtang.jpg" alt="Langtang Region" loading="lazy" width="1024" height="1024">
                               <span class="mega-menu__item-alt-tag">4,773m</span>
                             </div>
                             <div class="mega-menu__item-info">
@@ -532,7 +532,7 @@
                           </a>
                           <a href="/destinations.html#manaslu" class="mega-menu__item">
                             <div class="mega-menu__item-thumb">
-                              <img src="/assets/images/destinations/manaslu.jpg" alt="Manaslu Region" loading="lazy">
+                              <img src="/assets/images/destinations/manaslu.jpg" alt="Manaslu Region" loading="lazy" width="1024" height="1024">
                               <span class="mega-menu__item-alt-tag">5,106m</span>
                             </div>
                             <div class="mega-menu__item-info">
@@ -542,7 +542,7 @@
                           </a>
                           <a href="/destinations.html#mustang" class="mega-menu__item">
                             <div class="mega-menu__item-thumb">
-                              <img src="/assets/images/destinations/mustang.jpg" alt="Upper Mustang" loading="lazy">
+                              <img src="/assets/images/destinations/mustang.jpg" alt="Upper Mustang" loading="lazy" width="1024" height="1024">
                               <span class="mega-menu__item-alt-tag">3,840m</span>
                             </div>
                             <div class="mega-menu__item-info">
@@ -552,7 +552,7 @@
                           </a>
                           <a href="/destinations.html#dolpo" class="mega-menu__item">
                             <div class="mega-menu__item-thumb">
-                              <img src="/assets/images/destinations/dolpo.jpg" alt="Dolpo Region" loading="lazy">
+                              <img src="/assets/images/destinations/dolpo.jpg" alt="Dolpo Region" loading="lazy" width="1024" height="1024">
                               <span class="mega-menu__item-alt-tag">5,350m</span>
                             </div>
                             <div class="mega-menu__item-info">
@@ -690,7 +690,7 @@
         </div>
         <input class="search-modal__input" type="search" placeholder="Search treks, destinations…"
           aria-label="Search treks and destinations" autocomplete="off" data-search-input aria-controls="search-results"
-          aria-expanded="false">
+          aria-expanded="false" id="siteSearchInput" name="searchQuery">
         <button class="btn btn--sm btn--secondary" data-search-close aria-label="Close search"
           type="button">ESC</button>
       </div>
@@ -1097,7 +1097,7 @@
     </svg>
   </button>
 
-  <script type="module" src="/assets/js/main.bundle.js" defer></script>
+  <script defer src="/assets/js/main.bundle.js"></script>
 
   <!-- Static fallback for no-JS environments -->
   <noscript>

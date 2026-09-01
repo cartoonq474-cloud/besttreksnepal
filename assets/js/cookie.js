@@ -89,7 +89,7 @@ export const initCookieConsent = () => {
               <div style="display:flex;align-items:center;justify-content:space-between;gap:0.5rem;margin-bottom:0.25rem;">
                 <span class="cookie-pref-name">Analytics &amp; Performance</span>
                 <label class="cookie-toggle-label">
-                  <input type="checkbox" id="cookiePrefAnalytics" checked class="cookie-toggle-input">
+                  <input type="checkbox" id="cookiePrefAnalytics" name="cookiePrefAnalytics" checked class="cookie-toggle-input">
                   <span class="cookie-toggle-slider"></span>
                 </label>
               </div>
@@ -102,7 +102,7 @@ export const initCookieConsent = () => {
               <div style="display:flex;align-items:center;justify-content:space-between;gap:0.5rem;margin-bottom:0.25rem;">
                 <span class="cookie-pref-name">Personalization</span>
                 <label class="cookie-toggle-label">
-                  <input type="checkbox" id="cookiePrefPersonalization" checked class="cookie-toggle-input">
+                  <input type="checkbox" id="cookiePrefPersonalization" name="cookiePrefPersonalization" checked class="cookie-toggle-input">
                   <span class="cookie-toggle-slider"></span>
                 </label>
               </div>

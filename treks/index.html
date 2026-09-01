@@ -480,7 +480,7 @@
     <!-- =====================================================================
        TOP INFORMATION BAR
        ===================================================================== -->
-    <div class="top-bar" role="banner" aria-label="Contact information">
+    <div class="top-bar" aria-label="Contact information">
       <div class="container">
         <div class="top-bar__inner">
           <div class="top-bar__contacts">
@@ -587,7 +587,7 @@
 
                           <a href="/destinations.html#everest" class="mega-menu__item">
                             <div class="mega-menu__item-thumb">
-                              <img src="/assets/images/destinations/everest.jpg" alt="Everest Region" loading="lazy">
+                              <img src="/assets/images/destinations/everest.jpg" alt="Everest Region" loading="lazy" width="1024" height="1024">
                               <span class="mega-menu__item-alt-tag">5,545m</span>
                             </div>
                             <div class="mega-menu__item-info">
@@ -599,7 +599,7 @@
                           <a href="/destinations.html#annapurna" class="mega-menu__item">
                             <div class="mega-menu__item-thumb">
                               <img src="/assets/images/destinations/annapurna.jpg" alt="Annapurna Region"
-                                loading="lazy">
+                                loading="lazy" width="1024" height="1024">
                               <span class="mega-menu__item-alt-tag">5,416m</span>
                             </div>
                             <div class="mega-menu__item-info">
@@ -610,7 +610,7 @@
 
                           <a href="/destinations.html#langtang" class="mega-menu__item">
                             <div class="mega-menu__item-thumb">
-                              <img src="/assets/images/destinations/langtang.jpg" alt="Langtang Region" loading="lazy">
+                              <img src="/assets/images/destinations/langtang.jpg" alt="Langtang Region" loading="lazy" width="1024" height="1024">
                               <span class="mega-menu__item-alt-tag">4,773m</span>
                             </div>
                             <div class="mega-menu__item-info">
@@ -621,7 +621,7 @@
 
                           <a href="/destinations.html#manaslu" class="mega-menu__item">
                             <div class="mega-menu__item-thumb">
-                              <img src="/assets/images/destinations/manaslu.jpg" alt="Manaslu Region" loading="lazy">
+                              <img src="/assets/images/destinations/manaslu.jpg" alt="Manaslu Region" loading="lazy" width="1024" height="1024">
                               <span class="mega-menu__item-alt-tag">5,106m</span>
                             </div>
                             <div class="mega-menu__item-info">
@@ -632,7 +632,7 @@
 
                           <a href="/destinations.html#mustang" class="mega-menu__item">
                             <div class="mega-menu__item-thumb">
-                              <img src="/assets/images/destinations/mustang.jpg" alt="Upper Mustang" loading="lazy">
+                              <img src="/assets/images/destinations/mustang.jpg" alt="Upper Mustang" loading="lazy" width="1024" height="1024">
                               <span class="mega-menu__item-alt-tag">3,840m</span>
                             </div>
                             <div class="mega-menu__item-info">
@@ -643,7 +643,7 @@
 
                           <a href="/destinations.html#dolpo" class="mega-menu__item">
                             <div class="mega-menu__item-thumb">
-                              <img src="/assets/images/destinations/dolpo.jpg" alt="Dolpo Region" loading="lazy">
+                              <img src="/assets/images/destinations/dolpo.jpg" alt="Dolpo Region" loading="lazy" width="1024" height="1024">
                               <span class="mega-menu__item-alt-tag">5,350m</span>
                             </div>
                             <div class="mega-menu__item-info">
@@ -814,7 +814,7 @@
         </div>
         <input class="search-modal__input" type="search" placeholder="Search treks, destinations…"
           aria-label="Search treks and destinations" autocomplete="off" data-search-input aria-controls="search-results"
-          aria-expanded="false">
+          aria-expanded="false" id="siteSearchInput" name="searchQuery">
         <button class="btn btn--sm btn--secondary" data-search-close aria-label="Close search"
           type="button">ESC</button>
       </div>
@@ -836,21 +836,21 @@
 
         <!-- Slide 1 — Everest Base Camp -->
         <div class="hero__slide is-active" role="group" aria-roledescription="slide" aria-label="Slide 1 of 3">
-          <img class="hero__slide-bg" src="/assets/images/treks/upper-mustang.jpg" alt="Everest Trek Package"
+          <img class="hero__slide-bg" src="/assets/images/hero/slide-1-everest.jpg" alt="Everest Trek Package"
             aria-hidden="true" loading="eager" fetchpriority="high" width="1920" height="1080">
           <div class="hero__overlay"></div>
         </div>
 
         <!-- Slide 2 — Annapurna Sanctuary -->
         <div class="hero__slide" role="group" aria-roledescription="slide" aria-label="Slide 2 of 3">
-          <img class="hero__slide-bg" src="7e43adc06c1cb8353e385e87afb51a2e.jpg" alt="Annapurna Circuit Trek"
+          <img class="hero__slide-bg" src="/assets/images/hero/slide-2-annapurna.jpg" alt="Annapurna Circuit Trek"
             aria-hidden="true" loading="lazy" width="1920" height="1080">
           <div class="hero__overlay"></div>
         </div>
 
         <!-- Slide 3 — Gokyo Lakes & Mustang -->
         <div class="hero__slide" role="group" aria-roledescription="slide" aria-label="Slide 3 of 3">
-          <img class="hero__slide-bg" src="e888f375bb57ef750cf149d0ffb94e68.jpg" alt="Upper Mustang Expedition"
+          <img class="hero__slide-bg" src="/assets/images/hero/slide-3-gokyo.jpg" alt="Upper Mustang Expedition"
             aria-hidden="true" loading="lazy" width="1920" height="1080">
           <div class="hero__overlay"></div>
         </div>
@@ -928,7 +928,7 @@
           <!-- 4. Action Row (Play Thumb + White Floating Pill with Avatars) -->
           <div class="hero__action-row reveal">
             <a href="/treks/everest-base-camp.html" class="hero__play-thumb" aria-label="Watch trek video preview">
-              <img loading="lazy" src="/assets/images/treks/everest-base-camp.jpg" alt="Everest trek preview">
+              <img loading="lazy" src="/assets/images/treks/everest-base-camp.jpg" alt="Everest trek preview" width="1024" height="1024">
               <div class="hero__play-btn">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="12" height="12">
                   <path d="M8 5v14l11-7z" />
@@ -939,13 +939,13 @@
             <div class="hero__trust-pill">
               <div class="hero__avatars">
                 <img loading="lazy" src="/assets/images/team/pemba-nuru.jpg" referrerpolicy="no-referrer" crossorigin="anonymous"
-                  alt="Trekker" class="hero__avatar">
+                  alt="Trekker" class="hero__avatar" width="1024" height="1024">
                 <img loading="lazy" src="/assets/images/team/lhakpa-tenzing.jpg" referrerpolicy="no-referrer" crossorigin="anonymous"
-                  alt="Trekker" class="hero__avatar">
+                  alt="Trekker" class="hero__avatar" width="1024" height="1024">
                 <img loading="lazy" src="/assets/images/team/jai-taneja.jpg" referrerpolicy="no-referrer" crossorigin="anonymous"
-                  alt="Trekker" class="hero__avatar">
+                  alt="Trekker" class="hero__avatar" width="1024" height="1024">
                 <img loading="lazy" src="/assets/images/team/pasang-sherpa.jpg" referrerpolicy="no-referrer" crossorigin="anonymous"
-                  alt="Trekker" class="hero__avatar">
+                  alt="Trekker" class="hero__avatar" width="1024" height="1024">
               </div>
               <span class="hero__trust-text">Trusted By <strong>+15,000 Trekkers</strong></span>
               <a href="/booking.html" class="btn hero__trust-btn">Book Your Trek</a>
@@ -963,7 +963,7 @@
               </svg>
               <input class="hero__search-input" id="heroTrekSearchInput" type="search"
                 placeholder="Search by trek name, altitude, or duration (e.g., EBC, 14 days, Annapurna)..."
-                aria-label="Search trekking packages" autocomplete="off">
+                aria-label="Search trekking packages" autocomplete="off" name="heroTrekSearchInput">
             </div>
 
             <button class="btn hero__search-submit" type="button" aria-label="Submit search">
@@ -1108,7 +1108,7 @@
                 <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="m8 3 4 8 5-5 5 15H2L8 3z"/></svg>
                 Region
               </label>
-              <select id="filterRegion" class="filter-select" data-filter-select="region">
+              <select id="filterRegion" class="filter-select" data-filter-select="region" name="filterRegion">
                 <option value="all">All Regions (8+)</option>
                 <option value="everest">Everest Region</option>
                 <option value="annapurna">Annapurna Region</option>
@@ -1128,7 +1128,7 @@
                 <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
                 Difficulty
               </label>
-              <select id="filterDifficulty" class="filter-select" data-filter-select="difficulty">
+              <select id="filterDifficulty" class="filter-select" data-filter-select="difficulty" name="filterDifficulty">
                 <option value="all">All Difficulties</option>
                 <option value="easy">Easy / Beginner</option>
                 <option value="moderate">Moderate</option>
@@ -1143,7 +1143,7 @@
                 <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
                 Max Duration
               </label>
-              <select id="filterDuration" class="filter-select" data-filter-select="duration">
+              <select id="filterDuration" class="filter-select" data-filter-select="duration" name="filterDuration">
                 <option value="all">Any Duration</option>
                 <option value="7">Short (&le; 7 Days)</option>
                 <option value="12">Medium (&le; 12 Days)</option>
@@ -1158,7 +1158,7 @@
                 <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
                 Trekking Season
               </label>
-              <select id="filterSeason" class="filter-select" data-filter-select="season">
+              <select id="filterSeason" class="filter-select" data-filter-select="season" name="filterSeason">
                 <option value="all">All Seasons</option>
                 <option value="spring">Spring (Mar – May)</option>
                 <option value="autumn">Autumn (Sep – Nov)</option>
@@ -1191,7 +1191,7 @@
             data-price="1399" data-season="spring,autumn">
             <a href="/treks/everest-base-camp.html" class="trek-card__image-wrap">
               <img src="/assets/images/treks/everest-base-camp.jpg" alt="Everest Base Camp Trek" class="trek-card__image"
-                loading="lazy">
+                loading="lazy" width="1024" height="1024">
               <span class="badge badge--accent trek-card__badge">MOST POPULAR</span>
               <div class="trek-card__rating">
                 <svg width="12" height="12" viewBox="0 0 24 24" fill="#f59e0b"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
@@ -1238,7 +1238,7 @@
             data-price="1299" data-season="spring,autumn">
             <a href="/treks/gokyo-lakes.html" class="trek-card__image-wrap">
               <img src="/assets/images/treks/upper-mustang.jpg" alt="Gokyo Lakes Trek" class="trek-card__image"
-                loading="lazy">
+                loading="lazy" width="1024" height="1024">
               <span class="badge badge--teal trek-card__badge" style="background:#0f5257; color:#fff;">TURQUOISE LAKES</span>
               <div class="trek-card__rating">
                 <svg width="12" height="12" viewBox="0 0 24 24" fill="#f59e0b"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
@@ -1285,7 +1285,7 @@
             data-price="1890" data-season="spring,autumn">
             <a href="/treks/three-passes.html" class="trek-card__image-wrap">
               <img src="/assets/images/treks/three-passes.jpg" referrerpolicy="no-referrer" crossorigin="anonymous" alt="Everest Three Passes Trek" class="trek-card__image"
-                loading="lazy">
+                loading="lazy" width="1376" height="768">
               <span class="badge badge--accent trek-card__badge">HIGH PASS EXPEDITION</span>
               <div class="trek-card__rating">
                 <svg width="12" height="12" viewBox="0 0 24 24" fill="#f59e0b"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
@@ -1332,7 +1332,7 @@
             data-price="1150" data-season="spring,autumn,winter">
             <a href="/treks/ama-dablam-base-camp.html" class="trek-card__image-wrap">
               <img src="/assets/images/treks/three-passes.jpg" alt="Ama Dablam Base Camp Trek" class="trek-card__image"
-                loading="lazy">
+                loading="lazy" width="1376" height="768">
               <span class="badge badge--success trek-card__badge">SCENIC PANORAMA</span>
               <div class="trek-card__rating">
                 <svg width="12" height="12" viewBox="0 0 24 24" fill="#f59e0b"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
@@ -1379,7 +1379,7 @@
             data-price="899" data-season="spring,autumn,winter">
             <a href="/treks/everest-view.html" class="trek-card__image-wrap">
               <img src="/assets/images/treks/everest-view.jpg" alt="Everest View Panorama Trek" class="trek-card__image"
-                loading="lazy">
+                loading="lazy" width="1376" height="768">
               <span class="badge badge--info trek-card__badge">SHORT &amp; COMFORT</span>
               <div class="trek-card__rating">
                 <svg width="12" height="12" viewBox="0 0 24 24" fill="#f59e0b"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
@@ -1426,7 +1426,7 @@
             data-price="2199" data-season="spring,autumn,winter">
             <a href="/treks/ebc-heli-return.html" class="trek-card__image-wrap">
               <img src="/assets/images/treks/everest-view.jpg" alt="Everest Base Camp with Heli Return" class="trek-card__image"
-                loading="lazy">
+                loading="lazy" width="1376" height="768">
               <span class="badge badge--warning trek-card__badge">LUXURY HELI-TREK</span>
               <div class="trek-card__rating">
                 <svg width="12" height="12" viewBox="0 0 24 24" fill="#f59e0b"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
@@ -1477,7 +1477,7 @@
             data-price="1199" data-season="spring,autumn">
             <a href="/treks/annapurna-circuit.html" class="trek-card__image-wrap">
               <img src="/assets/images/treks/annapurna-circuit.jpg" alt="Annapurna Circuit Trek" class="trek-card__image"
-                loading="lazy">
+                loading="lazy" width="1024" height="1024">
               <span class="badge badge--success trek-card__badge">CLASSIC ROUTE</span>
               <div class="trek-card__rating">
                 <svg width="12" height="12" viewBox="0 0 24 24" fill="#f59e0b"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
@@ -1524,7 +1524,7 @@
             data-price="999" data-season="spring,autumn,winter">
             <a href="/treks/annapurna-base-camp.html" class="trek-card__image-wrap">
               <img src="/assets/images/treks/annapurna-circuit.jpg" alt="Annapurna Base Camp Trek" class="trek-card__image"
-                loading="lazy">
+                loading="lazy" width="1024" height="1024">
               <span class="badge badge--success trek-card__badge">SANCTUARY VIEWS</span>
               <div class="trek-card__rating">
                 <svg width="12" height="12" viewBox="0 0 24 24" fill="#f59e0b"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
@@ -1571,7 +1571,7 @@
             data-price="599" data-season="spring,autumn,winter">
             <a href="/treks/mardi-himal.html" class="trek-card__image-wrap">
               <img src="/assets/images/treks/mardi-himal.jpg" alt="Mardi Himal Ridge Trek" class="trek-card__image"
-                loading="lazy">
+                loading="lazy" width="1376" height="768">
               <span class="badge badge--accent trek-card__badge">SHORT TREK</span>
               <div class="trek-card__rating">
                 <svg width="12" height="12" viewBox="0 0 24 24" fill="#f59e0b"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
@@ -1618,7 +1618,7 @@
             data-price="499" data-season="spring,autumn,winter">
             <a href="/treks/poon-hill.html" class="trek-card__image-wrap">
               <img src="/assets/images/treks/poon-hill.jpg" alt="Ghorepani Poon Hill Trek" class="trek-card__image"
-                loading="lazy">
+                loading="lazy" width="1376" height="768">
               <span class="badge badge--info trek-card__badge">BEGINNER FRIENDLY</span>
               <div class="trek-card__rating">
                 <svg width="12" height="12" viewBox="0 0 24 24" fill="#f59e0b"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
@@ -1665,7 +1665,7 @@
             data-price="1650" data-season="spring,autumn">
             <a href="/treks/nar-phu.html" class="trek-card__image-wrap">
               <img src="/assets/images/treks/poon-hill.jpg" alt="Nar Phu Valley Trek" class="trek-card__image"
-                loading="lazy">
+                loading="lazy" width="1376" height="768">
               <span class="badge badge--purple trek-card__badge" style="background:#7c3aed; color:#fff;">RESTRICTED MEDIEVAL</span>
               <div class="trek-card__rating">
                 <svg width="12" height="12" viewBox="0 0 24 24" fill="#f59e0b"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
@@ -1712,7 +1712,7 @@
             data-price="850" data-season="spring,autumn,winter">
             <a href="/treks/khopra-danda.html" class="trek-card__image-wrap">
               <img src="/assets/images/destinations/annapurna.jpg" alt="Khopra Danda Trek" class="trek-card__image"
-                loading="lazy">
+                loading="lazy" width="1024" height="1024">
               <span class="badge badge--success trek-card__badge">OFF-THE-BEATEN-PATH</span>
               <div class="trek-card__rating">
                 <svg width="12" height="12" viewBox="0 0 24 24" fill="#f59e0b"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
@@ -1763,7 +1763,7 @@
             data-price="799" data-season="spring,autumn,winter">
             <a href="/treks/langtang-valley.html" class="trek-card__image-wrap">
               <img src="/assets/images/treks/langtang-valley.jpg" alt="Langtang Valley Trek" class="trek-card__image"
-                loading="lazy">
+                loading="lazy" width="1024" height="1024">
               <span class="badge badge--info trek-card__badge">TAMANG HERITAGE</span>
               <div class="trek-card__rating">
                 <svg width="12" height="12" viewBox="0 0 24 24" fill="#f59e0b"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
@@ -1810,7 +1810,7 @@
             data-price="749" data-season="spring,autumn,winter">
             <a href="/treks/gosaikunda-lakes.html" class="trek-card__image-wrap">
               <img src="/assets/images/treks/langtang-valley.jpg" alt="Gosaikunda Lake Trek" class="trek-card__image"
-                loading="lazy">
+                loading="lazy" width="1024" height="1024">
               <span class="badge badge--teal trek-card__badge" style="background:#0f5257; color:#fff;">HOLY LAKES PILGRIMAGE</span>
               <div class="trek-card__rating">
                 <svg width="12" height="12" viewBox="0 0 24 24" fill="#f59e0b"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
@@ -1857,7 +1857,7 @@
             data-price="699" data-season="spring,autumn,winter">
             <a href="/treks/tamang-heritage.html" class="trek-card__image-wrap">
               <img src="/assets/images/destinations/langtang.jpg" alt="Tamang Heritage Trail" class="trek-card__image"
-                loading="lazy">
+                loading="lazy" width="1024" height="1024">
               <span class="badge badge--accent trek-card__badge">CULTURAL HOMESTAYS</span>
               <div class="trek-card__rating">
                 <svg width="12" height="12" viewBox="0 0 24 24" fill="#f59e0b"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
@@ -1904,7 +1904,7 @@
             data-price="1199" data-season="spring,autumn">
             <a href="/treks/langtang-helambu.html" class="trek-card__image-wrap">
               <img src="/assets/images/destinations/langtang.jpg" alt="Langtang Gosaikunda Helambu Circuit" class="trek-card__image"
-                loading="lazy">
+                loading="lazy" width="1024" height="1024">
               <span class="badge badge--success trek-card__badge">GRAND VALLEY CIRCUIT</span>
               <div class="trek-card__rating">
                 <svg width="12" height="12" viewBox="0 0 24 24" fill="#f59e0b"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
@@ -1955,7 +1955,7 @@
             data-price="1499" data-season="spring,autumn">
             <a href="/treks/manaslu-circuit.html" class="trek-card__image-wrap">
               <img src="/assets/images/treks/manaslu-circuit.jpg" alt="Manaslu Circuit Trek" class="trek-card__image"
-                loading="lazy">
+                loading="lazy" width="1024" height="1024">
               <span class="badge badge--warning trek-card__badge">RESTRICTED AREA</span>
               <div class="trek-card__rating">
                 <svg width="12" height="12" viewBox="0 0 24 24" fill="#f59e0b"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
@@ -2002,7 +2002,7 @@
             data-price="1950" data-season="spring,autumn">
             <a href="/treks/tsum-valley.html" class="trek-card__image-wrap">
               <img src="/assets/images/treks/manaslu-circuit.jpg" alt="Manaslu and Tsum Valley Trek" class="trek-card__image"
-                loading="lazy">
+                loading="lazy" width="1024" height="1024">
               <span class="badge badge--purple trek-card__badge" style="background:#7c3aed; color:#fff;">SACRED VALLEY EPIC</span>
               <div class="trek-card__rating">
                 <svg width="12" height="12" viewBox="0 0 24 24" fill="#f59e0b"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
@@ -2049,7 +2049,7 @@
             data-price="1399" data-season="spring,autumn">
             <a href="/treks/manaslu-base-camp.html" class="trek-card__image-wrap">
               <img src="/assets/images/destinations/manaslu.jpg" alt="Manaslu Base Camp Trek" class="trek-card__image"
-                loading="lazy">
+                loading="lazy" width="1024" height="1024">
               <span class="badge badge--success trek-card__badge">GLACIAL SANCTUARY</span>
               <div class="trek-card__rating">
                 <svg width="12" height="12" viewBox="0 0 24 24" fill="#f59e0b"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
@@ -2100,7 +2100,7 @@
             data-price="1899" data-season="spring,monsoon,autumn">
             <a href="/treks/upper-mustang.html" class="trek-card__image-wrap">
               <img src="/assets/images/treks/upper-mustang.jpg" alt="Upper Mustang Trek" class="trek-card__image"
-                loading="lazy">
+                loading="lazy" width="1024" height="1024">
               <span class="badge badge--purple trek-card__badge" style="background:#6d28d9; color:#fff;">RAIN-SHADOW</span>
               <div class="trek-card__rating">
                 <svg width="12" height="12" viewBox="0 0 24 24" fill="#f59e0b"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
@@ -2147,7 +2147,7 @@
             data-price="2150" data-season="spring,monsoon">
             <a href="/treks/mustang-tiji-festival.html" class="trek-card__image-wrap">
               <img src="/assets/images/treks/upper-mustang.jpg" alt="Mustang Tiji Festival" class="trek-card__image"
-                loading="lazy">
+                loading="lazy" width="1024" height="1024">
               <span class="badge badge--warning trek-card__badge">SACRED RITUAL FESTIVAL</span>
               <div class="trek-card__rating">
                 <svg width="12" height="12" viewBox="0 0 24 24" fill="#f59e0b"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
@@ -2194,7 +2194,7 @@
             data-price="1799" data-season="spring,monsoon,autumn">
             <a href="/treks/mustang-sky-caves.html" class="trek-card__image-wrap">
               <img src="/assets/images/destinations/mustang.jpg" alt="Sky Caves of Mustang" class="trek-card__image"
-                loading="lazy">
+                loading="lazy" width="1024" height="1024">
               <span class="badge badge--success trek-card__badge">ARCHAEOLOGY TRAIL</span>
               <div class="trek-card__rating">
                 <svg width="12" height="12" viewBox="0 0 24 24" fill="#f59e0b"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
@@ -2245,7 +2245,7 @@
             data-price="2499" data-season="spring,monsoon,autumn">
             <a href="/treks/dolpo.html" class="trek-card__image-wrap">
               <img src="/assets/images/destinations/dolpo.jpg" alt="Upper Dolpo Trek" class="trek-card__image"
-                loading="lazy">
+                loading="lazy" width="1024" height="1024">
               <span class="badge badge--warning trek-card__badge">REMOTE WILDERNESS</span>
               <div class="trek-card__rating">
                 <svg width="12" height="12" viewBox="0 0 24 24" fill="#f59e0b"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
@@ -2292,7 +2292,7 @@
             data-price="1450" data-season="spring,monsoon,autumn">
             <a href="/treks/phoksundo-lake.html" class="trek-card__image-wrap">
               <img src="/assets/images/treks/phoksundo-lake.jpg" alt="Phoksundo Turquoise Lake Trek" class="trek-card__image"
-                loading="lazy">
+                loading="lazy" width="1376" height="768">
               <span class="badge badge--teal trek-card__badge" style="background:#0f5257; color:#fff;">ALPINE JEWEL</span>
               <div class="trek-card__rating">
                 <svg width="12" height="12" viewBox="0 0 24 24" fill="#f59e0b"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
@@ -2339,7 +2339,7 @@
             data-price="1850" data-season="spring,monsoon,autumn">
             <a href="/treks/lower-dolpo.html" class="trek-card__image-wrap">
               <img src="/assets/images/treks/phoksundo-lake.jpg" alt="Lower Dolpo Circuit" class="trek-card__image"
-                loading="lazy">
+                loading="lazy" width="1376" height="768">
               <span class="badge badge--success trek-card__badge">CANYON EXPEDITION</span>
               <div class="trek-card__rating">
                 <svg width="12" height="12" viewBox="0 0 24 24" fill="#f59e0b"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
@@ -2390,7 +2390,7 @@
             data-price="2499" data-season="spring,autumn">
             <a href="/treks/kanchenjunga.html" class="trek-card__image-wrap">
               <img src="/assets/images/destinations/kanchenjunga.jpg" alt="Kanchenjunga Trek" class="trek-card__image"
-                loading="lazy">
+                loading="lazy" width="1024" height="1024">
               <span class="badge badge--warning trek-card__badge">FAR-EAST FRONTIER</span>
               <div class="trek-card__rating">
                 <svg width="12" height="12" viewBox="0 0 24 24" fill="#f59e0b"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
@@ -2437,7 +2437,7 @@
             data-price="1999" data-season="spring,autumn">
             <a href="/treks/kanchenjunga-south-bc.html" class="trek-card__image-wrap">
               <img src="/assets/images/destinations/kanchenjunga.jpg" alt="Kanchenjunga South Base Camp" class="trek-card__image"
-                loading="lazy">
+                loading="lazy" width="1024" height="1024">
               <span class="badge badge--success trek-card__badge">YALUNG GLACIER</span>
               <div class="trek-card__rating">
                 <svg width="12" height="12" viewBox="0 0 24 24" fill="#f59e0b"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
@@ -2484,7 +2484,7 @@
             data-price="2899" data-season="spring,autumn">
             <a href="/treks/kanchenjunga-circuit.html" class="trek-card__image-wrap">
               <img src="/assets/images/destinations/kanchenjunga.jpg" alt="Grand Kanchenjunga Double Circuit" class="trek-card__image"
-                loading="lazy">
+                loading="lazy" width="1024" height="1024">
               <span class="badge badge--warning trek-card__badge">ULTIMATE EXPEDITION</span>
               <div class="trek-card__rating">
                 <svg width="12" height="12" viewBox="0 0 24 24" fill="#f59e0b"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
@@ -2535,7 +2535,7 @@
             data-price="1950" data-season="spring,autumn">
             <a href="/treks/makalu-base-camp.html" class="trek-card__image-wrap">
               <img src="/assets/images/destinations/makalu.jpg" alt="Makalu Base Camp Trek" class="trek-card__image"
-                loading="lazy">
+                loading="lazy" width="1024" height="1024">
               <span class="badge badge--teal trek-card__badge" style="background:#0f5257; color:#fff;">BARUN VALLEY WILD</span>
               <div class="trek-card__rating">
                 <svg width="12" height="12" viewBox="0 0 24 24" fill="#f59e0b"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
@@ -2582,7 +2582,7 @@
             data-price="1750" data-season="spring,autumn">
             <a href="/treks/barun-shipton-la.html" class="trek-card__image-wrap">
               <img src="/assets/images/destinations/makalu.jpg" alt="Barun Gorge & Shipton La Pass Trek" class="trek-card__image"
-                loading="lazy">
+                loading="lazy" width="1024" height="1024">
               <span class="badge badge--success trek-card__badge">ALPINE HIGH PASSES</span>
               <div class="trek-card__rating">
                 <svg width="12" height="12" viewBox="0 0 24 24" fill="#f59e0b"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
@@ -2633,7 +2633,7 @@
             data-price="2399" data-season="spring,autumn">
             <a href="/treks/island-peak.html" class="trek-card__image-wrap">
               <img src="/assets/images/destinations/everest.jpg" alt="Island Peak Climbing" class="trek-card__image"
-                loading="lazy">
+                loading="lazy" width="1024" height="1024">
               <span class="badge badge--accent trek-card__badge">6,000M SUMMIT</span>
               <div class="trek-card__rating">
                 <svg width="12" height="12" viewBox="0 0 24 24" fill="#f59e0b"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
@@ -2680,7 +2680,7 @@
             data-price="2250" data-season="spring,autumn">
             <a href="/treks/mera-peak.html" class="trek-card__image-wrap">
               <img src="/assets/images/destinations/everest.jpg" alt="Mera Peak Climbing" class="trek-card__image"
-                loading="lazy">
+                loading="lazy" width="1024" height="1024">
               <span class="badge badge--warning trek-card__badge">HIGHEST TREKKING PEAK</span>
               <div class="trek-card__rating">
                 <svg width="12" height="12" viewBox="0 0 24 24" fill="#f59e0b"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
@@ -2957,7 +2957,7 @@
           
           <article class="trek-card reveal">
             <a href="/blog/everest-base-camp-complete-guide.html" class="trek-card__image-wrap" style="display:block;">
-              <img src="/assets/images/destinations/everest.jpg" alt="Everest Base Camp Trek Guide" class="trek-card__image" loading="lazy">
+              <img src="/assets/images/destinations/everest.jpg" alt="Everest Base Camp Trek Guide" class="trek-card__image" loading="lazy" width="1024" height="1024">
               <span class="trek-card__badge" style="background:#0f5257;color:#fff;">EVEREST REGION</span>
             </a>
             <div class="trek-card__body">
@@ -2984,7 +2984,7 @@
 
           <article class="trek-card reveal">
             <a href="/blog/annapurna-circuit-vs-sanctuary.html" class="trek-card__image-wrap" style="display:block;">
-              <img src="/assets/images/destinations/annapurna.jpg" alt="Annapurna Circuit vs Sanctuary" class="trek-card__image" loading="lazy">
+              <img src="/assets/images/destinations/annapurna.jpg" alt="Annapurna Circuit vs Sanctuary" class="trek-card__image" loading="lazy" width="1024" height="1024">
               <span class="trek-card__badge" style="background:#7c3aed;color:#fff;">ANNAPURNA REGION</span>
             </a>
             <div class="trek-card__body">
@@ -3011,7 +3011,7 @@
 
           <article class="trek-card reveal">
             <a href="/blog/manaslu-circuit-trek-guide.html" class="trek-card__image-wrap" style="display:block;">
-              <img src="/assets/images/destinations/manaslu.jpg" alt="Manaslu Circuit Permits Guide" class="trek-card__image" loading="lazy">
+              <img src="/assets/images/destinations/manaslu.jpg" alt="Manaslu Circuit Permits Guide" class="trek-card__image" loading="lazy" width="1024" height="1024">
               <span class="trek-card__badge" style="background:#d97706;color:#fff;">MANASLU REGION</span>
             </a>
             <div class="trek-card__body">
@@ -3038,7 +3038,7 @@
 
           <article class="trek-card reveal">
             <a href="/blog/what-is-included-trek-package.html" class="trek-card__image-wrap" style="display:block;">
-              <img src="/assets/images/destinations/langtang.jpg" alt="What is included in Nepal trek package" class="trek-card__image" loading="lazy">
+              <img src="/assets/images/destinations/langtang.jpg" alt="What is included in Nepal trek package" class="trek-card__image" loading="lazy" width="1024" height="1024">
               <span class="trek-card__badge" style="background:#0f5257;color:#fff;">PACKAGE GUIDE</span>
             </a>
             <div class="trek-card__body">
@@ -3065,7 +3065,7 @@
 
           <article class="trek-card reveal">
             <a href="/blog/upper-mustang-trek-packages-guide.html" class="trek-card__image-wrap" style="display:block;">
-              <img src="/assets/images/destinations/mustang.jpg" alt="Upper Mustang Trek Package" class="trek-card__image" loading="lazy">
+              <img src="/assets/images/destinations/mustang.jpg" alt="Upper Mustang Trek Package" class="trek-card__image" loading="lazy" width="1024" height="1024">
               <span class="trek-card__badge" style="background:#b45309;color:#fff;">MUSTANG &amp; DOLPO</span>
             </a>
             <div class="trek-card__body">
@@ -3092,7 +3092,7 @@
 
           <article class="trek-card reveal">
             <a href="/blog/altitude-sickness-prevention-himalayan-treks.html" class="trek-card__image-wrap" style="display:block;">
-              <img src="/assets/images/destinations/kanchenjunga.jpg" alt="Altitude Sickness Prevention Guide" class="trek-card__image" loading="lazy">
+              <img src="/assets/images/destinations/kanchenjunga.jpg" alt="Altitude Sickness Prevention Guide" class="trek-card__image" loading="lazy" width="1024" height="1024">
               <span class="trek-card__badge" style="background:#dc2626;color:#fff;">SAFETY &amp; HEALTH</span>
             </a>
             <div class="trek-card__body">
@@ -3160,7 +3160,7 @@
             </svg>
             <input type="text" id="faqSearchInput"
               placeholder="Search questions by keyword (e.g. deposit, solo, gear, altitude)..."
-              aria-label="Search frequently asked questions">
+              aria-label="Search frequently asked questions" name="faqSearchInput">
           </div>
 
           <div class="faq-category-pills" role="tablist" aria-label="FAQ Category Filters">

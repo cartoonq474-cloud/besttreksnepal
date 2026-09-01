@@ -1,0 +1,45 @@
+# Best Treks Nepal
+
+> Best Treks Nepal is a premier Himalayan trekking operator based in Kathmandu, Nepal. We organize authentic, safety-certified trekking packages, high-altitude expeditions, and cultural tours across Nepal's premier trekking regions including Everest, Annapurna, Manaslu, Langtang, Upper Mustang, Dolpo, Kanchenjunga, and Makalu.
+
+## Core Services & Highlights
+
+- **Guided Himalayan Treks**: All-inclusive trekking packages with certified local Sherpa guides, porters, teahouse accommodations, and private ground/heli transportation.
+- **Zero-Advance Deposit Policy**: 100% cash-on-arrival payment options in Kathmandu with flexible free date changes.
+- **Altitude Safety & Oxygen Protocol**: Daily pulse oximeter monitoring, Gamow bag access, and emergency helicopter evacuation coordination.
+- **Sustainable Tourism**: Fair porter wages, eco-conscious trail practices, and Himalayan School sponsorship programs.
+
+## Trekking Regions & Hubs
+
+- [Everest Region](/destinations/everest.html): Home to Mount Everest (8,848.86m), Tengboche Monastery, Gokyo Sacred Lakes, and high alpine passes (Cho La, Kongma La, Renjo La).
+- [Annapurna Region](/destinations/annapurna.html): High-altitude circuits, Thorong La Pass (5,416m), Annapurna Sanctuary, Poon Hill sunrise view, and Gurung mountain culture.
+- [Manaslu Region](/destinations/manaslu.html): Pristine restricted wilderness circuit around Mt. Manaslu (8,163m), Larkya La Pass (5,106m), and ancient Buddhist Tsum Valley.
+- [Langtang Valley](/destinations/langtang.html): Closest mountain sanctuary to Kathmandu, Kyanjin Gompa, Tserko Ri (4,984m), and the 108 sacred alpine lakes of Gosaikunda.
+- [Upper Mustang](/destinations/mustang.html): Ancient trans-Himalayan walled kingdom of Lo Manthang, prehistoric cliffside sky caves, and summer rainshadow haven.
+- [Upper Dolpo](/destinations/dolpo.html): Shey Phoksundo turquoise alpine lake, nomadic Bon-Po culture, and crystal mountain wilderness.
+- [Kanchenjunga](/destinations/kanchenjunga.html): Remote eastern wilderness to the base of the world's 3rd highest peak (8,586m).
+- [Makalu Barun](/destinations/makalu.html): Dramatic vertical granite gorges, hanging waterfalls, and untouched pristine biodiversity.
+
+## Top Trekking Packages
+
+- [Everest Base Camp Trek (14 Days)](/treks/everest-base-camp.html): The world-famous classic route from Lukla to EBC (5,364m) and Kala Patthar (5,545m).
+- [Annapurna Circuit Trek (14 Days)](/treks/annapurna-circuit.html): Complete traverse across subtropical river gorges up to Thorong La Pass (5,416m).
+- [Manaslu Circuit Trek (14 Days)](/treks/manaslu-circuit.html): Restricted pristine wilderness trek crossing Larkya La Pass (5,106m).
+- [Langtang Valley Trek (8 Days)](/treks/langtang-valley.html): Scenic valley hike with panoramic views from Kyanjin Ri (4,773m).
+- [Upper Mustang Trek (14 Days)](/treks/upper-mustang.html): Trans-Himalayan desert landscapes and 14th-century fortified capital of Lo Manthang.
+- [Gokyo Lakes Trek (12 Days)](/treks/gokyo-lakes.html): Pristine glacial lakes and panoramic vista of 4 eight-thousanders from Gokyo Ri (5,357m).
+- [Everest Three Passes Trek (19 Days)](/treks/three-passes.html): The ultimate Himalayan challenge crossing Kongma La, Cho La, and Renjo La.
+
+## Essential Guides & Planning Resources
+
+- [Best Time to Trek in Nepal](/blog/best-time-trek-nepal.html): Comprehensive seasonal breakdown (Autumn peak, Spring blooms, Monsoon rainshadow).
+- [Altitude Sickness Prevention & Acclimatization Guide](/blog/altitude-sickness-prevention-himalayan-treks.html): Acute Mountain Sickness (AMS) symptoms, hydration, Diamox guidelines, and ascent profiles.
+- [Nepal Trekking Permits Guide (2026 Updated)](/blog/nepal-trekking-permits.html): National park permits, TIMS card, and restricted area permit (RAP) costs and requirements.
+- [Complete Gear & Packing List](/blog/nepal-trekking-gear-packing-list.html): 4-layer clothing system, footwear, sleeping bags, and electronics packing advice.
+- [What is Included in a Nepal Trek Package](/blog/what-is-included-trek-package.html): Detailed transparent breakdown of guides, meals, lodging, transfers, and permits.
+
+## Booking & Contact
+
+- [Interactive Trek Booking Portal](/booking.html): Instant cost calculator, accommodation tier customizer (Standard, Comfort, Luxury), and reservation submission.
+- [About Best Treks Nepal](/about.html): Team backgrounds, safety track records, sustainability initiatives, and legal licensing.
+- [Contact & Support Desk](/contact.html): 24/7 Kathmandu operations office, WhatsApp direct support (+977 9748343015), and email inquiries.

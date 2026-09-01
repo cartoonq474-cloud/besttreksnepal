@@ -1335,7 +1335,7 @@
     <!-- =====================================================================
        TOP INFORMATION BAR
        ===================================================================== -->
-    <div class="top-bar" role="banner" aria-label="Contact information">
+    <div class="top-bar" aria-label="Contact information">
       <div class="container">
         <div class="top-bar__inner">
           <div class="top-bar__contacts">
@@ -1440,7 +1440,7 @@
 
                           <a href="/destinations.html#everest" class="mega-menu__item">
                             <div class="mega-menu__item-thumb">
-                              <img src="/assets/images/destinations/everest.jpg" alt="Everest Region" loading="lazy">
+                              <img src="/assets/images/destinations/everest.jpg" alt="Everest Region" loading="lazy" width="1024" height="1024">
                               <span class="mega-menu__item-alt-tag">5,545m</span>
                             </div>
                             <div class="mega-menu__item-info">
@@ -1452,7 +1452,7 @@
                           <a href="/destinations.html#annapurna" class="mega-menu__item">
                             <div class="mega-menu__item-thumb">
                               <img src="/assets/images/destinations/annapurna.jpg" alt="Annapurna Region"
-                                loading="lazy">
+                                loading="lazy" width="1024" height="1024">
                               <span class="mega-menu__item-alt-tag">5,416m</span>
                             </div>
                             <div class="mega-menu__item-info">
@@ -1463,7 +1463,7 @@
 
                           <a href="/destinations.html#langtang" class="mega-menu__item">
                             <div class="mega-menu__item-thumb">
-                              <img src="/assets/images/destinations/langtang.jpg" alt="Langtang Region" loading="lazy">
+                              <img src="/assets/images/destinations/langtang.jpg" alt="Langtang Region" loading="lazy" width="1024" height="1024">
                               <span class="mega-menu__item-alt-tag">4,773m</span>
                             </div>
                             <div class="mega-menu__item-info">
@@ -1474,7 +1474,7 @@
 
                           <a href="/destinations.html#manaslu" class="mega-menu__item">
                             <div class="mega-menu__item-thumb">
-                              <img src="/assets/images/destinations/manaslu.jpg" alt="Manaslu Region" loading="lazy">
+                              <img src="/assets/images/destinations/manaslu.jpg" alt="Manaslu Region" loading="lazy" width="1024" height="1024">
                               <span class="mega-menu__item-alt-tag">5,106m</span>
                             </div>
                             <div class="mega-menu__item-info">
@@ -1485,7 +1485,7 @@
 
                           <a href="/destinations.html#mustang" class="mega-menu__item">
                             <div class="mega-menu__item-thumb">
-                              <img src="/assets/images/destinations/mustang.jpg" alt="Upper Mustang" loading="lazy">
+                              <img src="/assets/images/destinations/mustang.jpg" alt="Upper Mustang" loading="lazy" width="1024" height="1024">
                               <span class="mega-menu__item-alt-tag">3,840m</span>
                             </div>
                             <div class="mega-menu__item-info">
@@ -1496,7 +1496,7 @@
 
                           <a href="/destinations.html#dolpo" class="mega-menu__item">
                             <div class="mega-menu__item-thumb">
-                              <img src="/assets/images/destinations/dolpo.jpg" alt="Dolpo Region" loading="lazy">
+                              <img src="/assets/images/destinations/dolpo.jpg" alt="Dolpo Region" loading="lazy" width="1024" height="1024">
                               <span class="mega-menu__item-alt-tag">5,350m</span>
                             </div>
                             <div class="mega-menu__item-info">
@@ -1654,7 +1654,7 @@
         </div>
         <input class="search-modal__input" type="search" placeholder="Search treks, destinations…"
           aria-label="Search treks and destinations" autocomplete="off" data-search-input aria-controls="search-results"
-          aria-expanded="false">
+          aria-expanded="false" id="siteSearchInput" name="searchQuery">
         <button class="btn btn--sm btn--secondary" data-search-close aria-label="Close search"
           type="button">ESC</button>
       </div>
@@ -1765,7 +1765,7 @@
           <!-- 4. Action Row (Play Thumb + White Floating Trust Pill with Avatars) -->
           <div class="hero__action-row reveal">
             <a href="/about.html" class="hero__play-thumb" aria-label="Watch Sherpa team intro preview">
-              <img loading="lazy" src="/assets/images/destinations/everest.jpg" alt="Sherpa expedition preview">
+              <img loading="lazy" src="/assets/images/destinations/everest.jpg" alt="Sherpa expedition preview" width="1024" height="1024">
               <div class="hero__play-btn">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="12" height="12">
                   <path d="M8 5v14l11-7z" />
@@ -1776,13 +1776,13 @@
             <div class="hero__trust-pill">
               <div class="hero__avatars">
                 <img loading="lazy" src="/assets/images/team/pasang-sherpa.jpg" referrerpolicy="no-referrer" crossorigin="anonymous"
-                  alt="Pasang Sherpa" class="hero__avatar">
+                  alt="Pasang Sherpa" class="hero__avatar" width="1024" height="1024">
                 <img loading="lazy" src="/assets/images/team/maya-gurung.jpg" referrerpolicy="no-referrer" crossorigin="anonymous"
-                  alt="Raj Lama" class="hero__avatar">
+                  alt="Raj Lama" class="hero__avatar" width="1024" height="1024">
                 <img loading="lazy" src="/assets/images/team/pemba-nuru.jpg" referrerpolicy="no-referrer" crossorigin="anonymous"
-                  alt="Karma Gurung" class="hero__avatar">
+                  alt="Karma Gurung" class="hero__avatar" width="1024" height="1024">
                 <img loading="lazy" src="/assets/images/team/lhakpa-tenzing.jpg" referrerpolicy="no-referrer" crossorigin="anonymous"
-                  alt="Trekker" class="hero__avatar">
+                  alt="Trekker" class="hero__avatar" width="1024" height="1024">
               </div>
               <span class="hero__trust-text">Led By <strong>25+ Native Sherpas</strong></span>
               <a href="/booking.html" class="btn hero__trust-btn">Plan Your Expedition</a>
@@ -1800,7 +1800,7 @@
               </svg>
               <input class="hero__search-input" type="search" placeholder="Search guides, safety, regions, permits..."
                 aria-label="Search guides, safety, regions, permits" autocomplete="off" data-search-input
-                aria-controls="hero-search-results">
+                aria-controls="hero-search-results" id="heroAboutSearchInput" name="aboutSearch">
             </div>
 
             <button class="btn hero__search-submit" type="button" aria-label="Submit search">
@@ -1920,7 +1920,7 @@
               </p>
               <div class="journey-quote__author">
                 <img loading="lazy" src="/assets/images/treks/everest-base-camp.jpg" referrerpolicy="no-referrer" crossorigin="anonymous"
-                  alt="Pasang Sherpa" class="journey-quote__avatar">
+                  alt="Pasang Sherpa" class="journey-quote__avatar" width="1024" height="1024">
                 <div>
                   <span class="journey-quote__name">Pasang Sherpa</span>
                   <span class="journey-quote__role">Co-Founder &amp; Lead Expedition Director</span>
@@ -2313,7 +2313,7 @@
                 <!-- Left Image Box (Authentic Sherpa Founder Portrait) -->
                 <div class="leadership-spotlight-img-wrap">
                   <img                     src="/assets/images/treks/annapurna-circuit.jpg" referrerpolicy="no-referrer" crossorigin="anonymous"
-                    alt="Ang Tshering Sherpa — Founder & Managing Director, Best Treks Nepal" loading="lazy">
+                    alt="Ang Tshering Sherpa — Founder & Managing Director, Best Treks Nepal" loading="lazy" width="1024" height="1024">
                   <div class="leadership-spotlight-img-badge">
                     <h4 class="leadership-spotlight-img-name">Ang Tshering Sherpa</h4>
                     <p class="leadership-spotlight-img-title">5x Everest Summitteer &amp; Managing Director</p>
@@ -2368,7 +2368,7 @@
                 <div class="team-card reveal">
                   <div class="team-card__img-wrap">
                     <img                       src="/assets/images/team/jai-taneja.jpg" referrerpolicy="no-referrer" crossorigin="anonymous"
-                      alt="Pasang Sherpa — Lead Expedition Director" loading="lazy">
+                      alt="Pasang Sherpa — Lead Expedition Director" loading="lazy" width="1024" height="1024">
                     <span class="team-card__badge">SOLUKHUMBU NATIVE</span>
                   </div>
                   <div class="team-card__body">
@@ -2395,7 +2395,7 @@
                 <div class="team-card reveal">
                   <div class="team-card__img-wrap">
                     <img                       src="/assets/images/team/pasang-sherpa.jpg" referrerpolicy="no-referrer" crossorigin="anonymous"
-                      alt="Raj Lama — Senior Annapurna Guide" loading="lazy">
+                      alt="Raj Lama — Senior Annapurna Guide" loading="lazy" width="1024" height="1024">
                     <span class="team-card__badge">ANNAPURNA SPECIALIST</span>
                   </div>
                   <div class="team-card__body">
@@ -2422,7 +2422,7 @@
                 <div class="team-card reveal">
                   <div class="team-card__img-wrap">
                     <img                       src="/assets/images/team/maya-gurung.jpg" referrerpolicy="no-referrer" crossorigin="anonymous"
-                      alt="Karma Gurung — Manaslu & Mustang Specialist" loading="lazy">
+                      alt="Karma Gurung — Manaslu & Mustang Specialist" loading="lazy" width="1024" height="1024">
                     <span class="team-card__badge">RESTRICTED AREAS</span>
                   </div>
                   <div class="team-card__body">
@@ -2449,7 +2449,7 @@
                 <div class="team-card reveal">
                   <div class="team-card__img-wrap">
                     <img                       src="/assets/images/team/pemba-nuru.jpg" referrerpolicy="no-referrer" crossorigin="anonymous"
-                      alt="Dr. Dawa Sherpa — High-Altitude Safety Officer" loading="lazy">
+                      alt="Dr. Dawa Sherpa — High-Altitude Safety Officer" loading="lazy" width="1024" height="1024">
                     <span class="team-card__badge">WILDERNESS MD</span>
                   </div>
                   <div class="team-card__body">
@@ -2494,7 +2494,7 @@
                 <div class="team-card-v2 reveal">
                   <img class="team-card-v2__img"
                     src="/assets/images/team/lhakpa-tenzing.jpg" referrerpolicy="no-referrer" crossorigin="anonymous"
-                    alt="Pasang Sherpa — Senior IFMGA Lead Guide" loading="lazy">
+                    alt="Pasang Sherpa — Senior IFMGA Lead Guide" loading="lazy" width="1024" height="1024">
                   <div class="team-card-v2__body">
                     <h3 class="team-card-v2__name">Pasang Sherpa</h3>
                     <span class="team-card-v2__role">Senior IFMGA Lead Guide</span>
@@ -2511,7 +2511,7 @@
                 <div class="team-card-v2 reveal">
                   <img class="team-card-v2__img"
                     src="/assets/images/team/jai-taneja.jpg" referrerpolicy="no-referrer" crossorigin="anonymous"
-                    alt="Dr. Dawa Sherpa — High-Altitude Medical Officer" loading="lazy">
+                    alt="Dr. Dawa Sherpa — High-Altitude Medical Officer" loading="lazy" width="1024" height="1024">
                   <div class="team-card-v2__body">
                     <h3 class="team-card-v2__name">Dr. Dawa Sherpa</h3>
                     <span class="team-card-v2__role">High-Altitude Medical Officer</span>
@@ -2528,7 +2528,7 @@
                 <div class="team-card-v2 reveal">
                   <img class="team-card-v2__img"
                     src="/assets/images/team/pasang-sherpa.jpg" referrerpolicy="no-referrer" crossorigin="anonymous"
-                    alt="Sunita Gurung — Travel & Logistics Manager" loading="lazy">
+                    alt="Sunita Gurung — Travel & Logistics Manager" loading="lazy" width="1024" height="1024">
                   <div class="team-card-v2__body">
                     <h3 class="team-card-v2__name">Sunita Gurung</h3>
                     <span class="team-card-v2__role">Travel &amp; Logistics Manager</span>
@@ -2545,7 +2545,7 @@
                 <div class="team-card-v2 reveal">
                   <img class="team-card-v2__img"
                     src="/assets/images/team/maya-gurung.jpg" referrerpolicy="no-referrer" crossorigin="anonymous"
-                    alt="Mingma Tenzing — Head of Porter Welfare" loading="lazy">
+                    alt="Mingma Tenzing — Head of Porter Welfare" loading="lazy" width="1024" height="1024">
                   <div class="team-card-v2__body">
                     <h3 class="team-card-v2__name">Mingma Tenzing</h3>
                     <span class="team-card-v2__role">Head of Porter Welfare</span>
@@ -2678,7 +2678,7 @@
                   </svg>
                   <input type="text" id="faqSearchInput"
                     placeholder="Search questions (e.g. guides, altitude, permits, safety)..."
-                    aria-label="Search FAQ questions">
+                    aria-label="Search FAQ questions" name="faqSearchInput">
                 </div>
 
                 <!-- Category Pills -->
@@ -3323,7 +3323,7 @@
     </svg>
   </button>
 
-  <script type="module" src="/assets/js/main.bundle.js" defer></script>
+  <script defer src="/assets/js/main.bundle.js"></script>
 
   <!-- Static fallback for no-JS environments -->
   <noscript>

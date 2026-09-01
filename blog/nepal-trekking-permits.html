@@ -698,7 +698,7 @@
   <!-- Master Site Header -->
   <div class="site-header">
     <!-- Top Information Bar -->
-    <div class="top-bar" role="banner" aria-label="Contact information">
+    <div class="top-bar" aria-label="Contact information">
       <div class="container">
         <div class="top-bar__inner">
           <div class="top-bar__contacts">
@@ -772,7 +772,7 @@
                         <div class="mega-menu__grid">
                           <a href="/destinations/everest.html" class="mega-menu__item">
                             <div class="mega-menu__item-thumb">
-                              <img src="/assets/images/destinations/everest.jpg" alt="Everest Region" loading="lazy">
+                              <img src="/assets/images/destinations/everest.jpg" alt="Everest Region" loading="lazy" width="1024" height="1024">
                               <span class="mega-menu__item-alt-tag">5,545m</span>
                             </div>
                             <div class="mega-menu__item-info">
@@ -782,7 +782,7 @@
                           </a>
                           <a href="/destinations/annapurna.html" class="mega-menu__item">
                             <div class="mega-menu__item-thumb">
-                              <img src="/assets/images/destinations/annapurna.jpg" alt="Annapurna Region" loading="lazy">
+                              <img src="/assets/images/destinations/annapurna.jpg" alt="Annapurna Region" loading="lazy" width="1024" height="1024">
                               <span class="mega-menu__item-alt-tag">5,416m</span>
                             </div>
                             <div class="mega-menu__item-info">
@@ -792,7 +792,7 @@
                           </a>
                           <a href="/destinations/langtang.html" class="mega-menu__item">
                             <div class="mega-menu__item-thumb">
-                              <img src="/assets/images/destinations/langtang.jpg" alt="Langtang Region" loading="lazy">
+                              <img src="/assets/images/destinations/langtang.jpg" alt="Langtang Region" loading="lazy" width="1024" height="1024">
                               <span class="mega-menu__item-alt-tag">4,773m</span>
                             </div>
                             <div class="mega-menu__item-info">
@@ -802,7 +802,7 @@
                           </a>
                           <a href="/destinations/manaslu.html" class="mega-menu__item">
                             <div class="mega-menu__item-thumb">
-                              <img src="/assets/images/destinations/manaslu.jpg" alt="Manaslu Region" loading="lazy">
+                              <img src="/assets/images/destinations/manaslu.jpg" alt="Manaslu Region" loading="lazy" width="1024" height="1024">
                               <span class="mega-menu__item-alt-tag">5,106m</span>
                             </div>
                             <div class="mega-menu__item-info">
@@ -812,7 +812,7 @@
                           </a>
                           <a href="/destinations/mustang.html" class="mega-menu__item">
                             <div class="mega-menu__item-thumb">
-                              <img src="/assets/images/destinations/mustang.jpg" alt="Upper Mustang" loading="lazy">
+                              <img src="/assets/images/destinations/mustang.jpg" alt="Upper Mustang" loading="lazy" width="1024" height="1024">
                               <span class="mega-menu__item-alt-tag">3,840m</span>
                             </div>
                             <div class="mega-menu__item-info">
@@ -822,7 +822,7 @@
                           </a>
                           <a href="/destinations/dolpo.html" class="mega-menu__item">
                             <div class="mega-menu__item-thumb">
-                              <img src="/assets/images/destinations/dolpo.jpg" alt="Dolpo Region" loading="lazy">
+                              <img src="/assets/images/destinations/dolpo.jpg" alt="Dolpo Region" loading="lazy" width="1024" height="1024">
                               <span class="mega-menu__item-alt-tag">5,350m</span>
                             </div>
                             <div class="mega-menu__item-info">
@@ -832,7 +832,7 @@
                           </a>
                           <a href="/destinations/kanchenjunga.html" class="mega-menu__item">
                             <div class="mega-menu__item-thumb">
-                              <img src="/assets/images/destinations/kanchenjunga.jpg" alt="Kanchenjunga Region" loading="lazy">
+                              <img src="/assets/images/destinations/kanchenjunga.jpg" alt="Kanchenjunga Region" loading="lazy" width="1024" height="1024">
                               <span class="mega-menu__item-alt-tag">5,143m</span>
                             </div>
                             <div class="mega-menu__item-info">
@@ -842,7 +842,7 @@
                           </a>
                           <a href="/destinations/makalu.html" class="mega-menu__item">
                             <div class="mega-menu__item-thumb">
-                              <img src="/assets/images/destinations/makalu.jpg" alt="Makalu Barun Region" loading="lazy">
+                              <img src="/assets/images/destinations/makalu.jpg" alt="Makalu Barun Region" loading="lazy" width="1024" height="1024">
                               <span class="mega-menu__item-alt-tag">4,870m</span>
                             </div>
                             <div class="mega-menu__item-info">
@@ -958,7 +958,7 @@
         <div class="search-modal__icon">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8" /><line x1="21" y1="21" x2="16.65" y2="16.65" /></svg>
         </div>
-        <input class="search-modal__input" type="search" placeholder="Search permits, TIMS, RAP, Sagarmatha, ACAP, fees…" aria-label="Search treks and destinations" autocomplete="off" data-search-input>
+        <input class="search-modal__input" type="search" placeholder="Search permits, TIMS, RAP, Sagarmatha, ACAP, fees…" aria-label="Search treks and destinations" autocomplete="off" data-search-input id="siteSearchInput" name="searchQuery">
         <button class="btn btn--sm btn--secondary" data-search-close type="button">ESC</button>
       </div>
       <div class="search-modal__results" id="search-results" role="listbox" hidden></div>
@@ -1423,7 +1423,7 @@
           <div class="calc-row">
             <div class="calc-group">
               <label for="calcTrek">Trekking Destination / Route</label>
-              <select id="calcTrek" onchange="calculatePermitCost()">
+              <select id="calcTrek" onchange="calculatePermitCost()" name="calcTrek">
                 <option value="ebc">Everest Base Camp / Gokyo (Khumbu)</option>
                 <option value="annapurna">Annapurna Circuit / ABC / Poon Hill</option>
                 <option value="langtang">Langtang Valley / Gosainkunda</option>
@@ -1439,7 +1439,7 @@
             </div>
             <div class="calc-group">
               <label for="calcNationality">Trekker Nationality</label>
-              <select id="calcNationality" onchange="calculatePermitCost()">
+              <select id="calcNationality" onchange="calculatePermitCost()" name="calcNationality">
                 <option value="foreign">Foreign National (Non-SAARC)</option>
                 <option value="saarc">SAARC Country National (India, etc.)</option>
               </select>
@@ -1449,11 +1449,11 @@
           <div class="calc-row">
             <div class="calc-group">
               <label for="calcTrekkers">Number of Trekkers</label>
-              <input type="number" id="calcTrekkers" min="1" max="15" value="2" onchange="calculatePermitCost()">
+              <input type="number" id="calcTrekkers" min="1" max="15" value="2" onchange="calculatePermitCost()" name="calcTrekkers">
             </div>
             <div class="calc-group">
               <label for="calcDays">Days in Restricted Zone (for Mustang / Dolpo)</label>
-              <input type="number" id="calcDays" min="1" max="30" value="10" onchange="calculatePermitCost()">
+              <input type="number" id="calcDays" min="1" max="30" value="10" onchange="calculatePermitCost()" name="calcDays">
             </div>
           </div>
 
@@ -1712,40 +1712,40 @@
 
           <div class="gear-checklist-grid" id="permitChecklistGrid">
             <!-- Tier 1: Identity & Visa -->
-            <label class="gear-check-item"><input type="checkbox" onchange="updatePermitProgress(this)" data-doc-id="p1"> Original Passport (6+ Months Validity)</label>
-            <label class="gear-check-item"><input type="checkbox" onchange="updatePermitProgress(this)" data-doc-id="p2"> Nepal Tourist Visa (Valid for Full Stay)</label>
-            <label class="gear-check-item"><input type="checkbox" onchange="updatePermitProgress(this)" data-doc-id="p3"> 6x Physical Passport Photos (2x2 inch)</label>
-            <label class="gear-check-item"><input type="checkbox" onchange="updatePermitProgress(this)" data-doc-id="p4"> 3x Printed Color Passport Photocopies</label>
+            <label class="gear-check-item"><input type="checkbox" onchange="updatePermitProgress(this)" data-doc-id="p1" name="p1"> Original Passport (6+ Months Validity)</label>
+            <label class="gear-check-item"><input type="checkbox" onchange="updatePermitProgress(this)" data-doc-id="p2" name="p2"> Nepal Tourist Visa (Valid for Full Stay)</label>
+            <label class="gear-check-item"><input type="checkbox" onchange="updatePermitProgress(this)" data-doc-id="p3" name="p3"> 6x Physical Passport Photos (2x2 inch)</label>
+            <label class="gear-check-item"><input type="checkbox" onchange="updatePermitProgress(this)" data-doc-id="p4" name="p4"> 3x Printed Color Passport Photocopies</label>
             
             <!-- Tier 2: Insurance & Emergency -->
-            <label class="gear-check-item"><input type="checkbox" onchange="updatePermitProgress(this)" data-doc-id="p5"> Travel Insurance Policy with 6,000m Medevac</label>
-            <label class="gear-check-item"><input type="checkbox" onchange="updatePermitProgress(this)" data-doc-id="p6"> Emergency Medevac Hotline Number</label>
-            <label class="gear-check-item"><input type="checkbox" onchange="updatePermitProgress(this)" data-doc-id="p7"> Next of Kin Emergency Contact Details</label>
-            <label class="gear-check-item"><input type="checkbox" onchange="updatePermitProgress(this)" data-doc-id="p8"> Blood Group &amp; Medical Allergy Card</label>
+            <label class="gear-check-item"><input type="checkbox" onchange="updatePermitProgress(this)" data-doc-id="p5" name="p5"> Travel Insurance Policy with 6,000m Medevac</label>
+            <label class="gear-check-item"><input type="checkbox" onchange="updatePermitProgress(this)" data-doc-id="p6" name="p6"> Emergency Medevac Hotline Number</label>
+            <label class="gear-check-item"><input type="checkbox" onchange="updatePermitProgress(this)" data-doc-id="p7" name="p7"> Next of Kin Emergency Contact Details</label>
+            <label class="gear-check-item"><input type="checkbox" onchange="updatePermitProgress(this)" data-doc-id="p8" name="p8"> Blood Group &amp; Medical Allergy Card</label>
 
             <!-- Tier 3: Cash & Local Currency -->
-            <label class="gear-check-item"><input type="checkbox" onchange="updatePermitProgress(this)" data-doc-id="p9"> NPR Cash for Entry Gate Fees (NPR 10,000+)</label>
-            <label class="gear-check-item"><input type="checkbox" onchange="updatePermitProgress(this)" data-doc-id="p10"> NPR Cash for Daily Trail Expenses</label>
-            <label class="gear-check-item"><input type="checkbox" onchange="updatePermitProgress(this)" data-doc-id="p11"> ATM / Credit Card Backup for Cities</label>
-            <label class="gear-check-item"><input type="checkbox" onchange="updatePermitProgress(this)" data-doc-id="p12"> Crisp USD Notes for RAP Surcharges</label>
+            <label class="gear-check-item"><input type="checkbox" onchange="updatePermitProgress(this)" data-doc-id="p9" name="p9"> NPR Cash for Entry Gate Fees (NPR 10,000+)</label>
+            <label class="gear-check-item"><input type="checkbox" onchange="updatePermitProgress(this)" data-doc-id="p10" name="p10"> NPR Cash for Daily Trail Expenses</label>
+            <label class="gear-check-item"><input type="checkbox" onchange="updatePermitProgress(this)" data-doc-id="p11" name="p11"> ATM / Credit Card Backup for Cities</label>
+            <label class="gear-check-item"><input type="checkbox" onchange="updatePermitProgress(this)" data-doc-id="p12" name="p12"> Crisp USD Notes for RAP Surcharges</label>
 
             <!-- Tier 4: Park & Restricted Credentials -->
-            <label class="gear-check-item"><input type="checkbox" onchange="updatePermitProgress(this)" data-doc-id="p13"> National Park / ACAP Stamped Permit Card</label>
-            <label class="gear-check-item"><input type="checkbox" onchange="updatePermitProgress(this)" data-doc-id="p14"> TIMS Card with Digital QR Code</label>
-            <label class="gear-check-item"><input type="checkbox" onchange="updatePermitProgress(this)" data-doc-id="p15"> Restricted Area Permit (RAP) Voucher</label>
-            <label class="gear-check-item"><input type="checkbox" onchange="updatePermitProgress(this)" data-doc-id="p16"> Khumbu Local Municipality Entry Card</label>
+            <label class="gear-check-item"><input type="checkbox" onchange="updatePermitProgress(this)" data-doc-id="p13" name="p13"> National Park / ACAP Stamped Permit Card</label>
+            <label class="gear-check-item"><input type="checkbox" onchange="updatePermitProgress(this)" data-doc-id="p14" name="p14"> TIMS Card with Digital QR Code</label>
+            <label class="gear-check-item"><input type="checkbox" onchange="updatePermitProgress(this)" data-doc-id="p15" name="p15"> Restricted Area Permit (RAP) Voucher</label>
+            <label class="gear-check-item"><input type="checkbox" onchange="updatePermitProgress(this)" data-doc-id="p16" name="p16"> Khumbu Local Municipality Entry Card</label>
 
             <!-- Tier 5: Guide & Agency Documentation -->
-            <label class="gear-check-item"><input type="checkbox" onchange="updatePermitProgress(this)" data-doc-id="p17"> Licensed Guide Official Government ID</label>
-            <label class="gear-check-item"><input type="checkbox" onchange="updatePermitProgress(this)" data-doc-id="p18"> Registered Trekking Agency Master Manifest</label>
-            <label class="gear-check-item"><input type="checkbox" onchange="updatePermitProgress(this)" data-doc-id="p19"> Guide &amp; Porter Medical Insurance Policy</label>
-            <label class="gear-check-item"><input type="checkbox" onchange="updatePermitProgress(this)" data-doc-id="p20"> Trek Itinerary &amp; Route Approval Document</label>
+            <label class="gear-check-item"><input type="checkbox" onchange="updatePermitProgress(this)" data-doc-id="p17" name="p17"> Licensed Guide Official Government ID</label>
+            <label class="gear-check-item"><input type="checkbox" onchange="updatePermitProgress(this)" data-doc-id="p18" name="p18"> Registered Trekking Agency Master Manifest</label>
+            <label class="gear-check-item"><input type="checkbox" onchange="updatePermitProgress(this)" data-doc-id="p19" name="p19"> Guide &amp; Porter Medical Insurance Policy</label>
+            <label class="gear-check-item"><input type="checkbox" onchange="updatePermitProgress(this)" data-doc-id="p20" name="p20"> Trek Itinerary &amp; Route Approval Document</label>
 
             <!-- Tier 6: Field Protection & Digital -->
-            <label class="gear-check-item"><input type="checkbox" onchange="updatePermitProgress(this)" data-doc-id="p21"> Waterproof Document Zip Pouch</label>
-            <label class="gear-check-item"><input type="checkbox" onchange="updatePermitProgress(this)" data-doc-id="p22"> 2x Laminated Hard Copies of All Permits</label>
-            <label class="gear-check-item"><input type="checkbox" onchange="updatePermitProgress(this)" data-doc-id="p23"> Offline PDF Scans Saved on Smartphone</label>
-            <label class="gear-check-item"><input type="checkbox" onchange="updatePermitProgress(this)" data-doc-id="p24"> Embassy Registration &amp; Step Details</label>
+            <label class="gear-check-item"><input type="checkbox" onchange="updatePermitProgress(this)" data-doc-id="p21" name="p21"> Waterproof Document Zip Pouch</label>
+            <label class="gear-check-item"><input type="checkbox" onchange="updatePermitProgress(this)" data-doc-id="p22" name="p22"> 2x Laminated Hard Copies of All Permits</label>
+            <label class="gear-check-item"><input type="checkbox" onchange="updatePermitProgress(this)" data-doc-id="p23" name="p23"> Offline PDF Scans Saved on Smartphone</label>
+            <label class="gear-check-item"><input type="checkbox" onchange="updatePermitProgress(this)" data-doc-id="p24" name="p24"> Embassy Registration &amp; Step Details</label>
           </div>
         </div>
 
@@ -1767,7 +1767,7 @@
 
         <!-- FAQ Search & Controls -->
         <div style="display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:0.5rem; margin-top:1.5rem;">
-          <input type="text" id="faqSearchInput" placeholder="Filter questions (e.g. TIMS, guide, cost, EBC)…" onkeyup="filterFaqs()" style="flex:1; min-width:260px; padding:0.6rem 1rem; border:1px solid #cbd5e1; border-radius:10px; font-size:0.9rem; outline:none;">
+          <input type="text" id="faqSearchInput" placeholder="Filter questions (e.g. TIMS, guide, cost, EBC)…" onkeyup="filterFaqs()" style="flex:1; min-width:260px; padding:0.6rem 1rem; border:1px solid #cbd5e1; border-radius:10px; font-size:0.9rem; outline:none;" name="faqSearchInput">
           <button type="button" class="itinerary-toggle-btn" id="toggleFaqBtn" onclick="toggleAllFaqs()">Expand All FAQs</button>
         </div>
 
@@ -1989,7 +1989,7 @@
       <div class="related-grid">
         <!-- Card 1: EBC -->
         <a href="/blog/everest-base-camp-complete-guide.html" class="related-card">
-          <img src="/assets/images/destinations/everest.jpg" alt="Everest Base Camp Trek Guide" class="related-card-img" loading="lazy">
+          <img src="/assets/images/destinations/everest.jpg" alt="Everest Base Camp Trek Guide" class="related-card-img" loading="lazy" width="1024" height="1024">
           <div class="related-card-body">
             <span class="diff-subbadge" style="background:#e0f2fe; color:#0369a1; font-size:0.7rem; padding:0.2rem 0.6rem;">Everest Region</span>
             <h3 style="font-size:1.15rem; font-weight:800; color:#0f172a; margin:0.35rem 0 0.5rem;">Everest Base Camp Complete Guide 2026</h3>
@@ -1999,7 +1999,7 @@
 
         <!-- Card 2: Annapurna -->
         <a href="/blog/annapurna-circuit-complete-guide.html" class="related-card">
-          <img src="/assets/images/destinations/annapurna.jpg" alt="Annapurna Circuit Trek Guide" class="related-card-img" loading="lazy">
+          <img src="/assets/images/destinations/annapurna.jpg" alt="Annapurna Circuit Trek Guide" class="related-card-img" loading="lazy" width="1024" height="1024">
           <div class="related-card-body">
             <span class="diff-subbadge" style="background:#ecfdf5; color:#047857; font-size:0.7rem; padding:0.2rem 0.6rem;">Annapurna Region</span>
             <h3 style="font-size:1.15rem; font-weight:800; color:#0f172a; margin:0.35rem 0 0.5rem;">Annapurna Circuit &amp; Thorong La Pass 2026</h3>
@@ -2009,7 +2009,7 @@
 
         <!-- Card 3: Upper Mustang -->
         <a href="/blog/upper-mustang-trek-guide.html" class="related-card">
-          <img src="/assets/images/destinations/mustang.jpg" alt="Upper Mustang Trek Guide" class="related-card-img" loading="lazy">
+          <img src="/assets/images/destinations/mustang.jpg" alt="Upper Mustang Trek Guide" class="related-card-img" loading="lazy" width="1024" height="1024">
           <div class="related-card-body">
             <span class="diff-subbadge" style="background:#fef3c7; color:#92400e; font-size:0.7rem; padding:0.2rem 0.6rem;">Restricted Kingdom</span>
             <h3 style="font-size:1.15rem; font-weight:800; color:#0f172a; margin:0.35rem 0 0.5rem;">Upper Mustang $500 RAP &amp; Sky Caves 2026</h3>

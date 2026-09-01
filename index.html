@@ -49,6 +49,7 @@
   <link rel="icon" href="/assets/images/icons/favicon-32.png" type="image/png" sizes="32x32">
   <link rel="apple-touch-icon" href="/assets/images/icons/apple-touch-icon.png">
   <link rel="manifest" href="/manifest.json">
+  <link rel="alternate" type="text/plain" href="/llms.txt" title="LLM Context">
   <meta name="theme-color" content="#0F5257">
 
   <!-- =====================================================================
@@ -64,7 +65,7 @@
        CSS Foundation Cascade
        ===================================================================== -->
   <link rel="preload" as="style" href="/assets/css/style.css">
-  <link rel="preload" as="image" href="/assets/images/hero/slide-1-everest.jpg" fetchpriority="high">
+  <link rel="preload" as="image" href="/assets/images/hero/slide-1-everest.webp" type="image/webp" fetchpriority="high">
   <link rel="stylesheet" href="/assets/css/style.css">
 
   <!-- =====================================================================
@@ -247,7 +248,7 @@
     <!-- =====================================================================
        TOP INFORMATION BAR
        ===================================================================== -->
-    <div class="top-bar" role="banner" aria-label="Contact information">
+    <div class="top-bar" aria-label="Contact information">
       <div class="container">
         <div class="top-bar__inner">
           <div class="top-bar__contacts">
@@ -353,7 +354,7 @@
 
                           <a href="/destinations.html#everest" class="mega-menu__item">
                             <div class="mega-menu__item-thumb">
-                              <img src="/assets/images/destinations/everest.jpg" alt="Everest Region" loading="lazy">
+                              <img src="/assets/images/destinations/everest.jpg" alt="Everest Region" loading="lazy" width="1024" height="1024">
                               <span class="mega-menu__item-alt-tag">5,545m</span>
                             </div>
                             <div class="mega-menu__item-info">
@@ -365,7 +366,7 @@
                           <a href="/destinations.html#annapurna" class="mega-menu__item">
                             <div class="mega-menu__item-thumb">
                               <img src="/assets/images/destinations/annapurna.jpg" alt="Annapurna Region"
-                                loading="lazy">
+                                loading="lazy" width="1024" height="1024">
                               <span class="mega-menu__item-alt-tag">5,416m</span>
                             </div>
                             <div class="mega-menu__item-info">
@@ -376,7 +377,7 @@
 
                           <a href="/destinations.html#langtang" class="mega-menu__item">
                             <div class="mega-menu__item-thumb">
-                              <img src="/assets/images/destinations/langtang.jpg" alt="Langtang Region" loading="lazy">
+                              <img src="/assets/images/destinations/langtang.jpg" alt="Langtang Region" loading="lazy" width="1024" height="1024">
                               <span class="mega-menu__item-alt-tag">4,773m</span>
                             </div>
                             <div class="mega-menu__item-info">
@@ -387,7 +388,7 @@
 
                           <a href="/destinations.html#manaslu" class="mega-menu__item">
                             <div class="mega-menu__item-thumb">
-                              <img src="/assets/images/destinations/manaslu.jpg" alt="Manaslu Region" loading="lazy">
+                              <img src="/assets/images/destinations/manaslu.jpg" alt="Manaslu Region" loading="lazy" width="1024" height="1024">
                               <span class="mega-menu__item-alt-tag">5,106m</span>
                             </div>
                             <div class="mega-menu__item-info">
@@ -398,7 +399,7 @@
 
                           <a href="/destinations.html#mustang" class="mega-menu__item">
                             <div class="mega-menu__item-thumb">
-                              <img src="/assets/images/destinations/mustang.jpg" alt="Upper Mustang" loading="lazy">
+                              <img src="/assets/images/destinations/mustang.jpg" alt="Upper Mustang" loading="lazy" width="1024" height="1024">
                               <span class="mega-menu__item-alt-tag">3,840m</span>
                             </div>
                             <div class="mega-menu__item-info">
@@ -409,7 +410,7 @@
 
                           <a href="/destinations.html#dolpo" class="mega-menu__item">
                             <div class="mega-menu__item-thumb">
-                              <img src="/assets/images/destinations/dolpo.jpg" alt="Dolpo Region" loading="lazy">
+                              <img src="/assets/images/destinations/dolpo.jpg" alt="Dolpo Region" loading="lazy" width="1024" height="1024">
                               <span class="mega-menu__item-alt-tag">5,350m</span>
                             </div>
                             <div class="mega-menu__item-info">
@@ -568,7 +569,7 @@
         </div>
         <input class="search-modal__input" type="search" placeholder="Search treks, destinations…"
           aria-label="Search treks and destinations" autocomplete="off" data-search-input aria-controls="search-results"
-          aria-expanded="false">
+          aria-expanded="false" id="siteSearchInput" name="searchQuery">
         <button class="btn btn--sm btn--secondary" data-search-close aria-label="Close search"
           type="button">ESC</button>
       </div>
@@ -592,22 +593,31 @@
 
         <!-- Slide 1 — Everest Base Camp -->
         <div class="hero__slide is-active" role="group" aria-roledescription="slide" aria-label="Slide 1 of 3">
-          <img class="hero__slide-bg" src="/assets/images/treks/upper-mustang.jpg" alt="" aria-hidden="true"
-            loading="eager" fetchpriority="high" width="1920" height="1080">
+          <picture>
+            <source srcset="/assets/images/hero/slide-1-everest.webp" type="image/webp">
+            <img class="hero__slide-bg" src="/assets/images/hero/slide-1-everest.jpg" alt="" aria-hidden="true"
+              loading="eager" fetchpriority="high" width="1920" height="1080">
+          </picture>
           <div class="hero__overlay"></div>
         </div>
 
         <!-- Slide 2 — Annapurna -->
         <div class="hero__slide" role="group" aria-roledescription="slide" aria-label="Slide 2 of 3">
-          <img class="hero__slide-bg" src="7e43adc06c1cb8353e385e87afb51a2e.jpg" alt="" aria-hidden="true"
-            loading="lazy" width="1920" height="1080">
+          <picture>
+            <source srcset="/assets/images/hero/slide-2-annapurna.webp" type="image/webp">
+            <img class="hero__slide-bg" src="/assets/images/hero/slide-2-annapurna.jpg" alt="" aria-hidden="true"
+              loading="lazy" width="1920" height="1080">
+          </picture>
           <div class="hero__overlay"></div>
         </div>
 
         <!-- Slide 3 — Gokyo Lakes -->
         <div class="hero__slide" role="group" aria-roledescription="slide" aria-label="Slide 3 of 3">
-          <img class="hero__slide-bg" src="e888f375bb57ef750cf149d0ffb94e68.jpg" alt="" aria-hidden="true"
-            loading="lazy" width="1920" height="1080">
+          <picture>
+            <source srcset="/assets/images/hero/slide-3-gokyo.webp" type="image/webp">
+            <img class="hero__slide-bg" src="/assets/images/hero/slide-3-gokyo.jpg" alt="" aria-hidden="true"
+              loading="lazy" width="1920" height="1080">
+          </picture>
           <div class="hero__overlay"></div>
         </div>
 
@@ -672,7 +682,7 @@
           <!-- 4. Action Row (Play Thumb + White Floating Pill with Avatars) -->
           <div class="hero__action-row reveal">
             <a href="/treks/everest-base-camp.html" class="hero__play-thumb" aria-label="Watch trek video preview">
-              <img loading="lazy" src="/assets/images/treks/everest-base-camp.jpg" alt="Everest trek preview">
+              <img loading="lazy" src="/assets/images/treks/everest-base-camp.jpg" alt="Everest trek preview" width="1024" height="1024">
               <div class="hero__play-btn">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" width="12" height="12">
                   <path d="M8 5v14l11-7z" />
@@ -682,18 +692,22 @@
 
             <div class="hero__trust-pill">
               <div class="hero__avatars">
-                <img loading="lazy"
-                  src="/assets/images/team/pasang-sherpa.jpg" referrerpolicy="no-referrer" crossorigin="anonymous"
-                  alt="Trekker" class="hero__avatar">
-                <img loading="lazy"
-                  src="/assets/images/team/maya-gurung.jpg" referrerpolicy="no-referrer" crossorigin="anonymous"
-                  alt="Trekker" class="hero__avatar">
-                <img loading="lazy"
-                  src="/assets/images/team/pemba-nuru.jpg" referrerpolicy="no-referrer" crossorigin="anonymous"
-                  alt="Trekker" class="hero__avatar">
-                <img loading="lazy"
-                  src="/assets/images/team/lhakpa-tenzing.jpg" referrerpolicy="no-referrer" crossorigin="anonymous"
-                  alt="Trekker" class="hero__avatar">
+                <picture>
+                  <source srcset="/assets/images/team/pasang-sherpa-sm.webp" type="image/webp">
+                  <img loading="lazy" src="/assets/images/team/pasang-sherpa-sm.jpg" alt="Trekker" class="hero__avatar" width="36" height="36">
+                </picture>
+                <picture>
+                  <source srcset="/assets/images/team/maya-gurung-sm.webp" type="image/webp">
+                  <img loading="lazy" src="/assets/images/team/maya-gurung-sm.jpg" alt="Trekker" class="hero__avatar" width="36" height="36">
+                </picture>
+                <picture>
+                  <source srcset="/assets/images/team/pemba-nuru-sm.webp" type="image/webp">
+                  <img loading="lazy" src="/assets/images/team/pemba-nuru-sm.jpg" alt="Trekker" class="hero__avatar" width="36" height="36">
+                </picture>
+                <picture>
+                  <source srcset="/assets/images/team/lhakpa-tenzing-sm.webp" type="image/webp">
+                  <img loading="lazy" src="/assets/images/team/lhakpa-tenzing-sm.jpg" alt="Trekker" class="hero__avatar" width="36" height="36">
+                </picture>
               </div>
               <span class="hero__trust-text">Trusted By <strong>+15,000 Trekkers</strong></span>
               <a href="/booking.html" class="btn hero__trust-btn">Book Your Trek</a>
@@ -711,7 +725,7 @@
               </svg>
               <input class="hero__search-input" type="search" placeholder="Where do you want to go?"
                 aria-label="Search treks and destinations" autocomplete="off" data-search-input
-                aria-controls="hero-search-results">
+                aria-controls="hero-search-results" id="heroHomeSearchInput" name="heroSearch">
             </div>
 
             <button class="btn hero__search-submit" type="button" aria-label="Submit search">
@@ -912,14 +926,17 @@
           </p>
         </div>
 
-        <div class="grid grid--auto-fit-sm reveal-group" role="list">
+        <div class="grid grid--auto-fit-sm reveal-group">
 
           <!-- Trek Card 1 -->
-          <article class="trek-card reveal" role="listitem" data-region="everest" data-difficulty="challenging"
+          <article class="trek-card reveal" data-region="everest" data-difficulty="challenging"
             data-duration="14" data-price="1400" data-season="autumn,spring">
             <div class="trek-card__image-wrap">
-              <img src="/assets/images/treks/upper-mustang.jpg" alt="Everest Base Camp Trek Nepal"
-                class="trek-card__image" loading="lazy" width="400" height="260">
+              <picture>
+                <source srcset="/assets/images/treks/upper-mustang-card.webp" type="image/webp">
+                <img src="/assets/images/treks/upper-mustang-card.jpg" alt="Everest Base Camp Trek Nepal"
+                  class="trek-card__image" loading="lazy" width="400" height="260">
+              </picture>
               <div class="trek-card__badge">
                 <span class="badge badge--accent">Best Seller</span>
               </div>
@@ -969,11 +986,14 @@
           </article>
 
           <!-- Trek Card 2 -->
-          <article class="trek-card reveal" role="listitem" data-region="annapurna" data-difficulty="challenging"
+          <article class="trek-card reveal" data-region="annapurna" data-difficulty="challenging"
             data-duration="18" data-price="1200" data-season="autumn,spring">
             <div class="trek-card__image-wrap">
-              <img src="/assets/images/treks/everest-base-camp.jpg" alt="Annapurna Circuit Trek Nepal"
-                class="trek-card__image" loading="lazy" width="400" height="260">
+              <picture>
+                <source srcset="/assets/images/treks/everest-base-camp-card.webp" type="image/webp">
+                <img src="/assets/images/treks/everest-base-camp-card.jpg" alt="Annapurna Circuit Trek Nepal"
+                  class="trek-card__image" loading="lazy" width="400" height="260">
+              </picture>
               <div class="trek-card__badge">
                 <span class="badge badge--primary">Featured</span>
               </div>
@@ -1023,11 +1043,14 @@
           </article>
 
           <!-- Trek Card 3 -->
-          <article class="trek-card reveal" role="listitem" data-region="manaslu" data-difficulty="challenging"
+          <article class="trek-card reveal" data-region="manaslu" data-difficulty="challenging"
             data-duration="16" data-price="1600" data-season="autumn,spring">
             <div class="trek-card__image-wrap">
-              <img src="/assets/images/treks/annapurna-circuit.jpg" alt="Manaslu Circuit Trek Nepal"
-                class="trek-card__image" loading="lazy" width="400" height="260">
+              <picture>
+                <source srcset="/assets/images/treks/annapurna-circuit-card.webp" type="image/webp">
+                <img src="/assets/images/treks/annapurna-circuit-card.jpg" alt="Manaslu Circuit Trek Nepal"
+                  class="trek-card__image" loading="lazy" width="400" height="260">
+              </picture>
               <div class="trek-card__badge">
                 <span class="badge badge--accent">Popular</span>
               </div>
@@ -1077,11 +1100,14 @@
           </article>
 
           <!-- Trek Card 4 -->
-          <article class="trek-card reveal" role="listitem" data-region="annapurna" data-difficulty="moderate"
+          <article class="trek-card reveal" data-region="annapurna" data-difficulty="moderate"
             data-duration="11" data-price="950" data-season="autumn,spring,winter">
             <div class="trek-card__image-wrap">
-              <img src="/assets/images/treks/manaslu-circuit.jpg" alt="Annapurna Base Camp Trek Nepal"
-                class="trek-card__image" loading="lazy" width="400" height="260">
+              <picture>
+                <source srcset="/assets/images/treks/manaslu-circuit-card.webp" type="image/webp">
+                <img src="/assets/images/treks/manaslu-circuit-card.jpg" alt="Annapurna Base Camp Trek Nepal"
+                  class="trek-card__image" loading="lazy" width="400" height="260">
+              </picture>
               <div class="trek-card__badge">
                 <span class="badge badge--primary">Classic</span>
               </div>
@@ -1131,11 +1157,14 @@
           </article>
 
           <!-- Trek Card 5 -->
-          <article class="trek-card reveal" role="listitem" data-region="everest" data-difficulty="challenging"
+          <article class="trek-card reveal" data-region="everest" data-difficulty="challenging"
             data-duration="13" data-price="1350" data-season="autumn,spring">
             <div class="trek-card__image-wrap">
-              <img src="/assets/images/treks/annapurna-base-camp.jpg" alt="Gokyo Lakes Trek Nepal" class="trek-card__image"
-                loading="lazy" width="400" height="260">
+              <picture>
+                <source srcset="/assets/images/treks/annapurna-base-camp-card.webp" type="image/webp">
+                <img src="/assets/images/treks/annapurna-base-camp-card.jpg" alt="Gokyo Lakes Trek Nepal"
+                  class="trek-card__image" loading="lazy" width="400" height="260">
+              </picture>
               <div class="trek-card__rating">
                 <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="#f59e0b"
                   aria-hidden="true">
@@ -1182,11 +1211,14 @@
           </article>
 
           <!-- Trek Card 6 -->
-          <article class="trek-card reveal" role="listitem" data-region="mustang" data-difficulty="moderate"
+          <article class="trek-card reveal" data-region="mustang" data-difficulty="moderate"
             data-duration="14" data-price="2200" data-season="spring,summer">
             <div class="trek-card__image-wrap">
-              <img src="/assets/images/treks/gokyo-lakes.jpg" alt="Upper Mustang Trek Nepal" class="trek-card__image"
-                loading="lazy" width="400" height="260">
+              <picture>
+                <source srcset="/assets/images/treks/gokyo-lakes-card.webp" type="image/webp">
+                <img src="/assets/images/treks/gokyo-lakes-card.jpg" alt="Upper Mustang Trek Nepal"
+                  class="trek-card__image" loading="lazy" width="400" height="260">
+              </picture>
               <div class="trek-card__badge">
                 <span class="badge badge--accent">Exclusive</span>
               </div>
@@ -1385,13 +1417,13 @@
           </p>
         </div>
 
-        <div class="grid destinations-grid reveal-group" role="list">
+        <div class="grid destinations-grid reveal-group">
 
           <!-- Destination 1: Everest Region -->
-          <a href="/destinations/everest.html" class="dest-card reveal" role="listitem"
+          <a href="/destinations/everest.html" class="dest-card reveal"
             aria-label="Explore Everest Region trekking">
             <img src="/assets/images/treks/upper-mustang.jpg" alt="Everest Region Nepal" class="dest-card__image"
-              loading="lazy">
+              loading="lazy" width="1024" height="1024">
             <div class="dest-card__overlay"></div>
             <div class="dest-card__content">
               <h3 class="dest-card__title">Everest Region</h3>
@@ -1408,10 +1440,10 @@
           </a>
 
           <!-- Destination 2: Annapurna Region -->
-          <a href="/destinations/annapurna.html" class="dest-card reveal" role="listitem"
+          <a href="/destinations/annapurna.html" class="dest-card reveal"
             aria-label="Explore Annapurna Region trekking">
             <img src="/assets/images/destinations/annapurna.jpg" alt="Annapurna Region Nepal" class="dest-card__image"
-              loading="lazy">
+              loading="lazy" width="1024" height="1024">
             <div class="dest-card__overlay"></div>
             <div class="dest-card__content">
               <h3 class="dest-card__title">Annapurna Region</h3>
@@ -1428,10 +1460,10 @@
           </a>
 
           <!-- Destination 3: Langtang Region -->
-          <a href="/destinations/langtang.html" class="dest-card reveal" role="listitem"
+          <a href="/destinations/langtang.html" class="dest-card reveal"
             aria-label="Explore Langtang Region trekking">
             <img src="/assets/images/destinations/langtang.jpg" alt="Langtang Region Nepal" class="dest-card__image"
-              loading="lazy">
+              loading="lazy" width="1024" height="1024">
             <div class="dest-card__overlay"></div>
             <div class="dest-card__content">
               <h3 class="dest-card__title">Langtang Region</h3>
@@ -1448,10 +1480,10 @@
           </a>
 
           <!-- Destination 4: Manaslu Region -->
-          <a href="/destinations/manaslu.html" class="dest-card reveal" role="listitem"
+          <a href="/destinations/manaslu.html" class="dest-card reveal"
             aria-label="Explore Manaslu Region trekking">
             <img src="/assets/images/destinations/manaslu.jpg" alt="Manaslu Region Nepal" class="dest-card__image"
-              loading="lazy">
+              loading="lazy" width="1024" height="1024">
             <div class="dest-card__overlay"></div>
             <div class="dest-card__content">
               <h3 class="dest-card__title">Manaslu Region</h3>
@@ -1468,10 +1500,10 @@
           </a>
 
           <!-- Destination 5: Mustang -->
-          <a href="/destinations/mustang.html" class="dest-card reveal" role="listitem"
+          <a href="/destinations/mustang.html" class="dest-card reveal"
             aria-label="Explore Mustang trekking">
             <img src="/assets/images/destinations/mustang.jpg" alt="Mustang Region Nepal" class="dest-card__image"
-              loading="lazy">
+              loading="lazy" width="1024" height="1024">
             <div class="dest-card__overlay"></div>
             <div class="dest-card__content">
               <h3 class="dest-card__title">Mustang</h3>
@@ -1488,10 +1520,10 @@
           </a>
 
           <!-- Destination 6: Dolpo -->
-          <a href="/destinations/dolpo.html" class="dest-card reveal" role="listitem"
+          <a href="/destinations/dolpo.html" class="dest-card reveal"
             aria-label="Explore Dolpo trekking">
             <img src="/assets/images/destinations/dolpo.jpg" alt="Dolpo Region Nepal" class="dest-card__image"
-              loading="lazy">
+              loading="lazy" width="1024" height="1024">
             <div class="dest-card__overlay"></div>
             <div class="dest-card__content">
               <h3 class="dest-card__title">Dolpo</h3>
@@ -1508,10 +1540,10 @@
           </a>
 
           <!-- Destination 7: Kanchenjunga -->
-          <a href="/destinations/kanchenjunga.html" class="dest-card reveal" role="listitem"
+          <a href="/destinations/kanchenjunga.html" class="dest-card reveal"
             aria-label="Explore Kanchenjunga Region trekking">
             <img src="/assets/images/destinations/kanchenjunga.jpg" alt="Kanchenjunga Region Nepal"
-              class="dest-card__image" loading="lazy">
+              class="dest-card__image" loading="lazy" width="1024" height="1024">
             <div class="dest-card__overlay"></div>
             <div class="dest-card__content">
               <h3 class="dest-card__title">Kanchenjunga</h3>
@@ -1723,7 +1755,7 @@
               <div class="video-review-card">
                 <div class="video-review-card__thumb">
                   <img                     src="/assets/images/treks/manaslu-circuit.jpg" referrerpolicy="no-referrer" crossorigin="anonymous"
-                    alt="EBC Trek video review" loading="lazy">
+                    alt="EBC Trek video review" loading="lazy" width="1024" height="1024">
                   <div class="video-review-card__play"><svg viewBox="0 0 24 24" width="40" height="40">
                       <circle cx="12" cy="12" r="12" fill="rgba(255,255,255,0.9)" />
                       <polygon points="10,8 18,12 10,16" fill="#0f172a" />
@@ -1735,7 +1767,7 @@
                   <div class="video-review-card__meta">
                     <img loading="lazy"
                       src="/assets/images/treks/langtang-valley.jpg" referrerpolicy="no-referrer" crossorigin="anonymous"
-                      alt="James" class="video-review-card__avatar">
+                      alt="James" class="video-review-card__avatar" width="1024" height="1024">
                     <span>James · Canada</span>
                     <div class="video-review-card__stars">★★★★★</div>
                   </div>
@@ -1745,7 +1777,7 @@
               <div class="video-review-card">
                 <div class="video-review-card__thumb">
                   <img src="/assets/images/treks/gokyo-lakes.jpg" referrerpolicy="no-referrer" crossorigin="anonymous"
-                    alt="Annapurna trek video review" loading="lazy">
+                    alt="Annapurna trek video review" loading="lazy" width="1024" height="1024">
                   <div class="video-review-card__play"><svg viewBox="0 0 24 24" width="40" height="40">
                       <circle cx="12" cy="12" r="12" fill="rgba(255,255,255,0.9)" />
                       <polygon points="10,8 18,12 10,16" fill="#0f172a" />
@@ -1757,7 +1789,7 @@
                   <div class="video-review-card__meta">
                     <img loading="lazy"
                       src="/assets/images/treks/upper-mustang.jpg" referrerpolicy="no-referrer" crossorigin="anonymous"
-                      alt="Sophie" class="video-review-card__avatar">
+                      alt="Sophie" class="video-review-card__avatar" width="1024" height="1024">
                     <span>Sophie · France</span>
                     <div class="video-review-card__stars">★★★★★</div>
                   </div>
@@ -1767,7 +1799,7 @@
               <div class="video-review-card">
                 <div class="video-review-card__thumb">
                   <img                     src="/assets/images/treks/mardi-himal.jpg" referrerpolicy="no-referrer" crossorigin="anonymous"
-                    alt="Gokyo Lakes video" loading="lazy">
+                    alt="Gokyo Lakes video" loading="lazy" width="1376" height="768">
                   <div class="video-review-card__play"><svg viewBox="0 0 24 24" width="40" height="40">
                       <circle cx="12" cy="12" r="12" fill="rgba(255,255,255,0.9)" />
                       <polygon points="10,8 18,12 10,16" fill="#0f172a" />
@@ -1779,7 +1811,7 @@
                   <div class="video-review-card__meta">
                     <img loading="lazy"
                       src="/assets/images/treks/poon-hill.jpg" referrerpolicy="no-referrer" crossorigin="anonymous"
-                      alt="Robin" class="video-review-card__avatar">
+                      alt="Robin" class="video-review-card__avatar" width="1376" height="768">
                     <span>Robin · UK</span>
                     <div class="video-review-card__stars">★★★★★</div>
                   </div>
@@ -1856,7 +1888,7 @@
                 <div class="review-rich-card__author">
                   <img loading="lazy"
                     src="/assets/images/treks/three-passes.jpg" referrerpolicy="no-referrer" crossorigin="anonymous"
-                    alt="James" class="review-rich-card__avatar">
+                    alt="James" class="review-rich-card__avatar" width="1376" height="768">
                   <div class="review-rich-card__info">
                     <div class="review-rich-card__name">James <span class="verified-check">✓</span></div>
                     <div class="review-rich-card__role">Musician (Canada)</div>
@@ -1876,7 +1908,7 @@
                 <div class="review-rich-card__author">
                   <img loading="lazy"
                     src="/assets/images/treks/ama-dablam-base-camp.jpg" referrerpolicy="no-referrer" crossorigin="anonymous"
-                    alt="Brandon" class="review-rich-card__avatar">
+                    alt="Brandon" class="review-rich-card__avatar" width="1376" height="768">
                   <div class="review-rich-card__info">
                     <div class="review-rich-card__name">Brandon <span class="verified-check">✓</span></div>
                     <div class="review-rich-card__role">Athlete (Australia)</div>
@@ -1896,7 +1928,7 @@
                 <div class="review-rich-card__author">
                   <img loading="lazy"
                     src="/assets/images/treks/phoksundo-lake.jpg" referrerpolicy="no-referrer" crossorigin="anonymous"
-                    alt="Jack" class="review-rich-card__avatar">
+                    alt="Jack" class="review-rich-card__avatar" width="1376" height="768">
                   <div class="review-rich-card__info">
                     <div class="review-rich-card__name">Jack <span class="verified-check">✓</span></div>
                     <div class="review-rich-card__role">Illustrator (USA)</div>
@@ -1916,7 +1948,7 @@
                 <div class="review-rich-card__author">
                   <img loading="lazy"
                     src="/assets/images/treks/annapurna-base-camp.jpg" referrerpolicy="no-referrer" crossorigin="anonymous"
-                    alt="Robin" class="review-rich-card__avatar">
+                    alt="Robin" class="review-rich-card__avatar" width="1024" height="1024">
                   <div class="review-rich-card__info">
                     <div class="review-rich-card__name">Robin <span class="verified-check">✓</span></div>
                     <div class="review-rich-card__role">Photographer (UK)</div>
@@ -1936,7 +1968,7 @@
                 <div class="review-rich-card__author">
                   <img loading="lazy"
                     src="/assets/images/treks/everest-view.jpg" referrerpolicy="no-referrer" crossorigin="anonymous"
-                    alt="Elena" class="review-rich-card__avatar">
+                    alt="Elena" class="review-rich-card__avatar" width="1376" height="768">
                   <div class="review-rich-card__info">
                     <div class="review-rich-card__name">Elena <span class="verified-check">✓</span></div>
                     <div class="review-rich-card__role">Teacher (Spain)</div>
@@ -1956,7 +1988,7 @@
                 <div class="review-rich-card__author">
                   <img loading="lazy"
                     src="/assets/images/treks/everest-base-camp.jpg" referrerpolicy="no-referrer" crossorigin="anonymous"
-                    alt="Sophie" class="review-rich-card__avatar">
+                    alt="Sophie" class="review-rich-card__avatar" width="1024" height="1024">
                   <div class="review-rich-card__info">
                     <div class="review-rich-card__name">Sophie <span class="verified-check">✓</span></div>
                     <div class="review-rich-card__role">Architect (France)</div>
@@ -1976,7 +2008,7 @@
                 <div class="review-rich-card__author">
                   <img loading="lazy"
                     src="/assets/images/treks/annapurna-circuit.jpg" referrerpolicy="no-referrer" crossorigin="anonymous"
-                    alt="Michael" class="review-rich-card__avatar">
+                    alt="Michael" class="review-rich-card__avatar" width="1024" height="1024">
                   <div class="review-rich-card__info">
                     <div class="review-rich-card__name">Michael <span class="verified-check">✓</span></div>
                     <div class="review-rich-card__role">Engineer (Germany)</div>
@@ -1997,7 +2029,7 @@
                 <div class="review-rich-card__author">
                   <img loading="lazy"
                     src="/assets/images/treks/manaslu-circuit.jpg" referrerpolicy="no-referrer" crossorigin="anonymous"
-                    alt="Aisha" class="review-rich-card__avatar">
+                    alt="Aisha" class="review-rich-card__avatar" width="1024" height="1024">
                   <div class="review-rich-card__info">
                     <div class="review-rich-card__name">Aisha <span class="verified-check">✓</span></div>
                     <div class="review-rich-card__role">Journalist (UAE)</div>
@@ -2018,7 +2050,7 @@
                 <div class="review-rich-card__author">
                   <img loading="lazy"
                     src="/assets/images/treks/langtang-valley.jpg" referrerpolicy="no-referrer" crossorigin="anonymous"
-                    alt="James" class="review-rich-card__avatar">
+                    alt="James" class="review-rich-card__avatar" width="1024" height="1024">
                   <div class="review-rich-card__info">
                     <div class="review-rich-card__name">James <span class="verified-check">✓</span></div>
                     <div class="review-rich-card__role">Musician (Canada)</div>
@@ -2037,7 +2069,7 @@
                 <div class="review-rich-card__author">
                   <img loading="lazy"
                     src="/assets/images/treks/gokyo-lakes.jpg" referrerpolicy="no-referrer" crossorigin="anonymous"
-                    alt="Brandon" class="review-rich-card__avatar">
+                    alt="Brandon" class="review-rich-card__avatar" width="1024" height="1024">
                   <div class="review-rich-card__info">
                     <div class="review-rich-card__name">Brandon <span class="verified-check">✓</span></div>
                     <div class="review-rich-card__role">Athlete (Australia)</div>
@@ -2056,7 +2088,7 @@
                 <div class="review-rich-card__author">
                   <img loading="lazy"
                     src="/assets/images/treks/upper-mustang.jpg" referrerpolicy="no-referrer" crossorigin="anonymous"
-                    alt="Jack" class="review-rich-card__avatar">
+                    alt="Jack" class="review-rich-card__avatar" width="1024" height="1024">
                   <div class="review-rich-card__info">
                     <div class="review-rich-card__name">Jack <span class="verified-check">✓</span></div>
                     <div class="review-rich-card__role">Illustrator (USA)</div>
@@ -2075,7 +2107,7 @@
                 <div class="review-rich-card__author">
                   <img loading="lazy"
                     src="/assets/images/treks/mardi-himal.jpg" referrerpolicy="no-referrer" crossorigin="anonymous"
-                    alt="Robin" class="review-rich-card__avatar">
+                    alt="Robin" class="review-rich-card__avatar" width="1376" height="768">
                   <div class="review-rich-card__info">
                     <div class="review-rich-card__name">Robin <span class="verified-check">✓</span></div>
                     <div class="review-rich-card__role">Photographer (UK)</div>
@@ -2094,7 +2126,7 @@
                 <div class="review-rich-card__author">
                   <img loading="lazy"
                     src="/assets/images/treks/poon-hill.jpg" referrerpolicy="no-referrer" crossorigin="anonymous"
-                    alt="Elena" class="review-rich-card__avatar">
+                    alt="Elena" class="review-rich-card__avatar" width="1376" height="768">
                   <div class="review-rich-card__info">
                     <div class="review-rich-card__name">Elena <span class="verified-check">✓</span></div>
                     <div class="review-rich-card__role">Teacher (Spain)</div>
@@ -2113,7 +2145,7 @@
                 <div class="review-rich-card__author">
                   <img loading="lazy"
                     src="/assets/images/treks/three-passes.jpg" referrerpolicy="no-referrer" crossorigin="anonymous"
-                    alt="Sophie" class="review-rich-card__avatar">
+                    alt="Sophie" class="review-rich-card__avatar" width="1376" height="768">
                   <div class="review-rich-card__info">
                     <div class="review-rich-card__name">Sophie <span class="verified-check">✓</span></div>
                     <div class="review-rich-card__role">Architect (France)</div>
@@ -2132,7 +2164,7 @@
                 <div class="review-rich-card__author">
                   <img loading="lazy"
                     src="/assets/images/treks/ama-dablam-base-camp.jpg" referrerpolicy="no-referrer" crossorigin="anonymous"
-                    alt="Michael" class="review-rich-card__avatar">
+                    alt="Michael" class="review-rich-card__avatar" width="1376" height="768">
                   <div class="review-rich-card__info">
                     <div class="review-rich-card__name">Michael <span class="verified-check">✓</span></div>
                     <div class="review-rich-card__role">Engineer (Germany)</div>
@@ -2152,7 +2184,7 @@
                 <div class="review-rich-card__author">
                   <img loading="lazy"
                     src="/assets/images/treks/phoksundo-lake.jpg" referrerpolicy="no-referrer" crossorigin="anonymous"
-                    alt="Aisha" class="review-rich-card__avatar">
+                    alt="Aisha" class="review-rich-card__avatar" width="1376" height="768">
                   <div class="review-rich-card__info">
                     <div class="review-rich-card__name">Aisha <span class="verified-check">✓</span></div>
                     <div class="review-rich-card__role">Journalist (UAE)</div>
@@ -2274,7 +2306,7 @@
                   <div class="platform-review-card__author">
                     <img loading="lazy"
                       src="/assets/images/team/jai-taneja.jpg" referrerpolicy="no-referrer" crossorigin="anonymous"
-                      alt="David" class="platform-review-card__avatar">
+                      alt="David" class="platform-review-card__avatar" width="1024" height="1024">
                     <span>David K. · <strong>Google Review</strong></span>
                   </div>
                 </div>
@@ -2294,7 +2326,7 @@
                   <div class="platform-review-card__author">
                     <img loading="lazy"
                       src="/assets/images/team/pasang-sherpa.jpg" referrerpolicy="no-referrer" crossorigin="anonymous"
-                      alt="Maria" class="platform-review-card__avatar">
+                      alt="Maria" class="platform-review-card__avatar" width="1024" height="1024">
                     <span>Maria L. · <strong>TripAdvisor</strong></span>
                   </div>
                 </div>
@@ -2314,7 +2346,7 @@
                   <div class="platform-review-card__author">
                     <img loading="lazy"
                       src="/assets/images/team/maya-gurung.jpg" referrerpolicy="no-referrer" crossorigin="anonymous"
-                      alt="Sam" class="platform-review-card__avatar">
+                      alt="Sam" class="platform-review-card__avatar" width="1024" height="1024">
                     <span>Sam T. · <strong>Trustpilot</strong></span>
                   </div>
                 </div>
@@ -2334,7 +2366,7 @@
                   <div class="platform-review-card__author">
                     <img loading="lazy"
                       src="/assets/images/team/pemba-nuru.jpg" referrerpolicy="no-referrer" crossorigin="anonymous"
-                      alt="Lena" class="platform-review-card__avatar">
+                      alt="Lena" class="platform-review-card__avatar" width="1024" height="1024">
                     <span>Lena R. · <strong>SourceForge</strong></span>
                   </div>
                 </div>
@@ -2361,7 +2393,7 @@
                   <div class="platform-review-card__author">
                     <img loading="lazy"
                       src="/assets/images/team/lhakpa-tenzing.jpg" referrerpolicy="no-referrer" crossorigin="anonymous"
-                      alt="Carlos" class="platform-review-card__avatar">
+                      alt="Carlos" class="platform-review-card__avatar" width="1024" height="1024">
                     <span>Carlos M. · <strong>Google Review</strong></span>
                   </div>
                 </div>
@@ -2382,7 +2414,7 @@
                   <div class="platform-review-card__author">
                     <img loading="lazy"
                       src="/assets/images/team/jai-taneja.jpg" referrerpolicy="no-referrer" crossorigin="anonymous"
-                      alt="Priya" class="platform-review-card__avatar">
+                      alt="Priya" class="platform-review-card__avatar" width="1024" height="1024">
                     <span>Priya S. · <strong>TripAdvisor</strong></span>
                   </div>
                 </div>
@@ -2409,7 +2441,7 @@
                   <div class="platform-review-card__author">
                     <img loading="lazy"
                       src="/assets/images/team/pasang-sherpa.jpg" referrerpolicy="no-referrer" crossorigin="anonymous"
-                      alt="David" class="platform-review-card__avatar">
+                      alt="David" class="platform-review-card__avatar" width="1024" height="1024">
                     <span>David K. · <strong>Google Review</strong></span>
                   </div>
                 </div>
@@ -2429,7 +2461,7 @@
                   <div class="platform-review-card__author">
                     <img loading="lazy"
                       src="/assets/images/team/maya-gurung.jpg" referrerpolicy="no-referrer" crossorigin="anonymous"
-                      alt="Maria" class="platform-review-card__avatar">
+                      alt="Maria" class="platform-review-card__avatar" width="1024" height="1024">
                     <span>Maria L. · <strong>TripAdvisor</strong></span>
                   </div>
                 </div>
@@ -2449,7 +2481,7 @@
                   <div class="platform-review-card__author">
                     <img loading="lazy"
                       src="/assets/images/team/pemba-nuru.jpg" referrerpolicy="no-referrer" crossorigin="anonymous"
-                      alt="Sam" class="platform-review-card__avatar">
+                      alt="Sam" class="platform-review-card__avatar" width="1024" height="1024">
                     <span>Sam T. · <strong>Trustpilot</strong></span>
                   </div>
                 </div>
@@ -2469,7 +2501,7 @@
                   <div class="platform-review-card__author">
                     <img loading="lazy"
                       src="/assets/images/team/lhakpa-tenzing.jpg" referrerpolicy="no-referrer" crossorigin="anonymous"
-                      alt="Lena" class="platform-review-card__avatar">
+                      alt="Lena" class="platform-review-card__avatar" width="1024" height="1024">
                     <span>Lena R. · <strong>SourceForge</strong></span>
                   </div>
                 </div>
@@ -2495,7 +2527,7 @@
                   <div class="platform-review-card__author">
                     <img loading="lazy"
                       src="/assets/images/team/jai-taneja.jpg" referrerpolicy="no-referrer" crossorigin="anonymous"
-                      alt="Carlos" class="platform-review-card__avatar">
+                      alt="Carlos" class="platform-review-card__avatar" width="1024" height="1024">
                     <span>Carlos M. · <strong>Google Review</strong></span>
                   </div>
                 </div>
@@ -2515,7 +2547,7 @@
                   <div class="platform-review-card__author">
                     <img loading="lazy"
                       src="/assets/images/team/pasang-sherpa.jpg" referrerpolicy="no-referrer" crossorigin="anonymous"
-                      alt="Priya" class="platform-review-card__avatar">
+                      alt="Priya" class="platform-review-card__avatar" width="1024" height="1024">
                     <span>Priya S. · <strong>TripAdvisor</strong></span>
                   </div>
                 </div>
@@ -2565,7 +2597,7 @@
             data-caption="Everest Base Camp — 5,364m, Khumbu Region" tabindex="0" role="button"
             aria-label="Open Everest Base Camp photo">
             <img src="/assets/images/treks/everest-base-camp.jpg" alt="Everest Base Camp at 5364m" loading="lazy"
-              class="gallery-bento__img">
+              class="gallery-bento__img" width="1024" height="1024">
             <div class="gallery-bento__overlay">
               <div class="gallery-bento__caption">
                 <span class="gallery-bento__location">📍 Khumbu, Nepal</span>
@@ -2588,7 +2620,7 @@
             data-caption="Gokyo Lakes — Turquoise Waters at 4,700m" tabindex="0" role="button"
             aria-label="Open Gokyo Lakes photo">
             <img src="/assets/images/treks/gokyo-lakes.jpg" alt="Turquoise Gokyo Lakes at 4700m" loading="lazy"
-              class="gallery-bento__img">
+              class="gallery-bento__img" width="1024" height="1024">
             <div class="gallery-bento__overlay">
               <div class="gallery-bento__caption">
                 <span class="gallery-bento__location">📍 Gokyo, Nepal</span>
@@ -2612,7 +2644,7 @@
             data-caption="Annapurna Circuit — Thorong La Pass, 5,416m" tabindex="0" role="button"
             aria-label="Open Annapurna Circuit photo">
             <img src="/assets/images/treks/annapurna-circuit.jpg" alt="Annapurna Circuit Thorong La Pass" loading="lazy"
-              class="gallery-bento__img">
+              class="gallery-bento__img" width="1024" height="1024">
             <div class="gallery-bento__overlay">
               <div class="gallery-bento__caption">
                 <span class="gallery-bento__location">📍 Annapurna, Nepal</span>
@@ -2636,7 +2668,7 @@
             data-caption="Langtang Valley — Rhododendron Forest at 3,500m" tabindex="0" role="button"
             aria-label="Open Langtang Valley photo">
             <img src="/assets/images/treks/langtang-valley.jpg" alt="Langtang Valley rhododendron trail" loading="lazy"
-              class="gallery-bento__img">
+              class="gallery-bento__img" width="1024" height="1024">
             <div class="gallery-bento__overlay">
               <div class="gallery-bento__caption">
                 <span class="gallery-bento__location">📍 Langtang, Nepal</span>
@@ -2660,7 +2692,7 @@
             data-caption="Upper Mustang — Ancient Lo Manthang Walled City" tabindex="0" role="button"
             aria-label="Open Upper Mustang photo">
             <img src="/assets/images/treks/upper-mustang.jpg" alt="Lo Manthang ancient walled city Mustang"
-              loading="lazy" class="gallery-bento__img">
+              loading="lazy" class="gallery-bento__img" width="1024" height="1024">
             <div class="gallery-bento__overlay">
               <div class="gallery-bento__caption">
                 <span class="gallery-bento__location">📍 Mustang, Nepal</span>
@@ -2684,7 +2716,7 @@
             data-caption="Annapurna Base Camp — Sanctuary at 4,130m" tabindex="0" role="button"
             aria-label="Open Annapurna Base Camp photo">
             <img src="/assets/images/treks/annapurna-base-camp.jpg" alt="Annapurna Base Camp sanctuary" loading="lazy"
-              class="gallery-bento__img">
+              class="gallery-bento__img" width="1024" height="1024">
             <div class="gallery-bento__overlay">
               <div class="gallery-bento__caption">
                 <span class="gallery-bento__location">📍 Annapurna, Nepal</span>
@@ -2708,7 +2740,7 @@
             data-caption="Manaslu Circuit — Remote Himalayan Wilderness" tabindex="0" role="button"
             aria-label="Open Manaslu Circuit photo">
             <img src="/assets/images/treks/manaslu-circuit.jpg" alt="Manaslu Circuit remote Himalayan trail"
-              loading="lazy" class="gallery-bento__img">
+              loading="lazy" class="gallery-bento__img" width="1024" height="1024">
             <div class="gallery-bento__overlay">
               <div class="gallery-bento__caption">
                 <span class="gallery-bento__location">📍 Manaslu, Nepal</span>
@@ -2759,7 +2791,7 @@
       </button>
       <div class="gallery-lightbox__backdrop" id="lightboxBackdrop"></div>
       <div class="gallery-lightbox__content">
-        <img loading="lazy" src="" alt="" id="lightboxImg" class="gallery-lightbox__img">
+        <img src="" alt="" id="lightboxImg" class="gallery-lightbox__img" width="1200" height="800">
         <p class="gallery-lightbox__caption" id="lightboxCaption"></p>
       </div>
     </div>
@@ -2793,7 +2825,7 @@
           <article class="blog-card reveal">
             <div class="blog-card__image-wrap">
               <img src="/assets/images/team/maya-gurung.jpg" referrerpolicy="no-referrer" crossorigin="anonymous"
-                alt="Best Time to Trek in Nepal" class="blog-card__image" loading="lazy">
+                alt="Best Time to Trek in Nepal" class="blog-card__image" loading="lazy" width="1024" height="1024">
               <span class="blog-card__category-badge blog-card__category-badge--teal">SEASON GUIDE</span>
               <span class="blog-card__read-time">⏱️ 8 min read</span>
             </div>
@@ -2810,7 +2842,7 @@
               <div class="blog-card__footer">
                 <div class="blog-card__author">
                   <img src="/assets/images/team/pemba-nuru.jpg" referrerpolicy="no-referrer" crossorigin="anonymous"
-                    alt="Pasang Sherpa" class="blog-card__author-avatar" loading="lazy">
+                    alt="Pasang Sherpa" class="blog-card__author-avatar" loading="lazy" width="1024" height="1024">
                   <div class="blog-card__author-info">
                     <span class="blog-card__author-name">Pasang Sherpa</span>
                     <span class="blog-card__date">Aug 12, 2026</span>
@@ -2828,7 +2860,7 @@
           <article class="blog-card reveal">
             <div class="blog-card__image-wrap">
               <img src="/assets/images/team/lhakpa-tenzing.jpg" referrerpolicy="no-referrer" crossorigin="anonymous"
-                alt="Nepal Trekking Permits 2026" class="blog-card__image" loading="lazy">
+                alt="Nepal Trekking Permits 2026" class="blog-card__image" loading="lazy" width="1024" height="1024">
               <span class="blog-card__category-badge blog-card__category-badge--amber">PERMITS &amp; FEES</span>
               <span class="blog-card__read-time">⏱️ 6 min read</span>
             </div>
@@ -2845,7 +2877,7 @@
               <div class="blog-card__footer">
                 <div class="blog-card__author">
                   <img src="/assets/images/team/jai-taneja.jpg" referrerpolicy="no-referrer" crossorigin="anonymous"
-                    alt="Dawa Nuru Sherpa" class="blog-card__author-avatar" loading="lazy">
+                    alt="Dawa Nuru Sherpa" class="blog-card__author-avatar" loading="lazy" width="1024" height="1024">
                   <div class="blog-card__author-info">
                     <span class="blog-card__author-name">Dawa Nuru</span>
                     <span class="blog-card__date">Jul 28, 2026</span>
@@ -2863,7 +2895,7 @@
           <article class="blog-card reveal">
             <div class="blog-card__image-wrap">
               <img src="/assets/images/team/pasang-sherpa.jpg" referrerpolicy="no-referrer" crossorigin="anonymous"
-                alt="Everest Base Camp Packing List" class="blog-card__image" loading="lazy">
+                alt="Everest Base Camp Packing List" class="blog-card__image" loading="lazy" width="1024" height="1024">
               <span class="blog-card__category-badge blog-card__category-badge--emerald">PACKING &amp; GEAR</span>
               <span class="blog-card__read-time">⏱️ 10 min read</span>
             </div>
@@ -2880,7 +2912,7 @@
               <div class="blog-card__footer">
                 <div class="blog-card__author">
                   <img src="/assets/images/team/maya-gurung.jpg" referrerpolicy="no-referrer" crossorigin="anonymous"
-                    alt="Dr. Sarah Jenkins" class="blog-card__author-avatar" loading="lazy">
+                    alt="Dr. Sarah Jenkins" class="blog-card__author-avatar" loading="lazy" width="1024" height="1024">
                   <div class="blog-card__author-info">
                     <span class="blog-card__author-name">Dr. Sarah J.</span>
                     <span class="blog-card__date">Jul 15, 2026</span>
@@ -2922,7 +2954,7 @@
           <div class="founders-note__image-column">
             <div class="founders-note__img-wrap">
               <img src="/assets/images/team/pasang-sherpa.jpg" alt="Pasang Sherpa — Founder of Best Treks Nepal"
-                class="founders-note__img" loading="lazy">
+                class="founders-note__img" loading="lazy" width="1024" height="1024">
               <div class="founders-note__img-badge">
                 <span class="badge-icon">
                   <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--color-accent)"
@@ -3013,7 +3045,7 @@
           <!-- Member 1: Pasang Sherpa -->
           <div class="team-card reveal">
             <img src="/assets/images/team/pasang-sherpa.jpg" alt="Pasang Sherpa — Founder & Lead Guide"
-              class="team-card__img" loading="lazy">
+              class="team-card__img" loading="lazy" width="1024" height="1024">
             <div class="team-card__overlay"></div>
             <div class="team-card__content">
               <span class="team-pill-indicator" aria-hidden="true"></span>
@@ -3027,7 +3059,7 @@
           <!-- Member 2: Pemba Nuru -->
           <div class="team-card reveal">
             <img src="/assets/images/team/pemba-nuru.jpg" alt="Pemba Nuru — Senior IFMGA Guide" class="team-card__img"
-              loading="lazy">
+              loading="lazy" width="1024" height="1024">
             <div class="team-card__overlay"></div>
             <div class="team-card__content">
               <span class="team-pill-indicator" aria-hidden="true"></span>
@@ -3041,7 +3073,7 @@
           <!-- Member 3: Lhakpa Tenzing -->
           <div class="team-card reveal">
             <img src="/assets/images/team/lhakpa-tenzing.jpg" alt="Lhakpa Tenzing — Safety & Heli Rescue Mgr"
-              class="team-card__img" loading="lazy">
+              class="team-card__img" loading="lazy" width="1024" height="1024">
             <div class="team-card__overlay"></div>
             <div class="team-card__content">
               <span class="team-pill-indicator" aria-hidden="true"></span>
@@ -3055,7 +3087,7 @@
           <!-- Member 4: Jai Taneja -->
           <div class="team-card reveal">
             <img src="/assets/images/team/jai-taneja.jpg" alt="Jai Taneja — Expedition Operations"
-              class="team-card__img" loading="lazy">
+              class="team-card__img" loading="lazy" width="1024" height="1024">
             <div class="team-card__overlay"></div>
             <div class="team-card__content">
               <span class="team-pill-indicator" aria-hidden="true"></span>
@@ -3069,7 +3101,7 @@
           <!-- Member 5: Maya Gurung -->
           <div class="team-card reveal">
             <img src="/assets/images/team/maya-gurung.jpg" alt="Maya Gurung — Custom Trip Specialist"
-              class="team-card__img" loading="lazy">
+              class="team-card__img" loading="lazy" width="1024" height="1024">
             <div class="team-card__overlay"></div>
             <div class="team-card__content">
               <span class="team-pill-indicator" aria-hidden="true"></span>
@@ -3088,7 +3120,7 @@
             <div class="specialist-support-bar__left">
               <div class="specialist-support-avatar-wrap">
                 <img loading="lazy" src="/assets/images/team/maya-gurung.jpg" alt="Support Specialist"
-                  class="specialist-support-avatar">
+                  class="specialist-support-avatar" width="1024" height="1024">
                 <span class="specialist-online-dot"></span>
               </div>
               <span class="specialist-support-text">24/7 available support</span>
@@ -3130,7 +3162,7 @@
               <line x1="21" y1="21" x2="16.65" y2="16.65" />
             </svg>
             <input type="text" id="faqSearchInput" placeholder="Search questions (e.g. permits, altitude, booking)..."
-              aria-label="Search FAQ questions">
+              aria-label="Search FAQ questions" name="faqSearchInput">
           </div>
 
           <!-- Category Pills -->
@@ -3410,10 +3442,10 @@
             Season updates, packing tips, permit news, and exclusive deals —
             delivered monthly. No spam, ever.
           </p>
-          <form class="newsletter__form" data-newsletter aria-label="Newsletter signup form" novalidate>
+          <form class="newsletter__form" data-newsletter aria-label="Newsletter signup form" novalidate toolname="newsletterSubscription" tooldescription="Subscribe to quarterly Himalayan expedition advice and trail updates.">
             <label for="newsletter-email" class="sr-only">Email address</label>
             <input type="email" id="newsletter-email" class="newsletter__input" placeholder="Enter your email address"
-              required autocomplete="email" aria-required="true">
+              required autocomplete="email" aria-required="true" name="newsletter-email">
             <button type="submit" class="btn btn--accent">
               Subscribe
             </button>
@@ -3879,7 +3911,7 @@
   <!-- =====================================================================
        JavaScript — ES6 modules, deferred
        ===================================================================== -->
-  <script type="module" src="/assets/js/main.bundle.js" defer></script>
+  <script defer src="/assets/js/main.bundle.js"></script>
 
   <!-- Reviews Tab Switching -->
   <script>

@@ -414,7 +414,7 @@
   <div class="site-header">
 
     <!-- TOP INFORMATION BAR -->
-    <div class="top-bar" role="banner" aria-label="Contact information">
+    <div class="top-bar" aria-label="Contact information">
       <div class="container">
         <div class="top-bar__inner">
           <div class="top-bar__contacts">
@@ -515,7 +515,7 @@
                         <div class="mega-menu__grid">
                           <a href="/destinations.html#everest" class="mega-menu__item">
                             <div class="mega-menu__item-thumb">
-                              <img src="/assets/images/destinations/everest.jpg" alt="Everest Region" loading="lazy">
+                              <img src="/assets/images/destinations/everest.jpg" alt="Everest Region" loading="lazy" width="1024" height="1024">
                               <span class="mega-menu__item-alt-tag">5,545m</span>
                             </div>
                             <div class="mega-menu__item-info">
@@ -525,7 +525,7 @@
                           </a>
                           <a href="/destinations.html#annapurna" class="mega-menu__item">
                             <div class="mega-menu__item-thumb">
-                              <img src="/assets/images/destinations/annapurna.jpg" alt="Annapurna Region" loading="lazy">
+                              <img src="/assets/images/destinations/annapurna.jpg" alt="Annapurna Region" loading="lazy" width="1024" height="1024">
                               <span class="mega-menu__item-alt-tag">5,416m</span>
                             </div>
                             <div class="mega-menu__item-info">
@@ -535,7 +535,7 @@
                           </a>
                           <a href="/destinations.html#langtang" class="mega-menu__item">
                             <div class="mega-menu__item-thumb">
-                              <img src="/assets/images/destinations/langtang.jpg" alt="Langtang Region" loading="lazy">
+                              <img src="/assets/images/destinations/langtang.jpg" alt="Langtang Region" loading="lazy" width="1024" height="1024">
                               <span class="mega-menu__item-alt-tag">4,773m</span>
                             </div>
                             <div class="mega-menu__item-info">
@@ -545,7 +545,7 @@
                           </a>
                           <a href="/destinations.html#manaslu" class="mega-menu__item">
                             <div class="mega-menu__item-thumb">
-                              <img src="/assets/images/destinations/manaslu.jpg" alt="Manaslu Region" loading="lazy">
+                              <img src="/assets/images/destinations/manaslu.jpg" alt="Manaslu Region" loading="lazy" width="1024" height="1024">
                               <span class="mega-menu__item-alt-tag">5,106m</span>
                             </div>
                             <div class="mega-menu__item-info">
@@ -555,7 +555,7 @@
                           </a>
                           <a href="/destinations.html#mustang" class="mega-menu__item">
                             <div class="mega-menu__item-thumb">
-                              <img src="/assets/images/destinations/mustang.jpg" alt="Upper Mustang" loading="lazy">
+                              <img src="/assets/images/destinations/mustang.jpg" alt="Upper Mustang" loading="lazy" width="1024" height="1024">
                               <span class="mega-menu__item-alt-tag">3,840m</span>
                             </div>
                             <div class="mega-menu__item-info">
@@ -565,7 +565,7 @@
                           </a>
                           <a href="/destinations.html#dolpo" class="mega-menu__item">
                             <div class="mega-menu__item-thumb">
-                              <img src="/assets/images/destinations/dolpo.jpg" alt="Dolpo Region" loading="lazy">
+                              <img src="/assets/images/destinations/dolpo.jpg" alt="Dolpo Region" loading="lazy" width="1024" height="1024">
                               <span class="mega-menu__item-alt-tag">5,350m</span>
                             </div>
                             <div class="mega-menu__item-info">
@@ -705,7 +705,7 @@
         </div>
         <input class="search-modal__input" type="search" placeholder="Search treks, destinations…"
           aria-label="Search treks and destinations" autocomplete="off" data-search-input aria-controls="search-results"
-          aria-expanded="false">
+          aria-expanded="false" id="siteSearchInput" name="searchQuery">
         <button class="btn btn--sm btn--secondary" data-search-close aria-label="Close search"
           type="button">ESC</button>
       </div>
@@ -746,7 +746,7 @@
         <!-- Live Search Input -->
         <div class="directory-search-box">
           <svg class="directory-search-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
-          <input type="search" id="directorySearchInput" class="directory-search-input" placeholder="Type to filter all pages, treks, regions, or guides…" aria-label="Filter all pages">
+          <input type="search" id="directorySearchInput" class="directory-search-input" placeholder="Type to filter all pages, treks, regions, or guides…" aria-label="Filter all pages" name="directorySearchInput">
         </div>
 
         <!-- Stats Counter Bar -->
@@ -908,7 +908,7 @@
           
           <a href="/destinations/everest.html" class="dest-dir-card" data-search-target="everest region khumbu sagarmatha kala patthar 5545m">
             <div class="dest-dir-card__thumb-wrap">
-              <img src="/assets/images/destinations/everest.jpg" alt="Everest Region" class="dest-dir-card__thumb" loading="lazy">
+              <img src="/assets/images/destinations/everest.jpg" alt="Everest Region" class="dest-dir-card__thumb" loading="lazy" width="1024" height="1024">
               <span class="dest-dir-card__alt-tag">5,545m</span>
             </div>
             <div class="dest-dir-card__content">
@@ -920,7 +920,7 @@
 
           <a href="/destinations/annapurna.html" class="dest-dir-card" data-search-target="annapurna region sanctuary circuit thorong la 5416m">
             <div class="dest-dir-card__thumb-wrap">
-              <img src="/assets/images/destinations/annapurna.jpg" alt="Annapurna Region" class="dest-dir-card__thumb" loading="lazy">
+              <img src="/assets/images/destinations/annapurna.jpg" alt="Annapurna Region" class="dest-dir-card__thumb" loading="lazy" width="1024" height="1024">
               <span class="dest-dir-card__alt-tag">5,416m</span>
             </div>
             <div class="dest-dir-card__content">
@@ -932,7 +932,7 @@
 
           <a href="/destinations/langtang.html" class="dest-dir-card" data-search-target="langtang valley kyanjin gompa gosaikunda lakes 4773m">
             <div class="dest-dir-card__thumb-wrap">
-              <img src="/assets/images/destinations/langtang.jpg" alt="Langtang Region" class="dest-dir-card__thumb" loading="lazy">
+              <img src="/assets/images/destinations/langtang.jpg" alt="Langtang Region" class="dest-dir-card__thumb" loading="lazy" width="1024" height="1024">
               <span class="dest-dir-card__alt-tag">4,773m</span>
             </div>
             <div class="dest-dir-card__content">
@@ -944,7 +944,7 @@
 
           <a href="/destinations/manaslu.html" class="dest-dir-card" data-search-target="manaslu circuit larkya la pass tsum valley restricted 5106m">
             <div class="dest-dir-card__thumb-wrap">
-              <img src="/assets/images/destinations/manaslu.jpg" alt="Manaslu Region" class="dest-dir-card__thumb" loading="lazy">
+              <img src="/assets/images/destinations/manaslu.jpg" alt="Manaslu Region" class="dest-dir-card__thumb" loading="lazy" width="1024" height="1024">
               <span class="dest-dir-card__alt-tag">5,106m</span>
             </div>
             <div class="dest-dir-card__content">
@@ -956,7 +956,7 @@
 
           <a href="/destinations/mustang.html" class="dest-dir-card" data-search-target="upper mustang kingdom lo manthang tiji festival rainshadow 3840m">
             <div class="dest-dir-card__thumb-wrap">
-              <img src="/assets/images/destinations/mustang.jpg" alt="Mustang Region" class="dest-dir-card__thumb" loading="lazy">
+              <img src="/assets/images/destinations/mustang.jpg" alt="Mustang Region" class="dest-dir-card__thumb" loading="lazy" width="1024" height="1024">
               <span class="dest-dir-card__alt-tag">3,840m</span>
             </div>
             <div class="dest-dir-card__content">
@@ -968,7 +968,7 @@
 
           <a href="/destinations/dolpo.html" class="dest-dir-card" data-search-target="dolpo upper dolpo phoksundo lake shey gompa wilderness 5350m">
             <div class="dest-dir-card__thumb-wrap">
-              <img src="/assets/images/destinations/dolpo.jpg" alt="Dolpo Region" class="dest-dir-card__thumb" loading="lazy">
+              <img src="/assets/images/destinations/dolpo.jpg" alt="Dolpo Region" class="dest-dir-card__thumb" loading="lazy" width="1024" height="1024">
               <span class="dest-dir-card__alt-tag">5,350m</span>
             </div>
             <div class="dest-dir-card__content">
@@ -980,7 +980,7 @@
 
           <a href="/destinations/kanchenjunga.html" class="dest-dir-card" data-search-target="kanchenjunga circuit third highest peak remote eastern 5143m">
             <div class="dest-dir-card__thumb-wrap">
-              <img src="/assets/images/destinations/everest.jpg" alt="Kanchenjunga Region" class="dest-dir-card__thumb" loading="lazy">
+              <img src="/assets/images/destinations/everest.jpg" alt="Kanchenjunga Region" class="dest-dir-card__thumb" loading="lazy" width="1024" height="1024">
               <span class="dest-dir-card__alt-tag">5,143m</span>
             </div>
             <div class="dest-dir-card__content">
@@ -992,7 +992,7 @@
 
           <a href="/destinations/makalu.html" class="dest-dir-card" data-search-target="makalu base camp barun valley pristine granite 4870m">
             <div class="dest-dir-card__thumb-wrap">
-              <img src="/assets/images/destinations/everest.jpg" alt="Makalu Region" class="dest-dir-card__thumb" loading="lazy">
+              <img src="/assets/images/destinations/everest.jpg" alt="Makalu Region" class="dest-dir-card__thumb" loading="lazy" width="1024" height="1024">
               <span class="dest-dir-card__alt-tag">4,870m</span>
             </div>
             <div class="dest-dir-card__content">
@@ -1677,7 +1677,7 @@
     </svg>
   </button>
 
-  <script type="module" src="/assets/js/main.bundle.js" defer></script>
+  <script defer src="/assets/js/main.bundle.js"></script>
 
   <!-- Live Client-side Search Filtering Script -->
   <script>

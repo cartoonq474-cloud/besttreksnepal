@@ -403,7 +403,7 @@
 
   <!-- Master Site Header -->
   <div class="site-header">
-    <div class="top-bar" role="banner" aria-label="Contact information">
+    <div class="top-bar" aria-label="Contact information">
       <div class="container">
         <div class="top-bar__inner">
           <div class="top-bar__contacts">
@@ -477,7 +477,7 @@
                         <div class="mega-menu__grid">
                           <a href="/destinations/everest.html" class="mega-menu__item is-active">
                             <div class="mega-menu__item-thumb">
-                              <img src="/assets/images/destinations/everest.jpg" alt="Everest Region" loading="lazy">
+                              <img src="/assets/images/destinations/everest.jpg" alt="Everest Region" loading="lazy" width="1024" height="1024">
                               <span class="mega-menu__item-alt-tag">5,545m</span>
                             </div>
                             <div class="mega-menu__item-info">
@@ -487,7 +487,7 @@
                           </a>
                           <a href="/destinations/annapurna.html" class="mega-menu__item">
                             <div class="mega-menu__item-thumb">
-                              <img src="/assets/images/destinations/annapurna.jpg" alt="Annapurna Region" loading="lazy">
+                              <img src="/assets/images/destinations/annapurna.jpg" alt="Annapurna Region" loading="lazy" width="1024" height="1024">
                               <span class="mega-menu__item-alt-tag">5,416m</span>
                             </div>
                             <div class="mega-menu__item-info">
@@ -497,7 +497,7 @@
                           </a>
                           <a href="/destinations/langtang.html" class="mega-menu__item">
                             <div class="mega-menu__item-thumb">
-                              <img src="/assets/images/destinations/langtang.jpg" alt="Langtang Region" loading="lazy">
+                              <img src="/assets/images/destinations/langtang.jpg" alt="Langtang Region" loading="lazy" width="1024" height="1024">
                               <span class="mega-menu__item-alt-tag">4,773m</span>
                             </div>
                             <div class="mega-menu__item-info">
@@ -507,7 +507,7 @@
                           </a>
                           <a href="/destinations/manaslu.html" class="mega-menu__item">
                             <div class="mega-menu__item-thumb">
-                              <img src="/assets/images/destinations/manaslu.jpg" alt="Manaslu Region" loading="lazy">
+                              <img src="/assets/images/destinations/manaslu.jpg" alt="Manaslu Region" loading="lazy" width="1024" height="1024">
                               <span class="mega-menu__item-alt-tag">5,106m</span>
                             </div>
                             <div class="mega-menu__item-info">
@@ -517,7 +517,7 @@
                           </a>
                           <a href="/destinations/mustang.html" class="mega-menu__item">
                             <div class="mega-menu__item-thumb">
-                              <img src="/assets/images/destinations/mustang.jpg" alt="Upper Mustang" loading="lazy">
+                              <img src="/assets/images/destinations/mustang.jpg" alt="Upper Mustang" loading="lazy" width="1024" height="1024">
                               <span class="mega-menu__item-alt-tag">3,840m</span>
                             </div>
                             <div class="mega-menu__item-info">
@@ -527,7 +527,7 @@
                           </a>
                           <a href="/destinations/dolpo.html" class="mega-menu__item">
                             <div class="mega-menu__item-thumb">
-                              <img src="/assets/images/destinations/dolpo.jpg" alt="Dolpo Region" loading="lazy">
+                              <img src="/assets/images/destinations/dolpo.jpg" alt="Dolpo Region" loading="lazy" width="1024" height="1024">
                               <span class="mega-menu__item-alt-tag">5,350m</span>
                             </div>
                             <div class="mega-menu__item-info">
@@ -537,7 +537,7 @@
                           </a>
                           <a href="/destinations/kanchenjunga.html" class="mega-menu__item">
                             <div class="mega-menu__item-thumb">
-                              <img src="/assets/images/destinations/kanchenjunga.jpg" alt="Kanchenjunga Region" loading="lazy">
+                              <img src="/assets/images/destinations/kanchenjunga.jpg" alt="Kanchenjunga Region" loading="lazy" width="1024" height="1024">
                               <span class="mega-menu__item-alt-tag">5,143m</span>
                             </div>
                             <div class="mega-menu__item-info">
@@ -547,7 +547,7 @@
                           </a>
                           <a href="/destinations/makalu.html" class="mega-menu__item">
                             <div class="mega-menu__item-thumb">
-                              <img src="/assets/images/destinations/makalu.jpg" alt="Makalu Barun Region" loading="lazy">
+                              <img src="/assets/images/destinations/makalu.jpg" alt="Makalu Barun Region" loading="lazy" width="1024" height="1024">
                               <span class="mega-menu__item-alt-tag">4,870m</span>
                             </div>
                             <div class="mega-menu__item-info">
@@ -669,7 +669,7 @@
         <div class="search-modal__icon">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8" /><line x1="21" y1="21" x2="16.65" y2="16.65" /></svg>
         </div>
-        <input class="search-modal__input" type="search" placeholder="Search Everest, EBC, Gokyo, passes, permits…" aria-label="Search treks and destinations" autocomplete="off" data-search-input>
+        <input class="search-modal__input" type="search" placeholder="Search Everest, EBC, Gokyo, passes, permits…" aria-label="Search treks and destinations" autocomplete="off" data-search-input id="siteSearchInput" name="searchQuery">
         <button class="btn btn--sm btn--secondary" data-search-close type="button">ESC</button>
       </div>
       <div class="search-modal__results" id="search-results" role="listbox" hidden></div>
@@ -783,7 +783,7 @@
         <!-- 5. Action Row (Preview Thumbnail + Trust Pill) -->
         <div class="hero__action-row reveal">
           <a href="#routes" class="hero__play-thumb" aria-label="Explore Everest expedition routes">
-            <img loading="lazy" src="/assets/images/destinations/everest.jpg" alt="Everest Base Camp preview">
+            <img loading="lazy" src="/assets/images/destinations/everest.jpg" alt="Everest Base Camp preview" width="1024" height="1024">
             <div class="hero__play-btn">
               <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
                 <line x1="5" y1="12" x2="19" y2="12" />
@@ -795,13 +795,13 @@
           <div class="hero__trust-pill">
             <div class="hero__avatars">
               <img loading="lazy" src="/assets/images/team/maya-gurung.jpg" referrerpolicy="no-referrer" crossorigin="anonymous"
-                alt="Trekker" class="hero__avatar">
+                alt="Trekker" class="hero__avatar" width="1024" height="1024">
               <img loading="lazy" src="/assets/images/team/pemba-nuru.jpg" referrerpolicy="no-referrer" crossorigin="anonymous"
-                alt="Trekker" class="hero__avatar">
+                alt="Trekker" class="hero__avatar" width="1024" height="1024">
               <img loading="lazy" src="/assets/images/team/lhakpa-tenzing.jpg" referrerpolicy="no-referrer" crossorigin="anonymous"
-                alt="Trekker" class="hero__avatar">
+                alt="Trekker" class="hero__avatar" width="1024" height="1024">
               <img loading="lazy" src="/assets/images/team/jai-taneja.jpg" referrerpolicy="no-referrer" crossorigin="anonymous"
-                alt="Trekker" class="hero__avatar">
+                alt="Trekker" class="hero__avatar" width="1024" height="1024">
             </div>
             <span class="hero__trust-text">Guided <strong>+6,800 Khumbu Climbers</strong></span>
             <a href="#routes" class="btn hero__trust-btn">Explore 6 Routes</a>
@@ -819,7 +819,7 @@
             </svg>
             <input class="hero__search-input" type="search"
               placeholder="Search Everest routes (e.g. Base Camp, Gokyo Lakes, Three Passes, Tengboche)..."
-              aria-label="Search Everest routes" autocomplete="off">
+              aria-label="Search Everest routes" autocomplete="off" id="heroTrekSearchInput" name="trekSearch">
           </div>
 
           <a href="#routes" class="btn hero__search-submit" style="text-decoration:none; display:inline-flex; align-items:center; gap:0.4rem;">
@@ -1115,7 +1115,7 @@
           <article class="route-card">
             <div class="route-card__img-wrap">
               <img src="/assets/images/destinations/everest.jpg" alt="Everest Base Camp Trek" class="route-card__img"
-                loading="lazy">
+                loading="lazy" width="1024" height="1024">
               <span class="route-card__badge" style="background:#0f5257; color:#fff;">MOST ICONIC</span>
             </div>
             <div class="route-card__body">
@@ -1173,7 +1173,7 @@
           <article class="route-card">
             <div class="route-card__img-wrap">
               <img src="/assets/images/treks/everest-base-camp.jpg" alt="Gokyo Lakes Trek" class="route-card__img"
-                loading="lazy">
+                loading="lazy" width="1024" height="1024">
               <span class="route-card__badge" style="background:#059669; color:#fff;">TURQUOISE LAKES</span>
             </div>
             <div class="route-card__body">
@@ -1231,7 +1231,7 @@
           <article class="route-card">
             <div class="route-card__img-wrap">
               <img src="/assets/images/treks/gokyo-lakes.jpg" referrerpolicy="no-referrer" crossorigin="anonymous" alt="Everest Three Passes Trek" class="route-card__img"
-                loading="lazy">
+                loading="lazy" width="1024" height="1024">
               <span class="route-card__badge" style="background:#dc2626; color:#fff;">EXTREME CIRCUIT</span>
             </div>
             <div class="route-card__body">
@@ -1288,7 +1288,7 @@
           <article class="route-card">
             <div class="route-card__img-wrap">
               <img src="/assets/images/treks/three-passes.jpg" alt="Ama Dablam Base Camp Trek" class="route-card__img"
-                loading="lazy">
+                loading="lazy" width="1376" height="768">
               <span class="route-card__badge" style="background:#7c3aed; color:#fff;">SCENIC PANORAMA</span>
             </div>
             <div class="route-card__body">
@@ -1345,7 +1345,7 @@
           <article class="route-card">
             <div class="route-card__img-wrap">
               <img src="/assets/images/treks/everest-base-camp.jpg" alt="Everest View Panorama Trek"
-                class="route-card__img" loading="lazy">
+                class="route-card__img" loading="lazy" width="1024" height="1024">
               <span class="route-card__badge" style="background:#0284c7; color:#fff;">COMFORT &amp; CULTURE</span>
             </div>
             <div class="route-card__body">
@@ -1402,7 +1402,7 @@
           <article class="route-card">
             <div class="route-card__img-wrap">
               <img src="/assets/images/treks/everest-base-camp.jpg" alt="Everest Base Camp with Heli Return"
-                class="route-card__img" loading="lazy">
+                class="route-card__img" loading="lazy" width="1024" height="1024">
               <span class="route-card__badge" style="background:#d97706; color:#fff;">LUXURY HELI-TREK</span>
             </div>
             <div class="route-card__body">
@@ -2018,7 +2018,7 @@
               <line x1="21" y1="21" x2="16.65" y2="16.65" />
             </svg>
             <input type="text" id="faqSearchInput" placeholder="Search Everest questions (e.g. Lukla, AMS, permits, lodges)..."
-              aria-label="Search Everest FAQ questions">
+              aria-label="Search Everest FAQ questions" name="faqSearchInput">
           </div>
 
           <!-- Category Pills -->

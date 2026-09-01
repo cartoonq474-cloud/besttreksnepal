@@ -530,7 +530,7 @@
   <div class="site-header">
 
     <!-- TOP INFORMATION BAR -->
-    <div class="top-bar" role="banner" aria-label="Contact information">
+    <div class="top-bar" aria-label="Contact information">
       <div class="container">
         <div class="top-bar__inner">
           <div class="top-bar__contacts">
@@ -604,7 +604,7 @@
                         <div class="mega-menu__grid">
                           <a href="/destinations.html#everest" class="mega-menu__item">
                             <div class="mega-menu__item-thumb">
-                              <img src="/assets/images/destinations/everest.jpg" alt="Everest Region" loading="lazy">
+                              <img src="/assets/images/destinations/everest.jpg" alt="Everest Region" loading="lazy" width="1024" height="1024">
                               <span class="mega-menu__item-alt-tag">5,545m</span>
                             </div>
                             <div class="mega-menu__item-info">
@@ -614,7 +614,7 @@
                           </a>
                           <a href="/destinations.html#annapurna" class="mega-menu__item">
                             <div class="mega-menu__item-thumb">
-                              <img src="/assets/images/destinations/annapurna.jpg" alt="Annapurna Region" loading="lazy">
+                              <img src="/assets/images/destinations/annapurna.jpg" alt="Annapurna Region" loading="lazy" width="1024" height="1024">
                               <span class="mega-menu__item-alt-tag">5,416m</span>
                             </div>
                             <div class="mega-menu__item-info">
@@ -624,7 +624,7 @@
                           </a>
                           <a href="/destinations.html#langtang" class="mega-menu__item">
                             <div class="mega-menu__item-thumb">
-                              <img src="/assets/images/destinations/langtang.jpg" alt="Langtang Region" loading="lazy">
+                              <img src="/assets/images/destinations/langtang.jpg" alt="Langtang Region" loading="lazy" width="1024" height="1024">
                               <span class="mega-menu__item-alt-tag">4,773m</span>
                             </div>
                             <div class="mega-menu__item-info">
@@ -634,7 +634,7 @@
                           </a>
                           <a href="/destinations.html#manaslu" class="mega-menu__item">
                             <div class="mega-menu__item-thumb">
-                              <img src="/assets/images/destinations/manaslu.jpg" alt="Manaslu Region" loading="lazy">
+                              <img src="/assets/images/destinations/manaslu.jpg" alt="Manaslu Region" loading="lazy" width="1024" height="1024">
                               <span class="mega-menu__item-alt-tag">5,106m</span>
                             </div>
                             <div class="mega-menu__item-info">
@@ -644,7 +644,7 @@
                           </a>
                           <a href="/destinations.html#mustang" class="mega-menu__item">
                             <div class="mega-menu__item-thumb">
-                              <img src="/assets/images/destinations/mustang.jpg" alt="Upper Mustang" loading="lazy">
+                              <img src="/assets/images/destinations/mustang.jpg" alt="Upper Mustang" loading="lazy" width="1024" height="1024">
                               <span class="mega-menu__item-alt-tag">3,840m</span>
                             </div>
                             <div class="mega-menu__item-info">
@@ -654,7 +654,7 @@
                           </a>
                           <a href="/destinations.html#dolpo" class="mega-menu__item">
                             <div class="mega-menu__item-thumb">
-                              <img src="/assets/images/destinations/dolpo.jpg" alt="Dolpo Region" loading="lazy">
+                              <img src="/assets/images/destinations/dolpo.jpg" alt="Dolpo Region" loading="lazy" width="1024" height="1024">
                               <span class="mega-menu__item-alt-tag">5,350m</span>
                             </div>
                             <div class="mega-menu__item-info">
@@ -783,7 +783,7 @@
         <div class="search-modal__icon" aria-hidden="true" inert>
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8" /><line x1="21" y1="21" x2="16.65" y2="16.65" /></svg>
         </div>
-        <input class="search-modal__input" type="search" placeholder="Search treks, destinations…" aria-label="Search treks and destinations" autocomplete="off" data-search-input aria-controls="search-results" aria-expanded="false">
+        <input class="search-modal__input" type="search" placeholder="Search treks, destinations…" aria-label="Search treks and destinations" autocomplete="off" data-search-input aria-controls="search-results" aria-expanded="false" id="siteSearchInput" name="searchQuery">
         <button class="btn btn--sm btn--secondary" data-search-close aria-label="Close search" type="button">ESC</button>
       </div>
       <div class="search-modal__results" id="search-results" role="listbox" aria-label="Search results" hidden></div>
@@ -830,7 +830,7 @@
 
       <div class="article-author-bar">
         <div class="article-author-left">
-          <img src="/assets/images/treks/upper-mustang.jpg" alt="Ang Tenzin" class="article-author-avatar" loading="lazy">
+          <img src="/assets/images/treks/upper-mustang.jpg" alt="Ang Tenzin" class="article-author-avatar" loading="lazy" width="1024" height="1024">
           <div>
             <span class="article-author-name">Ang Tenzin &amp; Pasang Sherpa</span>
             <span class="article-author-role">Operations &amp; Logistics Directors · 22+ Years Himalayan Service</span>
@@ -930,7 +930,7 @@
   <!-- HERO MAIN FIGURE -->
   <div class="container" style="max-width: 960px;">
     <figure class="article-hero-figure">
-      <img fetchpriority="high" src="/assets/images/destinations/langtang.jpg" alt="Trekker dining and briefing in high Himalayan teahouse" class="article-hero-img" loading="eager">
+      <img fetchpriority="high" src="/assets/images/destinations/langtang.jpg" alt="Trekker dining and briefing in high Himalayan teahouse" class="article-hero-img" loading="eager" width="1024" height="1024">
       <div class="hero-floating-badge">
         <div class="floating-badge-title">
           <span>🛡️ Best Treks Nepal Zero-Hidden-Fee Guarantee</span>
@@ -1308,7 +1308,7 @@
             <div class="calc-grid">
               <div class="calc-field">
                 <label for="trekSelect">Select Trek Route</label>
-                <select id="trekSelect" onchange="calculateTotalBudget()">
+                <select id="trekSelect" onchange="calculateTotalBudget()" name="trekSelect">
                   <option value="ebc">Everest Base Camp (14 Days) — $1,350 base</option>
                   <option value="circuit">Annapurna Circuit (14 Days) — $990 base</option>
                   <option value="abc">Annapurna Base Camp (10 Days) — $790 base</option>
@@ -1320,7 +1320,7 @@
 
               <div class="calc-field">
                 <label for="tierSelect">Package Service Tier</label>
-                <select id="tierSelect" onchange="calculateTotalBudget()">
+                <select id="tierSelect" onchange="calculateTotalBudget()" name="tierSelect">
                   <option value="standard">Standard All-Inclusive (Best Value)</option>
                   <option value="luxury">Luxury Heated Lodge Upgrade (+$750)</option>
                   <option value="budget">Guide + Porter Only (No food/flights) (-$450)</option>
@@ -1329,7 +1329,7 @@
 
               <div class="calc-field">
                 <label for="showerSelect">Hot Showers Preference</label>
-                <select id="showerSelect" onchange="calculateTotalBudget()">
+                <select id="showerSelect" onchange="calculateTotalBudget()" name="showerSelect">
                   <option value="5">Every other day (Approx. 5 showers / $20)</option>
                   <option value="10">Daily hot shower (Approx. 10 showers / $40)</option>
                   <option value="0">Wet wipes only ($0 cash needed)</option>
@@ -1338,7 +1338,7 @@
 
               <div class="calc-field">
                 <label for="chargingSelect">Device Charging &amp; Wi-Fi</label>
-                <select id="chargingSelect" onchange="calculateTotalBudget()">
+                <select id="chargingSelect" onchange="calculateTotalBudget()" name="chargingSelect">
                   <option value="moderate">Phone + Power Bank + Wi-Fi ($50 total)</option>
                   <option value="heavy">DSLR + Drone + Laptop + Daily Wi-Fi ($100 total)</option>
                   <option value="minimal">Offline mode + Solar power bank ($15 total)</option>
@@ -1551,22 +1551,22 @@
             </div>
 
             <div class="checklist-items-grid" id="checklistGrid">
-              <label class="check-item-label"><input type="checkbox" onchange="updateChecklist()"> <span>Are roundtrip domestic mountain flights 100% included in writing?</span></label>
-              <label class="check-item-label"><input type="checkbox" onchange="updateChecklist()"> <span>Are 3 hot meals per day uncapped without restrictive dollar vouchers?</span></label>
-              <label class="check-item-label"><input type="checkbox" onchange="updateChecklist()"> <span>Are all national park permits and TIMS cards included upfront?</span></label>
-              <label class="check-item-label"><input type="checkbox" onchange="updateChecklist()"> <span>Is the porter load strictly capped at 20kg maximum under IPPG rules?</span></label>
-              <label class="check-item-label"><input type="checkbox" onchange="updateChecklist()"> <span>Are porters and guides fully insured with medical &amp; helicopter riders?</span></label>
-              <label class="check-item-label"><input type="checkbox" onchange="updateChecklist()"> <span>Is the lead guide certified by the Nepal Tourism Board (NNMGA / TAAN)?</span></label>
-              <label class="check-item-label"><input type="checkbox" onchange="updateChecklist()"> <span>Does the guide carry a medical-grade pulse oximeter for daily checks?</span></label>
-              <label class="check-item-label"><input type="checkbox" onchange="updateChecklist()"> <span>Are private twin-share teahouse rooms guaranteed and pre-reserved?</span></label>
-              <label class="check-item-label"><input type="checkbox" onchange="updateChecklist()"> <span>Are 2 nights of boutique hotel in Kathmandu with breakfast included?</span></label>
-              <label class="check-item-label"><input type="checkbox" onchange="updateChecklist()"> <span>Are private airport pickup and drop-off transfers included?</span></label>
-              <label class="check-item-label"><input type="checkbox" onchange="updateChecklist()"> <span>Is a free expedition duffel bag, down jacket, and sleeping bag provided?</span></label>
-              <label class="check-item-label"><input type="checkbox" onchange="updateChecklist()"> <span>Is the mandatory 13% Nepal Government VAT and tax included in the price?</span></label>
-              <label class="check-item-label"><input type="checkbox" onchange="updateChecklist()"> <span>Does the company offer free date rescheduling in case of flight delays?</span></label>
-              <label class="check-item-label"><input type="checkbox" onchange="updateChecklist()"> <span>Is the agency legally bonded with Government License #1084/065?</span></label>
-              <label class="check-item-label"><input type="checkbox" onchange="updateChecklist()"> <span>Is a clear, itemized breakdown of legitimate personal exclusions provided?</span></label>
-              <label class="check-item-label"><input type="checkbox" onchange="updateChecklist()"> <span>Is 24/7 direct satellite emergency helicopter dispatch guaranteed?</span></label>
+              <label class="check-item-label"><input type="checkbox" onchange="updateChecklist()" id="formField_6" name="field_6"> <span>Are roundtrip domestic mountain flights 100% included in writing?</span></label>
+              <label class="check-item-label"><input type="checkbox" onchange="updateChecklist()" id="formField_7" name="field_7"> <span>Are 3 hot meals per day uncapped without restrictive dollar vouchers?</span></label>
+              <label class="check-item-label"><input type="checkbox" onchange="updateChecklist()" id="formField_8" name="field_8"> <span>Are all national park permits and TIMS cards included upfront?</span></label>
+              <label class="check-item-label"><input type="checkbox" onchange="updateChecklist()" id="formField_9" name="field_9"> <span>Is the porter load strictly capped at 20kg maximum under IPPG rules?</span></label>
+              <label class="check-item-label"><input type="checkbox" onchange="updateChecklist()" id="formField_10" name="field_10"> <span>Are porters and guides fully insured with medical &amp; helicopter riders?</span></label>
+              <label class="check-item-label"><input type="checkbox" onchange="updateChecklist()" id="formField_11" name="field_11"> <span>Is the lead guide certified by the Nepal Tourism Board (NNMGA / TAAN)?</span></label>
+              <label class="check-item-label"><input type="checkbox" onchange="updateChecklist()" id="formField_12" name="field_12"> <span>Does the guide carry a medical-grade pulse oximeter for daily checks?</span></label>
+              <label class="check-item-label"><input type="checkbox" onchange="updateChecklist()" id="formField_13" name="field_13"> <span>Are private twin-share teahouse rooms guaranteed and pre-reserved?</span></label>
+              <label class="check-item-label"><input type="checkbox" onchange="updateChecklist()" id="formField_14" name="field_14"> <span>Are 2 nights of boutique hotel in Kathmandu with breakfast included?</span></label>
+              <label class="check-item-label"><input type="checkbox" onchange="updateChecklist()" id="formField_15" name="field_15"> <span>Are private airport pickup and drop-off transfers included?</span></label>
+              <label class="check-item-label"><input type="checkbox" onchange="updateChecklist()" id="formField_16" name="field_16"> <span>Is a free expedition duffel bag, down jacket, and sleeping bag provided?</span></label>
+              <label class="check-item-label"><input type="checkbox" onchange="updateChecklist()" id="formField_17" name="field_17"> <span>Is the mandatory 13% Nepal Government VAT and tax included in the price?</span></label>
+              <label class="check-item-label"><input type="checkbox" onchange="updateChecklist()" id="formField_18" name="field_18"> <span>Does the company offer free date rescheduling in case of flight delays?</span></label>
+              <label class="check-item-label"><input type="checkbox" onchange="updateChecklist()" id="formField_19" name="field_19"> <span>Is the agency legally bonded with Government License #1084/065?</span></label>
+              <label class="check-item-label"><input type="checkbox" onchange="updateChecklist()" id="formField_20" name="field_20"> <span>Is a clear, itemized breakdown of legitimate personal exclusions provided?</span></label>
+              <label class="check-item-label"><input type="checkbox" onchange="updateChecklist()" id="formField_21" name="field_21"> <span>Is 24/7 direct satellite emergency helicopter dispatch guaranteed?</span></label>
             </div>
           </div>
         </section>
@@ -1814,7 +1814,7 @@
 
       <div class="related-grid">
         <a href="/blog/everest-base-camp-complete-guide.html" class="related-card">
-          <img src="/assets/images/destinations/everest.jpg" alt="Everest Base Camp Complete Guide" class="related-card-img" loading="lazy">
+          <img src="/assets/images/destinations/everest.jpg" alt="Everest Base Camp Complete Guide" class="related-card-img" loading="lazy" width="1024" height="1024">
           <div class="related-card-body">
             <span class="article-category-badge" style="background:#fef3c7; color:#92400e; border-color:#fde68a; margin-bottom:0.5rem;">Everest Guide</span>
             <h3 style="font-size:1.1rem; font-weight:800; color:#0f172a; margin:0.35rem 0 0.5rem;">Everest Base Camp 2026: Definitive Guide</h3>
@@ -1823,7 +1823,7 @@
         </a>
 
         <a href="/blog/nepal-trekking-permits.html" class="related-card">
-          <img src="/assets/images/destinations/manaslu.jpg" alt="Nepal Trekking Permits 2026" class="related-card-img" loading="lazy">
+          <img src="/assets/images/destinations/manaslu.jpg" alt="Nepal Trekking Permits 2026" class="related-card-img" loading="lazy" width="1024" height="1024">
           <div class="related-card-body">
             <span class="article-category-badge" style="background:#ecfdf5; color:#047857; border-color:#a7f3d0; margin-bottom:0.5rem;">Permits &amp; Rules</span>
             <h3 style="font-size:1.1rem; font-weight:800; color:#0f172a; margin:0.35rem 0 0.5rem;">Nepal Trekking Permits 2026: ACAP, TIMS &amp; RAPs</h3>
@@ -1832,7 +1832,7 @@
         </a>
 
         <a href="/blog/upper-mustang-trek-packages-guide.html" class="related-card">
-          <img src="/assets/images/destinations/mustang.jpg" alt="Upper Mustang Trek Packages 2026" class="related-card-img" loading="lazy">
+          <img src="/assets/images/destinations/mustang.jpg" alt="Upper Mustang Trek Packages 2026" class="related-card-img" loading="lazy" width="1024" height="1024">
           <div class="related-card-body">
             <span class="article-category-badge" style="background:#ede9fe; color:#6d28d9; border-color:#ddd6fe; margin-bottom:0.5rem;">Package Guide</span>
             <h3 style="font-size:1.1rem; font-weight:800; color:#0f172a; margin:0.35rem 0 0.5rem;">Upper Mustang Packages 2026: 4 Flagship Tiers</h3>

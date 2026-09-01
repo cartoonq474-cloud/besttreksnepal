@@ -1673,7 +1673,7 @@
     <!-- =====================================================================
        TOP INFORMATION BAR
        ===================================================================== -->
-    <div class="top-bar" role="banner" aria-label="Contact information">
+    <div class="top-bar" aria-label="Contact information">
       <div class="container">
         <div class="top-bar__inner">
           <div class="top-bar__contacts">
@@ -1783,7 +1783,7 @@
 
                           <a href="/destinations/everest.html" class="mega-menu__item">
                             <div class="mega-menu__item-thumb">
-                              <img src="/assets/images/destinations/everest.jpg" alt="Everest Region" loading="lazy">
+                              <img src="/assets/images/destinations/everest.jpg" alt="Everest Region" loading="lazy" width="1024" height="1024">
                               <span class="mega-menu__item-alt-tag">5,545m</span>
                             </div>
                             <div class="mega-menu__item-info">
@@ -1795,7 +1795,7 @@
                           <a href="/destinations/annapurna.html" class="mega-menu__item">
                             <div class="mega-menu__item-thumb">
                               <img src="/assets/images/destinations/annapurna.jpg" alt="Annapurna Region"
-                                loading="lazy">
+                                loading="lazy" width="1024" height="1024">
                               <span class="mega-menu__item-alt-tag">5,416m</span>
                             </div>
                             <div class="mega-menu__item-info">
@@ -1806,7 +1806,7 @@
 
                           <a href="/destinations/langtang.html" class="mega-menu__item">
                             <div class="mega-menu__item-thumb">
-                              <img src="/assets/images/destinations/langtang.jpg" alt="Langtang Region" loading="lazy">
+                              <img src="/assets/images/destinations/langtang.jpg" alt="Langtang Region" loading="lazy" width="1024" height="1024">
                               <span class="mega-menu__item-alt-tag">4,773m</span>
                             </div>
                             <div class="mega-menu__item-info">
@@ -1817,7 +1817,7 @@
 
                           <a href="/destinations/manaslu.html" class="mega-menu__item">
                             <div class="mega-menu__item-thumb">
-                              <img src="/assets/images/destinations/manaslu.jpg" alt="Manaslu Region" loading="lazy">
+                              <img src="/assets/images/destinations/manaslu.jpg" alt="Manaslu Region" loading="lazy" width="1024" height="1024">
                               <span class="mega-menu__item-alt-tag">5,106m</span>
                             </div>
                             <div class="mega-menu__item-info">
@@ -1828,7 +1828,7 @@
 
                           <a href="/destinations/mustang.html" class="mega-menu__item">
                             <div class="mega-menu__item-thumb">
-                              <img src="/assets/images/destinations/mustang.jpg" alt="Upper Mustang" loading="lazy">
+                              <img src="/assets/images/destinations/mustang.jpg" alt="Upper Mustang" loading="lazy" width="1024" height="1024">
                               <span class="mega-menu__item-alt-tag">3,840m</span>
                             </div>
                             <div class="mega-menu__item-info">
@@ -1839,7 +1839,7 @@
 
                           <a href="/destinations/dolpo.html" class="mega-menu__item">
                             <div class="mega-menu__item-thumb">
-                              <img src="/assets/images/destinations/dolpo.jpg" alt="Dolpo Region" loading="lazy">
+                              <img src="/assets/images/destinations/dolpo.jpg" alt="Dolpo Region" loading="lazy" width="1024" height="1024">
                               <span class="mega-menu__item-alt-tag">5,350m</span>
                             </div>
                             <div class="mega-menu__item-info">
@@ -1851,7 +1851,7 @@
                           <a href="/destinations/kanchenjunga.html" class="mega-menu__item">
                             <div class="mega-menu__item-thumb">
                               <img src="/assets/images/destinations/kanchenjunga.jpg" alt="Kanchenjunga Region"
-                                loading="lazy">
+                                loading="lazy" width="1024" height="1024">
                               <span class="mega-menu__item-alt-tag">5,143m</span>
                             </div>
                             <div class="mega-menu__item-info">
@@ -1863,7 +1863,7 @@
                           <a href="/destinations/makalu.html" class="mega-menu__item">
                             <div class="mega-menu__item-thumb">
                               <img src="/assets/images/destinations/makalu.jpg" alt="Makalu Barun Region"
-                                loading="lazy">
+                                loading="lazy" width="1024" height="1024">
                               <span class="mega-menu__item-alt-tag">4,870m</span>
                             </div>
                             <div class="mega-menu__item-info">
@@ -2055,7 +2055,7 @@
         </div>
         <input class="search-modal__input" type="search" placeholder="Search treks, destinations…"
           aria-label="Search treks and destinations" autocomplete="off" data-search-input aria-controls="search-results"
-          aria-expanded="false">
+          aria-expanded="false" id="siteSearchInput" name="searchQuery">
         <button class="btn btn--sm btn--secondary" data-search-close aria-label="Close search"
           type="button">ESC</button>
       </div>
@@ -2092,7 +2092,7 @@
       <div class="hero-bento-gallery">
         <!-- Main Bento 1 -->
         <div class="hero-bento-item hero-bento-item--main" onclick="openLightbox(0)">
-          <img loading="eager" fetchpriority="high" src="/assets/images/treks/three-passes.jpg" alt="Mt Manaslu 8163m rising above Samagaon village" class="hero-bento-img" fetchpriority="high" decoding="async" >>
+          <img loading="eager" fetchpriority="high" src="/assets/images/treks/three-passes.jpg" alt="Mt Manaslu 8163m rising above Samagaon village" class="hero-bento-img" fetchpriority="high" decoding="async"  width="1376" height="768">>
           <div class="hero-bento-overlay"></div>
           <button type="button" class="hero-video-play-btn" onclick="event.stopPropagation(); openVideoModal('https://www.youtube-nocookie.com/embed/dQw4w9WgXcQ')">
             <span class="hero-video-play-icon">
@@ -2107,34 +2107,34 @@
 
         <!-- Bento 2 -->
         <div class="hero-bento-item" onclick="openLightbox(1)">
-          <img src="/assets/images/team/pemba-nuru.jpg" referrerpolicy="no-referrer" crossorigin="anonymous" alt="Larkya La Pass 5106m Crossing with Prayer Flags" class="hero-bento-img" loading="eager" decoding="async" >
+          <img src="/assets/images/team/pemba-nuru.jpg" referrerpolicy="no-referrer" crossorigin="anonymous" alt="Larkya La Pass 5106m Crossing with Prayer Flags" class="hero-bento-img" loading="eager" decoding="async"  width="1024" height="1024">
           <div class="hero-bento-overlay"></div>
           <div class="hero-bento-caption"><span>Larkya La Pass Summit (5,106m)</span></div>
         </div>
 
         <!-- Bento 3 -->
         <div class="hero-bento-item" onclick="openLightbox(2)">
-          <img fetchpriority="high" src="/assets/images/team/lhakpa-tenzing.jpg" referrerpolicy="no-referrer" crossorigin="anonymous" alt="Birendra Glacial Lake beneath Manaslu Glacier" class="hero-bento-img" loading="eager" decoding="async" >
+          <img fetchpriority="high" src="/assets/images/team/lhakpa-tenzing.jpg" referrerpolicy="no-referrer" crossorigin="anonymous" alt="Birendra Glacial Lake beneath Manaslu Glacier" class="hero-bento-img" loading="eager" decoding="async"  width="1024" height="1024">
           <div class="hero-bento-overlay"></div>
           <div class="hero-bento-caption"><span>Birendra Turquoise Glacial Lake</span></div>
         </div>
 
         <!-- Bento 4 -->
         <div class="hero-bento-item" onclick="openLightbox(3)">
-          <img fetchpriority="high" src="/assets/images/team/jai-taneja.jpg" referrerpolicy="no-referrer" crossorigin="anonymous" alt="Lho Village & Ribung Gompa" class="hero-bento-img" loading="eager" decoding="async" >
+          <img fetchpriority="high" src="/assets/images/team/jai-taneja.jpg" referrerpolicy="no-referrer" crossorigin="anonymous" alt="Lho Village & Ribung Gompa" class="hero-bento-img" loading="eager" decoding="async"  width="1024" height="1024">
           <div class="hero-bento-overlay"></div>
           <div class="hero-bento-caption"><span>Lho Village &amp; Ribung Monastery</span></div>
         </div>
 
         <!-- Bento 5 (View All Trigger) -->
         <div class="hero-bento-item" onclick="openLightbox(4)">
-          <img fetchpriority="high" src="/assets/images/team/pasang-sherpa.jpg" referrerpolicy="no-referrer" crossorigin="anonymous" alt="Bimthang Valley & Mt Manaslu South Face" class="hero-bento-img" loading="eager" decoding="async" >
+          <img fetchpriority="high" src="/assets/images/team/pasang-sherpa.jpg" referrerpolicy="no-referrer" crossorigin="anonymous" alt="Bimthang Valley & Mt Manaslu South Face" class="hero-bento-img" loading="eager" decoding="async"  width="1024" height="1024">
           <div class="hero-bento-overlay"></div>
           <div class="hero-gallery-view-all-btn">
             <div class="traveler-avatar-stack">
-              <img loading="lazy" src="/assets/images/team/maya-gurung.jpg" referrerpolicy="no-referrer" crossorigin="anonymous" alt="Traveler" class="traveler-avatar">
-              <img loading="lazy" src="/assets/images/team/pemba-nuru.jpg" referrerpolicy="no-referrer" crossorigin="anonymous" alt="Traveler" class="traveler-avatar">
-              <img loading="lazy" src="/assets/images/team/lhakpa-tenzing.jpg" referrerpolicy="no-referrer" crossorigin="anonymous" alt="Traveler" class="traveler-avatar">
+              <img loading="lazy" src="/assets/images/team/maya-gurung.jpg" referrerpolicy="no-referrer" crossorigin="anonymous" alt="Traveler" class="traveler-avatar" width="1024" height="1024">
+              <img loading="lazy" src="/assets/images/team/pemba-nuru.jpg" referrerpolicy="no-referrer" crossorigin="anonymous" alt="Traveler" class="traveler-avatar" width="1024" height="1024">
+              <img loading="lazy" src="/assets/images/team/lhakpa-tenzing.jpg" referrerpolicy="no-referrer" crossorigin="anonymous" alt="Traveler" class="traveler-avatar" width="1024" height="1024">
             </div>
             <strong style="font-size:0.95rem;">View All 50 Photos</strong>
             <span style="font-size:0.75rem; opacity:0.85;">+ High Pass, Lakes &amp; Villages</span>
@@ -3065,7 +3065,7 @@
 
               <div id="weatherMonthDropdownWrap" style="display:flex; align-items:center; gap:0.5rem;">
                 <label for="weatherMonthSelect" style="font-size:0.78rem; font-weight:700; color:#64748b;">Month:</label>
-                <select id="weatherMonthSelect" onchange="updateWeatherDisplay()" style="padding:0.35rem 0.75rem; border-radius:8px; border:1px solid #cbd5e1; font-size:0.8rem; font-weight:700; color:#0f172a; outline:none; background:#ffffff;">
+                <select id="weatherMonthSelect" onchange="updateWeatherDisplay()" style="padding:0.35rem 0.75rem; border-radius:8px; border:1px solid #cbd5e1; font-size:0.8rem; font-weight:700; color:#0f172a; outline:none; background:#ffffff;" name="weatherMonthSelect">
                   <option value="2">March (Early Spring)</option>
                   <option value="3" selected>April (Prime Spring Bloom)</option>
                   <option value="4">May (Pre-Monsoon Warm)</option>
@@ -3364,19 +3364,19 @@
               <label style="font-size:0.88rem; font-weight:800; color:#0f172a; display:block; margin-bottom:0.75rem;">1. Select Package Tier:</label>
               <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(200px, 1fr)); gap:0.75rem;">
                 <label id="tierLabelStandard" class="is-selected" style="border:1.5px solid #0f5257; border-radius:12px; padding:0.85rem; cursor:pointer; display:flex; flex-direction:column; background:#f0fdfa;">
-                  <input type="radio" name="bookingTier" value="standard" checked onclick="selectBookingTier('standard', 1290)" style="margin-bottom:0.35rem;">
+                  <input type="radio" name="bookingTier" value="standard" checked onclick="selectBookingTier('standard', 1290)" style="margin-bottom:0.35rem;" id="bookingTier_standard">
                   <strong style="font-size:0.92rem; color:#0f172a;">Standard Teahouse</strong>
                   <span style="font-size:1.1rem; font-weight:900; color:#0f5257;">$1,290 <small style="font-size:0.75rem; font-weight:600; color:#64748b;">USD/pax</small></span>
                 </label>
 
                 <label id="tierLabelComfort" style="border:1.5px solid #cbd5e1; border-radius:12px; padding:0.85rem; cursor:pointer; display:flex; flex-direction:column; background:#ffffff;">
-                  <input type="radio" name="bookingTier" value="comfort" onclick="selectBookingTier('comfort', 1650)" style="margin-bottom:0.35rem;">
+                  <input type="radio" name="bookingTier" value="comfort" onclick="selectBookingTier('comfort', 1650)" style="margin-bottom:0.35rem;" id="bookingTier_comfort">
                   <strong style="font-size:0.92rem; color:#0f172a;">Comfort Plus</strong>
                   <span style="font-size:1.1rem; font-weight:900; color:#0f5257;">$1,650 <small style="font-size:0.75rem; font-weight:600; color:#64748b;">USD/pax</small></span>
                 </label>
 
                 <label id="tierLabelLuxury" style="border:1.5px solid #cbd5e1; border-radius:12px; padding:0.85rem; cursor:pointer; display:flex; flex-direction:column; background:#ffffff;">
-                  <input type="radio" name="bookingTier" value="luxury" onclick="selectBookingTier('luxury', 2850)" style="margin-bottom:0.35rem;">
+                  <input type="radio" name="bookingTier" value="luxury" onclick="selectBookingTier('luxury', 2850)" style="margin-bottom:0.35rem;" id="bookingTier_luxury">
                   <strong style="font-size:0.92rem; color:#0f172a;">Luxury VIP &amp; Heli</strong>
                   <span style="font-size:1.1rem; font-weight:900; color:#0f5257;">$2,850 <small style="font-size:0.75rem; font-weight:600; color:#64748b;">USD/pax</small></span>
                 </label>
@@ -3387,7 +3387,7 @@
             <div style="display:grid; grid-template-columns:1fr 1fr; gap:1.25rem; margin-bottom:1.5rem;">
               <div>
                 <label for="bookingDepartureDate" style="font-size:0.84rem; font-weight:700; color:#0f172a; display:block; margin-bottom:0.4rem;">2. Preferred Departure Date:</label>
-                <input type="date" id="bookingDepartureDate" value="2026-04-12" style="width:100%; padding:0.65rem 0.85rem; border:1.5px solid #cbd5e1; border-radius:10px; font-size:0.9rem; outline:none; font-family:inherit; box-sizing:border-box;">
+                <input type="date" id="bookingDepartureDate" value="2026-04-12" style="width:100%; padding:0.65rem 0.85rem; border:1.5px solid #cbd5e1; border-radius:10px; font-size:0.9rem; outline:none; font-family:inherit; box-sizing:border-box;" name="bookingDepartureDate">
               </div>
 
               <div>
@@ -3424,19 +3424,19 @@
             <div style="display:grid; grid-template-columns:1fr 1fr; gap:1rem; margin-bottom:1.5rem;">
               <div>
                 <label for="bookFullName" style="font-size:0.8rem; font-weight:700; color:#0f172a;">Lead Traveler Full Name *</label>
-                <input type="text" id="bookFullName" placeholder="e.g. Liam Henderson" style="width:100%; padding:0.65rem 0.85rem; border:1.5px solid #cbd5e1; border-radius:8px; font-size:0.88rem; outline:none; box-sizing:border-box;">
+                <input type="text" id="bookFullName" placeholder="e.g. Liam Henderson" style="width:100%; padding:0.65rem 0.85rem; border:1.5px solid #cbd5e1; border-radius:8px; font-size:0.88rem; outline:none; box-sizing:border-box;" name="bookFullName">
               </div>
               <div>
                 <label for="bookEmail" style="font-size:0.8rem; font-weight:700; color:#0f172a;">Email Address *</label>
-                <input type="email" id="bookEmail" placeholder="liam@example.com" style="width:100%; padding:0.65rem 0.85rem; border:1.5px solid #cbd5e1; border-radius:8px; font-size:0.88rem; outline:none; box-sizing:border-box;">
+                <input type="email" id="bookEmail" placeholder="liam@example.com" style="width:100%; padding:0.65rem 0.85rem; border:1.5px solid #cbd5e1; border-radius:8px; font-size:0.88rem; outline:none; box-sizing:border-box;" name="bookEmail">
               </div>
               <div>
                 <label for="bookPhone" style="font-size:0.8rem; font-weight:700; color:#0f172a;">WhatsApp / Phone Number *</label>
-                <input type="tel" id="bookPhone" placeholder="+1 555 123 4567" style="width:100%; padding:0.65rem 0.85rem; border:1.5px solid #cbd5e1; border-radius:8px; font-size:0.88rem; outline:none; box-sizing:border-box;">
+                <input type="tel" id="bookPhone" placeholder="+1 555 123 4567" style="width:100%; padding:0.65rem 0.85rem; border:1.5px solid #cbd5e1; border-radius:8px; font-size:0.88rem; outline:none; box-sizing:border-box;" name="bookPhone">
               </div>
               <div>
                 <label for="bookCountry" style="font-size:0.8rem; font-weight:700; color:#0f172a;">Country of Residence *</label>
-                <input type="text" id="bookCountry" placeholder="United States / Canada / UK" style="width:100%; padding:0.65rem 0.85rem; border:1.5px solid #cbd5e1; border-radius:8px; font-size:0.88rem; outline:none; box-sizing:border-box;">
+                <input type="text" id="bookCountry" placeholder="United States / Canada / UK" style="width:100%; padding:0.65rem 0.85rem; border:1.5px solid #cbd5e1; border-radius:8px; font-size:0.88rem; outline:none; box-sizing:border-box;" name="bookCountry">
               </div>
             </div>
 
@@ -3483,7 +3483,7 @@
             
             <div style="background:#ffffff; border:1px solid #e2e8f0; border-radius:16px; padding:1.35rem; box-shadow:0 2px 8px rgba(0,0,0,0.03);">
               <div style="display:flex; align-items:center; gap:0.75rem; margin-bottom:0.75rem;">
-                <img loading="lazy" src="/assets/images/team/jai-taneja.jpg" referrerpolicy="no-referrer" crossorigin="anonymous" alt="Liam H." style="width:44px; height:44px; border-radius:50%; object-fit:cover;">
+                <img loading="lazy" src="/assets/images/team/jai-taneja.jpg" referrerpolicy="no-referrer" crossorigin="anonymous" alt="Liam H." style="width:44px; height:44px; border-radius:50%; object-fit:cover;" width="1024" height="1024">
                 <div>
                   <strong style="font-size:0.92rem; color:#0f172a;">Liam Henderson</strong>
                   <div style="font-size:0.75rem; color:#64748b;">United States 🇺🇸 · Oct 2025 (Comfort Plus)</div>
@@ -3497,7 +3497,7 @@
 
             <div style="background:#ffffff; border:1px solid #e2e8f0; border-radius:16px; padding:1.35rem; box-shadow:0 2px 8px rgba(0,0,0,0.03);">
               <div style="display:flex; align-items:center; gap:0.75rem; margin-bottom:0.75rem;">
-                <img loading="lazy" src="/assets/images/team/pasang-sherpa.jpg" referrerpolicy="no-referrer" crossorigin="anonymous" alt="Elena V." style="width:44px; height:44px; border-radius:50%; object-fit:cover;">
+                <img loading="lazy" src="/assets/images/team/pasang-sherpa.jpg" referrerpolicy="no-referrer" crossorigin="anonymous" alt="Elena V." style="width:44px; height:44px; border-radius:50%; object-fit:cover;" width="1024" height="1024">
                 <div>
                   <strong style="font-size:0.92rem; color:#0f172a;">Elena Vanechka</strong>
                   <div style="font-size:0.75rem; color:#64748b;">Germany 🇩🇪 · Apr 2025 (Standard Teahouse)</div>
@@ -3511,7 +3511,7 @@
 
             <div style="background:#ffffff; border:1px solid #e2e8f0; border-radius:16px; padding:1.35rem; box-shadow:0 2px 8px rgba(0,0,0,0.03);">
               <div style="display:flex; align-items:center; gap:0.75rem; margin-bottom:0.75rem;">
-                <img loading="lazy" src="/assets/images/team/maya-gurung.jpg" referrerpolicy="no-referrer" crossorigin="anonymous" alt="Marcus T." style="width:44px; height:44px; border-radius:50%; object-fit:cover;">
+                <img loading="lazy" src="/assets/images/team/maya-gurung.jpg" referrerpolicy="no-referrer" crossorigin="anonymous" alt="Marcus T." style="width:44px; height:44px; border-radius:50%; object-fit:cover;" width="1024" height="1024">
                 <div>
                   <strong style="font-size:0.92rem; color:#0f172a;">Marcus Thorne</strong>
                   <div style="font-size:0.75rem; color:#64748b;">Canada 🇨🇦 · Nov 2025 (Comfort Plus)</div>
@@ -3525,7 +3525,7 @@
 
             <div style="background:#ffffff; border:1px solid #e2e8f0; border-radius:16px; padding:1.35rem; box-shadow:0 2px 8px rgba(0,0,0,0.03);">
               <div style="display:flex; align-items:center; gap:0.75rem; margin-bottom:0.75rem;">
-                <img loading="lazy" src="/assets/images/team/pemba-nuru.jpg" referrerpolicy="no-referrer" crossorigin="anonymous" alt="Sarah J." style="width:44px; height:44px; border-radius:50%; object-fit:cover;">
+                <img loading="lazy" src="/assets/images/team/pemba-nuru.jpg" referrerpolicy="no-referrer" crossorigin="anonymous" alt="Sarah J." style="width:44px; height:44px; border-radius:50%; object-fit:cover;" width="1024" height="1024">
                 <div>
                   <strong style="font-size:0.92rem; color:#0f172a;">Sarah Jenkins</strong>
                   <div style="font-size:0.75rem; color:#64748b;">Australia 🇦🇺 · Mar 2025 (Standard Teahouse)</div>
@@ -3552,7 +3552,7 @@
           <div class="faq-controls-bar">
             <div class="faq-search-box">
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
-              <input type="text" id="faqSearchInput" placeholder="Search questions (e.g. permits, Larkya La pass, solo traveler, RAP, Dharamsala)..." oninput="filterFaqQuestions()">
+              <input type="text" id="faqSearchInput" placeholder="Search questions (e.g. permits, Larkya La pass, solo traveler, RAP, Dharamsala)..." oninput="filterFaqQuestions()" name="faqSearchInput">
             </div>
 
             <div class="faq-category-tabs">
@@ -3800,7 +3800,7 @@
         
         <a href="/treks/tsum-valley.html" class="related-card">
           <div class="related-card__img-wrap">
-            <img src="/assets/images/treks/annapurna-circuit.jpg" referrerpolicy="no-referrer" crossorigin="anonymous" alt="Tsum Valley & Manaslu Circuit Trek" class="related-card__img" loading="lazy" decoding="async" >
+            <img src="/assets/images/treks/annapurna-circuit.jpg" referrerpolicy="no-referrer" crossorigin="anonymous" alt="Tsum Valley & Manaslu Circuit Trek" class="related-card__img" loading="lazy" decoding="async"  width="1024" height="1024">
             <span style="position:absolute; top:0.75rem; left:0.75rem; background:rgba(15,23,42,0.85); color:#34d399; font-size:0.7rem; font-weight:800; padding:0.25rem 0.6rem; border-radius:999px;">18 Days</span>
           </div>
           <div class="related-card__body">
@@ -3819,7 +3819,7 @@
 
         <a href="/treks/annapurna-circuit.html" class="related-card">
           <div class="related-card__img-wrap">
-            <img src="/assets/images/treks/annapurna-circuit.jpg" referrerpolicy="no-referrer" crossorigin="anonymous" alt="Annapurna Circuit Trek" class="related-card__img" loading="lazy" decoding="async" >
+            <img src="/assets/images/treks/annapurna-circuit.jpg" referrerpolicy="no-referrer" crossorigin="anonymous" alt="Annapurna Circuit Trek" class="related-card__img" loading="lazy" decoding="async"  width="1024" height="1024">
             <span style="position:absolute; top:0.75rem; left:0.75rem; background:rgba(15,23,42,0.85); color:#fbbf24; font-size:0.7rem; font-weight:800; padding:0.25rem 0.6rem; border-radius:999px;">14 Days</span>
           </div>
           <div class="related-card__body">
@@ -3838,7 +3838,7 @@
 
         <a href="/treks/langtang-helambu.html" class="related-card">
           <div class="related-card__img-wrap">
-            <img src="/assets/images/team/lhakpa-tenzing.jpg" referrerpolicy="no-referrer" crossorigin="anonymous" alt="Langtang, Gosaikunda & Helambu Circuit" class="related-card__img" loading="lazy" decoding="async" >
+            <img src="/assets/images/team/lhakpa-tenzing.jpg" referrerpolicy="no-referrer" crossorigin="anonymous" alt="Langtang, Gosaikunda & Helambu Circuit" class="related-card__img" loading="lazy" decoding="async"  width="1024" height="1024">
             <span style="position:absolute; top:0.75rem; left:0.75rem; background:rgba(15,23,42,0.85); color:#0284c7; font-size:0.7rem; font-weight:800; padding:0.25rem 0.6rem; border-radius:999px;">14 Days</span>
           </div>
           <div class="related-card__body">
@@ -3857,7 +3857,7 @@
 
         <a href="/treks/nar-phu.html" class="related-card">
           <div class="related-card__img-wrap">
-            <img src="/assets/images/team/jai-taneja.jpg" referrerpolicy="no-referrer" crossorigin="anonymous" alt="Nar Phu Valley Restricted Trek" class="related-card__img" loading="lazy" decoding="async" >
+            <img src="/assets/images/team/jai-taneja.jpg" referrerpolicy="no-referrer" crossorigin="anonymous" alt="Nar Phu Valley Restricted Trek" class="related-card__img" loading="lazy" decoding="async"  width="1024" height="1024">
             <span style="position:absolute; top:0.75rem; left:0.75rem; background:rgba(15,23,42,0.85); color:#f59e0b; font-size:0.7rem; font-weight:800; padding:0.25rem 0.6rem; border-radius:999px;">14 Days</span>
           </div>
           <div class="related-card__body">
@@ -4067,7 +4067,7 @@
     
     <div class="gallery-lightbox__stage">
       <button type="button" class="gallery-nav-btn gallery-nav-btn--prev" onclick="prevLightboxPhoto()">‹</button>
-      <img loading="lazy" id="galleryLightboxImg" src="" alt="Manaslu Gallery Photo" class="gallery-lightbox__img">
+      <img id="galleryLightboxImg" src="" alt="Manaslu Gallery Photo" class="gallery-lightbox__img" width="1200" height="800">
       <button type="button" class="gallery-nav-btn gallery-nav-btn--next" onclick="nextLightboxPhoto()">›</button>
     </div>
 

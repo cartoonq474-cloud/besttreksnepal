@@ -1421,7 +1421,7 @@
   <div class="site-header">
 
     <!-- Top Information Bar -->
-    <div class="top-bar" role="banner" aria-label="Contact information">
+    <div class="top-bar" aria-label="Contact information">
       <div class="container">
         <div class="top-bar__inner">
           <div class="top-bar__contacts">
@@ -1521,7 +1521,7 @@
                         <div class="mega-menu__grid">
                           <a href="/destinations/everest.html" class="mega-menu__item is-active">
                             <div class="mega-menu__item-thumb">
-                              <img src="/assets/images/destinations/everest.jpg" alt="Everest Region" loading="lazy">
+                              <img src="/assets/images/destinations/everest.jpg" alt="Everest Region" loading="lazy" width="1024" height="1024">
                               <span class="mega-menu__item-alt-tag">5,545m</span>
                             </div>
                             <div class="mega-menu__item-info">
@@ -1531,7 +1531,7 @@
                           </a>
                           <a href="/destinations/annapurna.html" class="mega-menu__item">
                             <div class="mega-menu__item-thumb">
-                              <img src="/assets/images/destinations/annapurna.jpg" alt="Annapurna Region" loading="lazy">
+                              <img src="/assets/images/destinations/annapurna.jpg" alt="Annapurna Region" loading="lazy" width="1024" height="1024">
                               <span class="mega-menu__item-alt-tag">5,416m</span>
                             </div>
                             <div class="mega-menu__item-info">
@@ -1541,7 +1541,7 @@
                           </a>
                           <a href="/destinations/langtang.html" class="mega-menu__item">
                             <div class="mega-menu__item-thumb">
-                              <img src="/assets/images/destinations/langtang.jpg" alt="Langtang Region" loading="lazy">
+                              <img src="/assets/images/destinations/langtang.jpg" alt="Langtang Region" loading="lazy" width="1024" height="1024">
                               <span class="mega-menu__item-alt-tag">4,773m</span>
                             </div>
                             <div class="mega-menu__item-info">
@@ -1551,7 +1551,7 @@
                           </a>
                           <a href="/destinations/manaslu.html" class="mega-menu__item">
                             <div class="mega-menu__item-thumb">
-                              <img src="/assets/images/destinations/manaslu.jpg" alt="Manaslu Region" loading="lazy">
+                              <img src="/assets/images/destinations/manaslu.jpg" alt="Manaslu Region" loading="lazy" width="1024" height="1024">
                               <span class="mega-menu__item-alt-tag">5,106m</span>
                             </div>
                             <div class="mega-menu__item-info">
@@ -1561,7 +1561,7 @@
                           </a>
                           <a href="/destinations/mustang.html" class="mega-menu__item">
                             <div class="mega-menu__item-thumb">
-                              <img src="/assets/images/destinations/mustang.jpg" alt="Upper Mustang" loading="lazy">
+                              <img src="/assets/images/destinations/mustang.jpg" alt="Upper Mustang" loading="lazy" width="1024" height="1024">
                               <span class="mega-menu__item-alt-tag">3,840m</span>
                             </div>
                             <div class="mega-menu__item-info">
@@ -1571,7 +1571,7 @@
                           </a>
                           <a href="/destinations/dolpo.html" class="mega-menu__item">
                             <div class="mega-menu__item-thumb">
-                              <img src="/assets/images/destinations/dolpo.jpg" alt="Dolpo Region" loading="lazy">
+                              <img src="/assets/images/destinations/dolpo.jpg" alt="Dolpo Region" loading="lazy" width="1024" height="1024">
                               <span class="mega-menu__item-alt-tag">5,350m</span>
                             </div>
                             <div class="mega-menu__item-info">
@@ -1581,7 +1581,7 @@
                           </a>
                           <a href="/destinations/kanchenjunga.html" class="mega-menu__item">
                             <div class="mega-menu__item-thumb">
-                              <img src="/assets/images/destinations/kanchenjunga.jpg" alt="Kanchenjunga Region" loading="lazy">
+                              <img src="/assets/images/destinations/kanchenjunga.jpg" alt="Kanchenjunga Region" loading="lazy" width="1024" height="1024">
                               <span class="mega-menu__item-alt-tag">5,143m</span>
                             </div>
                             <div class="mega-menu__item-info">
@@ -1591,7 +1591,7 @@
                           </a>
                           <a href="/destinations/makalu.html" class="mega-menu__item">
                             <div class="mega-menu__item-thumb">
-                              <img src="/assets/images/destinations/makalu.jpg" alt="Makalu Barun Region" loading="lazy">
+                              <img src="/assets/images/destinations/makalu.jpg" alt="Makalu Barun Region" loading="lazy" width="1024" height="1024">
                               <span class="mega-menu__item-alt-tag">4,870m</span>
                             </div>
                             <div class="mega-menu__item-info">
@@ -1707,7 +1707,7 @@
         <div class="search-modal__icon">
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8" /><line x1="21" y1="21" x2="16.65" y2="16.65" /></svg>
         </div>
-        <input class="search-modal__input" type="search" placeholder="Search Three Passes, EBC, high altitude gear…" aria-label="Search treks" autocomplete="off" data-search-input>
+        <input class="search-modal__input" type="search" placeholder="Search Three Passes, EBC, high altitude gear…" aria-label="Search treks" autocomplete="off" data-search-input id="siteSearchInput" name="searchQuery">
         <button class="btn btn--sm btn--secondary" data-search-close type="button">ESC</button>
       </div>
       <div class="search-modal__results" id="search-results" role="listbox" hidden></div>
@@ -1750,7 +1750,7 @@
       <!-- 5-Photo Bento Grid -->
       <div class="hero-bento-gallery">
         <div class="hero-bento-item hero-bento-item--main" onclick="openPhotoModal(0)">
-          <img loading="eager" fetchpriority="high" src="/assets/images/treks/three-passes.jpg" alt="Renjo La Pass Gokyo Lakes Panorama" class="hero-bento-img" fetchpriority="high" decoding="async">>
+          <img loading="eager" fetchpriority="high" src="/assets/images/treks/three-passes.jpg" alt="Renjo La Pass Gokyo Lakes Panorama" class="hero-bento-img" fetchpriority="high" decoding="async" width="1376" height="768">>
           <div class="hero-bento-overlay"></div>
           <div class="hero-bento-caption">
             <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/><circle cx="12" cy="13" r="4"/></svg>
@@ -1764,27 +1764,27 @@
           </button>
         </div>
         <div class="hero-bento-item" onclick="openPhotoModal(1)">
-          <img src="/assets/images/team/pemba-nuru.jpg" referrerpolicy="no-referrer" crossorigin="anonymous" alt="Cho La Glacial Saddle Traverse" class="hero-bento-img" loading="eager" decoding="async" >
+          <img src="/assets/images/team/pemba-nuru.jpg" referrerpolicy="no-referrer" crossorigin="anonymous" alt="Cho La Glacial Saddle Traverse" class="hero-bento-img" loading="eager" decoding="async"  width="1024" height="1024">
           <div class="hero-bento-overlay"></div>
           <div class="hero-bento-caption">Cho La Pass (5,420m) Glacier</div>
         </div>
         <div class="hero-bento-item" onclick="openPhotoModal(2)">
-          <img fetchpriority="high" src="/assets/images/team/lhakpa-tenzing.jpg" referrerpolicy="no-referrer" crossorigin="anonymous" alt="Kongma La Pass under Nuptse" class="hero-bento-img" loading="eager" decoding="async" >
+          <img fetchpriority="high" src="/assets/images/team/lhakpa-tenzing.jpg" referrerpolicy="no-referrer" crossorigin="anonymous" alt="Kongma La Pass under Nuptse" class="hero-bento-img" loading="eager" decoding="async"  width="1024" height="1024">
           <div class="hero-bento-overlay"></div>
           <div class="hero-bento-caption">Kongma La (5,535m) Wall of Nuptse</div>
         </div>
         <div class="hero-bento-item" onclick="openPhotoModal(3)">
-          <img fetchpriority="high" src="/assets/images/team/jai-taneja.jpg" referrerpolicy="no-referrer" crossorigin="anonymous" alt="Everest Base Camp & Kala Patthar" class="hero-bento-img" loading="eager" decoding="async" >
+          <img fetchpriority="high" src="/assets/images/team/jai-taneja.jpg" referrerpolicy="no-referrer" crossorigin="anonymous" alt="Everest Base Camp & Kala Patthar" class="hero-bento-img" loading="eager" decoding="async"  width="1024" height="1024">
           <div class="hero-bento-overlay"></div>
           <div class="hero-bento-caption">Kala Patthar (5,545m) Sunrise</div>
         </div>
         <div class="hero-bento-item" onclick="openPhotoModal(4)">
-          <img fetchpriority="high" src="/assets/images/destinations/everest.jpg" alt="Ama Dablam & Khumbu Valley" class="hero-bento-img" loading="eager" decoding="async" >
+          <img fetchpriority="high" src="/assets/images/destinations/everest.jpg" alt="Ama Dablam & Khumbu Valley" class="hero-bento-img" loading="eager" decoding="async"  width="1024" height="1024">
           <div class="hero-gallery-view-all-btn">
             <div class="traveler-avatar-stack">
-              <img loading="lazy" class="traveler-avatar" src="/assets/images/treks/manaslu-circuit.jpg" referrerpolicy="no-referrer" crossorigin="anonymous" alt="Climber">
-              <img loading="lazy" class="traveler-avatar" src="/assets/images/treks/langtang-valley.jpg" referrerpolicy="no-referrer" crossorigin="anonymous" alt="Climber">
-              <img loading="lazy" class="traveler-avatar" src="/assets/images/treks/gokyo-lakes.jpg" referrerpolicy="no-referrer" crossorigin="anonymous" alt="Climber">
+              <img loading="lazy" class="traveler-avatar" src="/assets/images/treks/manaslu-circuit.jpg" referrerpolicy="no-referrer" crossorigin="anonymous" alt="Climber" width="1024" height="1024">
+              <img loading="lazy" class="traveler-avatar" src="/assets/images/treks/langtang-valley.jpg" referrerpolicy="no-referrer" crossorigin="anonymous" alt="Climber" width="1024" height="1024">
+              <img loading="lazy" class="traveler-avatar" src="/assets/images/treks/gokyo-lakes.jpg" referrerpolicy="no-referrer" crossorigin="anonymous" alt="Climber" width="1024" height="1024">
             </div>
             <strong>+24 Photos</strong>
             <span style="font-size:0.75rem; opacity:0.85;">View Expedition Lightbox</span>
@@ -2936,7 +2936,7 @@
 
               <div id="weatherMonthDropdownWrap" style="display:flex; align-items:center; gap:0.5rem;">
                 <label for="weatherMonthSelect" style="font-size:0.78rem; font-weight:700; color:#64748b;">Month:</label>
-                <select id="weatherMonthSelect" onchange="updateWeatherDisplay()" style="padding:0.35rem 0.75rem; border-radius:8px; border:1px solid #cbd5e1; font-size:0.8rem; font-weight:700; color:#0f172a; outline:none;">
+                <select id="weatherMonthSelect" onchange="updateWeatherDisplay()" style="padding:0.35rem 0.75rem; border-radius:8px; border:1px solid #cbd5e1; font-size:0.8rem; font-weight:700; color:#0f172a; outline:none;" name="weatherMonthSelect">
                   <option value="2">March (Spring Bloom)</option>
                   <option value="3" selected>April (Prime Spring)</option>
                   <option value="4">May (Pre-Monsoon Peak)</option>
@@ -3229,7 +3229,7 @@
             <div style="display:grid; grid-template-columns:1fr 1fr; gap:1rem; margin-bottom:1.5rem;">
               <div>
                 <div class="booking-step-title"><span class="booking-step-num">2</span><span>Departure Date</span></div>
-                <input type="date" id="bookingDepartureDate" value="2026-04-08" style="width:100%; padding:0.65rem 0.85rem; border-radius:10px; border:1px solid #cbd5e1; font-weight:700; font-family:inherit; outline:none;">
+                <input type="date" id="bookingDepartureDate" value="2026-04-08" style="width:100%; padding:0.65rem 0.85rem; border-radius:10px; border:1px solid #cbd5e1; font-weight:700; font-family:inherit; outline:none;" name="bookingDepartureDate">
               </div>
               <div>
                 <div class="booking-step-title"><span class="booking-step-num">3</span><span>Number of Climbers</span></div>
@@ -3245,10 +3245,10 @@
             <div style="margin-bottom:1.5rem;">
               <div class="booking-step-title"><span class="booking-step-num">4</span><span>Lead Climber Contact</span></div>
               <div style="display:grid; grid-template-columns:1fr 1fr; gap:0.75rem;">
-                <input type="text" id="bookFullName" placeholder="Full Name (as in Passport)" style="padding:0.65rem 0.85rem; border-radius:10px; border:1px solid #cbd5e1; font-size:0.86rem; font-family:inherit; outline:none;">
-                <input type="email" id="bookEmail" placeholder="Email Address" style="padding:0.65rem 0.85rem; border-radius:10px; border:1px solid #cbd5e1; font-size:0.86rem; font-family:inherit; outline:none;">
-                <input type="tel" id="bookPhone" placeholder="WhatsApp Phone with Country Code" style="padding:0.65rem 0.85rem; border-radius:10px; border:1px solid #cbd5e1; font-size:0.86rem; font-family:inherit; outline:none;">
-                <input type="text" id="bookCountry" placeholder="Country of Residence" style="padding:0.65rem 0.85rem; border-radius:10px; border:1px solid #cbd5e1; font-size:0.86rem; font-family:inherit; outline:none;">
+                <input type="text" id="bookFullName" placeholder="Full Name (as in Passport)" style="padding:0.65rem 0.85rem; border-radius:10px; border:1px solid #cbd5e1; font-size:0.86rem; font-family:inherit; outline:none;" name="bookFullName">
+                <input type="email" id="bookEmail" placeholder="Email Address" style="padding:0.65rem 0.85rem; border-radius:10px; border:1px solid #cbd5e1; font-size:0.86rem; font-family:inherit; outline:none;" name="bookEmail">
+                <input type="tel" id="bookPhone" placeholder="WhatsApp Phone with Country Code" style="padding:0.65rem 0.85rem; border-radius:10px; border:1px solid #cbd5e1; font-size:0.86rem; font-family:inherit; outline:none;" name="bookPhone">
+                <input type="text" id="bookCountry" placeholder="Country of Residence" style="padding:0.65rem 0.85rem; border-radius:10px; border:1px solid #cbd5e1; font-size:0.86rem; font-family:inherit; outline:none;" name="bookCountry">
               </div>
             </div>
 
@@ -3327,7 +3327,7 @@
           <div class="faq-controls-bar">
             <div class="faq-search-box">
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
-              <input type="text" id="faqSearchInput" placeholder="Search questions (e.g. altitude, microspikes, passes, flights)..." oninput="filterFaqQuestions()">
+              <input type="text" id="faqSearchInput" placeholder="Search questions (e.g. altitude, microspikes, passes, flights)..." oninput="filterFaqQuestions()" name="faqSearchInput">
             </div>
             <div class="faq-category-tabs">
               <button type="button" class="faq-tab-btn is-active" onclick="setFaqCategory('all', this)">All Questions (12)</button>
@@ -3639,7 +3639,7 @@
         <!-- Card 1: Gokyo Lakes -->
         <div class="related-trek-card">
           <div class="related-trek-img-box">
-            <img src="/assets/images/treks/manaslu-circuit.jpg" referrerpolicy="no-referrer" crossorigin="anonymous" alt="Gokyo Lakes Trek" class="related-trek-img" loading="lazy">
+            <img src="/assets/images/treks/manaslu-circuit.jpg" referrerpolicy="no-referrer" crossorigin="anonymous" alt="Gokyo Lakes Trek" class="related-trek-img" loading="lazy" width="1024" height="1024">
             <span class="related-trek-badge">★ Scenic Alternative</span>
           </div>
           <div class="related-trek-body">
@@ -3667,7 +3667,7 @@
         <!-- Card 2: Classic EBC -->
         <div class="related-trek-card">
           <div class="related-trek-img-box">
-            <img src="/assets/images/treks/gokyo-lakes.jpg" referrerpolicy="no-referrer" crossorigin="anonymous" alt="Everest Base Camp Trek" class="related-trek-img" loading="lazy">
+            <img src="/assets/images/treks/gokyo-lakes.jpg" referrerpolicy="no-referrer" crossorigin="anonymous" alt="Everest Base Camp Trek" class="related-trek-img" loading="lazy" width="1024" height="1024">
             <span class="related-trek-badge">★ #1 Best Seller</span>
           </div>
           <div class="related-trek-body">
@@ -3695,7 +3695,7 @@
         <!-- Card 3: Manaslu Circuit -->
         <div class="related-trek-card">
           <div class="related-trek-img-box">
-            <img src="/assets/images/treks/everest-base-camp.jpg" alt="Manaslu Circuit Trek" class="related-trek-img" loading="lazy">
+            <img src="/assets/images/treks/everest-base-camp.jpg" alt="Manaslu Circuit Trek" class="related-trek-img" loading="lazy" width="1024" height="1024">
             <span class="related-trek-badge">★ Off-Beaten Path</span>
           </div>
           <div class="related-trek-body">
@@ -3723,7 +3723,7 @@
         <!-- Card 4: Annapurna Circuit -->
         <div class="related-trek-card">
           <div class="related-trek-img-box">
-            <img src="/assets/images/treks/manaslu-circuit.jpg" alt="Annapurna Circuit Trek" class="related-trek-img" loading="lazy">
+            <img src="/assets/images/treks/manaslu-circuit.jpg" alt="Annapurna Circuit Trek" class="related-trek-img" loading="lazy" width="1024" height="1024">
             <span class="related-trek-badge">★ Alpine Classic</span>
           </div>
           <div class="related-trek-body">
@@ -3824,7 +3824,7 @@
   <div id="trekGalleryLightbox" class="modal-overlay" onclick="closeGalleryLightbox(event)">
     <div class="lightbox-card" onclick="event.stopPropagation()">
       <div class="lightbox-stage">
-        <img loading="lazy" id="galleryLightboxImg" src="" alt="Everest Three Passes Photography">
+        <img id="galleryLightboxImg" src="" alt="Everest Three Passes Photography" width="1200" height="800">
         <button type="button" class="lightbox-nav-btn lightbox-nav-btn--prev" onclick="prevLightboxPhoto()">‹</button>
         <button type="button" class="lightbox-nav-btn lightbox-nav-btn--next" onclick="nextLightboxPhoto()">›</button>
       </div>
@@ -4018,7 +4018,7 @@
         if (lightboxCounter) lightboxCounter.textContent = `${currentPhotoIdx + 1} / ${galleryPhotos.length}`;
         if (thumbsTrack) {
           thumbsTrack.innerHTML = galleryPhotos.map((p, i) => `
-            <img loading="lazy" class="lightbox-thumb ${i === currentPhotoIdx ? 'is-active' : ''}" src="${p.thumb}" onclick="selectPhoto(${i})" alt="Best Treks Nepal scenery" loading="lazy" decoding="async">
+            <img class="lightbox-thumb ${i === currentPhotoIdx ? 'is-active' : ''}" src="${p.thumb}" onclick="selectPhoto(${i})" alt="Best Treks Nepal scenery" decoding="async" width="1200" height="800">
           `).join('');
         }
       };

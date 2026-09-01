@@ -2358,7 +2358,7 @@
   <!-- Master Site Header -->
   <div class="site-header">
     <!-- Top Information Bar -->
-    <div class="top-bar" role="banner" aria-label="Contact information">
+    <div class="top-bar" aria-label="Contact information">
       <div class="container">
         <div class="top-bar__inner">
           <div class="top-bar__contacts">
@@ -2460,7 +2460,7 @@
                         <div class="mega-menu__grid">
                           <a href="/destinations/everest.html" class="mega-menu__item">
                             <div class="mega-menu__item-thumb">
-                              <img src="/assets/images/destinations/everest.jpg" alt="Everest Region" loading="lazy">
+                              <img src="/assets/images/destinations/everest.jpg" alt="Everest Region" loading="lazy" width="1024" height="1024">
                               <span class="mega-menu__item-alt-tag">5,545m</span>
                             </div>
                             <div class="mega-menu__item-info">
@@ -2471,7 +2471,7 @@
                           <a href="/destinations/annapurna.html" class="mega-menu__item">
                             <div class="mega-menu__item-thumb">
                               <img src="/assets/images/destinations/annapurna.jpg" alt="Annapurna Region"
-                                loading="lazy">
+                                loading="lazy" width="1024" height="1024">
                               <span class="mega-menu__item-alt-tag">5,416m</span>
                             </div>
                             <div class="mega-menu__item-info">
@@ -2481,7 +2481,7 @@
                           </a>
                           <a href="/destinations/langtang.html" class="mega-menu__item">
                             <div class="mega-menu__item-thumb">
-                              <img src="/assets/images/destinations/langtang.jpg" alt="Langtang Region" loading="lazy">
+                              <img src="/assets/images/destinations/langtang.jpg" alt="Langtang Region" loading="lazy" width="1024" height="1024">
                               <span class="mega-menu__item-alt-tag">4,773m</span>
                             </div>
                             <div class="mega-menu__item-info">
@@ -2491,7 +2491,7 @@
                           </a>
                           <a href="/destinations/manaslu.html" class="mega-menu__item">
                             <div class="mega-menu__item-thumb">
-                              <img src="/assets/images/destinations/manaslu.jpg" alt="Manaslu Region" loading="lazy">
+                              <img src="/assets/images/destinations/manaslu.jpg" alt="Manaslu Region" loading="lazy" width="1024" height="1024">
                               <span class="mega-menu__item-alt-tag">5,106m</span>
                             </div>
                             <div class="mega-menu__item-info">
@@ -2501,7 +2501,7 @@
                           </a>
                           <a href="/destinations/mustang.html" class="mega-menu__item is-active">
                             <div class="mega-menu__item-thumb">
-                              <img src="/assets/images/destinations/mustang.jpg" alt="Upper Mustang" loading="lazy">
+                              <img src="/assets/images/destinations/mustang.jpg" alt="Upper Mustang" loading="lazy" width="1024" height="1024">
                               <span class="mega-menu__item-alt-tag">3,840m</span>
                             </div>
                             <div class="mega-menu__item-info">
@@ -2511,7 +2511,7 @@
                           </a>
                           <a href="/destinations/dolpo.html" class="mega-menu__item">
                             <div class="mega-menu__item-thumb">
-                              <img src="/assets/images/destinations/dolpo.jpg" alt="Dolpo Region" loading="lazy">
+                              <img src="/assets/images/destinations/dolpo.jpg" alt="Dolpo Region" loading="lazy" width="1024" height="1024">
                               <span class="mega-menu__item-alt-tag">5,350m</span>
                             </div>
                             <div class="mega-menu__item-info">
@@ -2522,7 +2522,7 @@
                           <a href="/destinations/kanchenjunga.html" class="mega-menu__item">
                             <div class="mega-menu__item-thumb">
                               <img src="/assets/images/destinations/kanchenjunga.jpg" alt="Kanchenjunga Region"
-                                loading="lazy">
+                                loading="lazy" width="1024" height="1024">
                               <span class="mega-menu__item-alt-tag">5,143m</span>
                             </div>
                             <div class="mega-menu__item-info">
@@ -2533,7 +2533,7 @@
                           <a href="/destinations/makalu.html" class="mega-menu__item">
                             <div class="mega-menu__item-thumb">
                               <img src="/assets/images/destinations/makalu.jpg" alt="Makalu Barun Region"
-                                loading="lazy">
+                                loading="lazy" width="1024" height="1024">
                               <span class="mega-menu__item-alt-tag">4,870m</span>
                             </div>
                             <div class="mega-menu__item-info">
@@ -2671,7 +2671,7 @@
         </div>
         <input class="search-modal__input" type="search"
           placeholder="Search Mustang, Lo Manthang, passes, permits, treks…" aria-label="Search treks and destinations"
-          autocomplete="off" data-search-input>
+          autocomplete="off" data-search-input id="siteSearchInput" name="searchQuery">
         <button class="btn btn--sm btn--secondary" data-search-close type="button">ESC</button>
       </div>
       <div class="search-modal__results" id="search-results" role="listbox" hidden></div>
@@ -2835,7 +2835,7 @@
   <figure class="article-hero-figure">
     <div class="article-hero-img-wrap">
       <img src="/assets/images/destinations/mustang.jpg" alt="Ancient Walled City of Lo Manthang Upper Mustang"
-        class="article-hero-img" loading="eager">
+        class="article-hero-img" loading="eager" width="1024" height="1024">
       <span class="hero-img-floating-tag">📍 Lo Manthang Walled City (3,840m)</span>
       <span class="hero-img-floating-tag-right">🏰 The Forbidden Kingdom</span>
     </div>
@@ -4221,21 +4221,21 @@
 
           <div class="calc-tiers-grid">
             <label class="calc-tier-option is-selected">
-              <input type="radio" name="mustang_tier" value="1890" checked style="margin-bottom:0.5rem;">
+              <input type="radio" name="mustang_tier" value="1890" checked style="margin-bottom:0.5rem;" id="mustang_tier_1890">
               <strong>All-Inclusive Standard</strong>
               <span style="color:var(--art-teal); font-weight:800; font-size:1.2rem;">$1,890 USD</span>
               <span style="font-size:0.75rem; color:#64748b;">$500 RAP + Flights + Guide + Porter + Food +
                 Lodging</span>
             </label>
             <label class="calc-tier-option">
-              <input type="radio" name="mustang_tier" value="1450" style="margin-bottom:0.5rem;">
+              <input type="radio" name="mustang_tier" value="1450" style="margin-bottom:0.5rem;" id="mustang_tier_1450">
               <strong>Guide &amp; Permit Only</strong>
               <span style="color:var(--art-teal); font-weight:800; font-size:1.2rem;">$1,450 USD</span>
               <span style="font-size:0.75rem; color:#64748b;">$500 RAP + ACAP + Guide. Flights &amp; meals
                 self-paid</span>
             </label>
             <label class="calc-tier-option">
-              <input type="radio" name="mustang_tier" value="3450" style="margin-bottom:0.5rem;">
+              <input type="radio" name="mustang_tier" value="3450" style="margin-bottom:0.5rem;" id="mustang_tier_3450">
               <strong>Luxury 4WD VIP Safari</strong>
               <span style="color:var(--art-teal); font-weight:800; font-size:1.2rem;">$3,450 USD</span>
               <span style="font-size:0.75rem; color:#64748b;">Private Scorpio 4WD + luxury heritage suites + all
@@ -4248,11 +4248,11 @@
               Incidentals:</div>
             <div style="display:flex; flex-wrap:wrap; gap:1rem; font-size:0.84rem;">
               <label style="display:flex; align-items:center; gap:0.4rem; cursor:pointer;"><input type="checkbox"
-                  class="calc-extra-mustang" value="60"> Chhoser Horse Riding (+$60)</label>
+                  class="calc-extra-mustang" value="60" id="formField_5" name="field_5"> Chhoser Horse Riding (+$60)</label>
               <label style="display:flex; align-items:center; gap:0.4rem; cursor:pointer;"><input type="checkbox"
-                  class="calc-extra-mustang" value="35"> Hot Showers &amp; Wi-Fi (+$35)</label>
+                  class="calc-extra-mustang" value="35" id="formField_6" name="field_6"> Hot Showers &amp; Wi-Fi (+$35)</label>
               <label style="display:flex; align-items:center; gap:0.4rem; cursor:pointer;"><input type="checkbox"
-                  class="calc-extra-mustang" value="45"> Apple Brandy &amp; Bakery (+$45)</label>
+                  class="calc-extra-mustang" value="45" id="formField_7" name="field_7"> Apple Brandy &amp; Bakery (+$45)</label>
             </div>
           </div>
 
@@ -4433,13 +4433,13 @@
             <div class="ll-rubric-card">
               <div class="ll-rubric-label">1. Headache Severity</div>
               <div class="ll-options-list">
-                <label class="ll-option-label"><input type="radio" name="ll_headache" value="0" checked> None (0
+                <label class="ll-option-label"><input type="radio" name="ll_headache" value="0" checked id="ll_headache_0"> None (0
                   pts)</label>
-                <label class="ll-option-label"><input type="radio" name="ll_headache" value="1"> Mild headache (1
+                <label class="ll-option-label"><input type="radio" name="ll_headache" value="1" id="ll_headache_1"> Mild headache (1
                   pt)</label>
-                <label class="ll-option-label"><input type="radio" name="ll_headache" value="2"> Moderate headache (2
+                <label class="ll-option-label"><input type="radio" name="ll_headache" value="2" id="ll_headache_2"> Moderate headache (2
                   pts)</label>
-                <label class="ll-option-label"><input type="radio" name="ll_headache" value="3"> Severe, incapacitating
+                <label class="ll-option-label"><input type="radio" name="ll_headache" value="3" id="ll_headache_3"> Severe, incapacitating
                   (3 pts)</label>
               </div>
             </div>
@@ -4447,13 +4447,13 @@
             <div class="ll-rubric-card">
               <div class="ll-rubric-label">2. Gastrointestinal Symptoms</div>
               <div class="ll-options-list">
-                <label class="ll-option-label"><input type="radio" name="ll_gi" value="0" checked> Good appetite (0
+                <label class="ll-option-label"><input type="radio" name="ll_gi" value="0" checked id="ll_gi_0"> Good appetite (0
                   pts)</label>
-                <label class="ll-option-label"><input type="radio" name="ll_gi" value="1"> Poor appetite / mild nausea
+                <label class="ll-option-label"><input type="radio" name="ll_gi" value="1" id="ll_gi_1"> Poor appetite / mild nausea
                   (1 pt)</label>
-                <label class="ll-option-label"><input type="radio" name="ll_gi" value="2"> Moderate nausea / vomiting (2
+                <label class="ll-option-label"><input type="radio" name="ll_gi" value="2" id="ll_gi_2"> Moderate nausea / vomiting (2
                   pts)</label>
-                <label class="ll-option-label"><input type="radio" name="ll_gi" value="3"> Severe persistent vomiting (3
+                <label class="ll-option-label"><input type="radio" name="ll_gi" value="3" id="ll_gi_3"> Severe persistent vomiting (3
                   pts)</label>
               </div>
             </div>
@@ -4461,13 +4461,13 @@
             <div class="ll-rubric-card">
               <div class="ll-rubric-label">3. Fatigue / Physical Weakness</div>
               <div class="ll-options-list">
-                <label class="ll-option-label"><input type="radio" name="ll_fatigue" value="0" checked> Normal energy (0
+                <label class="ll-option-label"><input type="radio" name="ll_fatigue" value="0" checked id="ll_fatigue_0"> Normal energy (0
                   pts)</label>
-                <label class="ll-option-label"><input type="radio" name="ll_fatigue" value="1"> Mild fatigue (1
+                <label class="ll-option-label"><input type="radio" name="ll_fatigue" value="1" id="ll_fatigue_1"> Mild fatigue (1
                   pt)</label>
-                <label class="ll-option-label"><input type="radio" name="ll_fatigue" value="2"> Moderate exhaustion (2
+                <label class="ll-option-label"><input type="radio" name="ll_fatigue" value="2" id="ll_fatigue_2"> Moderate exhaustion (2
                   pts)</label>
-                <label class="ll-option-label"><input type="radio" name="ll_fatigue" value="3"> Severe weakness /
+                <label class="ll-option-label"><input type="radio" name="ll_fatigue" value="3" id="ll_fatigue_3"> Severe weakness /
                   bedridden (3 pts)</label>
               </div>
             </div>
@@ -4475,13 +4475,13 @@
             <div class="ll-rubric-card">
               <div class="ll-rubric-label">4. Dizziness / Lightheadedness</div>
               <div class="ll-options-list">
-                <label class="ll-option-label"><input type="radio" name="ll_dizziness" value="0" checked> None (0
+                <label class="ll-option-label"><input type="radio" name="ll_dizziness" value="0" checked id="ll_dizziness_0"> None (0
                   pts)</label>
-                <label class="ll-option-label"><input type="radio" name="ll_dizziness" value="1"> Mild lightheadedness
+                <label class="ll-option-label"><input type="radio" name="ll_dizziness" value="1" id="ll_dizziness_1"> Mild lightheadedness
                   (1 pt)</label>
-                <label class="ll-option-label"><input type="radio" name="ll_dizziness" value="2"> Moderate dizziness (2
+                <label class="ll-option-label"><input type="radio" name="ll_dizziness" value="2" id="ll_dizziness_2"> Moderate dizziness (2
                   pts)</label>
-                <label class="ll-option-label"><input type="radio" name="ll_dizziness" value="3"> Severe unsteadiness /
+                <label class="ll-option-label"><input type="radio" name="ll_dizziness" value="3" id="ll_dizziness_3"> Severe unsteadiness /
                   vertigo (3 pts)</label>
               </div>
             </div>
@@ -5017,43 +5017,43 @@
           <div class="cl-items-grid">
             <!-- Footwear -->
             <div class="cl-category-header">🥾 1. Footwear &amp; Hardware (7 Items)</div>
-            <label class="cl-item-card"><input type="checkbox" class="mustang-checkbox" data-item="um_boots">
+            <label class="cl-item-card"><input type="checkbox" class="mustang-checkbox" data-item="um_boots" id="formField_24" name="field_24">
               <div class="cl-item-content">
                 <div class="cl-item-title">Broken-in Mid/High Hiking Boots (Dust-Sealed)</div><span
                   class="cl-badge badge-mandatory">Mandatory</span>
               </div>
             </label>
-            <label class="cl-item-card"><input type="checkbox" class="mustang-checkbox" data-item="um_poles">
+            <label class="cl-item-card"><input type="checkbox" class="mustang-checkbox" data-item="um_poles" id="formField_25" name="field_25">
               <div class="cl-item-content">
                 <div class="cl-item-title">Telescopic Trekking Poles with Rubber Tips</div><span
                   class="cl-badge badge-mandatory">Mandatory</span>
               </div>
             </label>
-            <label class="cl-item-card"><input type="checkbox" class="mustang-checkbox" data-item="um_camp_shoes">
+            <label class="cl-item-card"><input type="checkbox" class="mustang-checkbox" data-item="um_camp_shoes" id="formField_26" name="field_26">
               <div class="cl-item-content">
                 <div class="cl-item-title">Lodge Camp Footwear (Crocs / Sandals)</div><span
                   class="cl-badge badge-essential">Essential</span>
               </div>
             </label>
-            <label class="cl-item-card"><input type="checkbox" class="mustang-checkbox" data-item="um_socks">
+            <label class="cl-item-card"><input type="checkbox" class="mustang-checkbox" data-item="um_socks" id="formField_27" name="field_27">
               <div class="cl-item-content">
                 <div class="cl-item-title">Merino Wool Trekking Socks (4 Pairs)</div><span
                   class="cl-badge badge-mandatory">Mandatory</span>
               </div>
             </label>
-            <label class="cl-item-card"><input type="checkbox" class="mustang-checkbox" data-item="um_gaiters">
+            <label class="cl-item-card"><input type="checkbox" class="mustang-checkbox" data-item="um_gaiters" id="formField_28" name="field_28">
               <div class="cl-item-content">
                 <div class="cl-item-title">Low Dust Trail Gaiters</div><span
                   class="cl-badge badge-recommended">Recommended</span>
               </div>
             </label>
-            <label class="cl-item-card"><input type="checkbox" class="mustang-checkbox" data-item="um_liners">
+            <label class="cl-item-card"><input type="checkbox" class="mustang-checkbox" data-item="um_liners" id="formField_29" name="field_29">
               <div class="cl-item-content">
                 <div class="cl-item-title">Anti-Blister Sock Liners (2 Pairs)</div><span
                   class="cl-badge badge-recommended">Recommended</span>
               </div>
             </label>
-            <label class="cl-item-card"><input type="checkbox" class="mustang-checkbox" data-item="um_microspikes">
+            <label class="cl-item-card"><input type="checkbox" class="mustang-checkbox" data-item="um_microspikes" id="formField_30" name="field_30">
               <div class="cl-item-content">
                 <div class="cl-item-title">Microspikes (Early Spring / Late Autumn)</div><span
                   class="cl-badge badge-recommended">Optional</span>
@@ -5062,55 +5062,55 @@
 
             <!-- Clothing -->
             <div class="cl-category-header">🧥 2. 4-Layer Desert Alpine Clothing (9 Items)</div>
-            <label class="cl-item-card"><input type="checkbox" class="mustang-checkbox" data-item="um_down">
+            <label class="cl-item-card"><input type="checkbox" class="mustang-checkbox" data-item="um_down" id="formField_31" name="field_31">
               <div class="cl-item-content">
                 <div class="cl-item-title">750–800 Fill Down Jacket (-10°C Rated)</div><span
                   class="cl-badge badge-mandatory">Mandatory</span>
               </div>
             </label>
-            <label class="cl-item-card"><input type="checkbox" class="mustang-checkbox" data-item="um_shell">
+            <label class="cl-item-card"><input type="checkbox" class="mustang-checkbox" data-item="um_shell" id="formField_32" name="field_32">
               <div class="cl-item-content">
                 <div class="cl-item-title">Gore-Tex Windproof Hard-Shell Jacket</div><span
                   class="cl-badge badge-mandatory">Mandatory</span>
               </div>
             </label>
-            <label class="cl-item-card"><input type="checkbox" class="mustang-checkbox" data-item="um_base">
+            <label class="cl-item-card"><input type="checkbox" class="mustang-checkbox" data-item="um_base" id="formField_33" name="field_33">
               <div class="cl-item-content">
                 <div class="cl-item-title">Merino Wool Thermal Base Layers (2 Sets)</div><span
                   class="cl-badge badge-mandatory">Mandatory</span>
               </div>
             </label>
-            <label class="cl-item-card"><input type="checkbox" class="mustang-checkbox" data-item="um_fleece">
+            <label class="cl-item-card"><input type="checkbox" class="mustang-checkbox" data-item="um_fleece" id="formField_34" name="field_34">
               <div class="cl-item-content">
                 <div class="cl-item-title">Mid-Layer Technical Fleece / Softshell</div><span
                   class="cl-badge badge-essential">Essential</span>
               </div>
             </label>
-            <label class="cl-item-card"><input type="checkbox" class="mustang-checkbox" data-item="um_shirts">
+            <label class="cl-item-card"><input type="checkbox" class="mustang-checkbox" data-item="um_shirts" id="formField_35" name="field_35">
               <div class="cl-item-content">
                 <div class="cl-item-title">Quick-Dry Trekking Shirts (3 Long-Sleeve)</div><span
                   class="cl-badge badge-essential">Essential</span>
               </div>
             </label>
-            <label class="cl-item-card"><input type="checkbox" class="mustang-checkbox" data-item="um_pants">
+            <label class="cl-item-card"><input type="checkbox" class="mustang-checkbox" data-item="um_pants" id="formField_36" name="field_36">
               <div class="cl-item-content">
                 <div class="cl-item-title">Stretch Convertible Trekking Pants (2)</div><span
                   class="cl-badge badge-essential">Essential</span>
               </div>
             </label>
-            <label class="cl-item-card"><input type="checkbox" class="mustang-checkbox" data-item="um_buffs">
+            <label class="cl-item-card"><input type="checkbox" class="mustang-checkbox" data-item="um_buffs" id="formField_37" name="field_37">
               <div class="cl-item-content">
                 <div class="cl-item-title">2x Wind Dust Buffs (Face Mask) + UV Sun Hat</div><span
                   class="cl-badge badge-mandatory">Mandatory</span>
               </div>
             </label>
-            <label class="cl-item-card"><input type="checkbox" class="mustang-checkbox" data-item="um_gloves">
+            <label class="cl-item-card"><input type="checkbox" class="mustang-checkbox" data-item="um_gloves" id="formField_38" name="field_38">
               <div class="cl-item-content">
                 <div class="cl-item-title">Thermal Glove Liners + Windproof Mittens</div><span
                   class="cl-badge badge-mandatory">Mandatory</span>
               </div>
             </label>
-            <label class="cl-item-card"><input type="checkbox" class="mustang-checkbox" data-item="um_beanie">
+            <label class="cl-item-card"><input type="checkbox" class="mustang-checkbox" data-item="um_beanie" id="formField_39" name="field_39">
               <div class="cl-item-content">
                 <div class="cl-item-title">Warm Merino Wool Beanie</div><span
                   class="cl-badge badge-mandatory">Mandatory</span>
@@ -5119,37 +5119,37 @@
 
             <!-- Sleep System -->
             <div class="cl-category-header">⛺ 3. Sleep System &amp; Comfort (6 Items)</div>
-            <label class="cl-item-card"><input type="checkbox" class="mustang-checkbox" data-item="um_sleep_bag">
+            <label class="cl-item-card"><input type="checkbox" class="mustang-checkbox" data-item="um_sleep_bag" id="formField_40" name="field_40">
               <div class="cl-item-content">
                 <div class="cl-item-title">-10°C to -15°C Down Sleeping Bag</div><span
                   class="cl-badge badge-mandatory">Mandatory</span>
               </div>
             </label>
-            <label class="cl-item-card"><input type="checkbox" class="mustang-checkbox" data-item="um_liner">
+            <label class="cl-item-card"><input type="checkbox" class="mustang-checkbox" data-item="um_liner" id="formField_41" name="field_41">
               <div class="cl-item-content">
                 <div class="cl-item-title">Silk / Thermal Sleeping Bag Liner</div><span
                   class="cl-badge badge-essential">Essential</span>
               </div>
             </label>
-            <label class="cl-item-card"><input type="checkbox" class="mustang-checkbox" data-item="um_nalgene">
+            <label class="cl-item-card"><input type="checkbox" class="mustang-checkbox" data-item="um_nalgene" id="formField_42" name="field_42">
               <div class="cl-item-content">
                 <div class="cl-item-title">2x 1L Wide-Mouth Nalgene Bottles (Boiling Safe)</div><span
                   class="cl-badge badge-mandatory">Mandatory</span>
               </div>
             </label>
-            <label class="cl-item-card"><input type="checkbox" class="mustang-checkbox" data-item="um_headlamp">
+            <label class="cl-item-card"><input type="checkbox" class="mustang-checkbox" data-item="um_headlamp" id="formField_43" name="field_43">
               <div class="cl-item-content">
                 <div class="cl-item-title">300+ Lumen Headlamp for Sky Caves</div><span
                   class="cl-badge badge-mandatory">Mandatory</span>
               </div>
             </label>
-            <label class="cl-item-card"><input type="checkbox" class="mustang-checkbox" data-item="um_earplugs">
+            <label class="cl-item-card"><input type="checkbox" class="mustang-checkbox" data-item="um_earplugs" id="formField_44" name="field_44">
               <div class="cl-item-content">
                 <div class="cl-item-title">Silicone Earplugs &amp; Sleep Mask</div><span
                   class="cl-badge badge-essential">Essential</span>
               </div>
             </label>
-            <label class="cl-item-card"><input type="checkbox" class="mustang-checkbox" data-item="um_pillow">
+            <label class="cl-item-card"><input type="checkbox" class="mustang-checkbox" data-item="um_pillow" id="formField_45" name="field_45">
               <div class="cl-item-content">
                 <div class="cl-item-title">Inflatable Camp Pillow</div><span
                   class="cl-badge badge-recommended">Recommended</span>
@@ -5158,37 +5158,37 @@
 
             <!-- Tech & Optics -->
             <div class="cl-category-header">🔋 4. Optics, Electronics &amp; Power (6 Items)</div>
-            <label class="cl-item-card"><input type="checkbox" class="mustang-checkbox" data-item="um_sunglasses">
+            <label class="cl-item-card"><input type="checkbox" class="mustang-checkbox" data-item="um_sunglasses" id="formField_46" name="field_46">
               <div class="cl-item-content">
                 <div class="cl-item-title">UV-400 Wrap-Around Glacier Sunglasses (Cat 3/4)</div><span
                   class="cl-badge badge-mandatory">Mandatory</span>
               </div>
             </label>
-            <label class="cl-item-card"><input type="checkbox" class="mustang-checkbox" data-item="um_powerbank">
+            <label class="cl-item-card"><input type="checkbox" class="mustang-checkbox" data-item="um_powerbank" id="formField_47" name="field_47">
               <div class="cl-item-content">
                 <div class="cl-item-title">20,000mAh Power Bank (Cold-Resistant)</div><span
                   class="cl-badge badge-mandatory">Mandatory</span>
               </div>
             </label>
-            <label class="cl-item-card"><input type="checkbox" class="mustang-checkbox" data-item="um_adapter">
+            <label class="cl-item-card"><input type="checkbox" class="mustang-checkbox" data-item="um_adapter" id="formField_48" name="field_48">
               <div class="cl-item-content">
                 <div class="cl-item-title">Universal Travel Plug Adapter</div><span
                   class="cl-badge badge-essential">Essential</span>
               </div>
             </label>
-            <label class="cl-item-card"><input type="checkbox" class="mustang-checkbox" data-item="um_maps">
+            <label class="cl-item-card"><input type="checkbox" class="mustang-checkbox" data-item="um_maps" id="formField_49" name="field_49">
               <div class="cl-item-content">
                 <div class="cl-item-title">Offline GPS Maps (Maps.me / Gaia GPS)</div><span
                   class="cl-badge badge-mandatory">Mandatory</span>
               </div>
             </label>
-            <label class="cl-item-card"><input type="checkbox" class="mustang-checkbox" data-item="um_camera_bat">
+            <label class="cl-item-card"><input type="checkbox" class="mustang-checkbox" data-item="um_camera_bat" id="formField_50" name="field_50">
               <div class="cl-item-content">
                 <div class="cl-item-title">Spare Camera Batteries in Insulated Pouch</div><span
                   class="cl-badge badge-recommended">Recommended</span>
               </div>
             </label>
-            <label class="cl-item-card"><input type="checkbox" class="mustang-checkbox" data-item="um_solar">
+            <label class="cl-item-card"><input type="checkbox" class="mustang-checkbox" data-item="um_solar" id="formField_51" name="field_51">
               <div class="cl-item-content">
                 <div class="cl-item-title">Compact Backpack Solar Panel (15W)</div><span
                   class="cl-badge badge-recommended">Optional</span>
@@ -5197,49 +5197,49 @@
 
             <!-- Medical & Docs -->
             <div class="cl-category-header">🩺 5. Medical, Protection &amp; Cash (8 Items)</div>
-            <label class="cl-item-card"><input type="checkbox" class="mustang-checkbox" data-item="um_medkit">
+            <label class="cl-item-card"><input type="checkbox" class="mustang-checkbox" data-item="um_medkit" id="formField_52" name="field_52">
               <div class="cl-item-content">
                 <div class="cl-item-title">Medical Kit (Diamox, Cipro, Ibuprofen, Eye Drops)</div><span
                   class="cl-badge badge-mandatory">Mandatory</span>
               </div>
             </label>
-            <label class="cl-item-card"><input type="checkbox" class="mustang-checkbox" data-item="um_sunscreen">
+            <label class="cl-item-card"><input type="checkbox" class="mustang-checkbox" data-item="um_sunscreen" id="formField_53" name="field_53">
               <div class="cl-item-content">
                 <div class="cl-item-title">SPF 50+ Sunscreen &amp; Zinc Lip Balm</div><span
                   class="cl-badge badge-mandatory">Mandatory</span>
               </div>
             </label>
-            <label class="cl-item-card"><input type="checkbox" class="mustang-checkbox" data-item="um_moisturizer">
+            <label class="cl-item-card"><input type="checkbox" class="mustang-checkbox" data-item="um_moisturizer" id="formField_54" name="field_54">
               <div class="cl-item-content">
                 <div class="cl-item-title">Heavy Skin Moisturizer &amp; Nasal Saline Spray</div><span
                   class="cl-badge badge-mandatory">Mandatory</span>
               </div>
             </label>
-            <label class="cl-item-card"><input type="checkbox" class="mustang-checkbox" data-item="um_water_tabs">
+            <label class="cl-item-card"><input type="checkbox" class="mustang-checkbox" data-item="um_water_tabs" id="formField_55" name="field_55">
               <div class="cl-item-content">
                 <div class="cl-item-title">Water Purification Tablets (Aquatabs / Katadyn)</div><span
                   class="cl-badge badge-mandatory">Mandatory</span>
               </div>
             </label>
-            <label class="cl-item-card"><input type="checkbox" class="mustang-checkbox" data-item="um_blister">
+            <label class="cl-item-card"><input type="checkbox" class="mustang-checkbox" data-item="um_blister" id="formField_56" name="field_56">
               <div class="cl-item-content">
                 <div class="cl-item-title">Hydrocolloid Blister Plasters &amp; Leukotape</div><span
                   class="cl-badge badge-mandatory">Mandatory</span>
               </div>
             </label>
-            <label class="cl-item-card"><input type="checkbox" class="mustang-checkbox" data-item="um_wipes">
+            <label class="cl-item-card"><input type="checkbox" class="mustang-checkbox" data-item="um_wipes" id="formField_57" name="field_57">
               <div class="cl-item-content">
                 <div class="cl-item-title">Biodegradable Wet Wipes &amp; Pocket Sanitizer</div><span
                   class="cl-badge badge-essential">Essential</span>
               </div>
             </label>
-            <label class="cl-item-card"><input type="checkbox" class="mustang-checkbox" data-item="um_passport">
+            <label class="cl-item-card"><input type="checkbox" class="mustang-checkbox" data-item="um_passport" id="formField_58" name="field_58">
               <div class="cl-item-content">
                 <div class="cl-item-title">Original Passport + 4 Photos for $500 RAP Permit</div><span
                   class="cl-badge badge-mandatory">Mandatory</span>
               </div>
             </label>
-            <label class="cl-item-card"><input type="checkbox" class="mustang-checkbox" data-item="um_cash">
+            <label class="cl-item-card"><input type="checkbox" class="mustang-checkbox" data-item="um_cash" id="formField_59" name="field_59">
               <div class="cl-item-content">
                 <div class="cl-item-title">NPR 30,000–40,000 Cash in Waterproof Pouch</div><span
                   class="cl-badge badge-mandatory">Mandatory</span>
@@ -5558,7 +5558,7 @@
 
         <a href="/blog/manaslu-circuit-trek-guide.html" class="related-card">
           <img src="/assets/images/destinations/manaslu.jpg" alt="Manaslu Circuit Trek Guide" class="related-card-img"
-            loading="lazy">
+            loading="lazy" width="1024" height="1024">
           <div class="related-card-body">
             <span class="pt-badge pt-mandatory">Restricted Area Guide</span>
             <h3 style="font-size:1.1rem; font-weight:800; color:#0f172a; margin:0.4rem 0 0.5rem;">Manaslu Circuit Trek
@@ -5570,7 +5570,7 @@
 
         <a href="/blog/annapurna-circuit-complete-guide.html" class="related-card">
           <img src="/assets/images/destinations/annapurna.jpg" alt="Annapurna Circuit Complete Guide"
-            class="related-card-img" loading="lazy">
+            class="related-card-img" loading="lazy" width="1024" height="1024">
           <div class="related-card-body">
             <span class="pt-badge pt-conservation">Grand Himalayan Classic</span>
             <h3 style="font-size:1.1rem; font-weight:800; color:#0f172a; margin:0.4rem 0 0.5rem;">Annapurna Circuit
@@ -5582,7 +5582,7 @@
 
         <a href="/blog/langtang-valley-trek-guide.html" class="related-card">
           <img src="/assets/images/destinations/langtang.jpg" alt="Langtang Valley Trek Guide" class="related-card-img"
-            loading="lazy">
+            loading="lazy" width="1024" height="1024">
           <div class="related-card-body">
             <span class="pt-badge" style="background:#ecfdf5; color:#047857;">Moderate Alpine</span>
             <h3 style="font-size:1.1rem; font-weight:800; color:#0f172a; margin:0.4rem 0 0.5rem;">Langtang Valley Trek

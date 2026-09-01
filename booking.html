@@ -882,7 +882,7 @@
   <div class="site-header">
 
     <!-- TOP INFORMATION BAR -->
-    <div class="top-bar" role="banner" aria-label="Contact information">
+    <div class="top-bar" aria-label="Contact information">
       <div class="container">
         <div class="top-bar__inner">
           <div class="top-bar__contacts">
@@ -987,7 +987,7 @@
 
                           <a href="/destinations.html#everest" class="mega-menu__item">
                             <div class="mega-menu__item-thumb">
-                              <img src="/assets/images/destinations/everest.jpg" alt="Everest Region" loading="lazy">
+                              <img src="/assets/images/destinations/everest.jpg" alt="Everest Region" loading="lazy" width="1024" height="1024">
                               <span class="mega-menu__item-alt-tag">5,545m</span>
                             </div>
                             <div class="mega-menu__item-info">
@@ -999,7 +999,7 @@
                           <a href="/destinations.html#annapurna" class="mega-menu__item">
                             <div class="mega-menu__item-thumb">
                               <img src="/assets/images/destinations/annapurna.jpg" alt="Annapurna Region"
-                                loading="lazy">
+                                loading="lazy" width="1024" height="1024">
                               <span class="mega-menu__item-alt-tag">5,416m</span>
                             </div>
                             <div class="mega-menu__item-info">
@@ -1010,7 +1010,7 @@
 
                           <a href="/destinations.html#langtang" class="mega-menu__item">
                             <div class="mega-menu__item-thumb">
-                              <img src="/assets/images/destinations/langtang.jpg" alt="Langtang Region" loading="lazy">
+                              <img src="/assets/images/destinations/langtang.jpg" alt="Langtang Region" loading="lazy" width="1024" height="1024">
                               <span class="mega-menu__item-alt-tag">4,773m</span>
                             </div>
                             <div class="mega-menu__item-info">
@@ -1021,7 +1021,7 @@
 
                           <a href="/destinations.html#manaslu" class="mega-menu__item">
                             <div class="mega-menu__item-thumb">
-                              <img src="/assets/images/destinations/manaslu.jpg" alt="Manaslu Region" loading="lazy">
+                              <img src="/assets/images/destinations/manaslu.jpg" alt="Manaslu Region" loading="lazy" width="1024" height="1024">
                               <span class="mega-menu__item-alt-tag">5,106m</span>
                             </div>
                             <div class="mega-menu__item-info">
@@ -1032,7 +1032,7 @@
 
                           <a href="/destinations.html#mustang" class="mega-menu__item">
                             <div class="mega-menu__item-thumb">
-                              <img src="/assets/images/destinations/mustang.jpg" alt="Upper Mustang" loading="lazy">
+                              <img src="/assets/images/destinations/mustang.jpg" alt="Upper Mustang" loading="lazy" width="1024" height="1024">
                               <span class="mega-menu__item-alt-tag">3,840m</span>
                             </div>
                             <div class="mega-menu__item-info">
@@ -1043,7 +1043,7 @@
 
                           <a href="/destinations.html#dolpo" class="mega-menu__item">
                             <div class="mega-menu__item-thumb">
-                              <img src="/assets/images/destinations/dolpo.jpg" alt="Dolpo Region" loading="lazy">
+                              <img src="/assets/images/destinations/dolpo.jpg" alt="Dolpo Region" loading="lazy" width="1024" height="1024">
                               <span class="mega-menu__item-alt-tag">5,350m</span>
                             </div>
                             <div class="mega-menu__item-info">
@@ -1211,7 +1211,7 @@
         </div>
         <input class="search-modal__input" type="search" placeholder="Search treks, destinations…"
           aria-label="Search treks and destinations" autocomplete="off" data-search-input aria-controls="search-results"
-          aria-expanded="false">
+          aria-expanded="false" id="siteSearchInput" name="searchQuery">
         <button class="btn btn--sm btn--secondary" data-search-close aria-label="Close search"
           type="button">ESC</button>
       </div>
@@ -1299,7 +1299,7 @@
             </button>
           </div>
 
-          <form id="quickBookingForm" novalidate>
+          <form id="quickBookingForm" toolname="bookHimalayanTrek" tooldescription="Calculates pricing and reserves a guided trekking expedition in Nepal with zero advance deposit." novalidate>
 
             <!-- =========================================================
                  STEP 1: TREK SELECTION, DATES, PAX & TIER
@@ -1348,7 +1348,7 @@
               <div class="booking-controls-row">
                 <div>
                   <label class="form-label-custom" for="bookingDate">Preferred Departure Date <span style="color:#ef4444;">*</span></label>
-                  <input type="date" id="bookingDate" class="form-input-custom" required>
+                  <input type="date" id="bookingDate" class="form-input-custom" required name="bookingDate">
                 </div>
                 <div>
                   <label class="form-label-custom">Number of Trekkers</label>
@@ -1366,7 +1366,7 @@
                 
                 <!-- Tier 1: Standard -->
                 <div class="tier-card-option is-selected" data-tier="standard" data-multiplier="1.0">
-                  <input type="radio" name="bookingTier" value="standard" class="tier-card-radio" checked>
+                  <input type="radio" name="bookingTier" value="standard" class="tier-card-radio" checked id="bookingTier_standard">
                   <span class="tier-card-badge">Most Popular</span>
                   <div class="tier-card-name">Standard Teahouse</div>
                   <div class="tier-card-price" id="tierPriceStandard">$1,390 <small>USD/pax</small></div>
@@ -1380,7 +1380,7 @@
 
                 <!-- Tier 2: Comfort Plus -->
                 <div class="tier-card-option" data-tier="comfort" data-multiplier="1.35">
-                  <input type="radio" name="bookingTier" value="comfort" class="tier-card-radio">
+                  <input type="radio" name="bookingTier" value="comfort" class="tier-card-radio" id="bookingTier_comfort">
                   <span class="tier-card-badge">Enhanced Comfort</span>
                   <div class="tier-card-name">Comfort Plus</div>
                   <div class="tier-card-price" id="tierPriceComfort">$1,875 <small>USD/pax</small></div>
@@ -1394,7 +1394,7 @@
 
                 <!-- Tier 3: Luxury VIP -->
                 <div class="tier-card-option" data-tier="luxury" data-multiplier="2.4">
-                  <input type="radio" name="bookingTier" value="luxury" class="tier-card-radio">
+                  <input type="radio" name="bookingTier" value="luxury" class="tier-card-radio" id="bookingTier_luxury">
                   <span class="tier-card-badge">VIP Premium</span>
                   <div class="tier-card-name">Luxury VIP &amp; Heli</div>
                   <div class="tier-card-price" id="tierPriceLuxury">$3,335 <small>USD/pax</small></div>
@@ -1613,7 +1613,7 @@
               <!-- Terms Checkbox -->
               <div style="margin-bottom:1.5rem;">
                 <label class="checkbox-item" style="align-items:flex-start;">
-                  <input type="checkbox" id="termsCheck" required checked style="margin-top:3px;">
+                  <input type="checkbox" id="termsCheck" required checked style="margin-top:3px;" name="termsCheck">
                   <span style="font-size:0.82rem; color:#475569; line-height:1.45;">
                     I agree to the <a href="/terms.html" target="_blank" style="color:#0f5257; font-weight:700;" rel="noopener noreferrer">Terms &amp; Conditions</a> and confirm that I will pay the total expedition cost in cash upon arrival at the Kathmandu briefing before trek departure.
                   </span>
@@ -1641,7 +1641,7 @@
           
           <!-- Trek Info Header -->
           <div class="summary-trek-header">
-            <img loading="lazy" src="/assets/images/treks/upper-mustang.jpg" alt="Selected Trek" class="summary-trek-thumb" id="summaryThumb">
+            <img loading="lazy" src="/assets/images/treks/upper-mustang.jpg" alt="Selected Trek" class="summary-trek-thumb" id="summaryThumb" width="1024" height="1024">
             <div>
               <h3 class="summary-trek-title" id="summaryTitle">Everest Base Camp Trek</h3>
               <div class="summary-trek-meta">
@@ -1882,7 +1882,7 @@
     </svg>
   </button>
 
-  <script type="module" src="/assets/js/main.bundle.js" defer></script>
+  <script defer src="/assets/js/main.bundle.js"></script>
 
   <!-- Static fallback for no-JS environments -->
   <noscript>

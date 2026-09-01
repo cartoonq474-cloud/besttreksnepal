@@ -18,6 +18,7 @@ package-lock.json
 dist/
 build/
 .cache/
+scratch/
 .parcel-cache/
 .vite/
 
