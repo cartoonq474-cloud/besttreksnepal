@@ -153,22 +153,35 @@ const server = http.createServer((req, res) => {
           return res.end('Internal Server Error');
         }
 
+        // For local dev requests, adapt canonical and absolute URLs to current host
+        let responseData = data;
+        const host = req.headers.host || 'localhost:3000';
+        if (ext === '.html' && (host.startsWith('localhost') || host.startsWith('127.0.0.1'))) {
+          let htmlStr = data.toString('utf8');
+          htmlStr = htmlStr.replace(/https:\/\/besttreksnepal\.com/g, `http://${host}`);
+          responseData = Buffer.from(htmlStr, 'utf8');
+        }
+
         if (/\bbr\b/.test(acceptEncoding)) {
-          const brBuffer = getCompressed(filePath, data, stats.mtimeMs, 'br');
+          const brBuffer = (responseData === data) 
+            ? getCompressed(filePath, data, stats.mtimeMs, 'br')
+            : zlib.brotliCompressSync(responseData, { params: { [zlib.constants.BROTLI_PARAM_MODE]: zlib.constants.BROTLI_MODE_TEXT, [zlib.constants.BROTLI_PARAM_QUALITY]: 4 } });
           headers['Content-Encoding'] = 'br';
           headers['Content-Length'] = brBuffer.length;
           res.writeHead(200, headers);
           return res.end(brBuffer);
         } else if (/\bgzip\b/.test(acceptEncoding)) {
-          const gzBuffer = getCompressed(filePath, data, stats.mtimeMs, 'gzip');
+          const gzBuffer = (responseData === data)
+            ? getCompressed(filePath, data, stats.mtimeMs, 'gzip')
+            : zlib.gzipSync(responseData, { level: 6 });
           headers['Content-Encoding'] = 'gzip';
           headers['Content-Length'] = gzBuffer.length;
           res.writeHead(200, headers);
           return res.end(gzBuffer);
         } else {
-          headers['Content-Length'] = data.length;
+          headers['Content-Length'] = responseData.length;
           res.writeHead(200, headers);
-          return res.end(data);
+          return res.end(responseData);
         }
       });
     } else {
